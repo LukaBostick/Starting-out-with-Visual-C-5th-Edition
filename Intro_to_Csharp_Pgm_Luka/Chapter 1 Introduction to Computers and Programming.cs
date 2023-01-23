@@ -358,7 +358,7 @@
  * 
  * 
  * 
- * //////////////////////////////////////////////////////////////////////////
+* //////////////////////////////////////////////////////////////////////////
  *                              Storing Numbers
  * //////////////////////////////////////////////////////////////////////////
  * 
@@ -380,8 +380,226 @@
  * 
  * Starting with the rightmost digit and moving left,
  * the position values are 1,2,4,8, and so forth.
+ * ////////////////////////////////////////////////////////////////////////// 
+                    1.7 The Program Development Process
+   ////////////////////////////////////////////////////////////////////////// 
+    
+   ////////////////////////////////////////////////////////////////////////// 
+       Concept: Creating a program requires several steps,
+    which includes designing the program's logic, creating the user interface,
+    writing code, testing, and debugging
+   ////////////////////////////////////////////////////////////////////////// 
+    
+   ////////////////////////////////////////////////////////////////////////// 
+    The program developmente Cycle
+   ////////////////////////////////////////////////////////////////////////// 
+   Previously in this chapter, you learned that programmers typically use
+   high-level languages such as C# to preacte programs. There 
+   is much more to creating a program than writting code, however.
+   The process of creating a program that workds correctly typically requires 
+   the six phases shown in Figure 1-25. 
+   The entire process is know as the program development cycle
+////////////////////////////////////////////////////////////////////////// 
+        1. Understand The program's purpose
+    When beginning a new programming project, it is essential that you
+    understand what the program is suppoed to do. Most programs perform the 
+    following three-step process
+////////////////////////////////////////////////////////////////////////// 
+    Step 1. Input is reecived
+    Step 2 Some process is performed on the input
+    Step 3 Output is produced
+////////////////////////////////////////////////////////////////////////// 
+    Input is any data that the program recives while it is running.
+     Once input is recieved, some process, such as a mathematical
+     Calculation, is usually performed on it. The results of the
+     process are then sent out fo the program as output.
+     If you can identify these elements of a program(input,
+     process, and output), then you are on your way to understaning
+     what the program is suppoed to do.
+////////////////////////////////////////////////////////////////////////// 
+    Ex, suppose you have been asked to write a program to calculate
+    and display the gross pay for an hourly paid employee.
+    Here is a summary of the programs's input, procvess, and output:
+////////////////////////////////////////////////////////////////////////// 
+    INPUT:
+            *INput the numberof hours that the employee worked.
+            *Input the employee's hourly pay rate.
+            *
+    PROCESS:
+            *Multiply the number of houts worked by the hourlt pay rate.
+            *The reult is the employee's gross pay
+    Output:
+            * Display the employee's gross pay on the screen.
+            * 
+////////////////////////////////////////////////////////////////////////// 
+                2. DESIGN THE GUI
+    Once you clearly understand what the program is suppoed to do, you can
+    begin designing its GUI. Gften, you will find it helpful to draw a sketch
+    of each form that the program displays. 
+    Ex, if you are designing a program that calculates gross pay,
+    Figure 1-26 shows how you night sketch the program's form.
+    Notice that the sketch identifies each type of control (GUI object) that 
+    will appear on the form. The TextBox controls will allow the user to enter input
+    The user will type the number of hours worked into one of the TextBoxes
+    and the employee's hourly pay rate into the other TextBox.
+    Notice that Label contols are placed on the form to tell the user what data to enter.
+    When the user clicks the Button control that reads Calculate Gross Pay, 
+    the program will display the employee's gorss pay on the screen in a pop-up window.
+    When the user clicks the Button control that reads Calculaute gross pay,
+the program will display the employee's gross pay on the screen in a pop-up window.
+When the user clicks the Button control that reads Exit, the program will end.
+Once you are satisfied with tehe sketches that you have created for the program's forms,
+you can begin creating the actual forms on the computer.
+As a Visual C# programmer,
+you have a powerful envionment know as Visual Studio <3 at youtr disposal. 
+Visual Studio gives you a "what you see is what you get" editor that allows
+you to visual design a program's forms.
+You can use Visual Studio to create
+the program's forms, place all the necessary contols on the forms,
+and set each control's properties so it has the desired appearance.
+For ex, Figure 1-27 shows the actual form that you might create
+for the wage-calculator program, which calculates gross pay.
+////////////////////////////////////////////////////////////////////////// 
+    3. DESIGN THE PROGRAM'S LOGIC
+In this phase you break down each task that the propgram must perform
+into a series of logical steps. For exa,ple, if you look back at
+Figure 1-27, notice that the pay-calculating program's form has
+a Button control that reads CALCULATE GROSS PAY.
+Here are the steps that the program should take to perform that task:
+////////////////////////////////////////////////////////////////////////// 
+    Step 1* Get th number of hours worked from the appropriate TextBox.
+    Step 2* Get the hourly pay rate from the appropriate TextBox.
+    Step 3* Calculate the gorss pay as the number of hours worked times the hourly pay rate.
+    Step 4* Display the gross pay in a pop-up window.
+////////////////////////////////////////////////////////////////////////// 
+This is an example of an algo, which is a set of well-defined, logical steps that must
+be taken to perform a task.
+An algo that is written out in this manner,in plain
+English statements, is called pesudocode. 
+////////////////////////////////////////////////////////////////////////// 
+(the word pseudo means fake, so pesudocode is fake code.)
+The process of informally writing out the steps of an algo in pseudocode
+before attempting to write any actual code is very
+helpful when you care desiging a programs. 
+////////////////////////////////////////////////////////////////////////// 
+Because you do not have to worry about breaking any syntaxrules, you can
+focus on the logical steps that the prgram must focus on.
+Flowcharting is another tool that programmers use to design programs.
+A flowchart is a diagram that graphically depicts the steps of an algo.
+Figure 1-28 shows how you might create a flowchart for the wage-calculator algorithm, as described here:
+////////////////////////////////////////////////////////////////////////// 
+    * The ovals, which appear at the top and botton of the flowchart,
+    * are called terminal symbols. 
+    * The Start terminal symbol marks the program's 
+    * and the End terminal symbol marks the program's ending point.
+   
+    * Parallelograms are used as input symbols and output symbols.
+    * They represent steps in which the program reads input or displayes output.
+    
+    *Rectangles are used as processing symbols.
+    *They represent steps in which the program performs some process
+    *on data, such as a mathematical calculation
+    
+    The symbols are connected by arrows that represent the "flow" of the program.
+To step through the symbols in the proper order,
+you begin at the start terminal and follow
+the arrows until you reach the End terminal. 
+////////////////////////////////////////////////////////////////////////// 
+    4. WRITE THE CODE
+////////////////////////////////////////////////////////////////////////// 
+    Once you have created a program's GUI and design algorithms for the
+program's task, you are ready to start writing code. During this process,
+you will refer to the pseudocode or flowchart that you created in Step 3
+and use Visual Studio to write C# code.
+    
+////////////////////////////////////////////////////////////////////////// 
+    5. CORRECT SYNTAX ERRORS
+//////////////////////////////////////////////////////////////////////////
+///
+You previously learned in this chapter that a programming
+language such as C# has rules known as syntax, that must be followed
+when writting a program.A language's syntax rules dictate things such
+as how keywords, operators,and punctuation characters can be used.
+////////////////////////////////////////////////////////////////////////// 
+///
+A syntax error occurs if the programmer violates any of these rules.
+If the program contains a syntax error or even a simple mistake such as
+a misspelled keyword, the program cannot be compiled or executed.
+////////////////////////////////////////////////////////////////////////// 
+///
+Virtually all code contains syntax errors when it is first written, so the 
+programmer will typically spend some time correcting these. Once all the 
+syntax errors and simple typing mistakes have been corrected, the program
+can be compiled and translated into an executable program.
+////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////// 
+6. TEST THE PROGRAM AND CORRECT LOGIC ERRORS
+////////////////////////////////////////////////////////////////////////// 
+Once the code is in an executable form, you must then test it to determine
+whether any logic errors exist. A logic error is a mistake that does not
+prevent the program from running but causes it to produce incorrect results.
+(Matherematical mistakes are common causes of logic errors.)
+If the program produces incorrect results, the programmer must debig the code.
+This means that the programmer finds and corrects logic errors in the program.
+Sometimes, during this process, the programmer discovers that the program's original 
+design must be changed.
+In this even, the program development cycle starts over and continues until no errors can be found.
+
+
+//////////////////////////////////////////////////////////////////////////
+///     1.8 Getting started with the Visual Studio Environment
+///     
+/// //////////////////////////////////////////////////////////////////////////
+///                                 Concept
+/// //////////////////////////////////////////////////////////////////////////
+/// Visual Studio provides a collection of tools that you use to build Visual C#
+/// applications. The first step in visual C# is learning about these tools.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// To follow the tutorials in this book, and create Visual C# applications,
+/// you will need to install Visual Studio on your computer.
+/// 
+/// Visual Studio isa professional integrated development environment (IED),
+/// which means that it provides all the necessary tools for creating,
+/// testing, and debugging software.
+/// 
+/// It can be used to create applications not only with Visual C#,
+/// but also with other languages such as Visual Basic and Visual C++.
+/// 
+/// If you are using a school's computer lab, there's a good chance
+/// that Visual Studio has been installed.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// If you do not have access to Visual Studio, you can install Visual Studio
+/// Community Edition, a free programming environment that is available for
+/// download from Microsoft at www.visualstudio.com.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// Visual Studio is a customizable environment. If you care working in your
+/// school;s computer lab, there's a chanve that someone else has customized the 
+/// programming environment to suit his or her own preferences. If this is the 
+/// case, the screens that you see may not match exactly the ones shown in this
+/// book. For that reason it's a good idea to reset the programming environment
+/// before you create a Visual C# application. Tutorial 1-1 guides you through
+/// the process.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Tutorial 1-1: Starting Visual Studio and setting Up the Environment
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Step 1: Depending on your operating
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////////////
+
  * 
- * 
- * 
+ *
+ *
+ *
  * //////////////////////////////////////////////////////////////////////////
  */
