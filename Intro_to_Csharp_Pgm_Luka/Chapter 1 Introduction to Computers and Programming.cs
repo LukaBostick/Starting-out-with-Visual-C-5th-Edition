@@ -593,13 +593,260 @@ In this even, the program development cycle starts over and continues until no e
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Step 1: Depending on your operating
+/// 
+/// *  Windows 10: In the Windows search bar, start typing Visual Studio.
+///     When you see Visual Studio: (or another version)
+///     appear in the search result, click it.
+/// 
+/// * Windows 8: On the Start screem, simply start typing Visual Studio. 
+///     As you type, the search result will appear on the right edge on the 
+///     screen When you see Visual Studio 2077 ( or another verson
+///     appear, click it.) 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Step 2:
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Figure 1-29 shows the Visual Studio enviroment.
+/// 
+/// The Screen show in the figure is kinow as the Start page.
+/// 
+/// By default the Start Page will not displayed when you start Visual Studio.
+/// If you do not see the Start page you can always display it by clicking View
+/// on the menu at the top of the screen and the click the start page.
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                                Step 3:
+/// //////////////////////////////////////////////////////////////////////////
+/// In a school computer lab, it is possible that the Visual Studio environment
+/// has ben set up for a programming language other than Visual C#.
+/// 
+/// To make sure that Visual Studio looks and behaves as described in this book,
+/// you should make sure that visual C# is selected as the
+/// programming enviornment.
+/// 
+/// Perform the following:
+/// 
+///     * As shown in Figure 1-30, click Tools on the menu bar and then click Import and Export Settings...
+///     
+///     * On the screen that appers next, select Resey all settings and click the Next > button.
+///     
+///     * On the screen that appers next, select Rest all settings and click the Next>button.
+///     
+/// *On the screen that apperars next, select No, just rest settings, overwritting my current settings. Click the Next > button.
+/// 
+/// *The window shown in Figure 1-31 should appear next.
+/// Select Visual C# and then click the Finish button.
+/// After a moment you should see a reset Complete window.
+/// Click the Close button and continue with the next in the tutorial.
+/// //////////////////////////////////////////////////////////////////////////
+///                         Step 4:
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Now you will reset Visual Studio's window layout to the default configuration.
+/// 
+/// As shown in Figure 1-32,
+/// click Window on the menue bar then click Rest Window layout.
+/// 
+/// Next you will see a dialog blox asking Are you sure you want to restore
+/// the default window layout for the environment?
+/// 
+/// click yes.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// The Visual Studio environment is now setup so you can follow the remaining
+/// tutoeials in this book.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Starting a New Project
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// Each Visual C# application that you create is called a project.
+/// When you are ready to creare a new application, you start a new project.
+/// 
+/// Tutorial 1-2 leads you through the steps of starting a new Visual C# project.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///             Tutorial 1-2: Starting a New Visual C# Project
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// 
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp 1: if Visual Studio is not already running, start it as you did in 
+///         Tutorial 1-1.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp 2:
+/// Click FIle oon the menu bar at the top of the screen then select new, and then select project.
+/// 
+/// After doing this , the new Project window shown in Figure 1-33 should be displayed.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp 3: At the ledt side of the window, under Installed Templetes,
+/// make sure Visual C# is selected.
+/// Then, Select windos Froms App (.NET Framework), as shown in Figure 1-33.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp 4: At the bottom of the new Project window, you see a Name text box.
+/// 
+/// This is where you enter the name of your project.
+/// 
+/// The Name text box will be automatically filled in with a default name.
+/// In Figure 1-33 the default name is WindowsFormsApp1. Chanfe the project name
+/// to My First Project, as shown in Figure 1-34.
+/// 
+/// Just below the Name text box you will see a Location test box and a Solution name text box.
+/// 
+///         *The Location text box shows where a folder will be crearted
+///             to hold the project.IF you wish to change the location, click
+///             the Browse button and select the desired location.
+///             
+///         * A solution is a container that holds a project, and the Solution
+///             name text box shows the name of the solution that will hold
+///             this project.
+///             By default, the solution name is the same as the project name.
+///             
+///             For all the projects that you create in this book, you should
+///             keep the solution name the same as the project name.
+///             
+/// //////////////////////////////////////////////////////////////////////////
+///                             Note
+/// //////////////////////////////////////////////////////////////////////////
+/// As you work through this book, you will create a lot of vsC# projects.
+/// 
+/// AS you do, you will find that default names such as WindowsFormsApp1 do not
+/// help you remember what each project does: therefore, you should always
+/// change the name of a new project to something that describes the
+/// project's purpose.
+/// //////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp 5:Click the Ok button to create the project. It might take a moment
+/// for the project to be created. Once it is, the Visual Studio environment
+/// should appear, similar to Figure 1-35.
+/// 
+/// Notice that the name of the project, My First Project, is displayed in
+/// the title bar at the top of the Visual Studio window.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                 Tutorial 1-3: Saving and Closing a Project
+/// //////////////////////////////////////////////////////////////////////////
+/// As you work on a project, you shouid get into the habit of saving it often.
+/// 
+/// In this tutorial you will save the MyFirst Prject application and the close it .
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:1 Visual Studio should still be running from the previous tutorial.
+/// To same the proejct that is currtently open click File on the menue bar
+/// and then select Save all.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:2 
+/// To close the project, click File on the menu bar and
+/// thenclick Close Solution.
+/// //////////////////////////////////////////////////////////////////////////
+///                     The Visual Studio Environment 
+/// //////////////////////////////////////////////////////////////////////////
+/// The Visual Studio environment consists of a number of windows that you use 
+/// on a regualr basis.
+/// 
+/// Figure 1-36 shows the locarion of the followingf windows
+/// that appear within the Visual Studio environnment: the Designer window,
+/// the Solution explorere windows, and the Properties window.
+/// 
+/// Here is a brief summary of each of window's purpose:
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// The DESIGNER WINDOW
+/// 
+///     You use the Designer window to create an application's GUI.
+///     The Designer window shows the application's form and sllows you to 
+///     visuall design its appearance by placing the desired contrils that will
+///     appear on the form when the application executes.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// THE SOLUTION EXPLORER WINDOW
+/// 
+///     A solution is a container for holding Viaual C# projects.
+///     (we Discuss soltions in greater detail in a moment.)
+///      When you create a new C# project, a new solution is automaticallt
+///      created to contain it. The Solution Explorer
+///      
+/// window allows you to navigate among the files in a Visual C# project.
+/// 
+/// THE PROPERTIES WINDOW
+/// 
+///     A constol's appearance and other characteristics are determined by the control's propertices.
+///     When you are creating a Visual C# application,
+///     you use the Propertices window to examine and chanfe a contrils properties.
+///     
+/// Remember that Visual Studio is a customizable envitonment.
+/// You can move the various windows around, so they may not appear in the
+/// exact locations shown in Figure 1-36 on your system.
+/// 
+/// 
+/// Displaying the Solution Explorere and Properties Windows
+/// 
+/// IF you do not see the Solutionm Explorer or the Properties window,
+/// you can follow these steps to make them visible:
+/// 
+/// IF you do not see the Solution Explorer window, click View on the menu bar. On the View menu, click Solution Explorer.
+/// 
+/// If you do not see the Properties Window, click View on the menu bar.
+/// 
+/// On the View menu, click Properties.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Using Auto Hide
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// Many windows in Visual Studio have a feature know as Auto Hide. When you 
+/// see the pushpin icon in a window;s title bar, as shown in Figure 1-37,
+/// you know that the window has Auto Hide capablity.
+/// 
+/// you click the pushpin icon to turn Auto Hide on or off for a window.
+/// 
+/// When Auto Hide is turned on, the window is displayed only as a tab along one
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:1
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:1
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:2
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:3
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:4
+/// 
+//////////////////////////////////////////////////////////////////////////
+//
+/// Setp:5
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:6
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:7
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 
- * 
- *
- *
- *
+
  * //////////////////////////////////////////////////////////////////////////
  */
