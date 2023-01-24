@@ -1006,7 +1006,8 @@ In this even, the program development cycle starts over and continues until no e
 /// IF you do not see the Solutionm Explorer or the Properties window,
 /// you can follow these steps to make them visible:
 /// 
-/// IF you do not see the Solution Explorer window, click View on the menu bar. On the View menu, click Solution Explorer.
+/// IF you do not see the Solution Explorer window,
+/// click View on the menu bar. On the View menu, click Solution Explorer.
 /// 
 /// If you do not see the Properties Window, click View on the menu bar.
 /// 
@@ -1022,31 +1023,245 @@ In this even, the program development cycle starts over and continues until no e
 /// 
 /// you click the pushpin icon to turn Auto Hide on or off for a window.
 /// 
-/// When Auto Hide is turned on, the window is displayed only as a tab along one
+/// When Auto Hide is turned on, the window is displayed only as a tab along
+/// one of the edges of the Visual Studio enviroment. This feature gives you
+/// more room to view your application's forms and code. Figure 1-38 shows how
+/// the Solution Explorer and properties windows appear when their Auto Hide feature
+/// is turned on. 
+/// 
+/// Notice the tabs that read Solution Explorer and Properties along
+/// the right edge of the screen. (Figure 1-38 also shows a Team Explorer tab.
+/// We do not discuss the Team Explorer in this book.)
+/// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:1
+///                  The Menu Bar and the Standeard Toolbar
+/// //////////////////////////////////////////////////////////////////////////
+/// You've already used the Visual Studio menu bar several times.
+/// This is the bar at the top of the Visual Studio window that provides
+/// menu such as FIle, Edit, View, Project, and so forth.
+/// As you progress through this book, you will become familiar with of the menus.
+/// 
+/// Below the menue bar is the standard toolbar.
+/// The standard toolbar contains button that execute frequenctly used commands.
+/// All commeands that are displayed on the toolbar may also be executed from a
+/// menu, but the standard toolbar gives you quicker access to them.
+/// Figure 1-39identifies the standerd toolbar buttons that you will use most
+/// often, and Table 1-3 gives a brief description of each.
+/// 
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                 The Toolbox
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:1
+/// The Toolbox is a window that allows you to select the controls that you
+/// want to use in an application's user interface. When you want to place a
+/// Button, Label, TextBox, or other control on an application's form, you
+/// select it in the Toolbox. You will use the Toolbox extensively as yo
+/// u develop Visual C# applications.
+/// 
+/// The Toolbox typically appears on the left side of the Visual Studio
+/// environment. If the Toolbox is in Auto Hide mode, its tab will appear
+/// as shown in Figure 1-40. Figure 1-41 shows the Toolbox opened,
+/// whith Auto Hide turned off.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                     Note
+///                     
+/// IF you do not see the Toolbox or its tab along the side of the Visual Studio 
+/// environment, click View on the menu bar and then click Toolbox
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// The Toolbox is divided into sections, and each section has a name. In Figure 1-41
+/// you can see the ALL wINDOWS Forms and Common Constrols sections. 
+/// If you scroll the Toolbox, you will see many other sections.
+/// Each section can be opened or closed
+/// 
+/// IF you want to open a section of the Toolbox, you simply click on its name
+/// tab. To close the section, click on its name tab again.
+/// In Figure 1-41, the Common controls section is open. You use the Common
+/// Controls section to sccess controls that you frequently need, such as
+/// Buttons, Labels, and TextBoxes. You can move any section to the top
+/// of the list by dragging its name with the mouse.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Using ToolTips
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// A ToolTip is a small rectangular box that pops up when you hover the mouse
+/// pointer over a button on the toolbar or in the Toolbox for a few seconds.
+/// The ToolTip box contains a short description of tge button's purpose.
+/// Figure 1-42 shows the ToolTip that appears when the cursor is left sitting
+/// on the Save All button. Use a ToolTip whenecer you cannot remember a
+/// particular button's function.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Docked and Floating Windows
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// Figure 1-41 shows the Toolbox, Solution Explorer, and Properties window
+/// s when they care docked, which means they are attached to one of the edges
+/// of the Visual Studio Window. Alternatively, the windows can be floating.
+/// You can control wheather a window is docked or floating as follows:
+/// 
+///         * To changr a window from docked to floating, right-click its title bar and select Float.
+///         
+///         * To change a window from floating to docked, right-click its title bar and select dock.
+///         
+/// Figure 1-43 shows Visual Studio with the Toolbox, Solution Explorer, and
+/// Properties windows floating. When a window is floating, you can click and
+/// drag it by its title bar around the screen. You may use whichever style
+/// you prefer-docked or floating When windows are floating, they behave as
+/// normal windows. You may move or resize them to suit your preference.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Note
+///            A window cannot float if its Auto Hide feature is turned on.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Tip
+/// Remember, you can always reset the window layout by clicking Window on the
+/// menu bar and the selecting Rest Window Layout. If you accidentlly close
+/// the Designer window, the Solution Explorer window, or the Properties
+/// window, you can use the View menu to redisplay them.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Projects and Solutions
+///                         
+///     As you learn to preogram in visual C#, you will see the terms projects
+///     and solution used often. These terms do not mean the same thing, but
+///     they are somtimes used interchangerbly. LEt's briefly discuss the
+///     difference between a project and a solution.
+///     
+///     Each Visual C# application that you create is called a project.
+///     A Visual C# project consists of seceral files. You can think of a
+///     project as a collection of files that belong to a single application.
+/// 
+/// A solution is a constainer that ho;ds one or more Visual C# porjects.
+/// If you are developing applications for a large organization, you might
+/// find it conenient to store several realed projects together in the same
+/// solution.
+/// 
+/// Although it is possible for a solution to hold more than one project,
+/// each project that you will create in this book will be saved in its own
+/// solution. Each time you create a new project, you will also create a new
+/// solution to hold it. Figure 1-44 illustrates this concept. TYpically,
+/// the solution wil be given the same name as the project.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///          Typical Organization of Solutions and Projects on teh Disk.
+/// //////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// When you create a new project, you specify the project's name, the
+/// solution's name, and a location on the disk where the solution should
+/// be stored, You specify this information at the buttom of the 
+/// New Project window, as shown in Fiure 1-45.
+/// 
+/// Let's use Figure 1-45 to see an ex of how the files for the My First
+/// Project solution and project will be organized on the disk. 
+/// Notice that in Figure 1-45, the following location
+/// is shown for the solution:
+/// 
+/// c:\users\tony\source\repos
+/// 
+/// On your system, the location will not be exactly the same as this,
+/// but it will be something similar. At this location, a solution folder
+/// name My First Project wull be created. If we use Windows to look inside
+/// that folder, we will see the two items shown in FIgure 1-46. Notice that
+/// one if the items is another folder named My First Project. That is the 
+/// project filder, whuch contains various files related to the project. The
+/// other item is the solution file. In Windows, you can double-click the 
+/// solution file to open the project in Visual Studio.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+///                         Opening an Existing Project
+/// //////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////////
+/// IF Visual Studio is already running, you can perform the sollowing steps
+/// to open an existing project:
+/// 
+///            * Click File on the Visual Studio menu bar, then select Open,
+///             and then select Project/solution...
+///             
+///         * The Open Project window will appear. Navigate to the desired 
+///           solution folder, select the solution file, and click Open. 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Tutorial 1-4: Opening an Existing Project
+/// 
+/// In this tutorial you will reopen the My First Project application that you carated in Tutoorial 1-2
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Setp:1      Visual Studio should still be rinning from the prevous tutorial.
+///             Click File on the menu bar; select Open and then select Project/Solution....
+///             The Open Project window will appear. Navigate to the My First Project solution, select the solution file, and click the Open button. My Firsy Project should be opened. If you plan to complete the next tutorial, leave Visual Studio running with My First Project opened.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// Displaying the Designer (When It Does Not Automatically Appear)
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+///        Sometimes when you open an existing project, the project's
+///        form will not be automatically displayed in the Designer.
+///        Figure 1-47 shows an example of the Visual Studio environment with
+///        an opened project but no form displayed in the Designer.
+///        When this happens, perform the following steps to display 
+///        the projects form in the Designer:
+///        
+///             * As shown in Figure 1-48, right-click Form1.cs in the Solution Explorer.
+///             
+///                 * Click View Designer in the pop-up menu.
+///                 
+/// //////////////////////////////////////////////////////////////////////////
+///                 Accessing the Visual Studio Documentation
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/////////////////////////////////////////////////////////////////////////////
+///You can access the documentation for Visual Studio by Clicking Help on the menu bar, and then selecting View Help. (or, you can press CTRL + R, and the press V on the keyboard). THis launches your Web broser and opens the online Microsofr Developer Network (MSDN) Libaray. The MSDN Library provides complete documentation for Visual C# as well as the other programming languages included in Visual Studio. You will also find code samples, tutoirials, atricales, and access to tutorial videos.
+///
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// Tutorial 1-5: Getting Familiar with the Visual Studio Environment
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// This exercise will give you practice interacting with the Solution Explorer window, the Properties window, and the Toolbox
+//////////////////////////////////////////////////////////////////////////
+///
+/// Setp:1  If Visual Studio is still running on your computer from the previous tutorial, continue to step 2. If Visual Studio is not running on your computer, repeat the steps in Tutorial 1-4 to open My First Project.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Setp:2
+/// Practice turning the Auto Hide feature on and off for the Solution Explorer window, the Properties window, and the Toolbox. Recall from out previous discussion that clicking the pushpin icon in each window's title bar turns Auto Hide on and off. When you are finished practicing, make sure Auto Hide is turned off for each of these windos. Your screen should look like Figure 1-41
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:3
+/// Setp:3Practice floating and docking the Solution Explorer window, the Propertices window, and the Toolbox. Recall from our previous discussion that you can make any of these windos float by right-clicking its title bar and selecting float. You dock a floating window by right-clicking its title bar selecting dock.
 /// //////////////////////////////////////////////////////////////////////////
 /// Setp:4
+/// The ToolBox, solution Explorer, and Properties windows each have a Close button in their upper-right corner. Close each of these windows by clicking its Close button
 /// 
 //////////////////////////////////////////////////////////////////////////
 //
 /// Setp:5
+/// Do you remember which buttonbs on the toolbar resote the Solution Explorer, (Properties window, and Toolbox? If not, move your mouse cursor over any button on the toolbar and leave it there until the ToolTip appears. Repeat this procedure on different buttons until you find the ones whose ToolTips read Solution Explorer, Properties Window, and Toolbox. 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:6
+/// Setp:6Click the appropriate buttons on the toobar to restore the Solution Explorer, the Properties window, and the Toolbox.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:7
+/// Setp:7Exit Visual Studio by clicking FIle on the menu bar and then clicking Exit. You may see a dialog box asking whether you wish to save changes to a number of items. CLick Yes.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
