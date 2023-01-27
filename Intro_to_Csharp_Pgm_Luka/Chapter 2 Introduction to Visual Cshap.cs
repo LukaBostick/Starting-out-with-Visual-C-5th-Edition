@@ -673,47 +673,47 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////
 /// Switching between the COde Editor and the Designer
 /// //////////////////////////////////////////////////////////////////////
-/// When you open the code editor, it appears in the same part of the screen as the designer. While devloping a Visual C# application,                               
+/// When you open the code editor, it appears in the same part of the screen as the designer. While devloping a Visual C# application, you will often find yourself needing to switch back and forth between the Designer and the code editor. One way to quickly switch between the two windows is to use the tabs shown in Figure 2-29. In the figure, notice that the leftmost tab reads Form1.cs. That is the tab for the code editor. The rightmost tab reads Form1.cs [Design]. That is the tab for the Designer. (The tabs may not always appear in this order.) To switch between the Designer and the code editor, you simply click the tab for the desired window.                       
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-29 Code editor and Designer tabs
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// You can also detach the code editor and move it to another part of the screen. This allows you to see the code tab and drag it to the desired location on the screen. (If you have multiple monitors connected to your computer, you can even drag the code editor to a different monitor.) To return the code editor to its position within the IDE, right-click the tab for the source code file in the code editor window and select Move to Main Document Grcument Group. This is shown in Figure 2-31.
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-30 Detaching the code editor by clicking and dragging
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-31 Returning the code editor to its docked position
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Add Your Own Code to a Project
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Now you are ready to learn how to add your own code to a project. Suppose you have created a project named Code Demo and set up the project's form with a Button control, as shown in Figure 2-32. The Button control's name is myButton, and its Text property is set to Click me!.
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-32 A form with a Button control
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Suppose you want the application to display the message Thanks for clicking the button! When the user click the button. To accomplish that, you need to write a special type of method known as an event handler. An event handler is a method that executes when a specified event takes plcace while an application is runnung. In this project you need to write an event handler that will execute when the user clicks the myButton control. To create the event handler, you double-click the myButton control in the Designer. This opens the Form1.cs file in the code editor, as shown in Figure 2-33, with some new code added to it.
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-33 The code window opened with event handler code generated
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// When an application is running and the user clicks a control, we say that a Click event has occurred on the control. The code that has been added to the Form1.cs file (shown in Figure 2-33) is an event hanfler that will execute when a click event occurs on the myButton control. For now you do not need to understand all parts of the event handler code. At this point, you need to understand only the following concepts:
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// * As shown in Figure 2-34, the event handler's name is myButton_Click. The myButton portion of the name indicates that the event handler is associated with the myButton control, and the Click portion of the name indicates thatthe event handler responds to Click events. This is the typical naming convention that Visual Studio uses when it generates event handler code. When you see the name myButton_Click, you understand that it is an event handler that executes when a click event occurs on the myButton control.
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// * The event handler that Visual Studio generates dosen't actually do anything. You can think of it as an empty container to which uyou can add your own code. Notice that the second lione of the event handler is an opening brace({) and the last line is a closing brace(}). Any code that you want executed when the user clicks the myButton control must be written between these braces.
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-34 A closer look at the event handler code
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Now you know how to create an empty Click event handler for a Button control. But what code do you write inside the event handler? in this examplw, we write code that displays the message Thanks for clicking the button! in a message box, which is a small pop=up window.
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Message Boxes
 /// //////////////////////////////////////////////////////////////////////
-/// 
+///  A message box is a small window, sometimes referred to as a dialog box, that displays a messasge. Figure 2-35 shows an example of a message box displaying the message  Thanks for clicking the button! Notice that the message box also has an OK button. When the user clicks the OK button, the message closes. 
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// Figure 2-35 A message box
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// The .NET Framework provides a method named MessageBox.Show that you can use in Visual C# to display a message box, If you want to execute the MEssageBox.Show method, you write a statement known as a method call. (Programmers refer to the action of excuting a method as calling the method.) The following statement shows an example of how you would call the MessaegBox.Show method to display the message box shown in Figure 2-35:
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// MessageBox.Show("Thanks for clicking the button!");
 /// //////////////////////////////////////////////////////////////////////
-/// 
+/// When you call the MessageBox.Show method
 /// //////////////////////////////////////////////////////////////////////
 ////
 ///
