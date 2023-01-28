@@ -365,7 +365,9 @@
  //////////////////////////////////////////////////////////////////////////
  Steps
  //////////////////////////////////////////////////////////////////////////
- Step 1: Make sure the Button control is selected. (IF you don't see the bounding box and sizing handles around the control, just click the contril to select it.)
+ Step 1: Make sure the Button control is selected. (IF you don't see the 
+bounding box and sizing handles around the control, just click the
+contril to select it.)
 
  Step 2: In the Properties window, locate the Text property.
 
@@ -408,11 +410,17 @@
 
 
  //////////////////////////////////////////////////////////////////////////
- Step1: Make sure the controls is selected. (If you do not see the bounding box and sizing handles around the control, just click the control to select it.)
+ Step1: Make sure the controls is selected. (If you do not see the bounding
+box and sizing handles around the control, just click the control to select it.)
 
- Step 2: In the Properties window, scroll up to the top of the list if properties. You should see the Name property, as shown in Figure 2-12. (The Name property is enclosed in parenthese to make it appear near the top of the alphabetical list of properties. This makes it easier to find.)
+ Step 2: In the Properties window, scroll up to the top of the list if 
+properties. You should see the Name property, as shown in Figure 2-12. 
+(The Name property is enclosed in parenthese to make it appear near the
+top of the alphabetical list of properties. This makes it easier to find.)
 
- Step 3: Click inside the area that holds the Name property's value and then delete the current name. Then, type the new name in its place and press the Enter key. You have successfully changed the name of the control
+ Step 3: Click inside the area that holds the Name property's value and 
+then delete the current name. Then, type the new name in its place and 
+press the Enter key. You have successfully changed the name of the control
 
  //////////////////////////////////////////////////////////////////////////
  
@@ -437,11 +445,14 @@
  //////////////////////////////////////////////////////////////////////////
 
  //////////////////////////////////////////////////////////////////////////
- Control names are also know as identifiers. When nameing a control, you must follow these rules for C# identifiers:
+ Control names are also know as identifiers. When nameing a control, 
+you must follow these rules for C# identifiers:
 
- * The first character muct be one of the letters a through z or A through Z or an underscore character(_).
+ * The first character muct be one of the letters a through z or A 
+ * through Z or an underscore character(_).
  * 
- * After the first character, you may use the letters a through z or A through Z, the digits 0 through 9, or underscores.
+ * After the first character, you may use the letters a through z or
+ * A through Z, the digits 0 through 9, or underscores.
 
  *The name cannot contain spaces.
 
@@ -459,7 +470,9 @@
  //////////////////////////////////////////////////////////////////////////
 
  //////////////////////////////////////////////////////////////////////////
- Because a control's name should reflect the control's purpose, programmers often find themselves creating names that are made of multiple words. For ex, consider the following button control names:
+ Because a control's name should reflect the control's purpose, programmers
+often find themselves creating names that are made of multiple words. 
+For ex, consider the following button control names:
  //////////////////////////////////////////////////////////////////////////
  
  //////////////////////////////////////////////////////////////////////////
@@ -478,7 +491,8 @@ names to make it more readable to the human eye.
 
 
  //////////////////////////////////////////////////////////////////////////
- Most C# programmers address this problem by using the camelCase naming convention for controls. camelCase names are written in the following manner:
+ Most C# programmers address this problem by using the camelCase naming
+convention for controls. camelCase names are written in the following manner:
 
  * you begin writing the name with lowercase letters.
  * 
@@ -548,9 +562,14 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// windows. The Visual Studio environment should appear
 /// as shown in Figure 2-15.
 /// 
-/// Step 5: Change the Form1 form's Text property to My First Program, as shown in Figure 2-16.
+/// Step 5: Change the Form1 form's Text property to My First Program,
+/// as shown in Figure 2-16.
 /// 
-/// Step 6: The form's default size is too large for this application, so you need to make it smaller. Use the technique discussed in the previous section to adjust the form's size with the mouse. The form should appear similar to that shown in Figure 2-17. (Don't worry about the form's exact size. Just make it appear similar to Figure 2-17.)
+/// Step 6: The form's default size is too large for this application,
+/// so you need to make it smaller. Use the technique discussed in the
+/// previous section to adjust the form's size with the mouse. The form
+/// should appear similar to that shown in Figure 2-17. (Don't worry
+/// about the form's exact size. Just make it appear similar to Figure 2-17.)
 /// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -560,7 +579,11 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 7: New you are ready to add a Button control to the form. Locate the Button tool in the Toolbox and double-click it. A Button control should ap[pear on the form, as shown in Figure 2-18. Move the Button control so it appears approximately in the center of the form, as shown in Figure 2-19.
+/// Step 7: New you are ready to add a Button control to the form.
+/// Locate the Button tool in the Toolbox and double-click it. A 
+/// Button control should ap[pear on the form, as shown in Figure 
+/// 2-18. Move the Button control so it appears approximately in 
+/// the center of the form, as shown in Figure 2-19.
 /// //////////////////////////////////////////////////////////////////////////
 /// Figure 2-18 A Button control created on the form
 /// //////////////////////////////////////////////////////////////////////////
@@ -571,14 +594,18 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 8: Change the value of the Button control's Text property to display Message. After doing this, notice that the text displayed on teh button has changed, as shown in Figure 2-10.
+/// Step 8: Change the value of the Button control's Text property to
+/// display Message. After doing this, notice that the text displayed
+/// on teh button has changed, as shown in Figure 2-10.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Figure 2-20 The Button control's Text property changed
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 9: The Button control isn't quiew large enough to accommodate all of the text that you typed into its Test property, so enlarge the Button control, as shown in Figure 2-21
+/// Step 9: The Button control isn't quiew large enough to accommodate
+/// all of the text that you typed into its Test property, so enlarge 
+/// the Button control, as shown in Figure 2-21
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -586,7 +613,9 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 9: The Button control isn't quite large enough to accommodate all of the text that you typed into its property, so enlarge the Button control, as shown in Figure 2-21. 
+/// Step 9: The Button control isn't quite large enough to accommodate all
+/// of the text that you typed into its property, so enlarge the Button 
+/// control, as shown in Figure 2-21. 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -594,7 +623,12 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 10: As discueed in the previous section, a control's name should reflect the puropse of the control. The Button control that you created in this application will cause a message to be displayed when it is clicked. The name button1 does not convey that purpose, however. Change the Button control's Name property to message Button. The Properties window should appear as shown in Figure 2-2
+/// Step 10: As discueed in the previous section, a control's name should
+/// reflect the puropse of the control. The Button control that you created
+/// in this application will cause a message to be displayed when it is
+/// clicked. The name button1 does not convey that purpose, however. Change 
+/// the Button control's Name property to message Button. The Properties 
+/// window should appear as shown in Figure 2-2
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
@@ -603,17 +637,28 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 11: Click file on the Visual Studio menu bar and then click saved all to save the project.
+/// Step 11: Click file on the Visual Studio menu bar and
+/// then click saved all to save the project.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 12: You're only partially finished with the application, but you can run it now to see how the GUI looks on the screen. To run the application, press the F5 key on the keyboard or click the Start Debugging button() on the toolbar. This causes the application to be comiled and executed. You will notice the appearance of the Visual Studio environment change somewhat, and you will see the application's form appear on the screen as shown in Figure 2-12.
+/// Step 12: You're only partially finished with the application, but you can
+/// run it now to see how the GUI looks on the screen. To run the application,
+/// press the F5 key on the keyboard or click the Start Debugging button() 
+/// on the toolbar. This causes the application to be comiled and executed.
+/// You will notice the appearance of the Visual Studio environment change 
+/// somewhat, and you will see the application's form appear on the screen
+/// as shown in Figure 2-12.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Figure 2-23 The application running
 /// //////////////////////////////////////////////////////////////////////////
 /// Although the application is running, it is not capable of doing anything
-/// other than displaying the form. If you click the Display Message button, nothing will happen. That is because you have not yet written the code that executes when the button is clicked. You will do that in the next tutorial. To end the application, click the standard Windows close button(X) in the form's upper-right corner.
+/// other than displaying the form. If you click the Display Message button,
+/// nothing will happen. That is because you have not yet written the code
+/// that executes when the button is clicked. You will do that in the next
+/// tutorial. To end the application, click the standard Windows close 
+/// button(X) in the form's upper-right corner.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -621,30 +666,64 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////////
 /// Concept
 /// //////////////////////////////////////////////////////////////////////////
-/// You use the Visual Studio code editor to write an application's code. Much of the code that you will write in an application wil be event hanflers. Even handlers respond to speficic events that take place while an application is running.
+/// You use the Visual Studio code editor to write an application's code.
+/// Much of the code that you will write in an application wil be event
+/// hanflers. Even handlers respond to speficic events that take place
+/// while an application is running.
 /// //////////////////////////////////////////////////////////////////////////
-/// In the previous sections of this chapter, you learned the basics of creatiing an application's GUI. An application is more than a user interface, however. If you want your application to pteform any meaningful actions, you have to write code. This section introduces you to Visual C# code and shows how to program an application to respond to button clicks. A file that contains program code is called a cource code file. When you start a C# windows Forms Application project. If you look at the Solution Expolrer, as shown in Fiogure 2-24, you will see the names of two source code files: Form1.cs and Program.cs. (C# source code files always end with the .cs extension.)
+/// In the previous sections of this chapter, you learned the basics
+/// of creatiing an application's GUI. An application is more than
+/// a user interface, however. If you want your application 
+/// to pteform any meaningful actions, you have to write code.
+/// This section introduces you to Visual C# code and shows how
+/// to program an application to respond to button clicks. 
+/// A file that contains program code is called a cource code file.
+/// When you start a C# windows Forms Application project. If you look at
+/// the Solution Expolrer, as shown in Fiogure 2-24, you will see the names
+/// of two source code files: Form1.cs and Program.cs. (C# source code files
+/// always end with the .cs extension.)
 /// //////////////////////////////////////////////////////////////////////////
 /// Figure 2-24 Source code files shown in the Solution Explorer
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Here is a brief description of the two files:
 /// //////////////////////////////////////////////////////////////////////////
- // * The Program.cs files contains the application's start-up code, which executes when the application runs. The code in this files performs behind-the-scenes initialization tasks that are necessary to get the application up and running. It is important that you do not modify the contents of this file because doing so could prevent the application from executing.
+ // * The Program.cs files contains the application's start-up code,
+which executes when the application runs. The code in this files 
+performs behind-the-scenes initialization tasks that are necessary
+to get the application up and running. It is important that you do
+not modify the contents of this file because doing so could prevent 
+the application from executing.
  /// //////////////////////////////////////////////////////////////////////
- /// * The Form1.cs file contrains code that is associated with the Form1 form. When you write code that defines some action related to Form1(such as responding to a button click), you will write the code in this file.
+ /// * The Form1.cs file contrains code that is associated with the 
+ /// Form1 form. When you write code that defines some action related
+ /// to Form1(such as responding to a button click), you will write 
+ /// the code in this file.
  /// //////////////////////////////////////////////////////////////////////
- /// Note You might see additional source code files in the Solution Explorer, other than those whown in Figure 2-24
+ /// Note You might see additional source code files in the Solution
+ /// Explorer, other than those whown in Figure 2-24
 //////////////////////////////////////////////////////////////////////
-///	 The Form1/cs files alreadu contains code that was generated by Visual Studio when the project was created. You think of this auto-generated code as an outline to which you can add your own code as you develop the application.
+///	 The Form1/cs files alreadu contains code that was generated by
+///	 Visual Studio when the project was created. You think of this
+///	 auto-generated code as an outline to which you can add your
+///	 own code as you develop the application.
 /// //////////////////////////////////////////////////////////////////////
-/// Let's take a look at the code. If you still have the Hello World program open from the previous tutorial, right-click Form1.cs in the Solution Explorer. A pop-up menu will appear, as shown in Figure 2-25. On the pop-up menu, click View Code. The file's contents will be displayed in the Visual Studio code editor, as shown in Figure 2-26.
+/// Let's take a look at the code. If you still have the Hello World
+/// program open from the previous tutorial, right-click Form1.cs in
+/// the Solution Explorer. A pop-up menu will appear, as shown in
+/// Figure 2-25. On the pop-up menu, click View Code. The file's 
+/// contents will be displayed in the Visual Studio code editor, 
+/// as shown in Figure 2-26.
 /////////////////////////////////////////////////////////////////////////
 ///Figure 2-25 Opening Form1.cs in the code editor
 /////////////////////////////////////////////////////////////////////////
 ///2-26 Form1.cs code displayed in the Visual Studio code editor
 /////////////////////////////////////////////////////////////////////////
-///At this point, it's not necessary for you to understand the meaning of the statements that you see in this code. It will be helpful for you to know how this code is organized, however, because later will add your own code to this file. C# code is primarily organized in three ways: namespaces, classes, and methods. Here's a summary:
+///At this point, it's not necessary for you to understand the meaning
+///of the statements that you see in this code. It will be helpful for
+///you to know how this code is organized, however, because later will
+///add your own code to this file. C# code is primarily organized in
+///three ways: namespaces, classes, and methods. Here's a summary:
 /////////////////////////////////////////////////////////////////////////
 ///* A namespace is a container that holds classes.
 ///
@@ -653,31 +732,70 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////
 /// *A method is a group of one or more programming statements that performs some operation.
 /// //////////////////////////////////////////////////////////////////////
-/// So, C# code is organized as methods, which are caontained inside classes, which are contrained inside namespaces. With this organization atructure in mind, look at Figure 2-17.
+/// So, C# code is organized as methods, which are caontained inside
+/// classes, which are contrained inside namespaces. With this
+/// organization atructure in mind, look at Figure 2-17.
 /// 
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-17 Organization of the Form1.cs code
 /// //////////////////////////////////////////////////////////////////////
-/// The figure shows four different sections of the code, marked with teh numbers 1,2,3, and 4. Let's discuss each section of code.
+/// The figure shows four different sections of the code, marked with the
+/// numbers 1,2,3, and 4. Let's discuss each section of code.
 /// //////////////////////////////////////////////////////////////////////
 /// 1. Recall from Chapter 1 that C# applications rely heavily on the .NET
-/// Framework, which is a collection of classes and other code. The code in the .NET Framework is organized into namespaces. The series of using directives that appears at the top of a C# sour ce code files indicate which namespaces in the .NET Framework the program will use.
+/// Framework, which is a collection of classes and other code. The code
+/// in the .NET Framework is organized into namespaces. The series of
+/// using directives that appears at the top of a C# sour ce code files
+/// indicate which namespaces in the .NET Framework the program will use.
 /// //////////////////////////////////////////////////////////////////////
-/// 2. This section of code creates a namespace for the project. The line that reads namespace Hello_World marks the beginning of a namespace named Hello_World. Notice that the next line contains an opening brace({) and that the last line in the file contains a corresponding closing brace (}). All the code that appears between these braces is inside the Hello_World namespace.
+/// 2. This section of code creates a namespace for the project. The line
+/// that reads namespace Hello_World marks the beginning of a namespace
+/// named Hello_World. Notice that the next line contains an opening 
+/// brace({) and that the last line in the file contains a corresponding
+/// closing brace (}). All the code that appears between these braces is 
+/// inside the Hello_World namespace.
 /// //////////////////////////////////////////////////////////////////////
-/// 3. This section of code is a class declaration. The line that reads public partial class, and so forth marks the beginning of the class. The next line contains an opening brace is ({), and the last line in this section of code contains a corresponding closing brace(}). All the code that appears between these braces is inside the class
+/// 3. This section of code is a class declaration. The line that reads
+/// public partial class, and so forth marks the beginning of the class.
+/// The next line contains an opening brace is ({), and the last line in
+/// this section of code contains a corresponding closing brace(}). All
+/// the code that appears between these braces is inside the class
 /// //////////////////////////////////////////////////////////////////////
-/// 4. This section of code is a method. The line that reads public Form1() marks the beginning of the method. The next line contains an opening brace(}), and the last line in this section of code contains a corresponding closing brace(}). The code that appears between these braces is inside the method.
+/// 4. This section of code is a method. The line that reads public
+/// Form1() marks the beginning of the method. The next line contains
+/// an opening brace(}), and the last line in this section of code 
+/// contains a corresponding closing brace(}). The code that appears 
+/// between these braces is inside the method.
 /// //////////////////////////////////////////////////////////////////////
-/// It's important to point out that code containser, such as namespcace, classes, and methods, use braces(}) to enclose code. Each opening brace ({) must have a corresponding closeing brace(}) at some point later point in the program. Figure 2-18 shows how the braces in Form1.cs are paired.
+/// It's important to point out that code containser, such as namespcace,
+/// classes, and methods, use braces(}) to enclose code. Each opening
+/// brace ({) must have a corresponding closeing brace(}) at some point
+/// later point in the program. Figure 2-18 shows how the braces in
+/// Form1.cs are paired.
 /// //////////////////////////////////////////////////////////////////////
 /// Switching between the COde Editor and the Designer
 /// //////////////////////////////////////////////////////////////////////
-/// When you open the code editor, it appears in the same part of the screen as the designer. While devloping a Visual C# application, you will often find yourself needing to switch back and forth between the Designer and the code editor. One way to quickly switch between the two windows is to use the tabs shown in Figure 2-29. In the figure, notice that the leftmost tab reads Form1.cs. That is the tab for the code editor. The rightmost tab reads Form1.cs [Design]. That is the tab for the Designer. (The tabs may not always appear in this order.) To switch between the Designer and the code editor, you simply click the tab for the desired window.                       
+/// When you open the code editor, it appears in the same part of the
+/// screen as the designer. While devloping a Visual C# application,
+/// you will often find yourself needing to switch back and forth between
+/// the Designer and the code editor. One way to quickly switch between
+/// the two windows is to use the tabs shown in Figure 2-29. In the 
+/// figure, notice that the leftmost tab reads Form1.cs. That is the 
+/// tab for the code editor. The rightmost tab reads Form1.cs [Design].
+/// That is the tab for the Designer. (The tabs may not always appear in
+/// this order.) To switch between the Designer and the code editor, you
+/// simply click the tab for the desired window.                       
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-29 Code editor and Designer tabs
 /// //////////////////////////////////////////////////////////////////////
-/// You can also detach the code editor and move it to another part of the screen. This allows you to see the code tab and drag it to the desired location on the screen. (If you have multiple monitors connected to your computer, you can even drag the code editor to a different monitor.) To return the code editor to its position within the IDE, right-click the tab for the source code file in the code editor window and select Move to Main Document Grcument Group. This is shown in Figure 2-31.
+/// You can also detach the code editor and move it to another part of the
+/// screen. This allows you to see the code tab and drag it to the desired
+/// location on the screen. (If you have multiple monitors connected to
+/// your computer, you can even drag the code editor to a different
+/// monitor.) To return the code editor to its position within the IDE,
+/// right-click the tab for the source code file in the code editor window 
+/// and select Move to Main Document Grcument Group.
+/// This is shown in Figure 2-31.
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-30 Detaching the code editor by clicking and dragging
 /// //////////////////////////////////////////////////////////////////////
@@ -685,38 +803,204 @@ Tutorial 2-1 leads you through the process of creatring the GUI
 /// //////////////////////////////////////////////////////////////////////
 /// Add Your Own Code to a Project
 /// //////////////////////////////////////////////////////////////////////
-/// Now you are ready to learn how to add your own code to a project. Suppose you have created a project named Code Demo and set up the project's form with a Button control, as shown in Figure 2-32. The Button control's name is myButton, and its Text property is set to Click me!.
+/// Now you are ready to learn how to add your own code to a project.
+/// Suppose you have created a project named Code Demo and set up the
+/// project's form with a Button control, as shown in Figure 2-32. The
+/// Button control's name is myButton, and its Text property is set to Click me!.
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-32 A form with a Button control
 /// //////////////////////////////////////////////////////////////////////
-/// Suppose you want the application to display the message Thanks for clicking the button! When the user click the button. To accomplish that, you need to write a special type of method known as an event handler. An event handler is a method that executes when a specified event takes plcace while an application is runnung. In this project you need to write an event handler that will execute when the user clicks the myButton control. To create the event handler, you double-click the myButton control in the Designer. This opens the Form1.cs file in the code editor, as shown in Figure 2-33, with some new code added to it.
+/// Suppose you want the application to display the message Thanks for
+/// clicking the button! When the user click the button. To accomplish
+/// that, you need to write a special type of method known as an event
+/// handler. An event handler is a method that executes when a specified
+/// event takes plcace while an application is runnung. In this project
+/// you need to write an event handler that will execute when the user
+/// clicks the myButton control. To create the event handler, you
+/// double-click the myButton control in the Designer. This opens the
+/// Form1.cs file in the code editor, as shown in Figure 2-33, with
+/// some new code added to it.
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-33 The code window opened with event handler code generated
 /// //////////////////////////////////////////////////////////////////////
-/// When an application is running and the user clicks a control, we say that a Click event has occurred on the control. The code that has been added to the Form1.cs file (shown in Figure 2-33) is an event hanfler that will execute when a click event occurs on the myButton control. For now you do not need to understand all parts of the event handler code. At this point, you need to understand only the following concepts:
+/// When an application is running and the user clicks a control, we say
+/// that a Click event has occurred on the control. The code that has been
+/// added to the Form1.cs file (shown in Figure 2-33) is an event hanfler
+/// that will execute when a click event occurs on the myButton control.
+/// For now you do not need to understand all parts of the event handler
+/// code. At this point, you need to understand only the following concepts:
 /// //////////////////////////////////////////////////////////////////////
-/// * As shown in Figure 2-34, the event handler's name is myButton_Click. The myButton portion of the name indicates that the event handler is associated with the myButton control, and the Click portion of the name indicates thatthe event handler responds to Click events. This is the typical naming convention that Visual Studio uses when it generates event handler code. When you see the name myButton_Click, you understand that it is an event handler that executes when a click event occurs on the myButton control.
+/// * As shown in Figure 2-34, the event handler's name is myButton_Click.
+/// The myButton portion of the name indicates that the event handler is
+/// associated with the myButton control, and the Click portion of the
+/// name indicates thatthe event handler responds to Click events.
+/// This is the typical naming convention that Visual Studio uses when
+/// it generates event handler code. When you see the name myButton_Click,
+/// you understand that it is an event handler that executes when a click
+/// event occurs on the myButton control.
 /// //////////////////////////////////////////////////////////////////////
-/// * The event handler that Visual Studio generates dosen't actually do anything. You can think of it as an empty container to which uyou can add your own code. Notice that the second lione of the event handler is an opening brace({) and the last line is a closing brace(}). Any code that you want executed when the user clicks the myButton control must be written between these braces.
+/// * The event handler that Visual Studio generates dosen't actually do
+/// anything. You can think of it as an empty container to which uyou can
+/// add your own code. Notice that the second lione of the event handler
+/// is an opening brace({) and the last line is a closing brace(}).
+/// Any code that you want executed when the user clicks the myButton
+/// control must be written between these braces.
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-34 A closer look at the event handler code
 /// //////////////////////////////////////////////////////////////////////
-/// Now you know how to create an empty Click event handler for a Button control. But what code do you write inside the event handler? in this examplw, we write code that displays the message Thanks for clicking the button! in a message box, which is a small pop=up window.
+/// Now you know how to create an empty Click event handler for a Button
+/// control. But what code do you write inside the event handler? in this
+/// examplw, we write code that displays the message Thanks for clicking
+/// the button! in a message box, which is a small pop=up window.
 /// //////////////////////////////////////////////////////////////////////
 /// Message Boxes
 /// //////////////////////////////////////////////////////////////////////
-///  A message box is a small window, sometimes referred to as a dialog box, that displays a messasge. Figure 2-35 shows an example of a message box displaying the message  Thanks for clicking the button! Notice that the message box also has an OK button. When the user clicks the OK button, the message closes. 
+///  A message box is a small window, sometimes referred to as a dialog
+///  box, that displays a messasge. Figure 2-35 shows an example of a
+///  message box displaying the message  Thanks for clicking the button!
+///  Notice that the message box also has an OK button. When the user
+///  clicks the OK button, the message closes. 
 /// //////////////////////////////////////////////////////////////////////
 /// Figure 2-35 A message box
 /// //////////////////////////////////////////////////////////////////////
-/// The .NET Framework provides a method named MessageBox.Show that you can use in Visual C# to display a message box, If you want to execute the MEssageBox.Show method, you write a statement known as a method call. (Programmers refer to the action of excuting a method as calling the method.) The following statement shows an example of how you would call the MessaegBox.Show method to display the message box shown in Figure 2-35:
+/// The .NET Framework provides a method named MessageBox.Show that you
+/// can use in Visual C# to display a message box, If you want to execute
+/// the MEssageBox.Show method, you write a statement known as a
+/// method call. (Programmers refer to the action of excuting a method
+/// as calling the method.) The following statement shows an example of
+/// how you would call the MessaegBox.Show method to display the message
+/// box shown in Figure 2-35:
 /// //////////////////////////////////////////////////////////////////////
 /// MessageBox.Show("Thanks for clicking the button!");
 /// //////////////////////////////////////////////////////////////////////
-/// When you call the MessageBox.Show method
+/// When you call the MessageBox.Show method, you write a string of
+/// characters inside the parentheses. (In ptogramming, we use the
+/// term string to mean string of characters.) The tring that is
+/// wrtten inside the parentheses will be displayed in the message
+/// box. in this example, the string ""Thanks for clicking the button!"
+/// is written in the parentheses.
 /// //////////////////////////////////////////////////////////////////////
-////
-///
+/// Notice that the string is enclosed in double quotation marks in the code. When the message is displayed (as shown in Figure 2-35), however, the double quotation marks do not appear. The double marks are required in the code to indicate the beginning and end of the string.
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// Also notice that a smenicolon appears at the end of the statement. This is required bhy C# syntax. Just as a period marks the end of a sentence, a semicolon marks the end of a programming statement in C#
+/// //////////////////////////////////////////////////////////////////
+/// Getting back to our Code Demo example project, Figure 2-36 shows how you can call the MessageBox.Show method form the myButton_Click event handler. After typing the statement as shown in the figure, you can press the F5 key on the keyboard, or click the Start Dubugging button on the tollbar to compile and run the application. When the application runs, it will display the form shown on the left in Figure 2-37. When you click the button, the message box shown on the right in the figure will appear. You can click the OK button on the message box to close it.
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-36 Event handler code for displaying a message box
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-37 The COde Demo project running 
+/// //////////////////////////////////////////////////////////////////
+/// Note When writing a Click event handler for a Button control, you might be wondering if it is necesssary to first double-click the Button control in the Designer, creating the empty event handler code. After all, couldn;t you just skip this step and instead open the code editor and write all the event handler code yourself? The answer is no, you cannot skip this step. When you double-clik a control in the Designer, Visual Studio not only creates an empty event handler, but it also writes some code that you don't see elsewhere in the project. this other code is neccssary for the event handler to properly function.
+/// //////////////////////////////////////////////////////////////////
+/// String Literals  
+/// //////////////////////////////////////////////////////////////////
+/// Programs almost always work with data of some type. For example, the code shown in Figure 2-36 uses the following string when it calls the MEssageBox.Shown method:
+/// //////////////////////////////////////////////////////////////////
+/// "Thanks for clicking the button!"
+/// //////////////////////////////////////////////////////////////////
+/// This string is data that is displayed 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// 
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// 
+/// 
+/// 
+/// 
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////
 /// 
 /// 
 /// 
