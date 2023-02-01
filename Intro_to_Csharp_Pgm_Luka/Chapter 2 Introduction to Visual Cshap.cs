@@ -3,7 +3,7 @@
  *
  *
  * //////////////////////////////////////////////////////////////////////////
- *//* //////////////////////////////////////////////////////////////////////////
+ * //////////////////////////////////////////////////////////////////////////
  *	Chapter 2 Intorduction to Visual C#
  * //////////////////////////////////////////////////////////////////////////
  *
@@ -880,73 +880,145 @@ the application from executing.
 /// box. in this example, the string ""Thanks for clicking the button!"
 /// is written in the parentheses.
 /// //////////////////////////////////////////////////////////////////////
-/// Notice that the string is enclosed in double quotation marks in the code. When the message is displayed (as shown in Figure 2-35), however, the double quotation marks do not appear. The double marks are required in the code to indicate the beginning and end of the string.
+/// Notice that the string is enclosed in double quotation marks in
+/// the code. When the message is displayed (as shown in Figure 2-35),
+/// however, the double quotation marks do not appear. The double
+/// marks are required in the code to indicate the beginning and 
+/// end of the string.
 /// 
 /// //////////////////////////////////////////////////////////////////
-/// Also notice that a smenicolon appears at the end of the statement. This is required bhy C# syntax. Just as a period marks the end of a sentence, a semicolon marks the end of a programming statement in C#
+/// Also notice that a smenicolon appears at the end of the statement.
+/// This is required bhy C# syntax. Just as a period marks the end of
+/// a sentence, a semicolon marks the end of a programming
+/// statement in C#
 /// //////////////////////////////////////////////////////////////////
-/// Getting back to our Code Demo example project, Figure 2-36 shows how you can call the MessageBox.Show method form the myButton_Click event handler. After typing the statement as shown in the figure, you can press the F5 key on the keyboard, or click the Start Dubugging button on the tollbar to compile and run the application. When the application runs, it will display the form shown on the left in Figure 2-37. When you click the button, the message box shown on the right in the figure will appear. You can click the OK button on the message box to close it.
+/// Getting back to our Code Demo example project, Figure 2-36 shows
+/// how you can call the MessageBox.Show method form the
+/// myButton_Click event handler. After typing the statement as shown
+/// in the figure, you can press the F5 key on the keyboard, or click
+/// the Start Dubugging button on the tollbar to compile and run the
+/// application. When the application runs, it will display the form
+/// shown on the left in Figure 2-37. When you click the button, the
+/// message box shown on the right in the figure will appear. You can
+/// click the OK button on the message box to close it.
 /// //////////////////////////////////////////////////////////////////
 /// Figure 2-36 Event handler code for displaying a message box
 /// //////////////////////////////////////////////////////////////////
 /// Figure 2-37 The COde Demo project running 
 /// //////////////////////////////////////////////////////////////////
-/// Note When writing a Click event handler for a Button control, you might be wondering if it is necesssary to first double-click the Button control in the Designer, creating the empty event handler code. After all, couldn;t you just skip this step and instead open the code editor and write all the event handler code yourself? The answer is no, you cannot skip this step. When you double-clik a control in the Designer, Visual Studio not only creates an empty event handler, but it also writes some code that you don't see elsewhere in the project. this other code is neccssary for the event handler to properly function.
+/// Note When writing a Click event handler for a Button control, you
+/// might be wondering if it is necesssary to first double-click the
+/// Button control in the Designer, creating the empty event handler
+/// code. After all, couldn;t you just skip this step and instead open
+/// the code editor and write all the event handler code yourself?
+/// The answer is no, you cannot skip this step. When you double-clik
+/// a control in the Designer, Visual Studio not only creates an empty
+/// event handler, but it also writes some code that you don't see
+/// elsewhere in the project. this other code is neccssary for the 
+/// event handler to properly function.
 /// //////////////////////////////////////////////////////////////////
 /// String Literals  
 /// //////////////////////////////////////////////////////////////////
-/// Programs almost always work with data of some type. For example, the code shown in Figure 2-36 uses the following string when it calls the MEssageBox.Shown method:
+/// Programs almost always work with data of some type. For example,
+/// the code shown in Figure 2-36 uses the following string when it
+/// calls the MEssageBox.Shown method:
 /// //////////////////////////////////////////////////////////////////
 /// "Thanks for clicking the button!"
 /// //////////////////////////////////////////////////////////////////
-/// This string is data that is displayed 
+/// This string is the data that is displayed by the program. When a piece
+/// of data is written into a program's code, it's called a literal
+/// (because the data is literally written into the program).
+/// When a string is wrtten into a program's code, it's called a
+/// string literal. In C# string literals must be enclosed
+/// in double quotation marks.
 /// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// 
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
+/// Note: Programmer sometimes say that literals are values that are hard
+/// coded into a program because the value of a literal cannot change
+/// while the program is running.
 /// 
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Multiple Buttons with event Handlers
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// The Code Demo project previously shown has only one button with
+/// a Click event handler. Many of the application that will develop
+/// will have multiple buttons, each with its own CLick event handler.
+/// For example, the form shown in Figure 2-38 has three Button
+/// controls. As shown in the figure, the controls are named
+/// firstButton, secondButton, and thirdButton.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// To create Click event handlers for the button, you simply
+/// double-click each Button control in the Designer and an empty
+/// event handler will be created in the form's source code file.
+/// The names of the Click event handlers will be firstButton_CLick,
+/// secondButton_Click, and thridButton_Click. Figure 2-39 shows an 
+/// example of the form;s source code after the three event handlers
+/// have been created and MessageBos.Shown statement has been added
+/// to each one.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Design Time and Run Time
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// When you have a project open in Visual Studio, the time during
+/// which you build the GIU and write the application's code is
+/// reffered to as design time. During design time, you can use the
+/// Designer and the Toolbox to place controls on the form, use the
+/// Properties window to set property values, use the code editor
+/// to write code, and so forth. This is the phase during which
+/// you create or modify the application.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// When you are ready to run a project that you have open in visual
+/// studio, you press F5 key on the keyboard or click the Start
+/// Debugging button on the toolbar. The project will be compiled,
+/// and if there were no errors, it will be executed. The time during
+/// which an application is executing is referred to as run time.
+/// During run time, you can can interact with the running
+/// application, but you cannot use the Designer, the Toolbox, the
+/// Properties window, the code editor, or parts of Visual Studio
+/// to make changes to it.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Note: In computing literature and on the Web, you will see the
+/// term run time also spelled as runtime or run-time. All these 
+/// variations typically mean the same thing.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// 2.4 Writing Code for the Hello World Application
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Now you know everthing necessary to complete the Hello World
+/// project. In Tutorial 2-2, you will open the project and add
+/// a Click event handler for the messageButton control.
+/// The event handler will call the MessageBox.Shown method to display
+/// a message box with the message Hello World.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Tutorial 2-2: Writing COde for the Hello World Application
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Step 1:	If visual Studio is not already running, start it.
+/// Open the Hello World project that you started in Tutorial 2-1.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Step 2: Make sure Form 1 form is visible in the Designer, as shown
+/// in Figure 2-40 if it is not, right-click Form1.cs in the COlution
+/// Explorer and the nselect View Designer from the pop-up menu.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Step 3: IN the Designer, double-click the messageButton control.
+/// This should cause the code editor to appear as shown in Figure
+/// 2-41. Notice that an empty event handler named
+/// messageButton_Click has been created.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Inside the messageButton_Click event handler, type the following
+/// statement exactly as it is shown:
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// MessageBox.Show("Hello World");
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Don't forget to type the semicolon at the end of the statement!
+/// When you have finished, the code window should look like Figure 2-42.
 /// //////////////////////////////////////////////////////////////////
-/// 
+///	Step 5 Save the project 
+/// //////////////////////////////////////////////////////////////////
+/// Step 6: Press the F5 key on the keyboard, or click the Start
+/// Dubugging button on the toolbar to compile and run the application.
+/// //////////////////////////////////////////////////////////////////
+/// Note If you typed the statement correctly inside the messageButton_Click event handler (in Step 4), the application should run. IF you did not type the statement correctly, however, a window will appear reporting build errors. If that statement correctly, however, a window will appear reporting build errors. If that happens, click the No button in the window and then correct the statement so it appears exactly as shown in Figure 2-24.
+/// //////////////////////////////////////////////////////////////////
+/// When the application runs, it will display the form shown on the left in Figure 2-43. When you click the Display Message button, the message box shown on the right in the figure will appear. You can click OK button on the message box to close it.
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-43 The Hello World application running
 /// //////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////
