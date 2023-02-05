@@ -1360,13 +1360,37 @@ the application from executing.
 /// each of the controls on the form, refer to Tabel 2-3 for the
 /// relevant property settings.
 /// //////////////////////////////////////////////////////////////////
-/// Step 3: Once you have the form and its controls set up, you can create the click event 
+/// Step 3: Once you have the form and its controls set up, you can
+/// create the click event handlers for the Button controls. In the
+/// Designer, double-click the italianButton control. This will open
+/// the code editor, and you will see an empty event handler named
+/// italianButton_Click. Write the following statement inside 
+/// the event handler:
 /// //////////////////////////////////////////////////////////////////
+///				translationLabel.Text = "Buongiorno";
 /// //////////////////////////////////////////////////////////////////
+/// Step 4: Switch your view back to the Designer and double-click
+/// the spanishButton control. In the code editot you will see an
+/// empty event handler named spanishButton_CLick. Write the
+/// following statment inside the event handler:
+/// 
 /// //////////////////////////////////////////////////////////////////
+///				translationLabel.Text = "Buenos Dias";
 /// //////////////////////////////////////////////////////////////////
+/// Step 5: Switch your view back to the Designer and double-click the
+/// germanButton control. IN the code editor you will see an empty
+/// event handler named germanButton_Click. Write the fllowing
+/// statement inside the event handler:
 /// //////////////////////////////////////////////////////////////////
+///				translationLabel.Text = "Guten Morgen";
 /// //////////////////////////////////////////////////////////////////
+/// Step 6: The form's code should now appear as shown in Program 2-1.
+/// Note that the line numbers are not part of the code. The line
+/// numbers are shown so that you and your instructor can more easily
+/// refer to different parts of the program. The lines that appear
+/// in boldface are the ones that you typed. Make sure the code you
+/// typed appears exactly as shown here. (Don't forget the
+/// semicolons!))
 /// //////////////////////////////////////////////////////////////////
 /// //////////////////////////////////////////////////////////////////
 /// //////////////////////////////////////////////////////////////////
