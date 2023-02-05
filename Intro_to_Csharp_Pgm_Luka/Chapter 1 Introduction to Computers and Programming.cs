@@ -1201,7 +1201,10 @@ In this even, the program development cycle starts over and continues until no e
 /// //////////////////////////////////////////////////////////////////////////
 /// Setp:1      Visual Studio should still be rinning from the prevous tutorial.
 ///             Click File on the menu bar; select Open and then select Project/Solution....
-///             The Open Project window will appear. Navigate to the My First Project solution, select the solution file, and click the Open button. My Firsy Project should be opened. If you plan to complete the next tutorial, leave Visual Studio running with My First Project opened.
+///             The Open Project window will appear. Navigate to the My First
+///             Project solution, select the solution file, and click the Open
+///             button. My Firsy Project should be opened. If you plan to
+///             complete the next tutorial, leave Visual Studio running with My First Project opened.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// Displaying the Designer (When It Does Not Automatically Appear)
@@ -1223,7 +1226,13 @@ In this even, the program development cycle starts over and continues until no e
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /////////////////////////////////////////////////////////////////////////////
-///You can access the documentation for Visual Studio by Clicking Help on the menu bar, and then selecting View Help. (or, you can press CTRL + R, and the press V on the keyboard). THis launches your Web broser and opens the online Microsofr Developer Network (MSDN) Libaray. The MSDN Library provides complete documentation for Visual C# as well as the other programming languages included in Visual Studio. You will also find code samples, tutoirials, atricales, and access to tutorial videos.
+///You can access the documentation for Visual Studio by Clicking Help on the
+///menu bar, and then selecting View Help. (or, you can press CTRL + R, and 
+///the press V on the keyboard). THis launches your Web broser and opens the
+///online Microsofr Developer Network (MSDN) Libaray. The MSDN Library 
+///provides complete documentation for Visual C# as well as the other
+///programming languages included in Visual Studio. You will also find
+///code samples, tutoirials, atricales, and access to tutorial videos.
 ///
 /// //////////////////////////////////////////////////////////////////////////
 /// 
@@ -1234,34 +1243,55 @@ In this even, the program development cycle starts over and continues until no e
 /// Tutorial 1-5: Getting Familiar with the Visual Studio Environment
 /// //////////////////////////////////////////////////////////////////////////
 /// 
-/// This exercise will give you practice interacting with the Solution Explorer window, the Properties window, and the Toolbox
+/// This exercise will give you practice interacting with the Solution
+/// Explorer window, the Properties window, and the Toolbox
 //////////////////////////////////////////////////////////////////////////
 ///
-/// Setp:1  If Visual Studio is still running on your computer from the previous tutorial, continue to step 2. If Visual Studio is not running on your computer, repeat the steps in Tutorial 1-4 to open My First Project.
+/// Setp:1  If Visual Studio is still running on your computer from the
+/// previous tutorial, continue to step 2. If Visual Studio is not running 
+/// on your computer, repeat the steps in Tutorial 1-4 to open My First Project.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Setp:2
-/// Practice turning the Auto Hide feature on and off for the Solution Explorer window, the Properties window, and the Toolbox. Recall from out previous discussion that clicking the pushpin icon in each window's title bar turns Auto Hide on and off. When you are finished practicing, make sure Auto Hide is turned off for each of these windos. Your screen should look like Figure 1-41
+/// Practice turning the Auto Hide feature on and off for the Solution
+/// Explorer window, the Properties window, and the Toolbox. Recall from
+/// out previous discussion that clicking the pushpin icon in each window's
+/// title bar turns Auto Hide on and off. When you are finished practicing,
+/// make sure Auto Hide is turned off for each of these windos. Your screen
+/// should look like Figure 1-41
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:3Practice floating and docking the Solution Explorer window, the Propertices window, and the Toolbox. Recall from our previous discussion that you can make any of these windos float by right-clicking its title bar and selecting float. You dock a floating window by right-clicking its title bar selecting dock.
+/// Setp:3Practice floating and docking the Solution Explorer window,
+/// the Propertices window, and the Toolbox. Recall from our previous
+/// discussion that you can make any of these windos float by right-clicking
+/// its title bar and selecting float. You dock a floating window by
+/// right-clicking its title bar selecting dock.
 /// //////////////////////////////////////////////////////////////////////////
 /// Setp:4
-/// The ToolBox, solution Explorer, and Properties windows each have a Close button in their upper-right corner. Close each of these windows by clicking its Close button
+/// The ToolBox, solution Explorer, and Properties windows each have a
+/// Close button in their upper-right corner. Close each of these windows
+/// by clicking its Close button
 /// 
 //////////////////////////////////////////////////////////////////////////
 //
 /// Setp:5
-/// Do you remember which buttonbs on the toolbar resote the Solution Explorer, (Properties window, and Toolbox? If not, move your mouse cursor over any button on the toolbar and leave it there until the ToolTip appears. Repeat this procedure on different buttons until you find the ones whose ToolTips read Solution Explorer, Properties Window, and Toolbox. 
+/// Do you remember which buttons on the toolbar resote the Solution Explorer,
+/// (Properties window, and Toolbox? If not, move your mouse cursor over any
+/// button on the toolbar and leave it there until the ToolTip appears.
+/// Repeat this procedure on different buttons until you find the ones
+/// whose ToolTips read Solution Explorer, Properties Window, and Toolbox. 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:6Click the appropriate buttons on the toobar to restore the Solution Explorer, the Properties window, and the Toolbox.
+/// Setp:6Click the appropriate buttons on the toobar to restore the Solution
+/// Explorer, the Properties window, and the Toolbox.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Setp:7Exit Visual Studio by clicking FIle on the menu bar and then clicking Exit. You may see a dialog box asking whether you wish to save changes to a number of items. CLick Yes.
+/// Setp:7Exit Visual Studio by clicking FIle on the menu bar and then
+/// clicking Exit. You may see a dialog box asking whether you wish to
+/// save changes to a number of items. CLick Yes.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////

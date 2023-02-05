@@ -1077,7 +1077,18 @@ the application from executing.
 /// //////////////////////////////////////////////////////////////////
 /// The Font Property
 /// //////////////////////////////////////////////////////////////////
-/// If you want to change the apperance of a LAbel control's text, you can change the control's Font property. The Font property allows you to set the font, font style, and size of the control's text. When you select the Font property in the Properties window, you will notice that an ellipses button (...) appears next to thge property's value, as shown in Figure Figure 2-47. When you click the ellipses button, the Font dialog box appears next to the property's value, as shown in Figure Figure 2-48. Select a font, font style, and size, and click OK. The text displayed by the control will be updated with the selected attributes. For example, Figure 2-49 shows a Label control with the following Font property attributes:
+/// If you want to change the apperance of a LAbel control's text,
+/// you can change the control's Font property. The Font property
+/// allows you to set the font, font style, and size of the control's
+/// text. When you select the Font property in the Properties window,
+/// you will notice that an ellipses button (...) appears next to the
+/// property's value, as shown in Figure Figure 2-47. When you click
+/// the ellipses button, the Font dialog box appears next to the 
+/// property's value, as shown in Figure Figure 2-48. Select a font,
+/// font style, and size, and click OK. The text displayed by the
+/// control will be updated with the selected attributes. For example,
+/// Figure 2-49 shows a Label control with the following Font property
+/// attributes:
 /// //////////////////////////////////////////////////////////////////
 /// Font: Lucida Handwriting
 /// 
@@ -1093,58 +1104,276 @@ the application from executing.
 /// //////////////////////////////////////////////////////////////////
 /// Figure 2-49 A label's appearance with altered font attributes
 /// //////////////////////////////////////////////////////////////////
-/// The
+/// The BorderStyke Prioerty
+/// //////////////////////////////////////////////////////////////////
+/// Label controls have a BorderStyle property that allows you to 
+/// display a boarder around the control's text. The BorderStyle
+/// property may have one of three values: None, FixedSingle, or
+/// Fixed3D. The property is set to None dy default, which means
+/// that no border will appear arounf the control's text. If the
+/// BorderStyle propertyis set to Fixed3D, the control's text will
+/// have a recessed 3D appearance. Figure 2-50 shows an example of
+/// Label control with each BoarderStyle setting. The inage on the
+/// left in the figure shows the form in the Designer, and the image
+/// on the right shows the form at runtime.
+/// //////////////////////////////////////////////////////////////////
+/// Figure shows the form in the Designer, and the image on the
+/// right shows the form in the Designer, and the image on the right
+/// shows the form at runtime.
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-50 BoarderStyle examples
+/// //////////////////////////////////////////////////////////////////
+/// To change the BoarderStyle property, select it in the Properties
+/// windows and then click the down arrow button that appears next
+/// to the property's value. AS shown in Figure 2-51, a drop-down
+/// list will appear containing the three possible values for this
+/// property. Select the desired value and the control's text 
+/// will be updated.
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-51 BoarderStyle selections
+/// //////////////////////////////////////////////////////////////////
+/// The AutoSize Property
+/// //////////////////////////////////////////////////////////////////
+/// Label controls have an AutoSize property that controls the way
+/// they cam be resized. The AutoSized property is a Boolean property,
+/// which means that it can be set to one of two possible values:
+/// True or False. By default, a Label control's AutoSize property
+/// is set to True, which means that the control automatically resizes
+/// itseld to accommodate the size of the text it displays.
+/// For example, look at the three Label controls in Figure
+/// 2-52. Each of the controls displays different amounts of text
+/// at different font sizes. Because each control's BoarderStyle
+/// property is set to Fized Single, you can see that each control
+/// is just large enough to accommodate its text.
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-52 Label controls with AutoSize set to True
+/// //////////////////////////////////////////////////////////////////
+/// When a LAbel control's SutoSize property is set to True, you
+/// cannot manuially change the size of the control by clicking and
+/// dragging its bounding box. If you want to manually change the
+/// size of a Label control you have to set its AutoSize property
+/// to False. WHen AutoSize is set to False, sizing handles will
+/// appear around the control, allowing you click and drag the
+/// bounding box to resize the control. Figure 2-53 shows an example.
+/// In the figure, the Label control has been resized so it is much
+/// larger than the text it displays.
 /// //////////////////////////////////////////////////////////////////
 /// 
+/// Figure 2-53 Label control with AutoSize set to False
 /// //////////////////////////////////////////////////////////////////
+/// Note WHen a LAbel control's AutoSize property is set to True,
+/// the label's text will always appear on one line. When the AutoSize
+/// property is set to False, the label's text will wrap across
+/// multiple line if it is too long to fit one line.
+/// //////////////////////////////////////////////////////////////////
+/// The TextAlign Property
+/// //////////////////////////////////////////////////////////////////
+/// When you set a LAbel control's AutoSize property to False and
+/// the nmanually resize the control, it sometimes becaomes necessary
+/// to change the way the label's text is aligned. By default, a
+/// label's text is aligned with the top and left edges of the
+/// label's bounding box. For example, look at the label shown
+/// in Figure 2-53. Notice how the text is positioned in the the
+/// lower-right cornner? We can change the text's alignmetn in the
+/// label with the TextAlign property. The TextAlign property may
+/// be set to any of the following values: TopLeft, TopCenter,
+/// TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft,
+/// BottomCenter, or BottomRight. Figure 2-54 shows nine Label
+/// controls, each with a different TextAlign value.
+/// //////////////////////////////////////////////////////////////////
+///		Figure 2-54 Text alignments
+/// //////////////////////////////////////////////////////////////////
+/// To change the TextAlign property, elecet it in the Properties
+/// window and the click the down-arrow button that appears next 
+/// to its value. This causes a dialog box with nine buttons, as
+/// shown in the left image in Figure 2-55, to appear. As shown
+/// on the right image in the figure, the nine buttons represent
+/// the valid settings of the TextAlign property.
+/// //////////////////////////////////////////////////////////////////
+/// Using Code to Display Output in a Label Control
+/// //////////////////////////////////////////////////////////////////
+/// In addition to displaying unchanging text on a form, Label
+/// controls are also useful for displaying ooutput while an
+/// application is running. For example, suppose you are creating
+/// an application that performs a calculation and you want to
+/// display the result of the calculation at a specific location
+/// on the form. Using a Label control to display the output would
+/// be an ideal solution. Here are the general
+/// steps that you would follow:
+/// //////////////////////////////////////////////////////////////////
+/// Step 1: While creating the application's GUI, you plae a Label
+/// control on the form at the locatuion where you want the result
+/// to be displayed. Then, in the PRoperties window, you erase the
+/// contrents of the Label control's Text property. Because the
+/// control's Text property is empty, control will initially display
+/// anything when the application runs.
+/// 
+/// Step 2: IN the application's code, you write the necessary 
+/// statements to preform the calculation and then you store the 
+/// results of the calculation in the Label control's Text property.
+/// This causes the result to be displayed on the form in the Label
+/// control.
+/// //////////////////////////////////////////////////////////////////
+/// Note We do not discuss calculations until Chapter 3, so in this
+/// chapter we looks at examples that display nonmathematical
+/// data as output in Label controls.
+/// //////////////////////////////////////////////////////////////////
+/// In code, you use an assignment statement to store a value in a
+/// control's property. For Example, suppose you have created a Label
+/// control and named it outputLabel. The following assignment 
+/// statement stores the string "Thank you very much" in the controls
+/// Text property.
+/// //////////////////////////////////////////////////////////////////
+/// outputLabel.Text = "Thank you very much";
+/// //////////////////////////////////////////////////////////////////
+/// The equal sign (=) is know as the assignment operator. It assigns the
+/// value that appears on its right side to the item that appears on its
+/// left side. In this example, the item is on the left of the
+/// assignment operator is the expression outputLabel.Text. This is
+/// simply the outputLabel control's Text property. The value on the
+/// right side of the assignment operator is the string ""Thank you
+/// very much". When this statement executes, the string "Thank you
+/// very much" is assigned to the outputLabel control's Text property.
+/// When this statement executes, the text Thank you very much is
+/// displayed in the Label control.
+/// //////////////////////////////////////////////////////////////////
+/// WARNING! When writing assignment statements, remeber that the item
+/// receiving the value much be on the left side of the = operator.
+/// The following statement, for example, is wrong and will cause an
+/// error when you compile the program:
+/// "Thank you very much" = outputLabel; <- ERROR!
+/// //////////////////////////////////////////////////////////////////
+/// Note The standard notation for referring to a control's property in code is:
+/// //////////////////////////////////////////////////////////////////
+/// ControlName.PropertyName
+/// //////////////////////////////////////////////////////////////////
+/// Let's look at an example application that uses a Label control to display output.
+/// Make sure you have downloaded the student sample programs from the book's companion Web site ()
+/// https://media.pearsoncmg.com/ph/esm/ecs_gaddis_sowvcsharp_5/cw/index.php#videonotes
+/// https://media.pearsoncmg.com/ph/esm/ecs_gaddis_sowvcsharp_5/cw/index.php.
+/// In the Chap02 folder, you will find a project named Presidential
+/// Trivia. The purpose of the application is to display a trivia
+/// question about a former U.S. president. When the user clicks
+/// a button, the answer to the trivia question is displayed on 
+/// the form. The project's form appears as shown in Figure 2-56.
+///  //////////////////////////////////////////////////////////////////
+///  As shown in the figure, the form has the three controls:
+///  
+///	 * A LAbel control named questionLabel.
+///	 This label displays the trivia question.
+///	 
+///  * A LAbel control named answerLabel.
+///  This label initially appears empty, but will be used to display
+///  the answer to the trivia question.
+///  
+/// * A Button control named showAnswerButton. When the user clicks
+///  this button, the answer to the trivia question is displayed.
+///  //////////////////////////////////////////////////////////////////
+///  Table 2-2 lists the property settings for each control of which you should take note.
+///  //////////////////////////////////////////////////////////////////
+///  __________________________________________________________________
+///  |Control Name		Control Type			Property Settings	  |													     	  |
+///  |----------------------------------------------------------------|
+///  |questionLabel1|    LAbel    |AutoSize:False 					  |
+///  |				|			  |BorderStyle: None	              |
+///  |				|			  |Font: Microsoft Sans Serif         |
+///	 |              |			  |	(Style: Regular, Size: 10 point)  |
+///  |              |             |Text: What former U.S president is |
+///	 |				|			  |known for going on an African      |
+///  |	    		|			  |TextAlign: MiddleCenter            |
+///  |              |             |                                   |
+///  |--------------|-------------|-----------------------------------|
+///  |answerLAbel   |   Label     |AutoSize:False                     |
+///  |				|			  |BorderStyle: FixedSingle           |
+///  |				|			  | Font: Microsoft Sans Serif        |
+///	 |				|			  |	 (Style: Bold, Size: 10 point)    |
+///  |				|			  |Text(the contents of the Text      |
+///  |				|    		  |		property have been erased.)   |
+///	 |				|	    	  |	TextAlign: MiddleCenter           |
+///  |			    |		      |             					  |
+///  |--------------|-------------|-----------------------------------|
+///  |showAnswer    | Button      |   Size: 110,23                    |
+///  | Button       |             |   Text: Show the Answer           |
+///  |              |             |                                   |
+///  ------------------------------------------------------------------
+///  //////////////////////////////////////////////////////////////////
+/// If we open the Form1.cs files in the vode editor, we see the code
+/// shown in Figure 2-57. (To open the file in the code window,
+/// right-click Form1.cs in the Solution Explorer and then select
+/// View Code.) Notice the method na,ed showAnswerButton_Click.
+/// This is the Click event handler for the showAnswerButton control.
+/// It contains the following statement:
+///  
+///  //////////////////////////////////////////////////////////////////
+///  answerLabel.Text = "Theodore Roosevelt";
+///  //////////////////////////////////////////////////////////////////
+///  When this statement executes, it assigns the string
+///  "Theodore Roosevelt" to the answerLabel control's Text property.
+///  As a result, Theodore Roosevelt is displayed in the label control.
+///  //////////////////////////////////////////////////////////////////
+///  When you run the application, the form appears as shown on the left in Figure 2-58. Click the Show the Anser button and the answer to the trivia question appears as shown on the right in the figure.
+///  //////////////////////////////////////////////////////////////////
+///             The Text Property Accepts Strings Only
+///  //////////////////////////////////////////////////////////////////
+///  it is importans to point out the LAbel control's Text property 
+///  can accept strings only. You cannot assign a number to tthe Text
+///  property. For example, let's assume that an application has a
+///  Label control named resultLabel. The following statement will
+///  cause an error because it is attempting to store the number 5
+///  in the resulyLabel control's Text property:
+///  //////////////////////////////////////////////////////////////////
+///				resultLAbel.Text = 5; <-- ERROR!
+///  //////////////////////////////////////////////////////////////////
+///  This does not mean that you cannot display a number in a label,
+///  however. If you put quotation mark around the number,
+///  it becomes a string. The following statement will work:
+/// //////////////////////////////////////////////////////////////////
+///					resultLabel.Text = "5"
+/// //////////////////////////////////////////////////////////////////
+///						Clearing a Label
+/// //////////////////////////////////////////////////////////////////
+/// In code, if you want to clear the text that is displayed in a
+/// Label control, simply assign an empty string ("") to the control's
+/// Text property, as shown here:
+/// //////////////////////////////////////////////////////////////////
+///						answerLabel.Text = "";
+/// //////////////////////////////////////////////////////////////////
+/// In Tutorial 2-3, you work with some of the LAbel control
+/// properties that we have discussed in this section.
+/// //////////////////////////////////////////////////////////////////
+/// Tutorial 2-3: Creating the Language Translator Application
+/// //////////////////////////////////////////////////////////////////
+/// In this tutorial, you create an application that displays the
+/// phrase"Good Morning" in different languages. The form will have 
+/// three buttons: one for Italian, one for Spanish, and oone for
+/// German. When the user clicks any of these buttons, the translated
+/// phrase will appear in a Label control.
 /// 
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Step1: Start Visual Studio and begin a new Windows Forms
+/// Application project named Language Translator.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Step 2: Set up the application's form as shown in Figure 2-59.
+/// Notice that the form's Text property is set to Language Translator.
+/// The form has two LAbel controls and three Button controls.
+/// The names of the controls are shown in the figure. As you place 
+/// each of the controls on the form, refer to Tabel 2-3 for the
+/// relevant property settings.
 /// //////////////////////////////////////////////////////////////////
-/// 
+/// Step 3: Once you have the form and its controls set up, you can create the click event 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
 /// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// 
+///  //////////////////////////////////////////////////////////////////
+///  //////////////////////////////////////////////////////////////////
 /// //////////////////////////////////////////////////////////////////
