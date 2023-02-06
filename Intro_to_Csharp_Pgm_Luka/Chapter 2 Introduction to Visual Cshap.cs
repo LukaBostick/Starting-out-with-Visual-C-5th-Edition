@@ -1455,42 +1455,157 @@ the application from executing.
 /// encouraged to experiment with it as you write code in future
 /// projects. Which a little practice, it will become intuitive.
 /// //////////////////////////////////////////////////////////////////
+///						2.7 PictureBox Controls
 /// //////////////////////////////////////////////////////////////////
+/// Cencept: A PictureBox control displays a graphic image on a form.
+/// PictureBox controls have properties fpr controlling the way the image
+/// is displayed. A PictureBox controls can have a Click event handler
+/// that responds when the user clicks the controls at runtime.
 /// //////////////////////////////////////////////////////////////////
+/// You can use a PictureBox control to display a graphic image
+/// on a form. A pictureBox control can display images that have been
+/// saved in the bitmap, GIF, JPEG, metafile, or icon graphics formats.
 /// //////////////////////////////////////////////////////////////////
+/// In the Toolbox, the PictureBox tool is located in the Common
+/// Controls  groups. When you doublee-click the tool, an empty
+/// PictureBox control is created on teh from, as shown in Figure
+/// 2-63. Althought the controls dose not yet display an image, it has
+/// a bounding box that shows its size and location, as well as sizing
+/// handles. When you create PictureBox controls, they are
+/// automatically given default names such as pictureBox1,
+/// pictureBox2, and so forth. You should always change the default
+/// name to something more meaningful.
 /// //////////////////////////////////////////////////////////////////
+/// Once you have created a PictureBox control, you use its Image
+/// property to spicify the image that it will display.
+/// Follow these steps:
 /// //////////////////////////////////////////////////////////////////
+/// Step 1: CLick the Image property in the Properties window. An
+/// ellipses button (...) will appear, as shown on the left in
+/// Figure 2-64
+/// 
+/// Step 2: Click the ellipses button and the Select Resource window, shown on the right in Figure 2-64, will appear.
+/// 
+/// Step 3: In the Select Resource window, click the Import button. An Open dialog box will appear. Use the dialog box to locate and select the image file that you want to display.
+/// 
+/// Step 4: After you select an image file, you will see its contents displayed in the Select Resource window. This inddicates that the image has been impoerted into the project. Figure 2-65 shows an example of the Select Resource window after we have selected and imported an image.
+/// 
+/// Step 5: Click the OK button in the Select Resource window, and the selected image will appear in the PIctureBox control. Figure 2-66 shows an example. Depending on the size of the image, you might see only part of it displayed. This is this case in Figure 2-66 beccause the image is larger than the PictureBox control. Your next step is to set the SizeMode property and adjust the size of the control.
 /// //////////////////////////////////////////////////////////////////
+/// The SizeMode Property
 /// //////////////////////////////////////////////////////////////////
+/// The PictureBox control's SizeMode property specifies how the
+/// control's image is to be displayed. It can be set to one of the
+/// following values.
+/// 
+/// *NORMAL
+/// Normal is the ddefault value. The image will be positioned in 
+/// the uipper-left coner of the PictureBox control. If the image is
+/// too big to fit in the PictureBox control, it will be clipped.
+/// 
+/// *STRETCHIMAGE
+/// StretchImage resizes the image both horizontally and vertically 
+/// to fit in the PictureBox control. If the image is resized more
+/// in one direction than the other, it will appear stretched.
+/// 
+/// *AUTOSIZE
+/// With AutoSize, the PictureBox control is sutomatically resized
+/// to fit the size of the image.
+/// 
+/// *CENTERIMAGE
+/// CenterImage centers the image in the PictureBox control without resizing it.
+/// 
+/// *ZOOM
+/// Zoom uniformaly resizes the image to fit in the PictureBox without
+/// losing its original aspect ratio. (Aspect ratio is the image's
+/// width to height ratio.) This causes the image to be resized
+/// without appearing stretched.
+/// 
+/// Figure 2-67 shows an example of an image displayed in a PictureBox
+/// control. The control's SizeMode is set to Zoom, so it can be
+/// resized without appearing streched.
 /// //////////////////////////////////////////////////////////////////
+/// Note PictureBox controls also have a BoarderStyle property that
+/// works just like a Label control's BoarderStyle property.
 /// //////////////////////////////////////////////////////////////////
+/// Creating Clickable Images
 /// //////////////////////////////////////////////////////////////////
+/// Buttons aren't the only controls that can respond to Click events.
+/// PictureBox controls can, too. That means an application can display
+/// an image and preform some action when the user clicks the image.
+/// 
+/// To make an image clickable, you can simply have to create a Click
+/// event handler for the  PictureBox control that displays the image.
+/// You create a Click event handler for a PictireBox control in the
+/// same way that you create a Click event handler
+/// for a Button control:
 /// //////////////////////////////////////////////////////////////////
+///		*You double-click the PictureBOx control in the Designer. THis cretaes an empty Click event handler in the form'ssource code file.
+///		
+/// * In the code editor you write statements inside the event handler that you want to execute when the image is clicked.
 /// //////////////////////////////////////////////////////////////////
+/// AS an example, look at the cat project that is in the Chap02 folder of the Student Sample programs that accompany this textbook. Figure 2-68 shows the application's form. The PictureBox control's name is catPictureBox. Its image is the Cat.jpg file, which is also found in the Chap02 folder of the Student Sample Programs. The SizeMode property is set to Zoom, and the BoarderStly property is set to FixedSingle.
+/// //////////////////////////////////////////////////////////////////
+/// OPen the Form1.cs file in the code editor and you will see that we have already created a Click event handler for the catPictureBox control, as shown in Figure 2-69. If you run the application and click the PictureBox, a message box will appear displaying the string Meow.
+/// //////////////////////////////////////////////////////////////////
+/// Tutorial 2-4 gives you a chance to practice using PictireBox controls. In the tutorial, you crate an application with three clickable PictureBox controls, displaying images that are provided in the Student Sample Program files that accompant this book.
+/// //////////////////////////////////////////////////////////////////
+/// Tutorial 2-4: Creating the Flags Application
+/// //////////////////////////////////////////////////////////////////
+/// In this tutorial, you create an application that displays the flags of finland, France, and Germany in Picture controls. WHen the user clicks any of these PictureBOxes, the name of the flag's country will appear in a Label control.
+/// 
+/// Step 1: Start Visual Studio and begin a new Windows Forms Application project named Flags.
+/// 
+/// Step 2: Set up the application's form as shown in Figure 2-70. Notice that the form's Text property is set to Flags. The name of the controls are shown in the figure. Refer to Tabel 2-4 foreach control's relevant property settings.
+/// 
+/// Step 3: Once you have the form and its controls set up, you can create the CLick event handlers for the PictureBox controls. In the Designer, double-click the finlandPictureBox control. THis will open the code editor, and you will see an empty event handler named finlandPictureBox_Click, Write the following statement inside the event handler:
+/// 
+/// Step 4: Switch your view back to the Designer and double-click the francePictureBox control. This will open the code editor, and you will see an empty event handler named francePictureBox_Click. Write the following statement insode the event handler:
+/// 
+/// Step 5: Switch your view back to the Designer and double-click the germantPictureBox control. This will open the code editor, and you will see an empty event handler named germanyPictureBox_CLick. Write the following statement inside the event handler:
+/// 
+/// Step 6: The form's code should now appear as shown in Program 2-2. As was mentioned in the previous tutorial, the line numbers are shown for reference only, and are not part of the code. The line that appear in boldface are the ones that you typed. Make sure the code you typed appears exactly as shown here. (Don't forget the semicolons!)
 /// //////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
+/// 
 /// //////////////////////////////////////////////////////////////////
-/// //////////////////////////////////////////////////////////////////
-/// //////////////////////////////////////////////////////////////////
-/// //////////////////////////////////////////////////////////////////
-/// //////////////////////////////////////////////////////////////////
+/// 
+/// 
+/// 
 /// 
 /// //////////////////////////////////////////////////////////////////
