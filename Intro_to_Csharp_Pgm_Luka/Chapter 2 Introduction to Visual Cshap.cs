@@ -1484,13 +1484,26 @@ the application from executing.
 /// ellipses button (...) will appear, as shown on the left in
 /// Figure 2-64
 /// 
-/// Step 2: Click the ellipses button and the Select Resource window, shown on the right in Figure 2-64, will appear.
+/// Step 2: Click the ellipses button and the Select Resource window,
+/// shown on the right in Figure 2-64, will appear.
 /// 
-/// Step 3: In the Select Resource window, click the Import button. An Open dialog box will appear. Use the dialog box to locate and select the image file that you want to display.
+/// Step 3: In the Select Resource window, click the Import button.
+/// An Open dialog box will appear. Use the dialog box to locate and
+/// select the image file that you want to display.
 /// 
-/// Step 4: After you select an image file, you will see its contents displayed in the Select Resource window. This inddicates that the image has been impoerted into the project. Figure 2-65 shows an example of the Select Resource window after we have selected and imported an image.
+/// Step 4: After you select an image file, you will see its contents
+/// displayed in the Select Resource window. This inddicates that the
+/// image has been impoerted into the project. Figure 2-65 shows an
+/// example of the Select Resource window after we have selected and
+/// imported an image.
 /// 
-/// Step 5: Click the OK button in the Select Resource window, and the selected image will appear in the PIctureBox control. Figure 2-66 shows an example. Depending on the size of the image, you might see only part of it displayed. This is this case in Figure 2-66 beccause the image is larger than the PictureBox control. Your next step is to set the SizeMode property and adjust the size of the control.
+/// Step 5: Click the OK button in the Select Resource window, and the
+/// selected image will appear in the PIctureBox control. Figure 2-66
+/// shows an example. Depending on the size of the image, you might
+/// see only part of it displayed. This is this case in Figure 2-66
+/// beccause the image is larger than the PictureBox control. Your
+/// next step is to set the SizeMode property and adjust the size
+/// of the control.
 /// //////////////////////////////////////////////////////////////////
 /// The SizeMode Property
 /// //////////////////////////////////////////////////////////////////
@@ -1540,72 +1553,421 @@ the application from executing.
 /// same way that you create a Click event handler
 /// for a Button control:
 /// //////////////////////////////////////////////////////////////////
-///		*You double-click the PictureBOx control in the Designer. THis cretaes an empty Click event handler in the form'ssource code file.
+///		*You double-click the PictureBOx control in the Designer.
+///		THis cretaes an empty Click event handler in the
+///		form's source code file.
 ///		
-/// * In the code editor you write statements inside the event handler that you want to execute when the image is clicked.
+/// * In the code editor you write statements inside the event handler
+/// that you want to execute when the image is clicked.
 /// //////////////////////////////////////////////////////////////////
-/// AS an example, look at the cat project that is in the Chap02 folder of the Student Sample programs that accompany this textbook. Figure 2-68 shows the application's form. The PictureBox control's name is catPictureBox. Its image is the Cat.jpg file, which is also found in the Chap02 folder of the Student Sample Programs. The SizeMode property is set to Zoom, and the BoarderStly property is set to FixedSingle.
+/// AS an example, look at the cat project that is in the Chap02
+/// folder of the Student Sample programs that accompany this
+/// textbook. Figure 2-68 shows the application's form. The PictureBox
+/// control's name is catPictureBox. Its image is the Cat.jpg file,
+/// which is also found in the Chap02 folder of the Student Sample
+/// Programs. The SizeMode property is set to Zoom, and the 
+/// BoarderStly property is set to FixedSingle.
 /// //////////////////////////////////////////////////////////////////
-/// OPen the Form1.cs file in the code editor and you will see that we have already created a Click event handler for the catPictureBox control, as shown in Figure 2-69. If you run the application and click the PictureBox, a message box will appear displaying the string Meow.
+/// OPen the Form1.cs file in the code editor and you will see that
+/// we have already created a Click event handler for the 
+/// catPictureBox control, as shown in Figure 2-69. If you run the 
+/// application and click the PictureBox, a message box will appear 
+/// displaying the string Meow.
 /// //////////////////////////////////////////////////////////////////
-/// Tutorial 2-4 gives you a chance to practice using PictireBox controls. In the tutorial, you crate an application with three clickable PictureBox controls, displaying images that are provided in the Student Sample Program files that accompant this book.
+/// Tutorial 2-4 gives you a chance to practice using PictireBox
+/// controls. In the tutorial, you crate an application with three
+/// clickable PictureBox controls, displaying images that are 
+/// provided in the Student Sample Program files that accompant
+/// this book.
 /// //////////////////////////////////////////////////////////////////
 /// Tutorial 2-4: Creating the Flags Application
 /// //////////////////////////////////////////////////////////////////
-/// In this tutorial, you create an application that displays the flags of finland, France, and Germany in Picture controls. WHen the user clicks any of these PictureBOxes, the name of the flag's country will appear in a Label control.
+/// In this tutorial, you create an application that displays the
+/// flags of finland, France, and Germany in Picture controls. When
+/// the user clicks any of these PictureBOxes, the name of the flag's
+/// country will appear in a Label control.
 /// 
-/// Step 1: Start Visual Studio and begin a new Windows Forms Application project named Flags.
+/// Step 1: Start Visual Studio and begin a new Windows Forms
+/// Application project named Flags.
 /// 
-/// Step 2: Set up the application's form as shown in Figure 2-70. Notice that the form's Text property is set to Flags. The name of the controls are shown in the figure. Refer to Tabel 2-4 foreach control's relevant property settings.
+/// Step 2: Set up the application's form as shown in Figure 2-70.
+/// Notice that the form's Text property is set to Flags. The name of
+/// the controls are shown in the figure. Refer to Tabel 2-4 foreach
+/// control's relevant property settings.
 /// 
-/// Step 3: Once you have the form and its controls set up, you can create the CLick event handlers for the PictureBox controls. In the Designer, double-click the finlandPictureBox control. THis will open the code editor, and you will see an empty event handler named finlandPictureBox_Click, Write the following statement inside the event handler:
+/// Step 3: Once you have the form and its controls set up, you can
+/// create the CLick event handlers for the PictureBox controls. In 
+/// the Designer, double-click the finlandPictureBox control. THis
+/// will open the code editor, and you will see an empty event
+/// handler named finlandPictureBox_Click, Write the following 
+/// statement inside the event handler:
 /// 
-/// Step 4: Switch your view back to the Designer and double-click the francePictureBox control. This will open the code editor, and you will see an empty event handler named francePictureBox_Click. Write the following statement insode the event handler:
+/// Step 4: Switch your view back to the Designer and double-click 
+/// the francePictureBox control. This will open the code editor, 
+/// and you will see an empty event handler named francePictureBox_Click.
+/// Write the following statement insode the event handler:
 /// 
-/// Step 5: Switch your view back to the Designer and double-click the germantPictureBox control. This will open the code editor, and you will see an empty event handler named germanyPictureBox_CLick. Write the following statement inside the event handler:
+/// Step 5: Switch your view back to the Designer and double-click
+/// the germantPictureBox control. This will open the code editor,
+/// and you will see an empty event handler named 
+/// germanyPictureBox_CLick. Write the following statement inside 
+/// the event handler:
 /// 
-/// Step 6: The form's code should now appear as shown in Program 2-2. As was mentioned in the previous tutorial, the line numbers are shown for reference only, and are not part of the code. The line that appear in boldface are the ones that you typed. Make sure the code you typed appears exactly as shown here. (Don't forget the semicolons!)
+/// Step 6: The form's code should now appear as shown in Program 2-2.
+/// As was mentioned in the previous tutorial, the line numbers are 
+/// shown for reference only, and are not part of the code. The line
+/// that appear in boldface are the ones that you typed. Make sure 
+/// the code you typed appears exactly as shown here. (Don't forget
+/// the semicolons!)
+/// //////////////////////////////////////////////////////////////////
+/// Step 7: Save the project. Then, press the f5 key on the keyboard,
+/// or click the Start Debigging button on the toolbar to compile
+/// and run the application.
+/// //////////////////////////////////////////////////////////////////
+/// Note if you typed the statements correctly inside the event
+/// handlers, the application should run. If you did type the
+/// statements inside the events handlers correctly, a window will
+/// appear reporting build errors. If that happens, click the No
+/// button in the window, the correct the code so it appears
+/// exactly as previously shown.
+/// //////////////////////////////////////////////////////////////////
+/// Figure 2-71 shows the application's form when it starts
+/// running and then after you have clicked each of the PictureBox
+/// controls. After you have clicked each flag to make sure the
+/// application works correctly, close the form.
+/// //////////////////////////////////////////////////////////////////
+/// The Visible Property
+/// //////////////////////////////////////////////////////////////////
+/// Most controls have a Visible property that determines whether the
+/// control is visible on the form at run time. The Visuble property
+/// is a Boolean property, which means it can be set only to the 
+/// values Trye or False. If a control's Visible property is set to
+/// False, however, the controls will not be visible at run time. 
+/// By default, the Visuble property is set to True.
+/// //////////////////////////////////////////////////////////////////
+/// When you use the Properties window to change a control's Visible
+/// property at design time, the control will still be visible in the
+/// Designer. When you run the application, however, the control will
+/// not be visible on the form. For example, the image on the left in 
+/// Figure 2-72 shows a form in the Designer. The PictureBox conrol's 
+/// Visuble property is set to False, but the control can still be sen
+/// in the Designer. The image on the right shows the form while the 
+/// application is running. At run time, the control is not visible.
+/// //////////////////////////////////////////////////////////////////
+/// A control's Visuble property can also be modified in code by an 
+/// assignment statement, which makes it possible to hide or display a 
+/// control while the application is running. For ex, the PictureBox
+/// shown in Figure 2-72 is named spiderPictureBox. The following
+/// statement sets the control's Visible property to true:
+/// //////////////////////////////////////////////////////////////////
+/// SpiderPictureBox.Visible = true;
+/// //////////////////////////////////////////////////////////////////
+/// When this statement executes, the spiderPictureBox control will
+/// become visible. Likewise, the following statement sets the control's
+/// Visible property to false:
+/// //////////////////////////////////////////////////////////////////
+/// spiderPicture.Visible = false;
+/// //////////////////////////////////////////////////////////////////
+/// When this statement executes, the spiderPictureBox control will become 
+/// invisible.
+/// //////////////////////////////////////////////////////////////////
+/// Note When you write the values true and false in code, as shown
+/// in the previous assignment statement, they musy be written in all
+/// lowercase letters. The words true and false are C# keywords, and
+/// an error will occur of you don't write them in lowercase. However,
+/// when you use the Properties window to set a Boolean property, such
+/// as Vsible, the values True and False will be shown with an initial
+/// capital Try not let this inconsistency cobnfuse you!
+/// //////////////////////////////////////////////////////////////////
+/// Tutorial 2-5: Creating the Card Flip Application
+/// //////////////////////////////////////////////////////////////////
+/// In this tutorial, you create an application that simulates a card
+/// being flipped over. When the application runs, it will display the
+/// form shown on the left in Figure 2-73. The form initially displays
+/// the back of a poker card. When the user clicks the Show the Card
+/// Face button, the card will be flipped over to show its face, as
+/// shown in the form on the right. WEHen the user clicks the Show
+/// the Card Back buttonm, the car is flipped back over to show its
+/// back.
+/// //////////////////////////////////////////////////////////////////
+/// The simulation of the card being flipped will be accomplished using the following logic:\
+/// 
+/// * When the user clicks the Show the Card Face buutton, the
+/// PictureBox showing the card's back will be made invisible and the
+/// PictureBox showing the card's face will be made visible.
+/// 
+/// * When the user clicks the Show the Card Back button,
+/// the PictureBox showing the card's face will be made invisible
+/// and the PictureBox showing the card's back will be made visible.
+/// //////////////////////////////////////////////////////////////////
+/// Step 1: Start Visual Studio and begin a new Windows Forms Application project named Card Flip.
+/// 
+/// Step 2: Set up the application's form as shown in Figure 2-74.
+/// Notice that the form's Text property is set to Card Flip. The names
+/// of the controls are shown in the figure. Use the Properties window
+/// to make the property settings shown in Tabel 2-5. (In particaular,
+/// note that the cardBAckPictureBox control's Visible property is set
+/// to True, and the cardFacePictureBox control's Visible property is
+/// set to False.)
+/// 
+/// Step 3: Once you have the form and its controls set up, you can
+/// create the click event handlers for the Button controls. In the
+/// Designer, double-click the showBackButton control. This will open
+/// the code editor, and you will see an empty event handler named
+/// showBackButton_Click. Write the following statments inside the 
+/// event hander:
+/// 
+/// cardBackPictureBox.Visible = true;
+/// cardFacePictureBox.Visible = false;
+/// 
+/// Step 4: Switch your view backto the Designer and double-click the
+/// showFaceButton control. This will open the code editor, and you
+/// will see an empty event handler named showFaceButton_Click. 
+/// Write the following statments inside the event handler:
+/// 
+/// cardBackPictureBox.Visible = false;
+/// 
+/// cardFacePictureBox.Visble = true;
+/// 
+/// Step 5: The form's code should now appear as shown in the
+/// Program 2-3. Remember, the line numbers are shown for reference
+/// only and are not part of the code. The lines that appear in
+/// boldface are the ones that you typed. Make sure the code you
+/// typed appears exactly as shown here (Don't forget the semicolons!)
+/// 
+/// Step 6: Save the project. Then press the F5 key on the keyboard,
+/// or click the Start Debugging button on the toolbar to compile and
+/// run the application. Test the application.
+/// //////////////////////////////////////////////////////////////////
+/// Note If you typed the statments correctly inside the event
+/// handlers, the application should run. If you did not type the
+/// statements inside the event handlers correctly, a window will
+/// appear reportying build errors. IF that happens, click the No
+/// button in the window and then correct the code so it appears
+/// exactly as previously shown. 
+/// //////////////////////////////////////////////////////////////////
+/// Note In addition to PictireBoxes, many other types of
+/// controls have a Visible property. For example, you can make a
+/// Label control visible or invisible bt setting the value of its
+/// visuble property.
+/// //////////////////////////////////////////////////////////////////
+/// Sequrntial Execution of Statements
+/// //////////////////////////////////////////////////////////////////
+/// IN Tutorial 2-5, the event handlers that you created each
+/// contained more than one statement. For example, here is the
+/// showBackButton_Click method: 
+/// //////////////////////////////////////////////////////////////////
+/// private voide showBackButton_Click(object sender, EventArgs e)
+/// {
+///		cardBackPictureBox.Visible = true;
+///		cardFacePictureBox.Visible = false;
+/// }
+/// //////////////////////////////////////////////////////////////////
+/// This method has two assignment statments. When the method executes,
+/// the statments in the method execute in the order that they appear,
+/// form the beginning of the method to the end of the method. This 
+/// statment eXEcutes first:
+/// //////////////////////////////////////////////////////////////////
+/// cardBackPictureBox.Visible = true;
+/// //////////////////////////////////////////////////////////////////
+/// Then this statement executes:
+/// //////////////////////////////////////////////////////////////////
+/// cardFacePictureBox.Visible = false;
+/// //////////////////////////////////////////////////////////////////
+/// When the application is running, however, you can't really tell
+/// that the statements are executing in this order simply by watching
+/// the asction take place on the screen. When you click the
+/// showBackButton control, the Click event handler executes so
+/// quickly that it appears as though b0th statements execute
+/// simultaneously. It's important for you to understand, however,
+/// that the statments execute one at a time, in the order that they
+/// appear in the method.
+/// //////////////////////////////////////////////////////////////////
+/// In this particular method, it doesn't really matter which
+/// assignment statement is written first. If we reverse the order
+/// of the statements, we will not be able to see the difference on
+/// the screen because the application executes so quickly. In most
+/// applications, however, the order in which you write event handlers
+/// that preform several steps, and in most cases, the steps must
+/// preformed in a specific order. Otherwise, the program will not
+/// produce the correct result.
+/// //////////////////////////////////////////////////////////////////
+/// 2.8 Comments, Blank Lines, and Indentation
+/// //////////////////////////////////////////////////////////////////
+/// Concept Comments are brief notes that are placed in a program's
+/// code to explain how parts of the program work. Programmers commonly
+/// use black lines and indentation in program code to give the code
+/// visual organization and it easier to read.
+/// //////////////////////////////////////////////////////////////////
+/// Comments
+/// //////////////////////////////////////////////////////////////////
+/// Comments are short notes that are placed in different parts of a 
+/// program, explaining how those parts of the prgram work. Comments
+/// are not intended for the compiler. They are intended for any
+/// person who is reading the code and trying to understand what
+/// it does.
+/// //////////////////////////////////////////////////////////////////
+/// In C#, there are three types of comments: line comments, block
+/// comments, and documentation comments. A line comment appears on 
+/// one line in a program. You begin a line comment with two forward
+/// slashes (//). Everything written after the slashes, to the send of
+/// the line, it ignored by the compiler. The following code sample
+/// shows how we might use line comments in the showBackButton_Click
+/// event handler form Tutorial 2-5. Each line comment explains what
+/// the very next line of code does.
+/// //////////////////////////////////////////////////////////////////
+/// private voide showBackButton_Click(object sender, EventArgs e)
+/// {
+///	  // Make the image of the back of the card visible.
+///		cardBackPictureBox.Visible = true;
+///  // Make the image of the face of the card invisible.
+///		cardFacePictureBox.Visible = false;
+/// }
+/// //////////////////////////////////////////////////////////////////
+/// A line comment does not have to occupy an entire line. Anything 
+/// appearing after the // symbol, to the end of the line, is ignored.
+/// 
+/// So, a comment can appear after an executable statement. The
+/// following code sample shows an example.
+/// //////////////////////////////////////////////////////////////////
+/// private voide showBackButton_Click(object sender, EventArgs e)
+/// {
+///	  
+///		cardBackPictureBox.Visible = true; // Show the card back
+///  
+///		cardFacePictureBox.Visible = false; // Hide the card face.
+/// }
+/// //////////////////////////////////////////////////////////////////
+/// A block comment can occupy multiple consecutive lines in a program.
+/// A block comment starts with /* (a forward slash followed by an 
+/// asterisk) and ends with * / (an asterisk followed by a forward
+/// slash). Everything between these markers is ignored. The following
+/// code sample shows how block comments may be used.  
+/// //////////////////////////////////////////////////////////////////
+/// /* a
+/// s
+/// d
+/// a
+/// s
+/// d
+/// a* /
+/// 
+/// //////////////////////////////////////////////////////////////////
+/// The first five lines in this code sample are a block comment that 
+/// explains what the showBackButton_Click method does. Block comments make
+/// it easier to write long explanations because you do not have to mark
+/// every line with a comment symbol.
+/// //////////////////////////////////////////////////////////////////
+/// The third type of comment is known as a documentation comment.
+/// Documentation comments are used by professional programmers to 
+/// embed extensive documentation in a program's source code.
+/// Visual Studio can extract information from the documentation 
+/// comments and generate external documentation file.
+/// Single - line documentation comments begin with three forward
+/// slashes (///)/ Block documentation comments begin with / ** and end with * /.
+/// although documentation comments are useful for professional programmers
+/// , we do not use them in this book.
+/// //////////////////////////////////////////////////////////////////
+/// As a beginning programmer, you might resist the idea of writing a 
+/// lot of comments in your programs. After all, it's a lot more 
+/// interesting to write code that actully does something; however, it's
+/// crucial that you take the extra time to write comments. They will
+/// almost certainly save you time in the future when you have to
+/// modify or debig the program. Even large and complex programs can
+/// be made easy to read and understand if they have proper comments.
+/// //////////////////////////////////////////////////////////////////
+/// Using Blank Line and Indentation to Make Your COde Easier to Read
+/// //////////////////////////////////////////////////////////////////
+/// Programmers commonly use blank lines and indentations in their
+/// code to create a sense of visual organization. This is similar to 
+/// the way that authors visually arrange the text on the pages of the 
+/// a book. Instead of writting each chapters as one long series of sentences
+/// , they break the text into paragraphs that are visually separated
+/// on the page. This does not change the information in the book, but
+/// it makes it easier to read.
+/// //////////////////////////////////////////////////////////////////
+/// For example, in the following code sample, we have inserted a
+/// blank line inside the method to visuallt seprate the code into two
+/// sets of statements. The blank line is not required, but it makes
+/// the code easier for humans to read.
+/// //////////////////////////////////////////////////////////////////
+/// Programemrs also use in
+/// //////////////////////////////////////////////////////////////////
+///  private voide showBackButton_Click(object sender, EventArgs e)
+/// {
+///	 // Make the image of the back of the card visible.
+///		cardBackPictureBox.Visible = true;
+///  // Make the image of the face of the card invisible.
+///		cardFacePictureBox.Visible = false;
+/// }
+/// //////////////////////////////////////////////////////////////////
+/// Programmers also use indentations to visually organize code. You
+/// may have noticed that code editor, all the statements that appear
+/// inside a set of braces({}) are indented. For example, all the 
+/// statements inside a namespace are indented, all the statements inside
+/// a class are indented, and all the statements inside a method are
+/// indented. In fact, Visual Studio is normally set up to
+/// automatically indent the code that you write in this fashion.
+/// //////////////////////////////////////////////////////////////////
+/// Although the indentation is not required, it makes your code much
+/// easier to read. By indenting the statements are inside the method.
+/// The same is true for classes and namespaces. This practice of 
+/// indentation is a convention that vitrually all programmers follow.
+/// //////////////////////////////////////////////////////////////////
+/// 2.9 Writing the Code to Close an Application's Form
+/// //////////////////////////////////////////////////////////////////
+/// Concept To close an application's form in code, you use the statement this.Close();
+/// //////////////////////////////////////////////////////////////////
+/// All the applications that you created in this chapter's tutorials
+/// required the user to click the standerd Windows close button(X) to
+/// close the application. The standard Windows close button appears
+/// in the upper-right corner of almost every window. In many
+/// application, however, you will want to give the user an
+/// alternative way to close the applcation. For example, you might
+/// want to create an Exit button that closes the application when
+/// it is clicked
+/// //////////////////////////////////////////////////////////////////
+/// To close an application's form, you execute the followign statment:
+/// //////////////////////////////////////////////////////////////////
+/// this.Close();
+/// //////////////////////////////////////////////////////////////////
+/// Let's look at an example of how this statement can be used.
+/// Figure 2-75 shows the form and code from a project named Exit
+/// Button Demo. The Button control that you see on the form is named
+/// exitButton. In the form's code you can see that we have crated a
+/// Click event handler for the button. When the user clicks the
+/// button, it closes the form, thus closing the application.
+/// //////////////////////////////////////////////////////////////////
+/// 2.10 Dealing with Syntax Errors
+/// //////////////////////////////////////////////////////////////////
+/// Concept The Visual Studio code editor examines each statement as 
+/// you type it and reports any syntax errors that are found. This
+/// allows you to quickly correct syntax errors.
+/// //////////////////////////////////////////////////////////////////
+/// Writting code requirs a lot of percision. Even small errors, such 
+/// as using an uppercase letter where you are supposed to use a 
+/// lowercase letter or forgetting to end a statement with a semicolon,
+/// will prevent an application's code from compiling and executing.
+/// Recall form Chapter 1 that these types of mistakes are know as 
+/// syntax errors.
+/// //////////////////////////////////////////////////////////////////
+/// The Visual Studio code editor does a good job of reporting syntax
+/// errors soon after you type them. When you enter a statement into 
+/// the editor, Visual Studio analyzes it, and if a syntax error is
+/// found, it is underlined with a jagged line. Figure 2-76 shows an
+/// example. If you hold the mouse cursor over the jagged a line, a
+/// description of the wrror will pop up in a ToolTip window. The
+/// description usually gives you enough information to determine
+/// the cause of the error and how to fix it.
+/// //////////////////////////////////////////////////////////////////
+/// if a syntax error exists in a project's code and you attempt to 
+/// compile and execute it , you will see the window shown in Figure
+/// 2-77, reporting build error List shown in Figure 2-78
+/// //////////////////////////////////////////////////////////////////
+/// Notice that the Error List window shows a description of the error, 
+/// the source code file that contains the error, the line number and
+/// column number of the error, and the name of the project. If you
+/// double-click the error message that is displayed in the Error List
+/// window, the code editor will highlight the code that caused the error
 /// //////////////////////////////////////////////////////////////////
 /// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// 
-/// 
-/// //////////////////////////////////////////////////////////////////
