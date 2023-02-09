@@ -188,7 +188,7 @@
  * //////////////////////////////////////////////////////////////////////////
  * 
  * 
- * Secondary storafe is a type of memory that can hold data for long periods
+ * Secondary storage is a type of memory that can hold data for long periods
  * of time, even when there is no power to the computer.
  * Profgrams are normally stored in sdecondary memory and loaded into main
  * memory as needed. Important data, such as word processing documents, payroll
