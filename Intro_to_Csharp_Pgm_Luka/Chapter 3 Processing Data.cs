@@ -441,18 +441,110 @@ namespace Chapter3ProcessingData
 /// Once you have set up the form with its controls, you can create the click
 /// event handlers for the Button controls. At the end of this tutorial,
 /// Program 3.1 shows the completed code for the form. You will be instructed
-/// to refer to Program 3.1 as you write the event handlers. 
+/// to refer to Program 3.1 as you write the event handlers. (Remember, the
+/// line numbers that are shown in Program 3.1 are not part of the program.
+/// They are shown for reference only._ In the SDwesigner, double-click the
+/// showDataButton control. This will open the code editor, and you will see
+/// an empty event handler named showDataButton_CLick. Compleate the 
+/// showDataButton_Click event handler by typing the code shown in lines 
+/// 22-32 Program 3.1 Lets take a closer look at the code:
+/// 
+/// Line 23: THis statement declars a string variable named output.
+/// Line 26-29: These lines are actually one large statement, broken up into
+/// multiple lines. The statment concatenates the Text propertyes of the
+/// TextBox controls, along with appropriatly placed commsa and spaces, to create the data string. The resulting string is assigned to the output variable.
+/// 
+/// For example, suppose the user has entered the following input:
+/// 
+///     * Firday in the dayof WeekTextBox control.
+///     
+///     * June in the monthTextBox control.
+///     
+///     * 1 in the dayOfMonthTextBox control.
+///     
+///     * 1990 in the yearTextBox control
+///     
+///    The concatenation in the statment produces the string "June 1, 1990";
+///    it is assignws to the output Variable.
+///    Line 32: This statement assigns the output variable to the
+///    deateOutputLabel control's Text property. When this statement 
+///    executes, the contents of the output variable are displayed in
+///    the dataOutputLabel control.
+///    
+/// Step 4: Switch your view back to the Designer and double-click the
+/// clearButton control. In the code editor, you will see an empty event
+/// handler named clearButton_CLick. Compleate the clearButton_CLick event 
+/// handler by clearButton_click. Complete the clearButton_CLick ebent handler
+/// by typing the code shown in the line 37 - 44 in the Program 3.1.
+/// 
+/// Let's take a closer look at the code:
+/// 
+/// Lines 38-41: Each statement an empty string ("") to the Text property of one of the TextBox controls.When these statments have finished executing , the TextBox controls will appear empty. 
+/// 
+/// Line 44: This statement assigns an empty string ("") to the dateOutputLAbel
+/// control's Text property/ After the statement has executed, the label
+/// appears empty.
+/// 
+/// Step 5: Switch your view back to the Designer and double-click the
+/// exitButton control. IN the code editor, you will see an empry event
+/// handler named exitButton_Click. Complete the exitButton_Click event 
+/// handler by typing the code shown in line 49-50 in Program 3.1. 
+/// 
+/// Step 6: Save the project. Then, press the F5 key on the keyboard, or
+/// click the Start Debugging button on the toolbar to compile and run the
+/// application, The form will appear as shown in the inage on the left in
+/// Figure 3-10. TEst the application by entering values into the TextBoxes
+/// and clicking  the Show DAta button. The data should be displayed , similer
+/// to the images shown on the right in the figure. Click the Clear button, 
+/// and the contents of the TExtBoxes and the Label control should clear. 
+/// Click the Edit button and the form should close
+///    
 /// //////////////////////////////////////////////////////////////////////////
+/// Note  In Tutorial 3.1, the statement in the lines 26-29 shows an example
+/// of how you can break up a statement into multiple line. Quite often, you
+/// will find yourself writing statments that are too long to fit entirely
+/// inside the COde window. Your code will be hard to read if you have to 
+/// horizontally scroll the code window to view long statements. In addition,
+/// if you or your instructor choosaes to print your code, the statements that
+/// are too long to fit on one line of the page will wrap around to the next
+/// line and make your code look unorganized. For these reasons, it is usually 
+/// best to break a long statement into multiple lines. When typing most
+/// statements, you can simply press the Enter key when you reach an
+/// appropriate point to continue the statment on the next line. Remember,
+/// however, that you cannot break up a keyword, a quoted string, or an 
+/// iderfifier (such as a variable name or a control name).
+/// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
+/// Initializing VAriables
 /// 
-/// //////////////////////////////////////////////////////////////////////////
+/// In C#, a varuable must be assigned a value before it can be used. for
+/// example, look at the code:
 /// 
-/// //////////////////////////////////////////////////////////////////////////
+/// string productDescription;
+/// MessageBox.Show(productDescription);
 /// 
-/// //////////////////////////////////////////////////////////////////////////
+/// This code declars a string variable named productDescription and then tries
+/// to display the variable;s value in message box. The only problem is that we
+/// have not asigned a value to the variable. When we compile the application
+/// contrining this code, we will get an erroe message such as User of unassigned 
+/// local variable 'productDescription'. The C# compiler will not compile code
+/// that tries to use an unassigneed variable.
 /// 
+/// One way to makle sure that a variable has been assigned a value is to
+/// initialieze the variable with a value when you declare it. For example,
+/// the following statement declares a string variable named producDescription
+/// and immediately assigns the string literal "Chocolate Truffle" to it: 
+/// /// //////////////////////////////////////////////////////////////////////////
+/// string productDescription = "Chocolate Truffle";
 /// //////////////////////////////////////////////////////////////////////////
+/// We say that this statement initializes the productDescription variable
+/// with the string "Chocolate Truffle". Here is another example:
+/// //////////////////////////////////////////////////////////////////////////
+/// string lastName = lastNameTextBox.Text;
+/// //////////////////////////////////////////////////////////////////////////
+/// Assume that this statement belongs to an appliocation that has a TextBox
+/// named lastNameTextBox. The statement declars a string variable named lastName and initalizes it whith the value of the lastNameTextBox. The statement declats a string variable named lastName adn initializes it with the value of the lastNAmeTExtBox
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
