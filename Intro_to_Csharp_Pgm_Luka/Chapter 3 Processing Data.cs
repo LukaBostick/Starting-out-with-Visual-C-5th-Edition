@@ -452,7 +452,8 @@ namespace Chapter3ProcessingData
 /// Line 23: THis statement declars a string variable named output.
 /// Line 26-29: These lines are actually one large statement, broken up into
 /// multiple lines. The statment concatenates the Text propertyes of the
-/// TextBox controls, along with appropriatly placed commsa and spaces, to create the data string. The resulting string is assigned to the output variable.
+/// TextBox controls, along with appropriatly placed commsa and spaces, to
+/// create the data string. The resulting string is assigned to the output variable.
 /// 
 /// For example, suppose the user has entered the following input:
 /// 
@@ -479,7 +480,9 @@ namespace Chapter3ProcessingData
 /// 
 /// Let's take a closer look at the code:
 /// 
-/// Lines 38-41: Each statement an empty string ("") to the Text property of one of the TextBox controls.When these statments have finished executing , the TextBox controls will appear empty. 
+/// Lines 38-41: Each statement an empty string ("") to the Text property of
+/// one of the TextBox controls.When these statments have finished executing 
+/// , the TextBox controls will appear empty. 
 /// 
 /// Line 44: This statement assigns an empty string ("") to the dateOutputLAbel
 /// control's Text property/ After the statement has executed, the label
@@ -544,42 +547,99 @@ namespace Chapter3ProcessingData
 /// string lastName = lastNameTextBox.Text;
 /// //////////////////////////////////////////////////////////////////////////
 /// Assume that this statement belongs to an appliocation that has a TextBox
-/// named lastNameTextBox. The statement declars a string variable named lastName and initalizes it whith the value of the lastNameTextBox. The statement declats a string variable named lastName adn initializes it with the value of the lastNAmeTExtBox
+/// named lastNameTextBox. The statement declars a string variable named
+/// lastName and initalizes it whith the value of the lastNameTextBox. The
+/// statement declats a string variable named lastName adn initializes it
+/// with the value of the lastNameTextBox control's Text property
+/// //////////////////////////////////////////////////////////////////////////
+/// Declaring Multiple Varables with One Statement
+/// //////////////////////////////////////////////////////////////////////////
+/// You can declate multiple cvariables of the same data type with one
+/// declaration statement Here is an example:
+/// //////////////////////////////////////////////////////////////////////////
+/// string lastNAme, firstNAame, middleName
+/// //////////////////////////////////////////////////////////////////////////
+/// This statement daclares three string variables named lastName, firstName, and 
+/// middleName. Notice that commas seperate the variavle names. Here is an 
+/// example how we can declare and initialize the variables with one statement:
+/// //////////////////////////////////////////////////////////////////////////
+/// string lastNAme = "Jones", firstNAme = "jill", middleNAme = "Rebecca";
+/// //////////////////////////////////////////////////////////////////////////
+/// Remember, you can break up a long statement so it spreads across two or
+/// more lines. Sometimes you will see long variable declarations written
+/// multiple lines, like this:
+/// //////////////////////////////////////////////////////////////////////////
+/// string lastName = "Jones"
+///        fistName = "Jill",
+///        middleName = "Rebecca";
+/// //////////////////////////////////////////////////////////////////////////
+/// Checkpoint
+///     3.5 What is the purpose of a variable
+/// //////////////////////////////////////////////////////////////////////////
+///     3.6 Give an example of a variable declaration that will store the name
+///     of your favorite food
+/// //////////////////////////////////////////////////////////////////////////
+///     3.7 For each of the following items, determine whether the data type
+///     should be an integer, string, or real number.
+///             a. pet name
+///             b. sales tax
+///             c. mailing address
+///             d. video game score
+/// //////////////////////////////////////////////////////////////////////////
+///     3.8 Indicate whether each of the following is a legal variable name.
+///     IF it is not, explain why.
+///             a. pay_Rate
+///             b. speed of sound
+///             c. totalCost
+///             d. 2ndPlaceName
+/// //////////////////////////////////////////////////////////////////////////
+///     3.9 What will be stored in the messagte variable after the following
+///     statement is executed?
+/// //////////////////////////////////////////////////////////////////////////
+///                     string message = "HE" + "ll" + "o!";
+/// //////////////////////////////////////////////////////////////////////////
+/// 3.10 What is the lifetime of a variable that is declared inside
+///     of a Click event handler?
+/// //////////////////////////////////////////////////////////////////////////
+/// 3.11 Assuming the variable greeting has not been assigned a value,
+///     what will be the result of the follwing statement?
+/// //////////////////////////////////////////////////////////////////////////
+///                     MessageBox.Show(greeting);
+/// //////////////////////////////////////////////////////////////////////////
+/// 3.12 Will the following statement cause an error? Why or why not?
+/// //////////////////////////////////////////////////////////////////////////
+/// string luckyNumber = 7;
+/// //////////////////////////////////////////////////////////////////////////
+/// 3.13 Write a single declaration statement for the variables name,
+/// city, and state.
+/// //////////////////////////////////////////////////////////////////////////
+///
+/// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
+///                     3.3 Numeric Data Types and Variables
 /// 
 /// //////////////////////////////////////////////////////////////////////////
+/// Concept IF you need to store a number in a variable and use that number
+/// in a mathematical opertation, the variable must be of a numeric data type.
+/// You selected a numberic data type that is appropriate for the type of 
+/// number that you need to store.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
+/// IN the previous section, you read about string variables. Variavbles of
+/// the string data type can be used to store text, but they cannot store
+/// numeric data for the purpose of performing mathematical operations, IF
+/// you need to store numbers and perform mathematical operations on them,
+/// you have to ise a numeric data type.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// The C# language provides several primitive data types. You can read about
+/// all the C# primitive data types in Appendic A. Many of the data types
+/// provided by C# are for specialized purposes byond the scope of this book.
+/// When it comes to numeric data, most of the time you will use the three
+/// numeric primtive data types described in Table 3.2
 /// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
+/// Here are examples of declaring variables of each data type :
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
