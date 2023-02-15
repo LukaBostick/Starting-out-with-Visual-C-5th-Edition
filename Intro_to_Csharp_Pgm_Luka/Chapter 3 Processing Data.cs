@@ -4,7 +4,7 @@ namespace Chapter3ProcessingData
 {
     static void Main(string[] args)
     {
-        
+
     }
 }
 
@@ -641,6 +641,153 @@ namespace Chapter3ProcessingData
 /// //////////////////////////////////////////////////////////////////////////
 /// Here are examples of declaring variables of each data type :
 /// //////////////////////////////////////////////////////////////////////////
+/// int speed;
+/// double distence;
+/// decimal grossPay;
+/// //////////////////////////////////////////////////////////////////////////
+/// The first statement declates an int variable named speed. The second
+/// example declares a double variable named distance. The third statement
+/// declares a variable named grossPay.
+/// //////////////////////////////////////////////////////////////////////////
+/// NUmeric Literals 
+/// //////////////////////////////////////////////////////////////////////////
+/// You learned in Chapter 2 that a literal is a piece of data written into
+/// a program;s code. When you know, at the time that you are writting a
+/// program's code, that you want to store a specfic value in a variable,
+/// you can assign that value as a literal to the variable.
+/// //////////////////////////////////////////////////////////////////////////
+/// A numeric literal is a number that is written into a program's code. For
+/// example, the follwoing statement declares an int variable named
+/// hoursWorked and initializes it with the value 40:
+/// //////////////////////////////////////////////////////////////////////////
+/// int hoursWorked = 40;
+/// //////////////////////////////////////////////////////////////////////////
+/// IN this statement, the number 40 is a numeric literal. The following shows another example:
+/// //////////////////////////////////////////////////////////////////////////
+/// double temperature = 87.6;
+/// //////////////////////////////////////////////////////////////////////////
+/// This statement declates a double variable named temperature and
+/// initializes it with the value 87.6 The number 87.6 is a numeric literal.
+/// //////////////////////////////////////////////////////////////////////////
+/// When you write a numeric literal in a program's code, the numeric literal
+/// is assigned a data type. In C#, if a numeric literal is an integer(not 
+/// writen with a deciamal point) and it fits within the range of an int (see
+/// Table 3.2 for the minimum and maximum values), then the numeric literal 
+/// is treated as an int. A numeric literal that is treated as an int is 
+/// called an integer literal. For example, each of the following statements
+/// initalizes a variable with an integer literal:
+/// //////////////////////////////////////////////////////////////////////////
+/// int hoursWorked = 40;
+/// int unitsSold = 650;
+/// int score = -23;
+/// //////////////////////////////////////////////////////////////////////////
+/// if a numeric literal is written with a decimal point and it fits within
+/// the range of a double (see Table 3.2 for the minimum and maximun values
+/// , then the numeric luteral is treated as a double. A numeric literal that
+/// is treated as a double is called a double literal. For example, each of 
+/// the following statements initalizes a variable with a double literal:
+/// //////////////////////////////////////////////////////////////////////////
+/// double distense = 28.75;
+/// dobule speed = 87.3;
+/// double temperature = -10.0
+/// //////////////////////////////////////////////////////////////////////////
+/// When you append the letter M or m to a numeric literal, it is treated
+/// as a decimal and its referred as a deciaml literal. Here are some examples
+/// //////////////////////////////////////////////////////////////////////////
+/// decimnal payRate = 29.75m
+/// decimnal price = 8.9M
+/// decimal profit = -50m;
+/// //////////////////////////////////////////////////////////////////////////
+/// Tip
+/// Because decimal is the preferred data type for storing monetary amounts,
+/// remembering that "m" stands for "money" might help you remember that
+/// decimal literals must end with the letter M or m.
+/// //////////////////////////////////////////////////////////////////////////
+/// Assignment Compatibility for int Variables
+/// //////////////////////////////////////////////////////////////////////////
+/// You can assign int values to int variables. For example, look at the 
+/// following declarations:
+/// //////////////////////////////////////////////////////////////////////////
+/// int hoursWorked = 40; <- THis works
+/// int uniteSold = 650ma <- ERROR!
+/// int score = -25.5; <-- Error!
+/// //////////////////////////////////////////////////////////////////////////
+/// The first declaration works because we are initalizing an int variable
+/// with an int value. The second declaration caises an error, however 
+/// because you cannot assign a decimal value to an int variable. 
+/// The third declaration also causes an error because you cannot
+/// assign a double value to an int variable.
+/// //////////////////////////////////////////////////////////////////////////
+/// You cannot assign a double or a decimal value to an int variable bacause
+/// such an assignment could result in a loss of data. Here are the reasons:
+/// //////////////////////////////////////////////////////////////////////////
+/// The double and decimal values may be fractional, but int variables can
+/// hold only integers. IF you were allowed to store a fractional value in
+/// an int variable, the fractional part of the value would have to be
+/// discarded.
+/// //////////////////////////////////////////////////////////////////////////
+///  The double and decimal values may be much larger or much smaller than
+///  allowed by the range of an int variable. A double or a decimal number
+///  can potentially be so large or so small that it will not fit i
+///  an int variable
+/// //////////////////////////////////////////////////////////////////////////
+/// Assignment Compatibility for double Variables
+/// //////////////////////////////////////////////////////////////////////////
+/// You can assign either double or int values to double variables, but you
+/// cannot assign decimal values to double variables. For example, look at 
+/// the following declarations: 
+/// //////////////////////////////////////////////////////////////////////////
+/// double distance = 28.75; <- THis works
+/// double speed = 75;       <- THis works
+/// double sales = 6500.0m;  <- ERROR!
+/// //////////////////////////////////////////////////////////////////////////
+/// The first declaration works because we are initializing a double variable
+/// with a double value. The second declaration works because we are 
+/// initializing a double variable with an int value. The third declaration
+/// causes an error, however, bacause you cannot assign a decimal value 
+/// to a double variable.
+/// //////////////////////////////////////////////////////////////////////////
+/// It makes sense that you are allowed to assign an int value to a double
+/// variable bacause any number that can be stored as an int can be converted
+/// to a double with no loss of data. When you assign an int value to a double
+/// variable, the int value is implicaitly converted to a double.
+/// //////////////////////////////////////////////////////////////////////////
+/// You cannot assign a decimal value to a double variable because the decimal
+/// data type allows for much greater precision than the double data type. A
+/// decimal value can have up to 28 digits of precision, whereas a double can
+/// provide only 15 digits of precision. Storing a decimal value in a double
+/// variable could potentially result in a loss of data
+/// //////////////////////////////////////////////////////////////////////////
+/// Assignment Compatibility for decimal Variables
+/// //////////////////////////////////////////////////////////////////////////
+/// You can assign either decimal or int values to decimal variables, but you
+/// cannot assign double values to decimal variables. For example, look at
+/// the following declarations:
+/// //////////////////////////////////////////////////////////////////////////
+/// decimal balance = 9280.73m; <- This works
+/// decimal price = 50;         <- This works
+/// decimal sales = 6500.0;     <- ERROR!
+/// //////////////////////////////////////////////////////////////////////////
+/// The first declaration works because we are initialing a decimal variable
+/// with a decimal value. The second declaration works because we are
+/// initializing a decimal variable with an int value. When you assign
+/// an int value to a decimal variable, the int value is implicitly
+/// converted to a decima; whith no loss of data. The third declaration 
+/// causes an error, however, bevause you cannot assign a double value to 
+/// a decimal variable. A double value can potentially be much larger or
+/// much smaller than allowed by the range of a decimal.
+/// //////////////////////////////////////////////////////////////////////////
+/// Explicitly Converting Values with Cast Operators
+/// //////////////////////////////////////////////////////////////////////////
+/// Let's consider a hypothetical situation. Suppose you've written an application that uses a double var, and for some reason, you need to assign the contents of the double var to an int var. IN this particular situation, you know that the double var's value is somthing that can be safely converted to an int without any loss of data(sucj as 3.0, or 98.0). However,  the C# compiler will not allow you to make the assignment because double values are not assignment compatible with int vars. Isn;t there a way to override the C# rules in this particular sitation and make the assignment anyway?
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// The answer is yes, there is a way. You can use a cast operator to
+/// explicitly convert a value from one numeric data type to another,
+/// even if the conversion might result in a loss of data.
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
@@ -711,6 +858,13 @@ namespace Chapter3ProcessingData
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// 
 /// 
 /// 
 /// 
