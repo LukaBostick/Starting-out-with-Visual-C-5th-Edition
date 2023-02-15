@@ -779,70 +779,136 @@ namespace Chapter3ProcessingData
 /// //////////////////////////////////////////////////////////////////////////
 /// Explicitly Converting Values with Cast Operators
 /// //////////////////////////////////////////////////////////////////////////
-/// Let's consider a hypothetical situation. Suppose you've written an application that uses a double var, and for some reason, you need to assign the contents of the double var to an int var. IN this particular situation, you know that the double var's value is somthing that can be safely converted to an int without any loss of data(sucj as 3.0, or 98.0). However,  the C# compiler will not allow you to make the assignment because double values are not assignment compatible with int vars. Isn;t there a way to override the C# rules in this particular sitation and make the assignment anyway?
+/// Let's consider a hypothetical situation. Suppose you've written an 
+/// application that uses a double var, and for some reason, you need 
+/// to assign the contents of the double var to an int var. IN this
+/// particular situation, you know that the double var's value is 
+/// somthing that can be safely converted to an int without any loss 
+/// of data(such as 3.0, or 98.0). However,  the C# compiler will not 
+/// allow you to make the assignment because double values are not
+/// assignment compatible with int vars. Isn;t there a way to override
+/// the C# rules in this particular sitation and make the assignment
+/// anyway?
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// The answer is yes, there is a way. You can use a cast operator to
 /// explicitly convert a value from one numeric data type to another,
-/// even if the conversion might result in a loss of data.
+/// even if the conversion might result in a loss of data. A cast operator is the name of the desired data type, written inside parentheses and placed to the left of the valur that you want ot convert. The following code sample demonstrates:
 /// //////////////////////////////////////////////////////////////////////////
+/// // Declare an int variable.
 /// 
+/// int wholeNumber;
 /// 
+/// // Declare a double variable.
+/// double realNumber = 3.0;
 /// 
+/// // Assign the double to the int.
+/// wholeNumber = (int)realNumber;
 /// //////////////////////////////////////////////////////////////////////////
+/// The following points describe the code:
 /// 
-/// //////////////////////////////////////////////////////////////////////////
+///     *Line 2 declares an int var named wholeNumber.
+///     
+///     * Line 5 declares a double variable named realNumber, initialized with the value 3.0.
+///     
+///     *Line 8 users a cast operator to convert the value of realNUmber to an int and assigns the converted valie to wholeNUmber. After this statement executes, the whileNumber variable is assigned the value 3.
+///     
+/// Table 3.3 shows other code examples involving different types of cast operators.
 /// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
+/// When you use a castoperator, you are essentially telling the compiler that you know what you are doing and you are willing to accept the consequences of the conversion. IT is still possible that a loss of data can occur. FOr ex, look at the following code:
+/// //////////////////////////////////////////////////////////////////////////
+/// int while Number;
 /// 
+/// double realNumber = 8.9;
+/// whileNumber = (int)realNumber;
+/// //////////////////////////////////////////////////////////////////////////
+/// IN this example, the souble variable contrins a fractional number.
+/// When the cast operator converts the fractional number to an int, the part
+/// of the number that appears after the decimal point is dropped. The process
+/// of dropping a number's fractional part is called truncation. After this
+/// code executes, the wholeNumber variable contrins the value 8.
+/// //////////////////////////////////////////////////////////////////////////
+/// It's important to realize that when a cast operator is applied to a var, 
+/// it does not change the contents of the var. The cast operator merely
+/// returns the value that is stored in the var, converted to the specifed
+/// data type. In the prevoise code sample, when the (int) cast operator is
+/// applied to the realNumber var, the cast opertor retues the value 8. The realNumber variable remains unchanged, however, still containing the value 8.9
+/// //////////////////////////////////////////////////////////////////////////
+/// Declaring Local Variables with the var Keyword
+/// //////////////////////////////////////////////////////////////////////////
+/// C# provides an alternative way to declare local variables, using the keywond and an initialization value. Here is an example:
+/// //////////////////////////////////////////////////////////////////////////
+/// var amount = 100;
+/// //////////////////////////////////////////////////////////////////////////
+/// Notice that this statement uses the word var instead of a data type. The var keyword tells the compiler to determine the variabl's data type from the initialization value. In this example, the initialization value 100 is an int, so amount will be an int variable. Here are other examples:
+/// //////////////////////////////////////////////////////////////////////////
+/// var interestRate = 12.0;
+/// var stockCode = "D465U";
+/// var accountBalance = 1000.0m;
+/// //////////////////////////////////////////////////////////////////////////
+/// IN this code, the InterestRate variable will be a double because the 
+/// initialization value 12.0 is a doudle. THe stockCode variable will be a 
+/// string because the initialization value "D465U" is a string. The accountBalance
+/// variable will be a decimal because the initialization value 1000.0m
+/// is a decimal.
+/// //////////////////////////////////////////////////////////////////////////
+/// var x,y,z = 99;        // ERROR!
+/// //////////////////////////////////////////////////////////////////////////
+/// YOu must provide an initialization value when you declare a variable with
+/// the var, keyword. The following statement will cause an error:
+/// //////////////////////////////////////////////////////////////////////////
+/// var myvalue;
+/// //////////////////////////////////////////////////////////////////////////
+/// These examples show how to use the var keyword, but they don't really show
+/// its usefulness. The var keyword is intended to simplify the syntax of
+/// declarations that are more comples than the onces shown here. Later in
+/// the book, you will see examples of how the var key can improve the 
+/// readablity of complex definition statements.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// 3.4 Preforming Calculations
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// Concept You can use math operators to preform simple calculations. Math
+/// expressions can be written using the math operators and parenthese as 
+/// grouping sybols. The result of a math expression can be assigned to a 
+/// variable.
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// Most programs require calculations of some sort to be performed. A 
+/// programmer's tools for performing calculations are math operatios. C# 
+/// provides the math operators shown in Table 3.4.
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// Programmers use the operators shown in Table 3.4 to create math expressions A math experession preforms a calculation and gives a value. The following is an example of a simple math expression:
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// 12*2
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// The values on the right and left of the * operator are called oprands. 
+/// THese are values that the * operator multiples together. The value
+/// that is given by this expression is 24.
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// VAriables may also be used in a math expression. Forexample, suppopse we have
+/// two variables may also be usaed in a math expression. For example, suppose 
+/// we have two variables named houtresWorked and payRate. The following
+/// math expression uses the * operator to multiply the value in the 
+/// hoursWorked variable by the value in the payRate variable:
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// hoursWorked * payRate 
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// When we use a math expression to calculate a value, we have to do
+/// something with the value. Normally we want to save the value in memory so 
+/// we can use irt again in the program.
+/// We do this with an assignment statement. Foe example, suppose we have 
+/// another variable named grossPay. The following statement assigns the 
+/// value hoursWorked times payRate to the grossPay variable:
 /// //////////////////////////////////////////////////////////////////////////
-/// 
+/// total = price + tax;
+/// sale = price - discount;
+/// commission = sales * percent;
+/// half = number / 2; 
 /// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
+/// The modulus operator (%) preforms division between two integers, but instead of returing the quotient, it returns the remainder
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
