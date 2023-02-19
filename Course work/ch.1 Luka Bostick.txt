@@ -1,0 +1,252 @@
+Review Questions
+
+Multiple Choice
+
+1. A(n)__b___ is a set of instructiions that a computer follows to perform a tast.
+	
+	a. compiler
+	b. program
+	c. interperter
+	d. programming language
+	
+2. The physical devices that a computer is made of are refered to as __A__
+	
+	a. hardware
+	b. software
+	c. the operating system
+	d. tools
+	
+3. The part of a computer that runs programs is called __C__
+	a. hardware
+	b. software
+	c. the operating system
+	d. tools
+	
+4. Today, CPU's are small chips know as __D__
+	a. ENIACs
+	b. secondary storage
+	c. main memory
+	d. the CPU
+
+5. The computer stores a program while the program is running, as well as the data that the program is working with, in _D___
+	a.	ENIACs 
+	b.	microprocessors
+	c.	memory chips
+	d.	operating system
+	
+6. __A___is a volatile type of memory that iks used only for temnporaty storage while a program is running.
+	a. RAM
+	b. Secondary storage
+	c. The disk drive
+	d. The USD drive
+	
+7. A type of memory that can hold data for long periods of time-even when there is no power to the computer-is called _B___.
+	a. RAM
+	b. Secondary storage
+	c. The disk drive
+	d. The USB drive
+	
+8. A component that collects data from peoplke or other devices and sends it to the computer is called__B__.
+	a.an output devices
+	b. an input device
+	c. a secondary storage device
+	d.main memory
+
+9. A video display is a(n)__A___device.
+	a.output
+	b.input
+	c.secondary storage
+	d. main memory
+	
+10. A___A_ is enough memory to store a letter of the alphabet or a small number.
+	a.Byte
+	b.Bit
+	c.Switch
+	d.Transistor
+11. A byte is made up of eight__D__.
+	a. CPUs
+	b. Instructiions
+	c. Variables
+	d. Bits
+12. In the _b___ numbering system, all numeric values are written as sequences of 0s and 1s.
+	a. hexadecimal
+	b.binary
+	c.octal
+	d.decimal
+
+13. A bit that is turned off represents the following value:_C___.
+	a.1
+	b.-1
+	c.0
+	d."no"
+	
+14. A set of 128 numeric codes that represents the English letters, various punctuation marks, and other characters is__B__.
+	a. binary numbering
+	b.ASCII
+	c.Unicode
+	d.ENIAC
+	
+15. An extensive encoding scheme that can represent the characters of many of the languages in the world is __C____.
+	a. binary number
+	b. ASCII
+	c. Unicode
+	d. ENIAC
+	
+16. NEgative numbers are encoded using the __B___tecgnique.
+	a. two's complement 
+	b. floting point
+	c. ASCII
+	d. uNICODE
+17. Real numbers are encoded using the _A___technique
+	a. two's complement
+	b. floating point
+	c.ASCII
+	d.Unicode
+18. The tiny dots of color that digital images are composed of are called_D___.
+	a.bits
+	b.bytes
+	c.color packets
+	d.pixles
+	
+19. IF you were to look at a machine langiage program, you would see __B_.
+	a.C# code
+	b. a stream of binary numbers
+	c. English words
+	d. circuits
+	
+20. In the _A___ part of the fetch-decode-execute cycle, the CPU determines which operation it should perform.
+	a. fetch
+	b. decode
+	c. execute
+	d.immediately after the instruction is executed
+	
+21. Computers can execute only prgrams that are written in __C___.
+	a. C#
+	b. assembly language
+	c. machine language
+	d. Java
+	
+22. The ___B___ Translates an assembly language program to a machine language program.
+	a. assembler
+	b. compiler
+	c. translator
+	d. interperter
+	
+23. The words that make up a high-level prgramming language are called _D________.
+	a. binary instructions
+	b. mnemonics
+	c. commands
+	d. keywords
+	
+24. The rules that must be followed when writting a program are called__A__. 
+	a. syntax
+	b.punctuation
+	c.keywords
+	d.operators
+	
+25. A(n) _B_____ is a program that translates a high-level language program into a sepatate machine language prgram.
+	a.assembler
+	b.compiler
+	c.translator
+	d.utility
+	
+26. A____B__ is any hypothetical person using a prgram and providing input for it.
+	a. designer
+	b. user
+	c. guinea pig
+	d. text subject
+	
+27. A___C___ error does not prevent the prgram from running but caUSES IT to produce incorrect results.
+	a. syntax
+	b. hardware
+	c. logic
+	d. fatal
+	
+28. A(n) ___D__ is a set of well-defined logical steps that must be taken to preform a task.
+	a. logarithm
+	b. plan of action
+	c. logic schedule
+	d. algorithm
+	
+29. An informal language that has no syntax rules and is not meant to be compiled or executed is called__B____.
+	a. faux code
+	b. pseudocode
+	c. C#
+	d. a flowchart
+	
+30. A ____A_ is a diagram that graphically depicts the steps that take place in a program.
+	a.flowchart
+	b.step chart
+	c. code graph
+	d. program graph
+	
+31. Object that are visible in a prgram's graphical user interface are commonly reffed to as __C_____.
+	a. button
+	b.controls
+	c.forms
+	d.windows
+	
+32. A _A___ is code that describes a particular type of object.
+	a. namespace
+	b.blueprint
+	c. schema
+	d. class
+	
+33. The ___A__ is a collection of classes and other code that can be used, along with a programming language such as C#, to create programs for the windows operating system
+	a. .NET framework
+	b. Standard Template Libary
+	c. GUI framework
+	d. MSDN Libary
+
+34. The ___B__ is the part of a computer with which the user interacts.
+	a. central processing unit
+	b. user interface
+	c. control system
+	d. interactivity system
+	
+35. Before GUIs became popular, the ___A__ interface was the most commonly used.
+	a. commaned line
+	b. remote terminal 
+	c. sensory
+	d. event-driven
+	
+36. __C___ programs are usually event driven.
+	a. Command line
+	b. Text-based
+	c.GUI
+	d.Procedural
+	
+	
+TRUE or False
+1. Today, CPUs are huge devices made of electrical and mechanical components such as vacuum tubes and switches.False
+2. Main memory is also know as RAM. False
+3. Any piece of data that is stored in a computer's memory must be stored as a binary number.TRUE
+4. Images, such as the ones you make will your digital camera, cannot be stored as binary numbers.False
+5. Machine language is the inly language that a CPU understands. TRUE
+6. Assembly language is the only language that a CPU understands False
+7. An interperter is a program that both translates and executes the instructions in a high-level language program. True
+8. A syntax error does not prevent a program from being compiled and executed. False
+9. Windows, Linux, UNIX, and Mac OS are all examnpls of application software. False
+10. WOrd processing processing, spreadsheet programs, e-mail programs, Web browsers, and games are all examples of utility prgrams. True
+11.Programmers must be careful not to make syntax errors when writing pseudocode programs.	False
+12. C# provides only the basic keywords and operators that you need to construct a program. False
+	
+	
+Short Answer
+
+1. Why is the CPU the most important component in a computer?
+2. What number does a bit that is turned on represent? What number does a bit that is turned off represent?
+3. What would you call a device that works with binary data?
+4. What are the words that make up a high-level programming language called?
+5. What are the short words that are used in assembly language called? 
+6. What is the deifference between a compiler and an imperter?
+7. What type of software controls the internal operations of the computer's hardware?
+8. What is pseudocode? What is a flowchart?
+9. When a prgram runs in a text-based environment, such as a command line interface, what determines the order in which things happens?
+10. What does a class specify about an object?
+11. Can you use C# alone to perform advanced operations such as creating GUIs, reading data from a file, or working with databases? Why or why not?
+12. Figure 1-49 shows the Visual Studio IDE. What are the names of tge four areas that are indicated in the figure?
+13. What is the purpose of the Toolbox in the Visual Studio environment
+14. How can you access the documentation for Visual Studio? What resoirces are provided by the MSDN Libary?
+15. What steps mush you take to open an existing project?
+16.How can you view the project's form if it is not automatically displayed in the Designer?
