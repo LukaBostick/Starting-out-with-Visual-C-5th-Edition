@@ -1,0 +1,208 @@
+1. When the user types into a TextBox control, the texy is stored in the control's _____ property.
+	a. Input
+	b. Text
+	c. String
+	d. Data
+	
+2.A _____ is a storage location in memeory that is represented by a name.
+	a. Mnemonic
+	b. data type
+	c. namespace
+	d. variable
+	
+3. IN C#, you must _____ a variable before you can use it to store data.
+	a.cite
+	b. associate
+	c. declare
+	d. instance
+
+4. A variable's _____indicates type of date
+	a.name
+	b. data type
+	c. scope
+	d. value
+	
+5. Fundamental types of data, such as strings, integers, and real numbers, are know as _____.
+	a. primitive data types
+	b. fundamental variables
+	c. logical digits
+	d. literal data types
+	
+6. A _____identifies a variable in the program code.
+	a. binary number
+	b. variable name
+	c. unique golbal identifier
+	d. hexadecimal value
+	
+7.	A common operation performed on strings is _____, or appending one string to the end of another string.
+	a. addition
+	b. merging
+	c. concatenation
+	d. tying
+	
+8.A _____ belongs to the method in which it is declared, and only statements indise that method can access the variable.
+	a. method variable
+	b. primitive variable
+	c. temporaty variable
+	d. local variable
+	
+9. Programmers use the term _____ to describe the part of a program in which a variable may be accessed.
+	a. range
+	b. scope
+	c. focus
+	d. field
+	
+10.A variable's _____ is the time period during which the variable executing.
+	a.lifetime
+	b.run time
+	c. time to live
+	d. half life
+	
+11. One way to make sure that a variable has been assigned a value is to _____ the variable with a value when you declare it. 
+	a. concatenate
+	b. intialize
+	c. delimit
+	d. restrict
+	
+12. You can use a _____ to explicity convert a value from one numeric data type to another, even if the cinveration might result in a loss of data.
+	a. transpose statement
+	b. cast operator
+	c. conversion operator
+	d. literal conversion
+	
+13. The process of dropping a number's fractional part is called_D__.
+	a. shifting
+	b. twos complement
+	c. numeric rounding
+	d. truncation
+	
+14. A programmer's tools for performing calculations are _____.
+	a. math operators
+	b. numeric literals
+	c. local variables 
+	d. parsed literals
+	
+15.A _____ performs a calculation and gives a value.
+	a. numeric literal
+	b. math expression
+	c. machine instruction
+	d.programming statement
+	
+16. C# offers a special set of operators known as _____ that are designed specificallt for changing the value of a variable without having to type the variable name twice.
+	a. combined assignment operators
+	b. advanced math operators
+	c. variable modifiers
+	d. assignment sequencers
+	
+17. In computer science, the tem _____ typically means to analyse a string of characters for some purpose.
+	a. compile
+	b. compute
+	c. debug
+	d. parse
+	
+
+18. A(n) _____ is a piece of data that is passed into a method.
+	a. variable
+	b. argument
+	c. string
+	d. literal
+	
+19. A(n) _____ is an unexpected error that occurs while a prgram is running causing the prgram to halt if the error is not properly delt with.
+	a. breakpoint
+	b. bug
+	c. syntax error
+	d. exception
+	
+20. The _____ indicates that you want the number to appear formatted in a specific way when it is returned as a string from the ToString method.
+
+	a.formatting string
+	b. insert method 
+	c. data type
+	d. variable name
+	
+21. You have started an application by clicking the Debugging button (|>) or by pressing f5 on the keyboard. If an exception is thrown, the application stops running and Visual Studio goes into a special mode known as _____.
+	a. exceotion mode
+	b. break mode
+	c. debug mode
+	d. crash mode
+22. Code that responds to exceptions when they are thrown and prevents the program from abruptly crashing is called a(n)_____.
+	a. exit strategy
+	b. fail safe
+	c. event handler
+	d. exception handler
+
+23. A _____ is a bame that represents a value that cannot be changetd during the program's execution.
+	a. named literal
+	b. named constant
+	c. variable signature
+	d. key term
+
+24. A _____ is a variable that is declared inside a class but not inside any method.
+	a. term 
+	b. class variable
+	c. field
+	d. mnemonic8
+
+25. A(n) _____ specifies how a class member can be accessed by code outside the class.
+	a. namespace
+	b. sccess modifier
+	c. scope delimiter
+	d. class directive
+	
+26. A _____ is a field that cannot be changed by any statement in the class.
+	a.static field
+	b.class name
+	c.key field
+	d.constant field
+	
+27. The .NET Framework provides a class named _____, which contains numerous mathods that are useful for programming advanced mathematical operations.
+	a. Math
+	b. Calc
+	c. Trig
+	d. Linq
+	
+
+28. When a control has the _____. it recives the user's keyboard input.
+	a. text
+	b. tab order
+	c. focus
+	d. input allocator
+	
+29. The order in chich controls receive the focus is called the _____.
+	a. order of operatrions
+	b. program flow
+	c. execution sequence
+	d. tab order
+	
+30. The _____ contains a numeric value, which indicates the control's position in the tab order.
+	a. Index of property
+	b. TabIndex property
+	c. ControlOrder property
+	d. TabOrder property
+	
+True or False
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+
+Short Answer
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.

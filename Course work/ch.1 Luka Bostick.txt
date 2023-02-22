@@ -235,18 +235,53 @@ TRUE or False
 Short Answer
 
 1. Why is the CPU the most important component in a computer?
+	It preforms all computation tasks. 
+	
 2. What number does a bit that is turned on represent? What number does a bit that is turned off represent?
+	the number one represents a bit that is turned on. The number 0 represents a but that is turened off.
+	
 3. What would you call a device that works with binary data?
+	The device that works with streams of binary data is called a computer.
+	
 4. What are the words that make up a high-level programming language called?
+	Code is writen with keywords, numbers and ASCII characters
+
 5. What are the short words that are used in assembly language called? 
+			Commands.
+			
 6. What is the deifference between a compiler and an imperter?
+	The compiler converts code into mechine code, and the imperter reads the mechine code and runs it.
+
 7. What type of software controls the internal operations of the computer's hardware?
+	The operating system.
+
 8. What is pseudocode? What is a flowchart?
+	pseudocode is the shorthand version of code, a flowchart demonstrates the flow of data.
+
 9. When a prgram runs in a text-based environment, such as a command line interface, what determines the order in which things happens?
+	The order it is typed in the code file.
+	
+	
 10. What does a class specify about an object?
+	Classes specify what methods and variables the object hold.
+	
 11. Can you use C# alone to perform advanced operations such as creating GUIs, reading data from a file, or working with databases? Why or why not?
-12. Figure 1-49 shows the Visual Studio IDE. What are the names of tge four areas that are indicated in the figure?
+	Yes, C# has a built in GUI(forms), you might use sql or postgres fir data bases, but c# supports files data streams.
+	
+12. Figure 1-49 shows the Visual Studio IDE. What are the names of the four areas that are indicated in the figure?
+	1.Toolbox
+	2.code window 
+	3.Solution Explorer 
+	4.properites
+	
 13. What is the purpose of the Toolbox in the Visual Studio environment
+	Drag and drop event basesd components.
+
 14. How can you access the documentation for Visual Studio? What resoirces are provided by the MSDN Libary?
+		microsoft devlopers netword provides the c# documentation. 
+
 15. What steps mush you take to open an existing project?
+	open visual studio code, and select the recent project
+	
 16.How can you view the project's form if it is not automatically displayed in the Designer?
+	By running the program.
