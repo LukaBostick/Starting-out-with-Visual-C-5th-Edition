@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -16,6 +16,7 @@
   <ItemGroup>
     <None Include="Chapter 1 Introduction to Computers and Programming.cs" />
     <None Include="Chapter 2 Introduction to Visual Cshap.cs" />
+    <None Include="C:\Users\lukab\OneDrive\Desktop\Chapter 3 Processing Data.cs" Link="Chapter 3 Processing Data.cs" />
   </ItemGroup>
 
 </Project>
