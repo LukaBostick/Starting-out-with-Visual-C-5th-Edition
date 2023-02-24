@@ -342,7 +342,8 @@ namespace Chapter3ProcessingData
 /// THis works because string literals are assignment compatible with string varibles.
 /// //////////////////////////////////////////////////////////////////////////
 /// In line 8, we assign a string variable to another string variable.
-/// THis works for the obvious reason that string variables are compatible with other string variables.
+/// THis works for the obvious reason that string variables are compatible
+/// with other string variables.
 /// //////////////////////////////////////////////////////////////////////////
 /// Assume that the application has a TextBox control named userInputTextBox.
 /// In line 11, we assign the value of the TextBox control's Text property to
@@ -793,7 +794,10 @@ namespace Chapter3ProcessingData
 /// //////////////////////////////////////////////////////////////////////////
 /// The answer is yes, there is a way. You can use a cast operator to
 /// explicitly convert a value from one numeric data type to another,
-/// even if the conversion might result in a loss of data. A cast operator is the name of the desired data type, written inside parentheses and placed to the left of the valur that you want ot convert. The following code sample demonstrates:
+/// even if the conversion might result in a loss of data. A cast operator
+/// is the name of the desired data type, written inside parentheses and 
+/// placed to the left of the valur that you want ot convert. The following
+/// code sample demonstrates:
 /// //////////////////////////////////////////////////////////////////////////
 /// // Declare an int variable.
 /// 
@@ -809,15 +813,21 @@ namespace Chapter3ProcessingData
 /// 
 ///     *Line 2 declares an int var named wholeNumber.
 ///     
-///     * Line 5 declares a double variable named realNumber, initialized with the value 3.0.
+///     * Line 5 declares a double variable named realNumber, initialized 
+///     with the value 3.0.
 ///     
-///     *Line 8 users a cast operator to convert the value of realNUmber to an int and assigns the converted valie to wholeNUmber. After this statement executes, the whileNumber variable is assigned the value 3.
+///     *Line 8 users a cast operator to convert the value of realNUmber to an
+///     int and assigns the converted valie to wholeNUmber. After this statement
+///     executes, the whileNumber variable is assigned the value 3.
 ///     
 /// Table 3.3 shows other code examples involving different types of cast operators.
 /// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// When you use a castoperator, you are essentially telling the compiler that you know what you are doing and you are willing to accept the consequences of the conversion. IT is still possible that a loss of data can occur. FOr ex, look at the following code:
+/// When you use a castoperator, you are essentially telling the compiler 
+/// that you know what you are doing and you are willing to accept the 
+/// consequences of the conversion. IT is still possible that a loss of 
+/// data can occur. FOr ex, look at the following code:
 /// //////////////////////////////////////////////////////////////////////////
 /// int while Number;
 /// 
@@ -834,15 +844,21 @@ namespace Chapter3ProcessingData
 /// it does not change the contents of the var. The cast operator merely
 /// returns the value that is stored in the var, converted to the specifed
 /// data type. In the prevoise code sample, when the (int) cast operator is
-/// applied to the realNumber var, the cast opertor retues the value 8. The realNumber variable remains unchanged, however, still containing the value 8.9
+/// applied to the realNumber var, the cast opertor retues the value 8. The 
+/// realNumber variable remains unchanged, however, still containing the 
+/// value 8.9
 /// //////////////////////////////////////////////////////////////////////////
 /// Declaring Local Variables with the var Keyword
 /// //////////////////////////////////////////////////////////////////////////
-/// C# provides an alternative way to declare local variables, using the keywond and an initialization value. Here is an example:
+/// C# provides an alternative way to declare local variables, using the 
+/// keywond and an initialization value. Here is an example:
 /// //////////////////////////////////////////////////////////////////////////
 /// var amount = 100;
 /// //////////////////////////////////////////////////////////////////////////
-/// Notice that this statement uses the word var instead of a data type. The var keyword tells the compiler to determine the variabl's data type from the initialization value. In this example, the initialization value 100 is an int, so amount will be an int variable. Here are other examples:
+/// Notice that this statement uses the word var instead of a data type. 
+/// The var keyword tells the compiler to determine the variabl's data type 
+/// from the initialization value. In this example, the initialization value 
+/// 100 is an int, so amount will be an int variable. Here are other examples:
 /// //////////////////////////////////////////////////////////////////////////
 /// var interestRate = 12.0;
 /// var stockCode = "D465U";
@@ -880,7 +896,9 @@ namespace Chapter3ProcessingData
 /// programmer's tools for performing calculations are math operatios. C# 
 /// provides the math operators shown in Table 3.4.
 /// //////////////////////////////////////////////////////////////////////////
-/// Programmers use the operators shown in Table 3.4 to create math expressions A math experession preforms a calculation and gives a value. The following is an example of a simple math expression:
+/// Programmers use the operators shown in Table 3.4 to create math
+/// expressions A math experession preforms a calculation and gives a value.
+/// The following is an example of a simple math expression:
 /// //////////////////////////////////////////////////////////////////////////
 /// 12*2
 /// //////////////////////////////////////////////////////////////////////////
@@ -908,7 +926,255 @@ namespace Chapter3ProcessingData
 /// commission = sales * percent;
 /// half = number / 2; 
 /// //////////////////////////////////////////////////////////////////////////
-/// The modulus operator (%) preforms division between two integers, but instead of returing the quotient, it returns the remainder
+/// The modulus operator (%) preforms division between two integers, but 
+/// instead of returing the quotient, it returns the remainder. The follwing
+/// statment assigns 2 to leftOver: 
+/// //////////////////////////////////////////////////////////////////////////
+/// leftOver = 17 % 3;
+/// //////////////////////////////////////////////////////////////////////////
+/// The statement assigns 2 to leftover because 17 divided by 3 is 5 with a 
+/// remainder of 2. You will not use the modulus opeerator refquently, but
+/// it it useful in some situations. It is commonly used in calculations 
+/// that detect odd or even numbers, determine the day of the week, or measure
+/// the passge of time and in oither speclized operations.
+/// //////////////////////////////////////////////////////////////////////////
+/// The Order of Operations
+/// //////////////////////////////////////////////////////////////////////////
+/// You can write mathmatical expressions wil several operators. The 
+/// following statement assigns the sum of 17, the variable x, 21 and the
+/// variable y to the variable anwser.
+/// //////////////////////////////////////////////////////////////////////////
+/// answer = 17 + x + 21 + y;
+/// //////////////////////////////////////////////////////////////////////////
+/// Some expressions are not that straightforward, however. Consider the
+/// following statemet:
+/// //////////////////////////////////////////////////////////////////////////
+/// outcome = 12 + 6 / 3;
+/// //////////////////////////////////////////////////////////////////////////
+/// What value will be stored in outcome? The number 6 is used as an operand 
+/// for both the assition and division operators. The outcome var could be 
+/// assigned either 6 or 14, depending on when the division takes place.
+/// The answer is 14 because the order of operations dictates that the 
+/// divison operator works before addition operator does.
+/// //////////////////////////////////////////////////////////////////////////
+/// The order of operations can be summarized as follows:
+/// 
+/// 1. Preform any operations that are enclosed in parentheses.
+/// 2. Preform any multiplications, divisions, or modulus operations as they
+///    appear from left to right.
+/// 3. Perform any additions or subtractions as they appear from left to right.
+/// //////////////////////////////////////////////////////////////////////////
+/// Mathematical expressions are evaluated from left to right. Mulitplication
+/// and division are always performed before addition and subtraction, so the
+/// statement
+/// //////////////////////////////////////////////////////////////////////////
+/// outcome = 12 + 6 / 3;
+/// //////////////////////////////////////////////////////////////////////////
+/// works like this:
+/// //////////////////////////////////////////////////////////////////////////
+///     1. 6 is divided by 3, yielding a result of 2.
+///     2. 12 is added to 2, yielding a result of 14.
+/// //////////////////////////////////////////////////////////////////////////
+/// IT could be diagramemd as shown in Figure 3-11.
+/// //////////////////////////////////////////////////////////////////////////
+/// Table 3.5 shows some other sample expressions with their values.
+/// //////////////////////////////////////////////////////////////////////////
+/// Grouping with Parentheses
+/// //////////////////////////////////////////////////////////////////////////
+/// Parts of a mathematical expression may be grouped with parentheses to force
+/// some operations to be preformed before other. IN the fikkiwubng statent,
+/// the vars a and b are added together, and their sum is diviede by 4:
+/// //////////////////////////////////////////////////////////////////////////
+/// result = (a+b)/4;
+/// //////////////////////////////////////////////////////////////////////////
+/// But what if we left the parentheses out, as shown here?
+/// //////////////////////////////////////////////////////////////////////////
+/// result = a + b / 4;
+/// //////////////////////////////////////////////////////////////////////////
+/// We would get a different result. Without the parentheses, b would be 
+/// devided by 4 and the result added to a. Table 3.6 shows some math expressions
+/// that use parentheses and their values.
+/// //////////////////////////////////////////////////////////////////////////
+/// Mixing Data Types in a Math Expression
+/// //////////////////////////////////////////////////////////////////////////
+/// When you preform a math operation on two operands, the data types of the 
+/// result will depend on the type of the operands. IF the operands are of the 
+/// same data type, the result will also be of that data type. For ex:
+/// 
+///     *When an operations is performmed on two int values, the esult will be an int.
+///     *When an operation is performed on two double values, the result will 
+///     be a double.
+///     *When an operation is performed on two decimal values, the result will 
+///     be a decimal values.
+///     
+/// //////////////////////////////////////////////////////////////////////////
+/// It's not uncommon, however, for a math expression to have operands of
+/// diferent data types. C# handles operations involving int, double, and 
+/// decimal operands in the following ways:
+/// //////////////////////////////////////////////////////////////////////////
+/// *When a math expression invilves an int and a double, the int is 
+/// temporarily converted to a double, and the result is a double.
+/// *When a math expression involves an int and a decimal, the int is 
+/// temporarily converted to a decimal, and the result is a decimal.
+/// *Math expressions involving a double and a decimal are not allowed unless
+/// a cast operator is used to convert one of the operands.
+/// //////////////////////////////////////////////////////////////////////////
+/// For example, suppose a pay-calculating program has the follwoing
+/// -variable declarations:
+/// 
+/// int hoursWorked;    // To hold the number of hours worked
+/// decimal payRate:
+/// deciamal grossPay;  // To hold the gross pay
+/// //////////////////////////////////////////////////////////////////////////
+/// Then, later in the program this statement appears:
+/// //////////////////////////////////////////////////////////////////////////
+/// grossPay = hoursWorked * payRate;
+/// //////////////////////////////////////////////////////////////////////////
+/// The math expression on the right side of the = operator multiplies an int
+/// by a decimal. When the statement executes, and then multiplied by the payRate
+/// variable. The result is a decimal and is assigned to the grossPay variable.
+/// //////////////////////////////////////////////////////////////////////////
+/// When possible, you should avoid math operations that use a mixture of double
+/// and decimal operands. C# does not allow operations involving these two types
+/// unless you a cast operator to explicitly conver one of the operands. For 
+/// ex, suppose a program that calculates the cost of a product has the following 
+/// variable declatations:
+/// //////////////////////////////////////////////////////////////////////////
+/// double weight;          // The product weight
+/// decimal pricePerPound;  // The proce per pound
+/// decimal total;          // The ritak cost
+/// //////////////////////////////////////////////////////////////////////////
+/// Later in the program you need to calculate the total cost, like this:
+/// //////////////////////////////////////////////////////////////////////////
+/// total = weight * pricePerPound; <- ERROR!
+/// //////////////////////////////////////////////////////////////////////////
+/// The compiler will not allow this statement because weight is a double and
+/// PricePerPound is a decimal. To fix the statement, you can insert a cast
+/// operator, as shown here:
+/// //////////////////////////////////////////////////////////////////////////
+/// total = (decimal)weight * pricePerPound;
+/// //////////////////////////////////////////////////////////////////////////
+/// The cast operator converts the value of the weight variable to a decimal,
+/// and the converted value is multiplied by pricePerPound. The result of the
+/// expression is a decimal and is assigned to total.
+/// //////////////////////////////////////////////////////////////////////////
+/// Integer Division
+/// //////////////////////////////////////////////////////////////////////////
+/// When you devide an integer by an integer in C#, the result is always
+/// given as an integer. IF the result has a fractional part, it is truncated.
+/// For ex, look at the following code:
+/// //////////////////////////////////////////////////////////////////////////
+/// int length;         //Declare length as an int
+/// double half;        //Declare half as a double
+/// length = 75;        //Assign 75 to length
+/// half = length / 2;  // Calculate half the length
+/// //////////////////////////////////////////////////////////////////////////
+/// The last statement divides the value of length by 2 and assigns the
+/// result to half. Mathematically, the result of 75 divided by 2 is 37.5
+/// However, that is not the result that we get from the math expression.
+/// The length variable is an int, and it is being devived by the numeric
+/// leiteral 2, which is also treated as an int. The result of the division
+/// is truncated, which gives the value 37. This is the value that is assigned
+/// to the half variable. IT does not matter that the half variable is 
+/// declared as a double. The fractional part of the result is truncated 
+/// before the siignment takes place.
+/// //////////////////////////////////////////////////////////////////////////
+/// Combined Assignment Operators
+/// //////////////////////////////////////////////////////////////////////////
+/// Sometimes you want to increase a variable's value by a certain amount. 
+/// For example, suppose toy have a variable named number and you want to 
+/// increase its value by 1. You can accomplish that with 
+/// the following statement:
+/// //////////////////////////////////////////////////////////////////////////
+/// number = number + 1;
+/// //////////////////////////////////////////////////////////////////////////
+/// The expression on the right side of the assignemnt operator calculates
+/// the value of number plus 1. The result is then assigned to number, replacing
+/// the value that was previously stored there statement executes, it is equal
+/// to 7 after the statement executes.
+/// //////////////////////////////////////////////////////////////////////////
+/// Similarly, the following statement substracks 5 from number:
+/// //////////////////////////////////////////////////////////////////////////
+/// number = number - 5;
+/// //////////////////////////////////////////////////////////////////////////
+/// IF number is equal to 15 before this statement executes, it is equal to 10
+/// after the statement executes. Here's another example. The following statement
+/// doublwa the value of number variable:
+/// //////////////////////////////////////////////////////////////////////////
+/// num = num*2
+/// //////////////////////////////////////////////////////////////////////////
+/// If number is equal to 4 before this statement executes, it is equal to 8 after
+/// the statement executes.
+/// //////////////////////////////////////////////////////////////////////////
+/// These types of operations are very common in programming. For convenience,
+/// C# offers a special set of operators know as combined assignment operators
+/// that are designed specificallt for these jobs. Table 3.7 shows the
+/// combined assignment operators.
+/// //////////////////////////////////////////////////////////////////////////
+/// AS you can see, the combined assignment operators do not require the
+/// programmer to type the variable name twice. Also, they give a clear
+/// indication of what is happening in the statement.
+/// //////////////////////////////////////////////////////////////////////////
+/// 3.5 Inputting and Outputting Numeric Values
+/// //////////////////////////////////////////////////////////////////////////
+/// Concept If the user has entered a number into a TextBox, the number will be
+/// stored as a string in the TextBox's Text property. IF you want ot store that
+/// number in a numeric variable, you have to convert it to the appropriate 
+/// numeric data type. When you want to display the value of a numeric variable 
+/// in a Label control or a message box, you have to convert it to a string.
+/// //////////////////////////////////////////////////////////////////////////
+/// Getting a Number from a TextBox
+/// //////////////////////////////////////////////////////////////////////////
+/// Graphical User (GUI) applications typically use TextBox controls to read
+/// keyboard input.
+/// 
+/// Any data that the user enters into a TextBox control is
+/// stored in the control's Text property as a string, even if it is a number.
+/// 
+/// For example, if the user enters the number 72 into a TextBox control, 
+/// the input is stored as the string "72" in the control's Text property
+/// to the desired numberic data type.Unfortunatelty, you cannot use a 
+/// cast operator to convert a string to a numeric type.
+/// 
+/// //////////////////////////////////////////////////////////////////////////
+/// To convert a string to any of the numeric data types, we use a family of
+/// methods in the .NET Framework known as the Parse method. In computer science, 
+/// the term parse typically means to analyze a string of characters for some
+/// purpose. The Parse method sre used to convert a string to a specific
+/// data type. There are several Parse methods in the .NET Framework, but
+/// because we are primarily using the int, double, and decimal numeric 
+/// data types, we need only three of them:
+/// //////////////////////////////////////////////////////////////////////////
+/// * WE use the int.Parse method to convert a string to an int.
+/// * We use the double.Parse method to convert a string to a double.
+/// * We use the decimal.Parse method to convert a string to a decimal
+/// //////////////////////////////////////////////////////////////////////////
+/// When you call one of the Parse methods, you pass a piece of data known as
+/// an argument into the method, and the method returns a piece of data back to you.
+/// The srgument that you pass to the method is the string that you want to convert, 
+/// and the piece of data that the method returns back to you is the converted value.
+/// Figure 3-12 illustrates this concept using the int.PArse method as an example.
+/// //////////////////////////////////////////////////////////////////////////
+/// The following code sameple shows how to use the int.Parse method to convert
+/// a control's Text property to an int. Assumes that hoursWorkedTextBox is the
+/// name of a TextBox control.
+/// //////////////////////////////////////////////////////////////////////////
+/// // Declare an int variable to hold the hours worked.
+/// int hoursWorked;
+/// 
+/// // Get the hours worked from the TextBox.
+/// hoursWorked = int.PArse(hoursWorkedTExtBox.Text);
+/// //////////////////////////////////////////////////////////////////////////
+/// Let's assume that the user has entered the value 40 into the 
+/// hoursWorkedTextBOx control. In line 5 of the code sample, on the right side
+/// of the = operator is the expression int.Parse(hoursWorkedTextBox.Text). This
+/// expression calls the int.PArse method, passing the value of
+/// hoursWorkTextBox.Test as an argument. Because the user has entered 40 into
+/// the TExtBox, the string "40" is the value is passed as the argument. The
+/// method converts the string "40" to the int value 40. The int value 40 is 
+/// returned from the method and the = operator assigns  it to the hoursWorked
+/// variable Figure 3-13 illustates this processs
+/// 
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -918,24 +1184,6 @@ namespace Chapter3ProcessingData
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// //////////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// 
-/// 
-/// 
-/// 
-/// 
-/// 
+
+
 //////////////////////////////////////////////////////////////////////////

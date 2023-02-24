@@ -285,3 +285,22 @@ Short Answer
 	
 16.How can you view the project's form if it is not automatically displayed in the Designer?
 	By running the program.
+	
+Programming Problems
+1. Use what you've learned about the binary numbering system in this chapter to convert the following decimal numbers to binary:
+	11
+	65
+	100
+	255
+	
+2. Use what you've ;earned about the binary numbering system in this chapter to convert the following binary numbers to decimal:
+	1101
+	1000
+	101011
+	
+3. Look at the ASCII chart in Appendix C and determine the codes for each letter of your first name.
+
+4. Suppose your instructor gives three exams during the semester and you want to write a program that calculates your average exam score. Answer the following:
+		a. What items of input must the user enter?
+		b. Once the input has  been entered, how will the program determine the average?
+		c. What output will the program display?
