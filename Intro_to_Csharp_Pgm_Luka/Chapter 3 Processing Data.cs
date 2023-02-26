@@ -1,4 +1,4 @@
-using System;
+sing System;
 
 namespace Chapter3ProcessingData
 {
@@ -1360,7 +1360,8 @@ method, and assigned to the temperature variable.
 ///     * The myNUmber variable's ToString method is called.
 ///       The method returns the string "123".
 ///       
-///     * The string "123" is passed to the MessageBox.Show method. As a result, the value 123 is displaed in a message box.
+///     * The string "123" is passed to the MessageBox.Show method. 
+///     As a result, the value 123 is displaed in a message box.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -1482,15 +1483,20 @@ method, and assigned to the temperature variable.
 ///         Line 24: This statement declates a double var named mpg. This var 
 ///         is used to hold MPG, which will be calculated.
 ///         
-///         Line 28: This statement convertys the milesTextBox control's Text property to a double and assigns the result to the miles var.
+///         Line 28: This statement convertys the milesTextBox control's Text
+///             property to a double and assigns the result to the miles var.
 ///         
-///         Line 32: This statement convers the gallonsTextBox control's Text property to a double and assigns the result to the gallons variable.
+///         Line 32: This statement convers the gallonsTextBox control's Text
+///             property to a double and assigns the result to the gallons
+///             variable.
 ///         
-///         Line 35: THis statement calculates MPG. it divides the miles var by the gallons var and assigns the result to the mpg var.
+///         Line 35: THis statement calculates MPG. it divides the miles var by 
+///             the gallons var and assigns the result to the mpg var.
 ///         
-///         Line 38: this statement converts the mpg var to a string and assigns the reult to the mpgLabel
-///                  control's Text property. This couses the value of the mpg variable to be displayed 
-///                  in the mpgLabel control.
+///         Line 38: this statement converts the mpg var to a string and assigns 
+///             the reult to the mpgLabel control's Text property.
+///             This couses the value of the mpg variable to be displayed
+///             in the mpgLabel control.
 ///         
 /// //////////////////////////////////////////////////////////////////////////
 /// 
@@ -1553,7 +1559,11 @@ method, and assigned to the temperature variable.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Notice in the decond statement that the "c" formatting string is passed to the amount variable's ToString method. The maeesage box that the statement display appears as shown in Figure 3-19.
+/// Notice in the decond statement that the "c" formatting string is passed
+/// to the amount variable's ToString method. 
+/// 
+/// The maeesage box that the statement
+/// display appears as shown in Figure 3-19.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -1566,7 +1576,9 @@ method, and assigned to the temperature variable.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// There are several other format strings that you can use with the ToString
-/// method, and each produces a different type of formatting. Table 3.9 shows a few of them.
+/// method, and each produces a different type of formatting.
+/// 
+/// Table 3.9 shows a few of them.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -1582,7 +1594,12 @@ method, and assigned to the temperature variable.
 /// 
 /// //////////////////////////////////////////////////////////////////////////
 /// Number format ("n" or "N") displays numeric values with comma separators and
-/// a decimal point. By default, two digits display to the right of the decimal point. Negative values are displayed with a leading minus sign. As example is -2,345.67.
+/// a decimal point. By default, two digits display to the right of the decimal
+/// point.
+/// 
+/// Negative values are displayed with a leading minus sign.
+/// 
+/// As example is -2,345.67.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
@@ -1741,7 +1758,8 @@ method, and assigned to the temperature variable.
 /// //////////////////////////////////////////////////////////////////////////
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Step 1: Start Visual Studio and begin a new Windows Forms Application project named Sale Price Calculator.
+/// Step 1: Start Visual Studio and begin a new Windows Forms Application
+/// project named Sale Price Calculator.
 /// 
 /// Step 2: Set up the application's form, as shown in Figure 3-20. notice 
 /// that the form's Text property is set to Sale Price Calculator. The
@@ -1770,13 +1788,18 @@ method, and assigned to the temperature variable.
 /// 
 /// 
 /// //////////////////////////////////////////////////////////////////////////
-/// Line: 22 This statement declares a decimal variable named orinalPrice. This var will hold the item's price.
+/// Line: 22 This statement declares a decimal variable named orinalPrice.
+/// This var will hold the item's price.
 /// 
-/// Line:23 This statement declares a decimal var named discountedPercentage. this var will hold the discount percentage.
+/// Line:23 This statement declares a decimal var named discountedPercentage.
+/// this var will hold the discount percentage.
 /// 
-/// Line:24 This statement declares a decimal var named discountAmount. THis var will hold the amount of discount that will be taken from the item's original price. This amount will be calculated.
+/// Line:24 This statement declares a decimal var named discountAmount. 
+/// THis var will hold the amount of discount that will be taken from the
+/// item's original price. This amount will be calculated.
 /// 
-/// Line:25 This statement declars a decimal var named salePrice. This var will hold the item's sale price. This amount will be calculated.
+/// Line:25 This statement declars a decimal var named salePrice. 
+/// This var will hold the item's sale price. This amount will be calculated.
 /// 
 /// Line:28 This statement converts the originalPriceTextBox control's Text
 ///     property to a decimal and assigns the result to the originalPrice var
@@ -2205,7 +2228,12 @@ method, and assigned to the temperature variable.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// Step 2:Set up the application's fprm as shpwn ion Figure 3-26. Notice that the form's Text property is set to Test Average. The names of  the controls are shown in the figure. As you place each of the controls on the form, refer to Table 3.14 for the relevan property settings.
+/// Step 2:Set up the application's fprm as shpwn ion Figure 3-26.
+/// Notice that the form's Text property is set to Test Average.
+/// The names of  the controls are shown in the figure. 
+/// 
+/// As you place each of the controls on the form, 
+/// refer to Table 3.14 for the relevan property settings.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
@@ -2571,11 +2599,14 @@ method, and assigned to the temperature variable.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// * IN the showNameButton_Click event handler, line 25 displays a message box showing the value of the name variable.
+/// * IN the showNameButton_Click event handler, line 25 displays a 
+/// message box showing the value of the name variable.
 /// 
-/// * In the chrisButton_click event handler, line 30 changes the value of the name variable to "Chris"
+/// * In the chrisButton_click event handler, line 30 changes the value
+/// of the name variable to "Chris"
 /// 
-/// * In the carmenButton_Click event handler, line 35 changes the value of the name variable to "Carmen". 
+/// * In the carmenButton_Click event handler, line 35 changes the value
+/// of the name variable to "Carmen". 
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
@@ -2830,198 +2861,405 @@ method, and assigned to the temperature variable.
 /// 
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// Step 6:
+/// Step 6: Switch your view back to the Designer and double-click the 
+///         twentyFiveCentsPictureBox control. This opens the code
+///         editor, and you will see an empty event handler named
+///         twentyFiveCentsPictureBox_Click.
+///         
+///         Complete shown in lines 50-54 in Program 3.6.
+///         
+/// Let's take a closer look at the code:
+/// 
+/// Line 51: This statement adds the value of the TWENTY_FIVE_CENT_VALUE
+///         constant to the total field.
+///         
+/// Line 54: This statement converts the total variable to a string and 
+/// assigins the result to the totalLabel control's Text property.
+/// The "c" format string causes the number to be formatted as currency.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-///Step 7: 
+///Step 7: Switch your view back to the Designer and double-click the 
+///         fiftyCentsCentsPictureBox control. This opens the code
+///         editor, and you will see an empty event handler named
+///         fiftyCentsPictureBox_Click.
+///         
+///  Complete shown in lines 59-63 in Program 3.6.
+///         
+/// Let's take a closer look at the code:
+/// 
+/// Line 60: This statement adds the value of the FIFTY_CENTS_VALUE constant
+///             to the total field.
+/// 
+/// Line 63: This statement converts the total variable to a string and
+/// assigns the result to the totalLabel control's Text property.
+/// The "c" format string causes the number to be formatted as currency.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-///Step 8:
- /// //////////////////////////////////////////////////////////////////
+/// Step 8: Now you write the event handler for the Exit button. Switch
+///     your view back to the Designer and double-click the exitButton 
+///     control. This operns the code editor, and you will see an empty
+///     event handler named exitButton_Click. 
+///     Complete the exitButton_Click event handler by typing the code
+///     shown in lines 68-69 in program 3.6.
+///
+/// /// //////////////////////////////////////////////////////////////////
 /// 
 /// ////////////////////////////////////////////////////////////////////
-/// Step 9:
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
+/// Step 9: Save the project. Then, press the F5 key on the key on the
+///     keyboard or click the Start Debugging button (|>) on the toolbar
+///     to compile and run the application. Test the application by clicking
+///     on the toolbar to compiler and run the application. 
+///     
+/// Test the application by clicking the coin images in any order you wish.
+/// The total shown on the form should update by the correct amount each time
+/// you click a coin. When you are finished, 
+/// click the Exit button and the form should close.
+/// /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
+///         3.10 Using the Math Class
+/// /////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////
+/// Concept The .NET Framework's Math class provides esveral methods for
+/// performing complex mathematical calculations.
 /// /////////////////////////////////////////////////////////////////////
 /// 
+/// /////////////////////////////////////////////////////////////////////
+/// The .Net Framework provides a class named Math, which contains
+/// numerous methods that are useful for performing advanced mathmatical
+/// operations.
+/// 
+/// Table 3.16 Gives a summary of several of the Math clas methods.
+/// 
+/// (For a comprehensive list of all the methods provided by the Math
+/// class methods(For a comprehenensive list of all the methods provided
+/// by the Math class and more details on any of the methods, just search
+/// for Math class in the MSDN help system.)
 /// 
 /// 
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// Table 3.16 Many of the MAth class methods
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// These methods typicall accept one or more values as arguments(args),
+/// perform a mathematical operation using the arguments, and return
+/// the result.
 /// 
+/// For example, the Math.Pow method raises a number to a power. Here is 
+/// an example of how the method is called:
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// double result;
+/// 
+/// result = Math.Sqrt(4.0,2.0);
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// The method takes two double arguments.
+/// It raises the firsy argument to the power of the second argument
+/// and returns the result as a double.
+/// 
+/// In this ex, 4.0 is raised to the power pf 2.0.
+/// 
+/// This statement is equivalent to the following algebraic statement:
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// result = 4^2
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// The following code sample shows another example of a statement using 
+/// the Math.Pow method. It assigns 3 times 6^3 to x:
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// double x;
+/// x=3*Math.pow(6.0,3.0);
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// The Math.Sqrt method accepts an arg and returns the square root of the arg.
+/// Here is an example of how it is usead:
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// 
- ///
+/// /////////////////////////////////////////////////////////////////////
+/// double result;
+/// 
+/// result=MathSqrt(16.0);
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// The statement that calls the Math.Sqrt method passes 16.0 as an arg. 
+/// The method returns the square root of 16.0(double), 
+/// which is then assigned to the result var.
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// The Math.PI and Math.E Named Constants
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// The MAth class also provides two predefined named constants, Math.Pi
+/// and Math.E Whic hare assigned mathmatical values of pi amd e. 
+/// You can use these var in equations that require their values. 
+/// For ex, the following statement, which calculates the area of a
+/// circle, uses MAth.PI.
+/// /////////////////////////////////////////////////////////////////////
+/// 
  /// //////////////////////////////////////////////////////////////////
-/// /
+/// area = Math.PI * radius * radius;
 /// ////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// Note If you look at the top of a form's source code in the code 
+/// editor, you should see a directive that reads using System;.
 /// 
+/// That directive is required for any program that uses the Math class.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// /////////////////////////////////////////////////////////////////////
+/// 3.11 More GUI Details
+/// /////////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// In Chapter 2, you learned the basics of creating a GUI by placing
+/// controls on a form and setting various properties. In this section,
+/// you learn to fine-turn many aspecrs of an applicatrions's gui
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// Controlling a Form's Tab Order
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// When an application is running and a form is displayed, one of the 
+/// form's controls always has the focus.
 /// 
+/// The control having the focus
+/// is the one that receives the user's keyboard input.
+/// 
+/// For example, 
+/// when a TextBox control has the focus, it receives the characters that 
+/// the user enters on the keyboard. 
+/// 
+/// When a button has the focus,
+/// it receives teh characters that the user enters on the keyboard.
+/// 
+/// When a button has focus, pressing the Enter key executes the button's
+/// Click event handler.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// Note
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// Only controls capable of receiving some sort of input, such as text
+/// boxes and buttons, may have the focus.
+/// /////////////////////////////////////////////////////////////////////
 /// 
+/// /////////////////////////////////////////////////////////////////////
+/// You can tell which control has the focus by looking at the form at 
+/// run time.
+/// 
+/// When a TextBox control has the focus, a blicking text
+/// cursor appears inside it, or the text inside the TextBox control 
+/// might appear heighlighted.
+/// 
+/// When a button has the focus, a thin dotted line usually appears
+/// around the control.
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// When an application is running, pressing the Tab key changes the focus
+/// from one constrol to another.
+/// 
+/// The order in which controls recieve the focus is called the tab order.
+/// 
+/// When you place controls on a form in Visual C#, the tab order is in 
+/// the same sequence in which you create controls.
+/// 
+/// IN many cases this is the tab order you want, but sometimes you
+/// rearrange controls on a form, delete controls, and add new ones.
+/// 
+/// These modifications often leads to a disorganized tab order, which
+/// 
+/// can confuse and irritate the user of your applicaion.
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// Users want to tab smoothly from one control to the next, in a logical sequence.
+/// 
+/// You can modify the tab order by changing a control's
+/// position in the tab order.
+/// 
+/// When you create a control, Visual C# automatically assigns a value to
+/// its TabIndex property.
+/// 
+/// The first control you create on a form has a TabIndex of 0, the
+/// second has a TabIndex of 1, and so forth.
+/// 
+/// The control with a TabIndex of 0 is the first control in the tab 
+/// order. 
+/// 
+/// The next control in the tab order is the ine with a TabIndex of 1.
+/// 
+/// The tab order continues in this sequence. 
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// You may change the tab order of a form's controls by sekecting them,
+/// one by one, and changing their TabIndex property in the Properties 
+/// window. 
+/// An easier method, however, is to click View on the Visual Studio
+/// menu bar and then click Tab Order.
+/// This causes the foram to be displayed in the tab order selection 
+/// mode.
+/// 
+/// The image on the left in Figure 3-31 shows a form in the normal view,
+/// and the image on the right shows the form in tab order
+/// selection mode. 
+/// 
+/// We have also inserted the names of the TextBos and Button controls
+/// in the image of the right for reference purposes.
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// Figure 3-31 A form displayed in tab order selection mode
 /// /////////////////////////////////////////////////////////////////////
 ///
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// In tab order selection mode, each contro's existing TabIndex value is
+/// displayed in a smaller box in the contro;s upper-left corner. Notice
+/// the following in the image on the right in Figure 3-31.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+///     *The nameTextBox control's TabIndex is 2.
+///     *The addressTextBox control's TabIndex is 3.
+///     *The cityTextBox control's TabIndex is 0.
+///     *The stateTextBox control's TabIndex is 4.
+///     *The zipTextBox control's TabIndex is 1.
+///     *The clearButton control's TabIndex is 8.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// Note
+/// //////////////////////////////////////////////////////////////////
+/// Although the LAbel controls have TabIndex values, those values are
+/// irrelvant in this example because LAbel controls cannot recieve the
+/// focus.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
-/// 
+/// As you look at Figure 3-31, think about the order in which the
+/// controls will receive the focus when the applications runs.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// *The cityTextBox control has the lowest TabIndex value (0), 
+/// so it will receive the focus first.
+/// 
+/// *IF you press the Tab key, the focus will jump to the zipTextBox
+/// control because it has the next lowest tabIndex value(1).
+/// 
+/// *Press the Tab key, the focus will jump to the nameTextBox control
+/// because it has the next lower TabIndex value(2).
+/// 
+/// *Press the Tab key again and the focus will jump at the 
+/// addressTextBox control(TabIndex is set to 3).
+/// 
+/// *Press the Tab key again and the focus will jump at the stateTextBox
+/// control(TabIndex is set to 4).
+/// 
+/// *Press the Tab key again and the focus will jump at the clearTextBox 
+/// control(TabIndex is set to 8).
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// This is a very confusing tab order and should be rearranged. 
 /// 
+/// When a form is displayed in tab order selection mode
+/// ,you establish a newtab order by simply clicking the control with 
+/// the mouse in in the order you want. 
 /// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// 
- /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
+/// To fix the disoraganized tab order shown in Figure 3-31, we perform 
+/// the following:
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// 
 /// /////////////////////////////////////////////////////////////////////
+/// *First, click the NameTextBox control. The control's TAbIndex value changes to 0.
+/// 
+/// *Next, click the addressTextBox control. The control's TAbIndex value changes to 1.
+/// 
+/// *Then, click the cityTextBox control. The control's TAbIndex value changes to 2.
+/// 
+/// *Next, click the stateTextBox control. The control's TAbIndex value changes to 3.
+/// 
+/// *Then, click the zipTextBox control. The control's TAbIndex value changes to 4.
+/// 
+/// *Finally, click the clearbutton control. The control's TAbIndex value changes to 5.
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// When you are finished, exit tab order selection
+/// mode by pressing the Esc key. 
+/// 
+/// Now when the application runs,the focus will shift smoothly in an
+/// order that makes sense to the user.
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// 
-/// 
 /// /////////////////////////////////////////////////////////////////////
+/// Changing the focus with the Focus Mathod
 /// /////////////////////////////////////////////////////////////////////
+/// Often, you want to make sure particular control has the focus.
 /// 
+/// For example, look at the form shown in Figure 3-31. The purpose of
+/// the Clear button is to clear any input that the user has entered and
+/// rest the form so it is ready to accept a new set of input.
 /// 
-/// /////////////////////////////////////////////////////////////////////
+/// When the Claer button is clicked, the TextBox controls should be
+/// cleared and the focus should return to the nameTextBox control.
 /// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
-/// /////////////////////////////////////////////////////////////////////
-/// /////////////////////////////////////////////////////////////////////
-/// 
-/// 
+/// This would make it unnecessary for the user to click the TextBox 
+/// control in order to start entering another set of information.
 /// /////////////////////////////////////////////////////////////////////
 /// 
+/// /////////////////////////////////////////////////////////////////////
+/// In code, you move the focus to a control by calling the focus method.
+/// The method's general syntax is:
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// ControlName.Focus();
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// where ControlName is the name of the control. For instance, you move
+/// the focus to the nameTextBox control with this statement:
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// nameTextBox.Focus();
+/// /////////////////////////////////////////////////////////////////////
+/// 
+/// /////////////////////////////////////////////////////////////////////
+/// After the statement executes, the nameTextBox control will have the
+/// focus. 
+/// 
+/// Here is an example of how the clearButton control's Click event
+/// handler could be written: 
 /// /////////////////////////////////////////////////////////////////////
 /// 
 /// 
