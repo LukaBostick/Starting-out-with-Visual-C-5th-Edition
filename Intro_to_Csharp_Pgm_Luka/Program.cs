@@ -13,7 +13,7 @@ Console.WriteLine("Hello, World!");
  * access acodes, or print supplements that may come packled with the bounded book. 
  * 
  * For courses in introductory c# programming. Motivate students with clear,
- * down-to-earth explanations andfamiliar grapgical elements Starting out
+ * down-to-earth explanations and familiar graphical elements Starting out
  * With Visual C# is an ideal intorductory Visual C# text for students with
  * no prior programming experience.
  * Students who are new to programming will appreciate the clear, down-to-earth

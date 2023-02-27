@@ -2,7 +2,8 @@ using System;
 
 namespace Chapter3ProcessingData
 {
-    static void Main(string[] args)
+    class text{
+     static void Main(string[] args)
     {
         string s1 = "this is a string";
         Console.WriteLine(s1);
@@ -10,6 +11,8 @@ namespace Chapter3ProcessingData
 
 
     }
+    }
+   
 }
 
 /* //////////////////////////////////////////////////////////////////////////
@@ -4058,4 +4061,6 @@ method, and assigned to the temperature variable.
 /// 
 /// /////////////////////////////////////////////////////////////////////
 ///                 Figure 3-46 Debug toolbar commands
-/// /////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////\
+
+*/

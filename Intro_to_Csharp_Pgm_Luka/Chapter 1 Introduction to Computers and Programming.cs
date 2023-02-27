@@ -1,4 +1,18 @@
-0/*
+using System
+
+    namespace Chapter1IntroductiontoComputersandProgramming
+    {
+        class testing
+    {
+        string s = "Hello World!";
+
+        
+    }
+
+    }
+
+
+/*
  * //////////////////////////////////////////////////////////////////////////
  * Chapter 1 Introduction to Computers and Programming 
  * //////////////////////////////////////////////////////////////////////////

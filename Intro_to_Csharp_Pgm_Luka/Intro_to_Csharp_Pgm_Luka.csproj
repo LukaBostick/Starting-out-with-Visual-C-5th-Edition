@@ -10,11 +10,13 @@
   <ItemGroup>
     <Compile Remove="Chapter 1 Introduction to Computers and Programming.cs" />
     <Compile Remove="Chapter 2 Introduction to Visual Cshap.cs" />
+    <Compile Remove="Chapter 4 Making Decisions.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Chapter 1 Introduction to Computers and Programming.cs" />
     <None Include="Chapter 2 Introduction to Visual Cshap.cs" />
+    <None Include="Chapter 4 Making Decisions.cs" />
   </ItemGroup>
 
 </Project>
