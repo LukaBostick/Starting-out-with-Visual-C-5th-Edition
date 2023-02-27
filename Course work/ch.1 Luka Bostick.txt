@@ -288,19 +288,29 @@ Short Answer
 	
 Programming Problems
 1. Use what you've learned about the binary numbering system in this chapter to convert the following decimal numbers to binary:
-	11
-	65
-	100
-	255
+	11 ~ 1011
+	65 ~ 1000001
+	100 ~1100100
+	255 ~ 11111111
 	
-2. Use what you've ;earned about the binary numbering system in this chapter to convert the following binary numbers to decimal:
-	1101
-	1000
-	101011
+2. Use what you've learned about the binary numbering system in this chapter to convert the following binary numbers to decimal:
+	1101 ~ 13
+	1000 ~ 8
+	101011 ~ 43
 	
 3. Look at the ASCII chart in Appendix C and determine the codes for each letter of your first name.
+	LUKA
+	
+	L~76
+	U~85
+	K~75
+	A~65
 
 4. Suppose your instructor gives three exams during the semester and you want to write a program that calculates your average exam score. Answer the following:
 		a. What items of input must the user enter?
 		b. Once the input has  been entered, how will the program determine the average?
 		c. What output will the program display?
+		
+		a. The grades of each exam
+		b. exam1+exam2+exam3/ 3 = result
+		c.result * 100 + "%"
