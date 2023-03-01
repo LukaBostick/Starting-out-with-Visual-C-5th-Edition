@@ -1,0 +1,369 @@
+1.A(n) __C___ is the thin dotted line that encloses an object in the Designer.
+	a. selection marker
+	b. control binder
+	c. bounding box
+	d. object container
+	
+2.The small squares that appear on the right edges, bottom edge, and lower-right corner of a form's bounding box are called___D___.
+	a.sizing hooks
+	b.form edges
+	c.bounding tags
+	d.sizing handles
+	
+3.__A___ is the name of the form that Visual Studio initially creates in a new project.
+	a.Form1
+	b.Main
+	c.New1
+	d.Blank
+
+4.The ___B___ property holds the text this is displayed on the face of the button.
+	a.Name
+	b.Text
+	c.Tag
+	d.Face
+	
+5.A file that contsins program code is called a(n) __D___.
+	a.destination code file
+	b.executable file
+	c.machine language file
+	d.source code file
+	
+6.A namespace is a contrainer that holds ___D__.	
+	a.methods
+	b.names
+	c.space
+	d.classes
+	
+7.A(n) ___B__ is a method that executes when a specific event takes place while an application is running.	
+	a.action process
+	b.event handler
+	c.runtime procedure
+	d. event method
+	
+8.The statement MessageBox.Show("Hello World"); is an example of a(n)____A__.
+	a.method call
+	b.event handler
+	c.runtime procedure
+	d. event method
+	
+9.In programming we use the string to mean___C__.
+	a.many lines of code
+	b.parallel memory locations
+	c.string of characters
+	d.virtually anything
+	
+10.A(n)___A__marks the end of a prgramming statement in C#.
+	a.semicolon
+	b.period
+	c.hyphen
+	d.underscore
+	
+11.A piece of data that is wtritten into a program's code is a(n)___D__.
+	a.identifier
+	b.specifier
+	c.keyword
+	d.literal
+	
+12.The time during which you build the GUI and write the application's code is referred to as __C___.
+	a.run time
+	b.design time
+	c.code time
+	d.planning
+	
+13.The time during which an application is executing is referred to as __D__.
+
+	a.go time
+	b.design time
+	c.execution 
+	d.run time
+	
+14.When you want to display text on a form, you use a ___D__ control.
+	a.Button
+	b.PictureBox
+	c.Label
+	d.TextBox
+	
+15.The __D___ property allows you to set the font, font style, and size of the control's text.
+	a.style
+	b.AutoSize
+	c.Text
+	d.Font
+	
+16.A ___A__ property can be set to one of two possible values: True or False.
+	a.Boolean
+	b.Logical
+	c.Binary
+	d.Dual
+	
+17.Label controls have a(n) __B__ property that contrils the way they can resized.
+	a.Stretch
+	b.AutoSize
+	c.Dimension
+	d.Fixed
+	
+
+18.The___B__ property can be used to change the text's alignment in the label.
+	a.TextPosition
+	b.AutoAlign
+	c.TextCenter
+	d.TextAlign
+	
+19. In code, you use a(n)__C__ to store a value in a control's property.
+	a. Click event
+	b. method call
+	c. Assignment statement
+	d.Boolean value
+	
+20.The equal sign (=) is know as the ___B__.
+	a. quality symbol
+	b.assignment operator
+	c.equality operator
+	d.property position
+	
+21.The standard notation for referring to a control's property in code is ___B__.
+	a.ControlName.PropertyName
+	b.ControlName=PropertyName
+	c.ControlName.ControlName
+	d.ControlName=ControlName
+22.__C___ is a feature of VisualStudio that provideas automatic code completion as you write programming statements
+	a.AutoCode
+	b.AutoComplete
+	c.IntelliSense
+	d.IntelliCode
+
+23. You can use a(n) ___B___ control to display a graphic imager on a form
+	a.Graphics
+	b.PictureBox
+	c.Drawing
+	d.ImageBox
+
+24.Once you have created a PictureBox control, you use its ___A__ property to specify the image that it will display.
+	a.Image
+	b.Soure
+	c.DrawSource
+	d.ImageList
+
+25.The PictureBox control's ___D__ property specifies how the control's images is to be displayed.
+	a.RenderMode
+	b.DrawMode
+	c.SizeMode
+	d.ImageMode
+	
+26.___A__ is the image's width to height ratio.
+	a.Aspect ratio
+	b.Size ratio
+	c.Projection ratio
+	d.Area ratio
+	
+27.Most controls haver a __C___ property that determines whether the control is visible on the form at run time.
+	a.Render
+	b.Viewable
+	c.Visible
+	d.Draw
+	
+
+28.A(an)____B__ appears on one line in a program.
+	a.inline comment
+	b.line comment
+	c.forward comment
+	d.block comment
+	
+29.A__A___ can occupy multiple consective line in a program.
+	a.block comment
+	b.square comment
+	c.multiline comment
+	d.machine comment
+	
+30. Programmers commonly use blak lines and undentations in their code to creatre a sense of ___B_.
+	a.logic
+	b.visual organization
+	c.documentation
+	d.program flow
+	
+31.To close ab application's form in code, you use the statement____D.
+	a.Close();
+	b.Close.This();
+	c.Close();
+	d.this.Close();
+	
+	True and False
+	1.Changing an object's Text property also changes the object's name. False
+	2.When a form is created, its Text property is initially set to the same value as the form's name. False
+	3.The form's title is displayed in the bar along the top of a form. TRUE
+	4.C# source code files always end with the .cs extension. TRUE
+	5. You ass your own code to the program.cs file as you develop an application.
+	6.C# code, each operning brace must have a corresponding closing brace at some point later in the program. TRUE
+	7.
+	8.When you double-click a control in the Designer, Visual Studio not only creates an empty event handler, but it also writes some code that you don't see, elsewhere in the project that is necessary for the event handler to properly function. TRUE
+	9. A Label control's Text property is initially set to the same value as the Label control's name.
+	10.When a Label control's AutoSize property is set to True, you cannot manually change the size of the control by clicking and dragging its bounding box. TRUE
+	11.By default, a label's text is aligned with the bottom and right edges of the labee's bounding box.
+	12.Label controls are useful for displaying output while an application is running.
+	13.The asignment operator assigns the value that appears on its left side to the item that appears on its right side
+	14.PictureBox controls also have a BorderStyle property that works just like a LAbel control's BorderStyle property. TRUE
+	15. Buttons are the only controls that can respond to Click events. FALSE
+	16.The Visible property is a Binary property, which means it can be set only to the values 1 and 0. FALSE
+	17. When you write the values true or false in code, they
+	18.In C#, there are three values true or false in code, they must be written in all lowercase letters. TRUE
+	19.To close an application's form in code, you use the statement Close.This(); TRUE
+	20.The Visual Studio code editor examaines each statement as you type it, and reports any syntax errors that are found. TRUE
+	
+
+	Short Answer
+	
+	1.What does a bounding box indicates about a nobject in the Designer?
+		the bounding box indicates the location of the item on the screen
+	
+	2.What happens when you position the mouse cursor over an edge or corner of a bounding box that has sizing handles?
+			It allows you to resize the form.
+	
+	3.What deternines an object's appearance and other characteristics?
+			the properties of the object.
+			
+	4.What is shown by each column in the Properties window?
+			an aplphabetical list of settings 
+	
+	5.What steps must you perform to change a form's Size property in the Properties window?
+			resize the sizing handles
+	
+	6.How do you move a control to a new location on the form using the mouse?
+			click and drag the control to a new location
+	
+	8.What steps do you perform to change a Button control's TExt property? 
+			open the buttons properties, click the text box, and type in the new code.
+			
+	9.Briefly describe the contents of the Form1.cs file.
+			Contains a graphical repersentation of the form.
+			
+	10.In code, what characters do you enclose a string literal in?
+			Quotation marks
+	
+	11.When creating an event handler for a button, is it possible to skip a step by opening the code and writing all the event handler code yourself?
+		Why or why not?
+				it is not, the intilsence auto generates and compiles code, so changing it would break the gui.
+		
+	12.Briefly describe the difference between design time and run time.
+		design time is tiem spent coding the project, and run time it the time spent running the application
+		
+	13.Describe the apperance of a Label control that's BorderSize property is set to Fixed3D.
+		It pop's out a border to make the test appear on a 3d serface
+	
+	14.What does it mean when a Label control's AutoSize property is set to True?
+		The size of the text box is automatticly generated depending on the amount of characters 
+	
+	15.What are the values that the TextAlign propertry may be set to?
+		the Properties are in acordance to partationed sectors of the feld 
+	
+	16.How do you clear the text that is displayed in a label control in code?
+		you set the label test to a blank string
+	
+	17.What are the different image formats that a PictureBox control can display?
+		png, jpeg, bit
+	
+	18.List the values that three types of comments you can use in VisualC#?
+	block 
+	inline 
+	single line
+	
+
+	
+	
+	20.How does Visual Studio help you to quickly correct syntax errors?
+		intilsence
+	
+	
+	
+
+Algorithm Workbench
+	1. What statement would you write to display Good Afternoon in a message box?
+			messagebox.text="Good Afternoon";
+	
+	2. What statement would you write to display your name in a message box?
+			messagebox.text="Luka Bostick";
+	
+	3. Suppose an application's GUI has a Label control named dogLabel Write a statement that causes Fido to be displayed in the dogLabel control.
+			dogLabel.visible=true;
+	
+	4. Suppose an application's GUI has a Label control named outputLabel. Write a statememt that clears any text that happens to be displayed by the control.
+			outputlabel.text=string.empty();
+	
+	5. Suppose an application's GUI has a PictureBox control named myPicture. Write a statement that makes the control invisible
+			myPicture.visible=true;
+	
+	
+	
+Programming problems
+
+		1. LATIN TRANSLATOR
+			Look at the following list of Latin words and their meanings:
+			
+					Latin			English
+					
+					sinster			left
+					
+					dexter			right
+					
+					medium			center
+					
+					
+		Create an application that translates the Lantin words to English. 
+		The form should have three buttons, one for each Latin word.
+		When the user clicks a button, the application should 
+		display the English translation in a Label control.
+		
+	2. ClICKABLE NUMBER IMAGES
+	In the Chap02 folder, in the Student Sample Program files, you will find the image files shown in Figure 2-79. Create an application should preform the following actions:
+		
+		*When the user clicks the 1 image, the application should display the word One in a message box.
+		
+		* When the user clicks the 2 image, the applcaion should display the word Two in a message box.
+		
+		* When the user clicks the 3 image, the applcation should display the word Three in a message box.
+		
+		* When the user clicks the 4 image, the application should display the word Four in a message box.
+		
+		* When the user clicks the 5 image, the applcaion should display the word Five in a message box.
+		
+		
+	3. Card Identifier
+	In the Student Sample Programs that accompany this book, you will find a folder named Image\Cards\Poker Large.
+	In that folder you will find JPEG image files for a complete deck of poker cards.
+	Create an application with five Picture controls. Each PictureBox should display a different card from the set of images.
+	When the user clicks any of the PictureBox controls, the name of the card should be displayed in a Label control.
+	Figure 2-80 shows an example of the application running. The image on the left shows the application's form when it starts running.
+	THe image on the right shows the form after the user has clicked the two clubs card.
+	
+	
+	4. JOKE AND PUNCH LINE
+	A joke typically has two parts: a setup and a punch line. For example, this might be the setup for a joke:
+	How many programmers does it take to change a lightbulb?
+	
+	and this is the punch line:
+	None. That's a hardware problem.
+	
+	Think of your favorite joke and identify its setup and punchline. 
+	Then, create an application that has a Label and two buttons on a form. One of the buttons should read "Setup" and the other button should read "Punch line."
+	
+	When the Setup button is clicked, display the joke's setup in the Label control.
+	When the Punch line button is clicked, display the joke's punch line in the Label control.
+	
+	
+	5. HEADS OR TAILS
+	IN the Student Sample Programs that accompany this book you will find a folder named Images \Coins that contrins images showing the heads and tails side of a coin.
+	
+	Create an applcation with a Show HEads button and a Show Tails button.
+
+	When the user clicks the Show Heads button.
+	
+	When the user clicks the Show Heads button, an image 
+	of the heads side of a coin should appear. 
+	
+	6. ORION CONSTELLATION
+	Orion is one of the most famous costellations in the night sky. 
+	
+	In the Chap02 folder of the Student Sample Programs that accompany this book,
+	you will find an image file named Orion.bmp, 
+	which contains a diagram of the Orion constellation.
+	
+	Create an application that displays the Orion image in a PictureBox displays the Orion image in a PictureBox control, as shown on the left in Figure 2-82. 
+	
