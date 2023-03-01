@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Truck SUV Demo", "Car Truck SUV Demo\Car Truck SUV Demo.csproj", "{B31F7C4C-9E95-4656-B632-E163B6D77AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B31F7C4C-9E95-4656-B632-E163B6D77AFB}.Debug|x86.ActiveCfg = Debug|x86
+		{B31F7C4C-9E95-4656-B632-E163B6D77AFB}.Debug|x86.Build.0 = Debug|x86
+		{B31F7C4C-9E95-4656-B632-E163B6D77AFB}.Release|x86.ActiveCfg = Release|x86
+		{B31F7C4C-9E95-4656-B632-E163B6D77AFB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

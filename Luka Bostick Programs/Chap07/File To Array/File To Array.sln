@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File To Array", "File To Array\File To Array.csproj", "{52C911B6-FE13-4A99-AAF9-52A5DB26DBEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52C911B6-FE13-4A99-AAF9-52A5DB26DBEC}.Debug|x86.ActiveCfg = Debug|x86
+		{52C911B6-FE13-4A99-AAF9-52A5DB26DBEC}.Debug|x86.Build.0 = Debug|x86
+		{52C911B6-FE13-4A99-AAF9-52A5DB26DBEC}.Release|x86.ActiveCfg = Release|x86
+		{52C911B6-FE13-4A99-AAF9-52A5DB26DBEC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

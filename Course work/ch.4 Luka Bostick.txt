@@ -1,0 +1,159 @@
+1.A ___ structure executes a set of statements only under certain circumstances.
+	a. sequence
+	b. circumstantial
+	c. decision
+	d. Boolean
+	
+2.A ___ structure provides one alternative path of execution.
+	a. sequence
+	b. single-alternative decision
+	c. one-path alternative
+	d. single-execution decision
+	
+3.A(n) ____ expression has a value of wither true or false.
+	a. binary
+	b. decision
+	c. unconditional
+	d. Boolean
+	
+4. The symbols >,<, and == are all ____ operators.
+	a. relational 
+	b. logical
+	c. conditional
+	d. ternary
+
+5.A ___ structure tests a condition and then takes one path if the condition is true or another path if the consition is false.
+	a.miltibranch statement
+	b.single-alternative
+	c.dual-alternative decision
+	d.sequence
+	
+6. You use a(n) ____ statement to write a single-alternative decision structure.
+	a. test-jump
+	b.if
+	c.if-else
+	d.if-call
+	
+7. You use a(n) ____ statement to write a dual alternative decision structure.	
+	a.test-jump
+	b.if
+	c.if-else
+	d.if-call
+	
+8.	A _____ decision structure is written inside another decision structure.
+	a.nested
+	b.tiered
+	c.dislodged
+	d.hierarchical
+	
+9. &&,||, and ! are ____ operators.
+	a.relational
+	b.logical
+	c.conditional
+	d.ternary
+	
+10. A compound Boolean expression created with the ____ operator is true only if both of its subexpressions are true.
+	a.&&
+	b.||
+	c.!
+	d.both
+	
+11. A compound Boolean expression created with the ____ operator is true if wither of its subexpression is true.
+	a.&&
+	b.||
+	c.!
+	d.either
+	
+12. The ____ operator takes a Boolean expression as its operand and reverses its logical value.
+	a.&&
+	b.||
+	c.!
+	d.either
+	
+13.A ____ is a Boolean variable that singals when some condition exists in the program.
+	a.flag
+	b.signal
+	c. sentinel
+	d. siren
+	
+14.The ____ family of methods can be used to convert a tring to a specific data type wothout throwing an exception.
+	a. TryConvert
+	b. Parse
+	c. TryParse
+	d. SafeConvert
+	
+15.If several ____ controls exist in a GroupBox, only one of them may be selected at a time.
+	a.CheckBox
+	b.RadioButton
+	c.ListBox
+	d.SelectionButton
+	
+16.You use the ___ statement to create a multiple-alternative decision structure. 
+	a. menu
+	b. branch
+	c. select
+	d. switch
+	
+17.The ___ section of a switch statement is branched to if none of the case values match the test expression.
+	a.else
+	b.default
+	c.case
+	d.otherwise
+	
+18.A ListBox's index numbering starts at ____.
+	a.0
+	b.1
+	c.-1
+	d.any value you specify
+
+19. You can use the ____ orioerty to setermine whether an item is selected in a ListBox.
+	a. Index
+	b. SelectedItem
+	c. SelectedIndex
+	d. Items.SelectedIndex
+	
+20.The ____ property holds the item that is selected ion a LIstBox control.
+	a.Index
+	b.SelectedItem
+	c.SelectedIndex
+	d.Items.SelectedIndex
+	
+
+	
+True or False
+
+1.You can write any program using sequence structures. True
+2.A single-alternative secision structure tests a condition and then takes one path if the condition is true or another path if the condition is false.
+3.The if-else statement is a dual-alternative decision structure.
+4.A decision structure can be nested inside another secision structure.
+5.A compound Boolean expression created with the && operator is true only when bother subexpressions are true.
+6.The TryPArse methods throw an exception if the string argument cannot be converted.
+7.Multiple CheckBox controls in the same GroupBox can be selected at the same time.
+8.The test expression in a switch statement can be a double or a decimal value.
+9.IF an item is not selected in a ListBox, the control's SelectedIndex property will be set to 0.
+10. To storeitems in a ListBox, you add them to the control's Test property.
+
+Short Answer
+1.What is meant by the term conditionally executed?
+2.You need to test a condition and then execute one set of statements of the condition is true. If the condition is false, you need to execute a different set of statements. What structure will you use?
+3.Briefly describe how the && operator works.
+4.Briefly describe how the || operator works.
+5.When determiningg whether a number is inside a range, which logical operator is it best to use?
+6.What is a flagg and how does it work?
+7.What are the two arguments that you pass to a TryPArse method?
+8.How do you determine in code whether a RadioButton control or a CheckBox control is selected?
+9.How do you add items to a ListBox using the Properties window?
+10.How can you read the selected item from a ListBox while preventing an exception from occuring if no item is selected?
+
+Algorithm WorkBench
+1.Write an if statement that assigns 20 to the variable y and assigns 40 to the cvariable x if the variable x is greater than 100.
+2.Write x if the variable x is greater than 100.
+3.Write an if statement that assigns 0 to the variable b and assigns 1 to the variable c if the variable a is less than 1-
+4.Write nested decision structures that perform the following: if amount1 is greater than 10 and amount 2 is less than 100, display the greater of amount 1 and amount2.
+5.Write an if-else statement that displays "Speed is normal" if the value of the speed variable is at least 24 but not more than 56. IF the speed variable's value is outside this range, display "Speed is abnormal."
+6.Write an an if-slse statement that determines whether the value of the points variable is less than 9 or greater than 51. IF this is true, display "Invalid points." Othjerwise, display "Valid points".
+7.Assume pointsTextBox is the name of a TextBox control and points is the name of an int variable. Write an if-else statement that uses one of the TryParse methods to convert the pointsTextBox control's Text property to an int and stores the result in the points variable. If the conversion is not succerssful, display an error message in a message box.
+8.Rewrite the following if-else-if statement as a switch statement.
+
+
+9.Assume nameListBox is a ListBox control. Write code that reads the selected item from the ListBox. Be sure to prevent an exception form occurring in case no item has been selected.
