@@ -525,56 +525,460 @@ namespace Chapter4MakingDecisions
  *	//////////////////////////////////////////////////////////////////////
  *	
  *	//////////////////////////////////////////////////////////////////////
+ *	Line 29-34 Theses statements declare the following variables:
+ *	
+ *	*hoursWorked, a decimal variable to hold the number of hours worked
+ *	
+ *	*hourlyPayRate, a decimal variable to hold the hourly pay rate
+ *
+ *	*basePay, a decimal variable to hold the pay for 40 or less hours
+ *	
+ *	*overtimeHours. a decimal variable to hold the number of overtime hours worked
+ *	
+ *	*overtimePay, a decimal variable to hold the amount of overtime pay
+ *	
+ *	*grossPay, a decimal variable to hold the gross pay
+ *	//////////////////////////////////////////////////////////////////////
+ *
+ *	//////////////////////////////////////////////////////////////////////
+ *	Line 37: This statement  converts the hoursWorkedTextBox control's
+ *	Text property to a decimal and assigns the result to the hoursWorked
+ *	variable.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Line 38: This statement converts the hourlyPayRateTextBox
+ *	control's Text property to a decimal and assigns the result to the 
+ *	hourlyPayRate variable.
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Line 41: This if state,emt determines whether hoursWorked is greater 
+ *	than BASE_HOURS (40). If so, the statements in lines 43-54 are 
+ *	executed. Otherwise the statements in lines 58-59 are executed.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Lines 43-54: Theses statements, which are executed only if the hours
+ *	worked are greater than 40, make all the necessary calculations to
+ *	determine gross pay with overtime:
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	*Line 44 calcuates the base pay, which is the amount of pay for the first
+ *		40 hours.
+ *		
+ *	*Line 47 calculates the number of overtime hours, which is the number
+ *	of hours over 40.
+ *	
+ *	*Lines 50 and 51 calcuate the amount of overtime pay, which is the pay
+ *	for the hours over 40.
+ *	
+ *	*Line 54 calculates the gross pay, which is the amount of base pay plus
+ *	the amount of overtime pay. The result is assigned to the grossPay
+ *	variable.
+ *	
+ *	*Line 59: This statement, which is executed only if the hours worked 
+ *	are 40 or less, calcuates the gross pay and assigns the result to the 
+ *	grossPay variable.
+ *	
+ *	
+ *	Line 63: This statement converts the value of the grossPay variable to a 
+ *	string, formatted as surrency, and assigns the result to the
+ *	grossPayLabel control's Text property.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Step 4: Switch your view back to the Designer and double-click the
+ *	clearButton control.
+ *	
+ *	In the code editor you see an empty event handler named clearButton_Click.
+ *  Complete the clearButton_Click event handler by typing the code shown
+ *  in lines 74-80 in Program 4-2. These statments clear the TextBoxes and 
+ *  the grossPayLAbel control and sets the focus to the hoursWorkedTextBox
+ *  control.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Step 5: Switch your view back to the Designer and double-click the
+ *	exitButton control. In the code editor you see an empty event handler
+ *	named exitButton_Click. Complete the exitButton_Click event handler by
+ *	typing the code shown lines 85-86 in Program 4-2.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Step 6: Save the project and run the application. First, enter 40 for
+ *	the number of hours worked and 20 for the hourly pay rate.
+ *	
+ *	Click the Calculate Gross Pay button, and the application should display
+ *	$800.00 as the gross pay.
+ *	
+ *	No overtime hours were worked, so the grosspay is simply calcuated as
+ *	hours worked x hourly pay rate.
+ *	
+ *	Click the clear button. 
+ *	
+ *	Enter 50 for the number of hours worked and 20 for the hourly pat rate.
+ *	
+ *	Click the Calculate Gross Pay button, and the application should display
+ *	$1,100.00 as the gross pay.
+ *	
+ *	This time, more than 40 hours were worked, so the application calculated
+ *	the gross pay to include overtime pay.
+ *	
+ *	Continue to test the application as you wish. When you are finshed, 
+ *	click the Exit button, and the form, should close.
+ *	//////////////////////////////////////////////////////////////////////
  *	
  *	//////////////////////////////////////////////////////////////////////
  *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	
- *	//////////////////////////////////////////////////////////////////////
- *	
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////////
+ *						4.3 Nested Decision Structures
  *	//////////////////////////////////////////////////////////////////////
  *	//////////////////////////////////////////////////////////////////////
  *	
  *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Concept To test more than one condition, a decision structure can
+ *	be nested inside another decision structure.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	In Section 4.1, we mentioned that a control structure determines the 
+ *	order in which a set of statements execute. Programs are usually designed
+ *	as combinations of different control structures. For example, Figure
+ *	4-10 shows a flowchart that combines a decision structure with two
+ *	sequence structures.
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Figure 4-10 Combining sequence structures with a decision structure
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	The flowchart in Figure 4-10 starts with a sequence strcture. Assuming
+ *	you have an outdoor thermometer in your window, the first step is Go 
+ *	to the window, and the next step is Read thermometer. A decision 
+ *	structure appears next, testing the condition Cold outside. IF this 
+ *	is true, the action Wear a coat is preformed. Another sequence
+ *	structure appears next.
+ *	The step Open the door is performed, followed by Go outside.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Quite often, structures must be nested inside other structures.
+ *	
+ *	For example, look at the partial flowchart in Figure 4-11.
+ *	IT shows a decision structure with a sequence structure nested inside. 
+ *	
+ *	The decision structure test the condition Cold outside. If that condition
+ *	is true, the steps in the sequence structure are executed.
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Figure 4-11 A sequence structure nested inside a decision structure
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	You can also have nested decision structures, which are decision
+ *	structures that appear inside other decision structures. 
+ *	This is commonly done in programs that need to test more than one
+ *	condition.
+ *	For ex, consider a program that determines whether a bank customer 
+ *	qualifies for a loan. To qualify, two conditions must exist:(1) 
+ *	THe customer must earn at least $40,000 per year, and (2) the customer
+ *	must have been employed at his or her current job for at least 2 years.
+ *	
+ *	Figure 4-12 shows a flowchart for an algorithm that could be used in such 
+ *	a program. Assume that the salary variable contrins the customer's
+ *	annual salary, and the yearsOnJob variable contrins the number of 
+ *	years that the customer has worked on his or her current job.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Figure 4-12 A nested decision structure
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	IF we follow the flow of execution, we see that the Boolean
+ *	expression salary >= 40000 is tested. if thus expression is false,
+ *	there is no need to perfrom further tests; we know that the customer
+ *	does not qualify for the  loan. If the expression is true, however, we 
+ *	need to test the second condition. This is done with a nesteed decision
+ *	structure that tests the Boolean expression yearsOnJob >= 2. IF this 
+ *	expression is true, then the customer qualifies for the loan. If this
+ *	expression is false, then the customer does not qualify. In Tutorial
+ *	4-3, you create an application that perfroms this algorithm.
+ *	//////////////////////////////////////////////////////////////////////
  *	
  *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Tutorial 4-3: Completing the Loan Qualifier Application
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	In this tutorial, you complete an application that determines whether
+ *	a person qualifies for a loan. 
+ *	
+ *	To qualify for the loan, the person must earn a salary of at least
+ *	$40,000 and must have been employed at this or her current job for
+ *	at least 2 years.
+ *	
+ *	To save time, the project has already been started for you, and
+ *	the applciation's form has aleady been created. To complete the project,
+ *	follow the steps in this tutorial.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Step 1: Start Visual Studio. Open the project named Loan Qualifier in 
+ *	the Chap04 folder of this book's Student Sample Programs.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Step 2: Open the Form1 form in the Designer. The form is shown, along
+ *	with the names of the inmpoerant controls, in Figure 4-13.
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	//////////////////////////////////////////////////////////////////////
+ *	Figure 4-13 The Loan Qualifier form
+ *	//////////////////////////////////////////////////////////////////////
+ *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Step 3: Now, you will create the Click event handlers for the Button
+ *	controls. At the end of this tutorial, Program 4-3 shows the completed
+ *	code for the form. You will be instructed to refer to Program 4-3 as
+ *	you write the event handlers.
+ *	
+ *	In the Designer, double-click the checkButton control.
+ *	This opens the code editor, and you see an empty event handler named
+ *	checkButton_Click. Complete the checkButton_CLick event handler by
+ *	typing the code shown in lines 22-62 in Program 4-3.
+ *	
+ *	Let's take a closer look at the code:
+ *	/////////////////////////////////////////////////////////////////////
  *	
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Line 22: This is the beginning of a try-catch statement. The try block
+ *	appears in lines 60-61. The purpose of this try-catch statement is to
+ *	gracefully respond if the user enters invalid input.
  *	
+ *	If an exception is thrown by any statement inside the try block, 
+ *	the program jumps to the catch block, and line 61 displays
+ *	an error message.
  *	
+ *	Lines 25-26: These statements declare the following named constants:	
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	* MINIMUM_SALARY, a constant decimal set to the value 40,000, which is 
+ *	the minimum salary a person must earn to qualify for the loan
  *	
+ *	* MINIMUM_YEARS_ON_JOB, a constant int set to the value 2,
+ *	which is the minimum number of years a person must have been at his or
+ *	her current job to qualify for the loan
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Lines 29-30: These statements declare the following variables:
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	* salary, a decimal variable to hold the salary
  *	
+ *	* yearsOnJob, an int variable to hold the number of years at the 
+ *	current job
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Lines 33-34: These statements get the salary and years at the current
+ *	job from the TextBox controls and assign those values to the salary
+ *	and yearsOnJob variables.
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Line 37: This if statement determines whether salary is greater than
+ *	equal to MINIMUN_SALARY. If so, the program contrinues at line 39.
+ *	Otherwise, the program jumps to the else caluse on line 51, and in 
+ *	lines 54-55 the string "Minimum salary requirement not met." is 
+ *	assigned to teh decisionLabel control's Text property. 
  *	
+ *	Line 39: THis if statement determiens whether yearsOnJob is greater
+ *	than or equal to MINIMUM_YEARS_ON_JOB. If so , the program continues
+ *	at line 42, where the string "You qualify for the loan."
  *	
+ *	is assigned to teh decisionLAbel control's Text property.
  *	
+ *	Otherwise, the program jumps to the else clause in line 44,
+ *	and in lines 47-48 the string "Minimum years at current job not met."
  *	
+ *	is assigned to the decisionLAbel control's Text property.
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Step 4: Switch your view back to the Designer and double-click the
+ *	clearButton control. IN the code editor you see an empty event handler
+ *	named clearButton_CLick. Complete the clearButton_Click event handler
+ *	by typing the code shown in lines 67-73 in program 4-3.
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Step 5: Switch your view back to the Designer and double-click the 
+ *	exitButton control. In the code editor you see an empty event handler
+ *	named exitButton_Click.
+ *	Complete the exitButton_Click event handler by typing the code shown
+ *	in lines 78-79 in Program 4-3.
  *	
+ *	/////////////////////////////////////////////////////////////////////
  *	
+ *	/////////////////////////////////////////////////////////////////////
+ *	Step 6: Save the project and run the application. First, enter 45000
+ *	for the salary and 1 for the years at current job. Click the Check
+ *	Qualifications button, and the application should display the message
+ *	"Minimum years at current job not met."
+ *	Click the Clear button. Enter 35000 for the salary and 5 for the years
+ *	current job. Click the Check the Clear button, and the applcation should
+ *	display the message "Minimum salary requirement not met."
  *	
+ *	Click the Clear button. Enter 45000 for the salary and 5 for the years
+ *	at current job. Click the Check Qualifications button, and the
+ *	application should display the message "You qualify for the loan."
  *	
+ *	Continue to test the application as you wish. When you are finished,
+ *	click the Exit buitton, and the form should close.
+ *	/////////////////////////////////////////////////////////////////////
+
+///  ////////////////////////////////////////////////////////////////////
+///	 Indentation and Alighment in Nested Decision Structures
+///  /////////////////////////////////////////////////////////////////////
+///  
+///  ////////////////////////////////////////////////////////////////////
+///	 For debugging purposes, it's important to use proper alignment and 
+///	 indentation in a nested if statement. This makes it easier to see
+///	 which actions are performed by each part of the structure.
+///	 
+/// For example, the following code is funcationally equivalent
+/// to lines 37-56 in Program 4-3.
+/// 
+/// Although this code is logically correct ,it would be very difficult
+/// to debug because it is not properly indented.
+///  /////////////////////////////////////////////////////////////////////
+///	 skip....
+//// ///////////////////////////////////////////////////////////////////
+///		
+/// /////////////////////////////////////////////////////////////////////
+///	Testing a Series of Conditions
+/// ////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+/// In Tutorial 4-3, you saw how a program can use nested decision 
+/// structures to test more than one Boolean expression.
+/// 
+/// It is not uncommon for a program to have a series of Boolean
+/// expression to test and the preform an action, depending on which
+/// expression is true.
+/// 
+/// One way to accomplish this it to have a decision structure with
+/// numerous other decision structures nested insude it. For example, 
+/// look at the Grader application in the Chap04 folder of this book's
+/// Sample Programs.
+/// 
+///  ////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+/// Figure 4-15 shows the application's form, with the names of several
+/// control. When you run the application, you enter a numeric test score 
+/// into the testScoreTexBox control and click the determineGradeButton
+/// control; a grade is then displayed in the gradeLAbel control.
+/// ////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+///	Figure 4-15 The Grader application's form
+/// ////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+/// The following 10-point grading scale is used to determine the grade:
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////	Test Score				Grade
+///		90 and above			  A
+///		80-89					  B
+///		70-79					  C
+///		60-69					  C
+///		Below 60				  F
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+/// The logic of determining the grade can be expressed like this:
+/// 
+/// If the test score is less than 60, then the grade is "F."
+///	Otherwise, if the test score is less than 70, than the grade is "D."
+/// Otherwise, if the test score is less than 80, than the grade is "C."
+/// Otherwise, if the test score is less than 80, than the grade is "."
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////////////////////////
+///
+/// /////////////////////////////////////////////////////////////////////
  *	
- *	
- *	
- *	
- *	
- *	
+ *	/////////////////////////////////////////////////////////////////////
  *	
  *	
  *	

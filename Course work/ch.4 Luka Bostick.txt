@@ -28,79 +28,79 @@
 	c.dual-alternative decision
 	d.sequence
 	
-6. You use a(n) ____ statement to write a single-alternative decision structure.
+6. You use a(n) __B__ statement to write a single-alternative decision structure.
 	a. test-jump
 	b.if
 	c.if-else
 	d.if-call
 	
-7. You use a(n) ____ statement to write a dual alternative decision structure.	
+7. You use a(n) __C__ statement to write a dual alternative decision structure.	
 	a.test-jump
 	b.if
 	c.if-else
 	d.if-call
 	
-8.	A _____ decision structure is written inside another decision structure.
+8.	A __A___ decision structure is written inside another decision structure.
 	a.nested
 	b.tiered
 	c.dislodged
 	d.hierarchical
 	
-9. &&,||, and ! are ____ operators.
+9. &&,||, and ! are _B__ operators.
 	a.relational
 	b.logical
 	c.conditional
 	d.ternary
 	
-10. A compound Boolean expression created with the ____ operator is true only if both of its subexpressions are true.
+10. A compound Boolean expression created with the _A___ operator is true only if both of its subexpressions are true.
 	a.&&
 	b.||
 	c.!
 	d.both
 	
-11. A compound Boolean expression created with the ____ operator is true if wither of its subexpression is true.
+11. A compound Boolean expression created with the __B__ operator is true if wither of its subexpression is true.
 	a.&&
 	b.||
 	c.!
 	d.either
 	
-12. The ____ operator takes a Boolean expression as its operand and reverses its logical value.
+12. The ___C_ operator takes a Boolean expression as its operand and reverses its logical value.
 	a.&&
 	b.||
 	c.!
 	d.either
 	
-13.A ____ is a Boolean variable that singals when some condition exists in the program.
+13.A ___A_ is a Boolean variable that singals when some condition exists in the program.
 	a.flag
 	b.signal
 	c. sentinel
 	d. siren
 	
-14.The ____ family of methods can be used to convert a tring to a specific data type wothout throwing an exception.
+14.The __B__ family of methods can be used to convert a string to a specific data type wothout throwing an exception.
 	a. TryConvert
 	b. Parse
 	c. TryParse
 	d. SafeConvert
 	
-15.If several ____ controls exist in a GroupBox, only one of them may be selected at a time.
+15.If several __D__ controls exist in a GroupBox, only one of them may be selected at a time.
 	a.CheckBox
 	b.RadioButton
 	c.ListBox
 	d.SelectionButton
 	
-16.You use the ___ statement to create a multiple-alternative decision structure. 
+16.You use the _D__ statement to create a multiple-alternative decision structure. 
 	a. menu
 	b. branch
 	c. select
 	d. switch
 	
-17.The ___ section of a switch statement is branched to if none of the case values match the test expression.
+17.The __B_ section of a switch statement is branched to if none of the case values match the test expression.
 	a.else
 	b.default
 	c.case
 	d.otherwise
 	
-18.A ListBox's index numbering starts at ____.
+18.A ListBox's index numbering starts at __A__.
 	a.0
 	b.1
 	c.-1
