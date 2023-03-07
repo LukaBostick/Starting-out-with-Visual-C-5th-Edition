@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _6.BODY_MASS_INDEX
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            //out
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //userin weight
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            //userin height
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
+            double weightInCm = 0;
+
+            double heightInInches = 0;
+
+
+            weightInCm= double.Parse(textBox1.Text);
+
+            heightInInches= double.Parse(textBox2.Text);
+
+             label4.Text=(weightInCm  / Math.Pow(heightInInches,2)*703).ToString();
+            
+           
+        }
+    }
+}
