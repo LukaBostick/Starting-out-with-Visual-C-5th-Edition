@@ -2257,23 +2257,49 @@ lists expressions showing all the possible combinations
 /////////////////////////////////////////////////////////////////////
 ///Sometimes stories are reported in the news about computer errors
 ///that mistankely cause people to be charged thousands of dollars
-///for small purches or to receive large
+///for small purches or to receive large tax refunds to which the
+///y were not entitled.
+///These "computer error" are rarely caused by a computer; however,
+///they are more commonly caused by software bugs or bad data that
+///was read into a program as input.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///The integrity of a program's output is only as good as the
+///integerity of its input.
 ///
+/// For this reason, you should write your programs in such a way
+/// that bad input is invalid, the program should discard it and 
+/// prompt the user to enter the correct data. This provess is known as
+/// input validation.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///For example, in a payroll program we might validate the number of
+///hours worked like this:
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///if(int.TryParse(hoursWorkedTextBox.Text, out hours))
+///{
+///		if (hours > 0 && hours <= 168)
+///		{
+///			// Contine to process the input.
+///		}
+///		else
+///		{
+///			MessageBox.Show("Invalid number of hours entered.");
+///		}
+///}
+///else
+///{
+///		MessageBox.Show("The hours worked must be an integer.");
+///}
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Let's suume the application uses a TextBox named hoursWorkedTextBox
+///to get the hours worked. Also assume that the variable hours has already been declared as an int.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
