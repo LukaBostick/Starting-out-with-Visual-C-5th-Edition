@@ -9,6 +9,8 @@ namespace Chapter4MakingDecisions
 			string s1 = "asjdasdj";
 			Console.WriteLine(s1);
 		}
+
+		
 	}
 }
 
@@ -2299,325 +2301,925 @@ lists expressions showing all the possible combinations
 ///
 /////////////////////////////////////////////////////////////////////
 ///Let's suume the application uses a TextBox named hoursWorkedTextBox
-///to get the hours worked. Also assume that the variable hours has already been declared as an int.
+///to get the hours worked. Also assume that the variable hours has
+///already been declared as an int. The outer if statement (line 1)
+///uses the int.Parse method to make sure the user has entered an
+///integer. If so, the valueis stored in the hours variable and the 
+///program contrinues to the inner if statement (line 3). The inner
+///if statement ensures that we cannot write a paycheck for 0 hours
+///worked, and 168 is the maximum number of hours in a week.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///LEt's look at another example.
+///The following code comes from an application that gets a test
+///score as input. A valid test score is an integer in the range of
+///0 through 100.
 ///
-///
-///
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///if(int.TryParse(testScoreTextBox.Text, out testScore))
+			{
+		if(testScore >= && testScpre <= 100)
+			{
+				// Continue to precess the input
+			}
+			else
+			{
+				MessageBox.Show("Test score must be in the range 0-100.");
+			}
+		}
+else
+{
+	MessageBox.Show("The test score must be an integer.");
+}
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///Let's assume the application uses a TextBox named testScoreTextBox 
+///to get the test score.
 ///
-/////////////////////////////////////////////////////////////////////
+///Also assume that the variable testScore has already been declared
+///as an int.
 ///
+/// The outer if statement (line 1)uses the int.TryParse method to 
+/// make sure the user has entered an integer. if so, the value is
+/// stored in the testScore variable and the program continues to 
+/// the inner if statement (line 3). The inner if statement ensures
+/// that we process the only if the testScore is greater than or
+/// equal to 0 and testScore is less than or equal to 100.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
 /////////////////////////////////////////////////////////////////////
-///
+///4.9 Radio Buttons and Check Boxes
 /////////////////////////////////////////////////////////////////////
-///
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+/// Concept GUIs commonly use radio buttons and check boxes to let the
+/// user select items.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Radio buttons are useful when you want the user to select one 
+///choice from several possible choices. Figure 4-24 shows a form, at
+///run time, with a group of three radio buttons. The radio buttons
+///in the figure allows the user to select Coffee, tea, soft Drink/
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
-///
+///Figure 4-24 Radio buttons
 /////////////////////////////////////////////////////////////////////
 ///
+/////////////////////////////////////////////////////////////////////
+///A radio button may either selected or deselected. Each radio button 
+///has a small circle that appears filled in when the radio button is
+///selected, and appears empty when the radio button is deselected. In
+///Figure 4-24, the Coffee radio is selected and the other radio
+///buttons are deselected.
+/////////////////////////////////////////////////////////////////////
 ///
 ///
 /////////////////////////////////////////////////////////////////////
+///At run time, only one radio button in a group may be selected at a
+///time. Clicking on a radio button selects it, and automatically 
+///deselects any other radio button in the same group. We call this
+///mutually exclusive selection.
 ///
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Note The name radio button refers to the old car radios that had 
+///push buttons for selecting stations. Only one button could be pushed 
+///in at a time. When you push a button, it automatically popped out
+///the currently selected button.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///When you want to create a group of radio button on a form, you use 
+///the RadioButton control, which is found in the Common Controls
+///section of the Toolbox. RadioButton controls are normally grouped
+///in one of the following ways:
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///* You place them inside a GroupBox control. All RadioButton controls
+///that are inside a GroupBox are memners of the same group.
 ///
-/////////////////////////////////////////////////////////////////////
+///*You place them inside a Panel control. All RadioButton controls that are
+///inside a PAnnel are members of the same group.
 ///
+///*You place them on a but not inside a GroupBox or a Panel. All
+///RadioButton controls that are on a form but not inside a GroupBox
+///or Panel are members of the same group.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Figure 4-25 shows a form, at run time, we two groups of
+///RadioButton controls. The group on the left is inside a GroupBox
+///control, and the group on the right is inside a Panel control.
+///When the application runs, the user will be able to select only
+///one RadioButton from each group. In the figure, Coffee is selected
+///in the left group and Lunch is selected in the right group.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Figure 4-25 A form with two groups of RadioButton controls
 /////////////////////////////////////////////////////////////////////
 ///
+/////////////////////////////////////////////////////////////////////
+///The RadioButton Control's Text Property
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///RadioButton controls have a Text property, which holds the tezt 
+///that is displayed next to the radio button's circle. For example,
+///the radio buttons shown in Figure 4-24 have their Text properties 
+///set to Coffee, Tea, and Soft Drink.
 /////////////////////////////////////////////////////////////////////
 ///
-///
 /////////////////////////////////////////////////////////////////////
-///
-///
-///
+///The RadioButton Control's Checked Property
 /////////////////////////////////////////////////////////////////////
+///RadioButton controls have a Checked propert that determines whether
+///the controls is selected or deselected.
 ///
+/// The Checked property is a Boolean property, Which means that it
+/// may be set to either True or False. When the Checked property is
+/// set to True, the RadioButton is selected, and when the Checked
+/// property is set to False, the RadioButton is deselected. By 
+/// default, the Checked property is set to False.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///You can use the Prioerties window to set the initial value of a 
+///RadioButton control's Checked property. Keep in mind that the
+///Checked property of only one RadioButton in a group can be set to 
+///True at a given time. When you set a RadioButton control's Checked
+///property to True in the Properties window, the Checked properties
+///of all the other RadioButtons in the same group automatically 
+///are set to False.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Tip When you create a group of RadioButtons controls, you should
+///always set one of the control's Checked property to True in the 
+///Properties window. If all the RadioButtons in a group have their
+///Checked property set to False, then the Checked property of the 
+///RadioButton with the lowest TabIndex value will automatically
+///be set to True when you run the application.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Working with Radio Buttons in Code
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///In code, you can determine whether a RadioButton control is
+///selected by testing its Checked property. For example, suppose a 
+///form has a RadioButton control named choice1RadioButton. The 
+///following if statement determines whether it is selected:
 ///
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///if(choice1RadioButton.Checked)
+///{
+///		MessageBox.Show("You selected Choice 1");
+///}
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///Notice that we did not have to use the == operator to explicitly
+///compare the Checked property to the value true.
 ///
+///This code is equivalent to the following:
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///if(choice1RadioButton.Checked == true)
+///{
+///		MessageBox.Show("You selected Choice 1.");
+///}
 /////////////////////////////////////////////////////////////////////
-///
-///
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Let's look at an example using multiple RadioButton controls. Open
+///the RadioButton project in the Chap04 folder of this book's Student
+///Sample Programs. THe application's form is shown in Figure 4-26. 
+///When you run the application, select one of the radio buttons and 
+///then click the OK button. A message box appears showing the 
+///spot that you selected.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Figure 4-26 The RadioButtonExample form
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Here is the code for the okButton_Click event handler:
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///private void okButton_Click(object sender, EventArgs e)
+///{
+///		if(footballRadioButton.Checked)
+///		{
+///			MessageBox.Show("You selected Football.");
+///		}
+///		else if(basketballRadioButton.Checked)
+///		{
+///			MessageBox.Show("You selected Basketball.")
+///		}
+///		else if(baseballRadioButton.Checked)
+///		{
+///			MessageBox.Show("You selected Baseball.");
+///		}
+///}
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///When the event handler executes, the if statement in line 3 
+///setermines whether the footballRadioButton control's Checked 
+///property is true.
 ///
-/////////////////////////////////////////////////////////////////////
+///If it is, the message you selected Football. is 
+///displayed in line 5.
 ///
+///Otherwise, line 7 determines whether the basketballRadioButton 
+///control's Checked property is true. If it is, the message you
+///selected Basketball. is displayed in line 9. Otherwise, line 11
+///determines whether the baseballRadioButton control's Checked 
+///property is true. If it is, the message You selected Baseball. is
+///displayed in line 13.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Check Boxes
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///A check box appears as a small box with some accompanying text.
+///Figure 4-27 shows an example. They are called check boxes because
+///clicking on an empty check box causes a check mark to appear in it.
+///If a check mark already appears in a check box, clikcking it removes the check mark.
 /////////////////////////////////////////////////////////////////////
 ///
-///
 /////////////////////////////////////////////////////////////////////
-///
-///
-///
+///Figure 4-27 A check box
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Check boxes are sinlar to radio buttons, exceot that check boxes
+///are not mutually exclusive. You can have one or more check boxes
+///in a group, and any number of them can be selected at any given 
+///time. When you want to create a check box a form, you use the 
+///CheckBox control, which is found in the Common Controls section
+///of the Toolbox.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///The CheckBox Control's Text Property
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///CheckBox controls have a Text property, which hides the text that
+///is displayed next to the check box. For example, the CheckBox 
+///control shown in Figure 4-27 has it Text property set to Pepperoni.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///The CheckBox Control's Checked Property
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Like radio buttons, CheckBox controls have a Checked properpty.
+///When a CheckBox control is selected, or checked, its checked
+///property is set to True. When a CheckBox control is deselected, or
+///unchecked, its Checked property is set to False.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Working with CheckBox Controls in Code
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///In code, you can determine whether a CheckBox control is selected:
 /////////////////////////////////////////////////////////////////////
-///
-///
 ///
 /////////////////////////////////////////////////////////////////////
-///
-///
-///
+///if(operionalCheckBox.Checked)
+///{	
+///		MessageBox.Show("You selected Option 1.");
+///}
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Let's look at an example program. Open the CheckBox Example project
+///in the Chap04 folder of book's Stadent Sample Programs. The 
+///application's form is shown in Figure 4-28. When you run the application,
+///select any of the check boxes and then click the Ok button. One
+///or more message boxes will appear, showing you the items that you selected.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Figure 4-28 The CheckBox Example form
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Here is the code for the okButton_Click event handler:
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///private void okButton_Click(object sender, EventArgs e)
+///{
+///	if(pepperoniCheckBox.Checked)
+///	{
+///		MessageBox.Show("You selected Pepperoni.");
+/// }
+/// if(cheeseCheckBox.Checked)
+///	{
+///		MessageBox.Show("You selected Cheese.");
+/// }
+/// 
+/// if(anchoviesCheckBox.Checked)
+/// {
+///		MessageBox.Show("You selected Anchovies.");
+/// }
+///}
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Notice that we have three separate if statements. The if statement
+///in line 3 determines whether the pepperoniCheckBox control is
+///selected.
+///If so, line 5 displays the message You selected Pepperoni. The if
+///statement in line 8 determiens whether the cheeseCheckBox control
+///is seleceted. IF so, line 10 displays the message You selected 
+///Cheese. The if statement in line 13 determines whether the 
+///anchoviesCheckBox controls is selected. IF so, line 15 displays 
+///the message You selected Anchovies.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///The CheckedChanged Event
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Any time a RadioButton or a CheckBox control's Checked property 
+///changes, a CheckedChanged event happens for that control. If you 
+///want some action to immediately take place when the user selects
+///(or dceselcts) a RadioButton or CheckBox, you can create a
+///CheckedChanged event handler for the control and write the desired
+///code in that event handler.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
-///
+///To create a CheckedChanged event handler for a RadioButton or a 
+///CheckBox, simply double-click the control in the Designer. An 
+///empty CheckedChange event handleris created in the code editor. You
+///can then write code inside the event handler. 
 ///
+///Tutorial 4-5 leads you through the process.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+/// Tutorial 4-5: Creating the Color Theme Application
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///In this tutorial, you ctrate an application that allows the user to
+///select a color using RadioButton controls. When the user selects a 
+///color, the form's background color is changed to that color immediately
+///Figure 4-29 shows the application's form, with the names of all the
+///controls.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Figure 4-29 The Color Theme form
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///Step 1: Once you have set up the form with its controls, you can 
+///create the CheckedChanged event handlers for the RAdioButton. 
+///At the end of this tutorial, Programs 4-5 shows the completed code
+///for the form. You will be instructed to refer to program 4-5 as you
+///write the event handlers. In the Designer, double-click the yellow
+///RadioButton control. This operns the code editor, and you see an 
+///empty event handler named yellowRadioButton_CheckedChanged. 
+///Complete the yellowRadioButton_CheckedChanged event handler by 
+///typing the code shown in lines 22-25 in Prgram 4-5.
 ///
+///The event handler is easy to understand. The if statement in
+///line 22 determine whether the yellowRadioButton_CheckedChanged
+///event handler by typing the code show in lines 22-25 in Program 4-5.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Step 2:Set up the application's form as shown in Figure 4-29.
+///Notice that the form's Text property is set to Color Theme. 
+///The names of the controls are shown in the figures. 
+///As you place each of the controls on the form, refer to Table 4-8
+///for the relevant property settings.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Table 4-8 Control property settings
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///Step 3:Once you have set up the form with its controls, you can 
+///create the CheckedChanged event handlers for the RAdioButton. 
+///At the end of this tutorial, Programs 4-5 shows the completed code
+///for the form. You will be instructed to refer to program 4-5 as you
+///write the event handlers. In the Designer, double-click the yellow
+///RadioButton control. This operns the code editor, and you see an 
+///empty event handler named yellowRadioButton_CheckedChanged. 
+///Complete the yellowRadioButton_CheckedChanged event handler by 
+///typing the code shown in lines 22-25 in Prgram 4-5.
 ///
+///The event handler is easy to understand. The if statement in
+///line 22 determine whether the yellowRadioButton_CheckedChanged
+///event handler by typing the code show in lines 22-25 in Program
+///4-5.
 /////////////////////////////////////////////////////////////////////
 ///
+/////////////////////////////////////////////////////////////////////
+///Step 4: Switch your view back to the designer and double-click
+///redRadioButton control. This operns the code editor, and you see 
+///an empty event handler named redRadioButton_CheckedChanged. 
+///Complete the redRadioButton_CheckChanged event handler by typing
+///the code shown in lines 30-33 in Program 4-5
+/////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///Step 5: Switch your view back to the Designer and double-click
+///the whiteRAdioButton control. This opern the code editor, and you
+///see an empty event handler named whiteRadioButton_CheckedChange. 
 ///
+///Complete the whiteRadioButton_CheckedChanged event handler by typing
+///the code shown in lines 38-41 in Program 4-5.
+/////////////////////////////////////////////////////////////////////
 ///
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Step 6:Switch your view back to the Designer And double-click the 
+///normalRadioButton_CheckedChanged event handler by typing the code
+///shown in lines 46-49 in Program 4-5.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Step 7:Switch your view back to the Designer and double-click
+///the exit control. In the code editor you see an empty event handler
+///named exitButton_Click. Complete the exit_Button_Click event handler
+///by typing the code shown in lines 54-55 in Program 4-5.
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
+///Step 8: Save the project and run the application. Notice that the 
+///Back to Normal radio button is initially selected. That's because 
+///you set its Checked property to True in the Properties window.
+///Click the other Radio buttons and notice that the form's background
+///color changes immediately. When you are finshed testing the application,
+///click the Exit button to close it. 
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
-///
 /////////////////////////////////////////////////////////////////////
-///
+///					4.10 The switch Statement 
 /////////////////////////////////////////////////////////////////////
-///
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///Concept The switch statement lets the value of a variable or an 
+///expression determine which path of execution the program will take.
+/////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///The switch statement is a multiple-alernative decision structure.
+///It allows you to test the value of a variable or an expression and 
+///then use that value t odetermine which statement or set of
+///statements to execute. Figure 4-30 shows an example of how a
+///multiple-alternative decision structure looks in a flowchart.
+/////////////////////////////////////////////////////////////////////
 ///
+/////////////////////////////////////////////////////////////////////
+///Figure 4-30 A multiple-alternative decision structure
 /////////////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////////////
+///In the flowchart, the diamond symbol shows month, which is the name
+///of a variable. If the month variable contains the value 1, the
+///program displays "January." If the month variable contains the
+///value 2, the program displays "February". If the month variable 
+///contains the value 3, the program display "March." If the month
+///variable contains none of these values, the action that is labeled 
+///Default is executed. In this case, the program
+///dispalays "Error: Invalid month."
 ///
+/// Here is the general format of a switch statement in C# code:
 /////////////////////////////////////////////////////////////////////
+///
+///
 /////////////////////////////////////////////////////////////////////
+///switch(testExpression)
+///{
+/// case value_1:
+/// statement;
+/// statement;
+/// etc.
+/// break.
+/// 
+/// case value_2:
+/// statement;
+/// statement;
+/// etc.
+/// break.
+/// 
+/// case value_N:
+/// statement;
+/// statement;
+/// etc.
+/// break.
+/// 
+/// default:
+/// statement;
+/// statement;
+/// etc.
+/// break.
+///}
 /////////////////////////////////////////////////////////////////////
+///
 /////////////////////////////////////////////////////////////////////
+///The first line of the statement starts with the word switch,
+///followed by a testExpression, which is enclosed in parenthese.
+///THe testExpression is a variable or an expression that gives an
+///integer, string, or bool value. (Several other data types that we 
+///have not discussed yet are also permissible. The important thing
+///to remember is that the testExpression cannot be a floating-point 
+///or a deciaml value.)
 /////////////////////////////////////////////////////////////////////
+///
 /////////////////////////////////////////////////////////////////////
+///Beginning at the next line is a block of code enclosed in curly
+///braces. Inside this block of code are one or more case sections. 
+///
+/// A case section begins with the word case, followed by a value,
+/// followed by a colon. Each case section contains one or more
+/// statements, followed by a break statement. Each case section must
+/// end with a break statement. At the end is an optional default
+/// section.
+/// 
+/// The default section must also end with a break statement.
 /////////////////////////////////////////////////////////////////////
+///
+//////////////////////////////////////////////////////////////////
+///When the switch statement executes, it compares the value of the
+///of the testExpression with the values that follow each of the
+///case statements (from top to bottom). When it finds a case value
+///that matches the testExpression's value, the program branches to
+///the case statement. The statements that follow the case
+///statement are executed, until a break statement is encountered.
+///
+/// At that point the program jumps out of the switch statement. If
+/// the testExpression does not match ant of the case values, the 
+/// program branches to the default statement and executes the 
+/// statements that immediately follow it.
+/// 
+/// For example, The following code performs the same operation as
+/// the flowchart in Figure 4-30:
+//////////////////////////////////////////////////////////////////
+///
+//////////////////////////////////////////////////////////////////
+///switch(month)
+///{
+///	case 1:
+///	MessageBox.Show("January")
+/// break;
+/// 
+/// case 2:
+/// MessageBox.Show("February")
+/// break;
+/// 
+/// case 3:
+/// MessageBox.Show("March")
+/// break;
+/// 
+/// default:
+/// MessageBox.Show("Error: Invalid month")
+/// break;
+///}
+//////////////////////////////////////////////////////////////////
+///
+//////////////////////////////////////////////////////////////////
+///In this ex the testExpression in the month variable.
+///
+///If the value in the month variable is 1, the program branches
+///to the case 1: section and executes the
+///MessageBox.Show("January") statement that immediatly follows it.
+///
+///If the value in the month
+///variable is 2, the program branches to the case 2: section and 
+///executes the MessageBox.Show("February") statement that
+///immediately follows it. If the value in the month variable is 
+///not 1,2, or 3, the program branches to the default: section and
+///executes the MessageBoxShow("Error: Invalid month") statement
+///that immediately follows it.
+//////////////////////////////////////////////////////////////////
+///
+//////////////////////////////////////////////////////////////////
+///The switch statement can be used as an alternative to an if-else
+///-if statement that tests the same variable or expression for 
+///several different values. For example, the previously shown 
+///switch statement worlds like this if-else-if statemet:
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// if (month == 1)
+/// {
+///		MessageBox.Show("January")
+/// }
+/// else if (month == 2)
+/// {
+/// MessageBox.Show("Fedruary");
+/// }
+/// else if (month == 3)
+/// {
+/// MessageBox.Show("March");
+/// }
+/// else
+/// {
+///		MessageBox.Show("Error: Invalid month");
+/// }
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// To see an application that uses a seitch statement, look at the
+/// Switch Example project in the Chap04 folder of this book's
+/// Student Sample Programs.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
+///				4.11 Introduction to List Boxes
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
+///
 //////////////////////////////////////////////////////////////////
+/// Concept: List boxes display a list of items and allow the 
+/// user to select an item from the list.
 //////////////////////////////////////////////////////////////////
- *	//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// A list box displays a list of items and allows the user to 
+/// select one or more items from the list. In Visual C# you use
+/// the ListBox control to create a list box on an application's 
+/// form. Figure 4-31 shows a form, at run time, with ListBox
+/// controls. At run time, the user may select one of the items,
+/// causing the item to appear selected.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Figure 4-31 ListBox examples
+/// //////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// The topmost ListBox in Figure 4-31 does not have a scroll bar,
+/// but the bottom one does. A scrool bar appears when a ListBox
+/// contains more items than can be displayed in the space provided.
+/// 
+/// In the figure, the top ListBox has four items 
+/// (Poodle, Great Dane, German Shepherd, and Terrier), and all
+/// items are displayed. The Bottom ListBox shows four items 
+/// (Siamese, Persian, Bobtail, and Burmese), But because it has
+/// a scroll bar, we know there are more items in the ListBox than
+/// those four.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// You will find the ListBox control in the Common Controls
+/// Section of the ToolBox. Once you create a ListBox control, you
+/// add items to its Items property. The items that you add to a 
+/// ListBox's Items property are displayed in the ListBox.
+//////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////
+/// To store values in the Items property at design time, follow 
+/// these steps:
+/// 
+/// 1. Select the ListBox control in the Designer window.
+/// 
+/// 2.In the Properties window, the settings for the items property is displayed as (Collection).
+/// When you select the Items property, an ellipses button (...) appears.
+/// 
+/// 3.Click the ellipses button. The String Collection Editor dialog box appears, as shown in Figure 4-32.
+/// 
+/// 4. Type the values that are to appear in the ListBox into the String Collection Editor dialog box.
+/// Type each value on a separate line by pressing the Enter key after each entry.
+/// 
+/// 5. When you have entered all the values, click the OK button
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Figure 4-32 The String Collection Editor dialog box
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///Note: Once you acquire the necessary skills, you will be able
+///to fill the Items collection of list boxes from exteranl 
+///data sources (such as databases).
+/////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///The SelectedItem Property
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// When the user selects an item in a ListBox, the item is stored  
+/// in the ListBox's SelectedItem property. For example, suppose
+/// an application has a ListBox control named fruitListBox and a 
+/// string variable named selectedFruit. The fruitListBox control
+/// contains the items Apples, Pear, and Bananas. If the user has
+/// selected Pears, the following statement assigns the string 
+/// "Pears" to the variable selectedFruit:
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///
+/// selectedFruit = fruitListBox.SelectedItem.ToString();
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Notice that you have to call the SelectedItem property's
+/// ToString method to retrieve the value as a string.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Determining Whether an Item Is Selected
+//////////////////////////////////////////////////////////////////
+///
+//////////////////////////////////////////////////////////////////
+///An exceprion will occur if you try to get the value of a
+///ListBox's SelectedItem property when no item is selected in the
+///ListBox. For that reason, you should always make sure that an 
+///item is selected before reading the SelectedItem property. You
+///do this with the SelectedIndex property.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///The items that are stored in a ListBox each have an index. The
+///index is simply a number of items in the ListBox. When the user
+///selects an item in a ListBox, the item's index is stored in the 
+///ListBox's SelectedIndex property. If noitem is selected in the 
+///ListBox, the SelectedIndex property is set to -1.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///You can use the SelectedIndex property to make sure that an item
+///is selected in a ListBox before you try to get the value of the 
+///SelectedItem property. You simply make sure the SelcetedIndex
+///property is not set to -1 before trying to read the SelectedItem
+///property. Here is an example:
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///if (fruitListBox.SelectedIndex != -1)
+///{
+///	selectedFruit = fruitListBox.SelectedItem.ToString();
+///}
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///In Tutorial 4-6, you create an application that lets the user
+///select an item from a ListBox control.
+/////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Tutorial 4-6: Creating the Time Zone Application
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// In this tutorial, you create an application that allows the 
+/// user to select a city from a ListBox control. When the user
+/// clicks a button, the application displays the names of the 
+/// city's time zone. Figure 4-33 shows the application's form,
+/// whith the names of all the controls.
+//////////////////////////////////////////////////////////////////
+/// 
+/////////////////////////////////////////////////////////////////
+/// Figure 4-33 The Color Theme form
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///Step 1: Start Visual Studio and begin a new Windows Form 
+///Application project named Time Zone.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///Step 2: Set up the application's form, as shown in Figure 4-33.
+///Notice that the form's Text property is set to Time Zone. The 
+///names of the controls are shown in the figure.
+///As you place each of the controls on the form, refer to Table
+///4-9 for the relevant property settings.
+/////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Table 4-9 Control property settings
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///Step 3: Once you have set up the form with its controls,
+///you can create the Click event handlers for the Button contrls.
+///At the end of this tutorial, Program 4-6 shows the completed 
+///code for the form. You will be instructed to refer to 
+///PRgram 4-6 as you write the event handlers. In the Designer,
+///double-click the okButton control. This opens the code editor,
+///and you see an empty event handler named okButton_Click. 
+///Complete the okButton_Click event handler by typing the 
+///code shown in lines 22-53 in Program 4-6. Let's take a closer
+///look at the code:
+///
+///Line 22:
+///This line declares a string variable named city.
+///It is used to hold the name of the city that the user
+///selects form the ListBox.
+///
+///Line 24:
+///This if statement determiens whether the user has selected
+///an item in the cityListBox control. If an item is selected,
+///the control's SelectedIndex property is set to -1, and the 
+///program jumps to the else clause in line 49.
+///
+///Line 27: This statement gets the selected item from the 
+///ListBox and assigns it to the city variable.
+///
+///Line 30: This switch statement tests the city variable and 
+///branches to one of its case statements, depending on the 
+///variable's value:
+///
+///	*If the city variable equals "Honolulu", the program jumps
+///	to the case statement in line 32.
+///		
+/// *If the city variable equals "San Francisco", the program jumps
+/// to the case statement in line 35.
+///		
+/// *If the city variable equals "Denver", the program jumps
+/// to the case statement in line 38.
+///		
+/// *If the city variable equals "Minneapolis", the program jumps
+/// to the case statement in line 41.
+///		
+/// *If the city variable equals "New York", the program jumps
+/// to the case statement in line 44.
+//////////////////////////////////////////////////////////////////
+/// 
+/////////////////////////////////////////////////////////////////
+/// Step 4: Switch your view back to the Designer and double-click
+/// the exitButton control. In the code editor you see an empty
+/// event handler named exitButton_CLick.
+/// Complete the exitButton_Click event handler by typing the code
+/// shown in lines 58-59 in Program 4-6.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// Step 5: Save the project and run the application. Select a city
+/// in the ListBox control and click the OK button to see its time
+/// zone. Test each city, and when you are finished, click the 
+/// Exit button, and the form should close.
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+/// //////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+///
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
+/// 
+//////////////////////////////////////////////////////////////////
  *	
  *	
  *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
- *	
+ *
  *//////////////////////////////////////////////////////////////////////
-*/
