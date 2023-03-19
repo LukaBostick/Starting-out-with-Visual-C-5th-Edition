@@ -1633,258 +1633,641 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Let's look at each line of code.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Line 1: This statement declares a variable named outputfile, which
+ * can be used to reference a StreamWriter object.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 2: In a nutshell, this statement opens the ffile to which you will
+ * be writting data. It does so by calling the FileCreateText method,
+ * passing the string "courses.txt" as an argument. The File.CreateText
+ * method does the following:
  * 
- * /////////////////////////////////////////////////////////////////////
+ *	*It creates a text file with the name specified by the argument.
+ *	if the file already exists, its contents are erased.
+ *	
+ *	*It creates a StreamWriter object in memory, associated with the file.
+ *	
+ *	*It returns a reference to the StreamWriter object.
+ *	
+ *	Notice that an assignment operator assigns the value returned from the
+ *	File.CreateText method to the outputFile variable. This causes the 
+ *	outputFIle variable to reference the StreamWriter object that was 
+ *	created by the method.
+ *	
+ *	After the statement in line 2 executes, the courses.txt file is
+ *	created on the disk, a StreamWriter object associated with the 
+ *	file exists in memory, and the outputFile variable references
+ *	that object.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 4: This statement writes the string "Intro to Computer Science"
+ * to the courses.txt file. It does that by calling the StreamWriter
+ * class's WriteLine method, passing the string that is to be written
+ * to the file as an argument. When the WriteLine method writes data
+ * to a file, ot writes a newline character immediately following the data.
+ * A newline character is an invisible character that specidides the 
+ * end of a line of text.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 5:This statement writes the string "English Conposition" to
+ * the course.txt file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 6:This statement writes the string "Calculus I" to
+ * the course.txt file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 7:This statement writes the string "Music Appreciation" to the
+ * course.txt file.
  * 
+ * Line 9:This statement closes the course.txt file. It does that by 
+ * calling the StreamWriter class's Close method.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * After this code has executed, we can open the course.txt file using
+ * a text editor and look at its contents. Figure 5-20 show how the 
+ * file's contents will appear in Notepad.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-20 Contents of the course.txt file shown in Notepad
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ *				Writing Data with the Write Method
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Earlier you read that the StreamWriter class's WriteLine method writes
+ * an item of data to a file and then writes a newline character. The 
+ * newline character specifies the end of a line of text. For example,
+ * the following code sample opens a file named Example.txt and then
+ * uses the WriteLine method to write the strings "One","Two",and "Three"
+ * to the file. BEcause a newline character is written after each string,
+ * the strings appear on sepatare lines when viewed in a text editor.
+ * The screen shown on the left in Figure 5-21 shows how the file would
+ * appear in Notepad.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-21 items written with WriteLine and Write methods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamWriter outputFile;
+ *  // This is so cool omg, this syntax is amazing
+ * outputFile = File.CreateText("Example.txt");
  * 
- * /////////////////////////////////////////////////////////////////////
+ * outputFile.WriteLine("One");
+ * outputFile.WriteLine("Two");
+ * outputFile.WriteLine("Three");
  * 
+ * outputFile.Close();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In some situations, you wight want to write an item to a file without
+ * a newline character immediayely following it. The StreamWriter class
+ * provides the Write method for this purpose. It writes an item of data
+ * to a text file without writing a newline character. The following code
+ * sample demonstrates. The screen shown on the right in Figure 5-21 shows
+ * how the resulting file would appear in Notepad.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamWriter outputFile;
+ * outputFile = File.CreateText("Example.txt");
  * 
- * /////////////////////////////////////////////////////////////////////
+ * outputFile.Write("One");
+ * outputFile.Write("Two");
+ * outputFile.Write("Three");
  * 
+ * outputFile.Close();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Handling File-Related Exceptions
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Unexpected problems can potentially occur when working with files.
+ * For example, your program mught not have sufficient rights to create
+ * a file when it calls the File.CreateText method, or the disk might
+ * be full when you call the StreamWriter class's WriteLine method.
  * 
+ * When unexpected errors such as these occur, an exception is thrown.
+ * To handle such exceptions, you can write a try-catch statement, with
+ * code that performs file operations placed in the try block. Here
+ * is an example:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * try
+ * {
+ *		StreamWriter outputFile;
+ *		
+ *		outputFile = File.CreateText("courses.txt");
+ *		
+ *		outputFile.WriteLine("Intro to Computer Science");
+ *		outputFile.WriteLine("English Composition");
+ *		outputFile.WriteLine("Calculus I");
+ *		outputFile.WriteLine("Music Appreciation");
  * 
+ *		outputFile.Close();
+ * }
+ * catch(Exception ex)
+ * {
+ *	// Display an error message.
+ *	MessageBox.Show(ex.Message);
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In Tutorial 5-4, you will complete an application that reads input 
+ * from a TextBox control and write the input to a file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Tutorial 5-4: Writing Data to a Text File
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you complete the Friend File application.
+ * The project has already been started for you and is located in the 
+ * Chap05 folder of this book's Student Sample Programs.
+ * The application's form is shown in Figure 5-22.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-22 The Friend File form
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * When you complete the application, it will allow the user to enter
+ * a name into the nameTextBox control. 
  * 
+ * When the user clicks the writeNameButton control, the application opens
+ * a text file named Friend.txt, writes the name that was entered into the 
+ * TextBox control to the file, and then closes the file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Step 1: Start Visual Studio. Open the project named Ending Balance
+ * in the Chap05 folder of this book's Student Sample programs.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 2:Open the Form1 form's code in teh code editor. Insert the 
+ * using System.io; directive shown in line 10 of Program 5-4 at the
+ * end pf this tutorial. This statement is necessary because the
+ * StreamWriter class is part of the System.IO namespace in the .NET Framework
  * 
- * /////////////////////////////////////////////////////////////////////
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 3:Open the Form1 form in the Designer. The form is shown, along with the
+ * names of the important controls, in Figure 5-22.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Double-click the writeNameButton control. This open the code editor, and you will 
+ * see an empty event handler named writeNameButton_Click.
+ * Complete the writeNameButton_Click event handler by typing the code shown in lines
+ * 22-44 in Program 5-4. Let's take a closer look at the code:
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 23: This is the beginning of a try-catch statement. The try block appear in
+ * lines 42-43. If an exception is thrown by any statement in the try block, the 
+ * program jumps to the catch block, and line 43 displays an error message.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 26: This statement declares a StreamWriter variable named outputFile. 
+ * You use this variable to reference a StreamWriter object.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 29: This statement calls the File.CreateText method to create a text file
+ * named Firend.txt. The method also creates a StreamWriter object in memory 
+ * associated with the file. The method returns a reference to that object,
+ * which is assigned to the outputFile variable. As a result, the outputFile
+ * variable references the StreamWriter object. You will be able to use the 
+ * outputFile variable to perform operations on the Firend.txt file.
  * 
- * /////////////////////////////////////////////////////////////////////
- *  * /////////////////////////////////////////////////////////////////////
+ * Line 32: This statement uses the outputFile variable to call the
+ * StreamWriter class;s WriteLine method. The nameTextBox control's Text
+ * property is passed as an argument. As a result, the value entered into the
+ * TextBox is written to the Firend.txt file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 35: This statement closes the Friend.txt file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 38: This statement displays a message box to let the user know that the name
+ * was written to the file.
  * 
- * /////////////////////////////////////////////////////////////////////
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 4: Switch your view back to the Designer and double-click the exitButton control
+ * . In the code editor you will see an emprt event handler named exitButton_Click.
+ * Complete the exitButton_Click event handler by typing the code shown in lines 49-50 in
+ * Program 5-4.
  * 
- * /////////////////////////////////////////////////////////////////////
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 5:Save the project. Then, oress F5 on the keyboard or click the Start Debugging 
+ * button(|>) in the toolbar to compile and run the application. Enter a name into the 
+ * nameTextBox control, and then click the Write Name button. You should see a message
+ * box appear letting you know that the name was written to the file. Click the OK button
+ * to dismiss the Enter a name into the nameTextBox control, and then click the Write 
+ * Name button. You should see a message box appear letting you know that the name was 
+ * written to the file. Click the OK button to dismiss the message box; then click the
+ * Exit button on the application's form to end the application.
  * 
- * /////////////////////////////////////////////////////////////////////
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 6: Now you will at the contents of the Firend.txt file that the application created.
+ * Click on the menu bar, then click open, and them click file...
  * 
- * /////////////////////////////////////////////////////////////////////
  * 
+ * Step 7:You should now see the Open File window, viewing the contents of the Friend File
+ * project folder. As shown if Figure 5-23, open the bin folder, then
+ * open the Debug folder,
+ * and then select the file Friend.txt. (You might not see the .txt
+ * extension, depending on hoe your system is set up) Click the Open
+ * button.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-23 Opening the Firend.txt file in the Open File window
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Step 8: You should now see the contents of the Friend.txt file in 
+ * Visual Studio, as shown in Figure 5-24. (The example in the figure
+ * shows the contents of the file after the user has written Tim Owens to
+ * the file.) When you are sinished examining the contents of the file
+ * , you can close its tab. We come back to this project in the next
+ * tutorial.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-24 Sample contents of the Firend.txt file shown in Visual
+ * Studio
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ *				Writing Numeric Data to a Text File
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * You can use the StreamWriter class's WriteLine or Write method to 
+ * write numbers (such as int s, double s, and decimals) to a text file,
+ * but the numbers are coverted to strings. For example, look at the 
+ * following sample code (taken from the Number File project in the 
+ * Chap05 filder of Student Sample Programs):
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * private void writeNumbersButton_Click(object sender, EventArgs e)
+ * {
+ *		try
+ *		{
+ *			// Declare a StreamWriter variable.
+ *			StreamWriter outputFile;
+ *			
+ *			// Create a file and get a StreamWriter object.
+ *			outputFile = File.CreateText("Numbers.txt");
+ *			
+ *			// Write the numbers 1 through 10 to the file.
+ *			for(int count = 1; count <= 10; count++)
+ *			{
+ *				outputFile.WriteLine(count);
+ *			}
+ *			
+ *			// Close the file.
+ *			outputFile.Close();
+ *		}
+ *		catch(Exception ex)
+ *		{
+ *			// Display an error message.
+ *			MessageBox.Show(ex.Message);
+ *		}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * When this event handler executes, line 9 creates a text file named 
+ * Numbers.txt, and the loop in line 12-15 writes the number 1-10 to the 
+ * file. Figure 5-25 shows how the file appears when opened with Notepad.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-25 The Numbers.txt file opened in Notepad
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Appending Data to an Existing File 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * When you call the File.CreateTExt method to open a file specified
+ * by the argument aleady exists, it is erased and a new empty file
+ * with the same nuame is created. For example, when you run the Friend
+ * FIle application that you completed in Tutorial 5-4, each time you 
+ * click the Write Name button, the Friend.txt file is erased and a new
+ * file is created.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Sometimes you want to preserve an existing file and append new data to 
+ * its current contents. To append data to an existing file, you open it
+ * with the File.AppendText method. It works like the File.CreateText 
+ * method, but the file is not erased if it already exists. Any data
+ * written to the file is appened to the file's existing contents.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * For example, assime the file Names.txt exists and contains the data
+ * shown in Figure 5-26.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-26 Name.txt file
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The following code opens the file and appends additional data to its
+ * exising contents:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamWriter outputFile;
+ * outputFile = File.AppendText("Names.txt");
  * 
- * /////////////////////////////////////////////////////////////////////
+ * outputFile.WriterLine("Lynn");
+ * outputFile.WriterLine("Lynn");
+ * outputFile.WriterLine("Lynn");
  * 
+ * outputFile.Close();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * After this code executes, the Names.txt file contains the data shown
+ * in Figure 5-27.
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-27 Names.txt file after data has been appended
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Tutorial 5-5: Appending Data to the Friend.txt File
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you will nodify the Friend File application so it 
+ * appends data to the Friend.txt file. When the user clicker the Write 
+ * Name button, instead of erasing the file's current contents, the 
+ * application adds the contents of the nameTextBox control to the 
+ * Friend.txt file.
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Step 1: IF the Friend File project from Tutorial 5-4 is not
+ * currently open in Viual Studio, oppen it now.
+ * 
+ * Step 2:Open the Form1 form's code in the code editor. 
+ * You will make modification to the writeNameButton_Click event
+ * handler. 
+ * Program 5-5, at the end of this tutorial, shows how the event
+ * handler code will appear after you make the following changes:
+ * 
+ * Line 8 and 9: Change the comments as shown to reflect the way the
+ * Friend.tx file will be opened in line 10.
+ * 
+ * Step 3: Save the project. Then, press F5 on the keyboard or
+ * click the Write Name button. You should see a message box letting
+ * you know that the name was written to the file. When you click
+ * the OK button to dismiss the messafe box, notice that the
+ * nameTextBox is cleared, and the focus is given to the TextBox.
+ * Enter another name, and click the Write Name button. Again, you
+ * see the message box. Click the OK button to dismiss the message
+ * box and then click the Exit button to end the application 
+ * 
+ * Step 4:Now you will look at the contents of the Firend.txt file.
+ * Click File on the menue bar, then click Open, and then click File.
+ * You should see the Open File window, viewing the contents of the
+ * Friend File project folder. Open the bin folder, then open the
+ * Debug folder, and then select the file Friend.txt. (You might 
+ * not see the .txt extension, depending on how your system is set
+ * up.) Click the Open button.)
+ * 
+ * Step 5: You should now see the contents of the Friend.txt file in
+ * Visual Studio. Figure 5-28 shows an example.
  * 
+ * Notice that the names that you entered were appended to the 
+ * file each time you clicked the Write Name button.
+ * 
+ * When you are finished examining the contents of the file,
+ * you can close its tab.
+ * 
+ * We come back to this project in the next tutorial.
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 5-28 Sample contents of the friend.txt file shown in Visual
+ * Studio
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Specifying The Location of an Output File
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * When you call the File.CreateText or File.AppendText methods to open
+ * a file, you pass the filename as a string argument. If ht filename
+ * that you pasas an argument does not contain the file's path, the 
+ * file's location will be the bin\Debug folder, under the
+ * application's project folder. You saw this in Tutorials 5-4 and 5-5 
+ * when you opened the Friend.txt file in Visual Studio.
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * IF you want to open a file in a different location, you can specify
+ * a path as well as a filename in the argument that you pass to the 
+ * File.CreateText or FileAppendText method.  if you specify a path in a string 
+ * literal, be sure to prefix the string with the @ character.
+ * Here is an example:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamWriter outputFile();
+ * outputFile = File.CreateText(@"C:\Users\Chris\Documents\Names.txt");
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Tip: You can also let the user specify the file location. See 
+ * Selction 5.7 for more information on the SaveFileDialog control.
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Reading Data from a FIle with a StreamReader Object
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * To read data from a text file, you create a StreamReader object. You
+ * can then use the StreamReader class's ReadLine method to read a line
+ * of text from a file. For example, suppose a file named Students.txt
+ * exists and contains the four names shown in Figure 5-29.
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-29 Contents of the Student.txt file
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Let's suppose you want to write a program that reads the four names
+ * from the Students.txt file and displays them in message boxes. The
+ * following code sample shows how you can do this. (This code sample
+ * is taken from Student Names project, in the Chap05 folder of this
+ * book's Student Sample Programs.)
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * try
+ * {
+ *		// Declare a var to hold an item read for the file.
+ *		string studentName;
+ *		
+ *		//Declare a StreamReader variable.
+ *		StreamReader inputFile;
+ *		
+ *		// Open the file and get a StreamReader object.
+ *		inputFile = File.OpenText("Student.txt");
+ *		
+ *		//Read and display the first name.
+ *		studentName = inputFile.ReadLine();
+ *		MessageBox.Show(studentName);
+ *		
+ *		//Read and display the second name.
+ *		studentName = inputFile.ReadLine();
+ *		MessageBox.Show(studentName);
+ *		
+ *		//Read and display the third name.
+ *		studentName = inputFile.ReadLine();
+ *		MessageBox.Show(studentName);
+ *		
+ *		//Read and display the fourth name.
+ *		studentName = inputFile.ReadLine();
+ *		MessageBox.Show(studentName);
+ *		
+ *		// Close the file.
+ *		inputFile.Close();
+ * }
+ * catch(Exception ex)
+ * {
+ *	//Display an error message.
+ *	MessageBox.Show(ex.Message);
+ * }
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Let's take a closer look at the code.
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * 
+ * Line 1:This is the beginning of a try-catch statement. An exception will be thrown in the try black of a problem occurs while the file is being opend or while an item is being read from the file. If that happens, the program jumps to the catch clause in line 31.
+ * 
+ * Line 4:This statement declares a string variable named studentName. Each time we read a line of text from the file, we assign it tot the variable.
+ * 
+ * Line 7:This statement declares a variable named inputFile that can be used to reference a StreamReader object.
+ * 
+ * Line 10:This statement opens the file from which we will be reading data. It does so by calling the FIle.OpenText method, passing the string "Student.txt" as an argument. The File.OpenText method does the following:
+ * 
+ * *It opens an existing text file with the name specified by the argument. If the file does not exist, an exception is thrown.
+ * *It creates a StreamReader object in memory associated with the file.
+ * *It returns a reference to the StreamReader object.
+ * 
+ * 
+ * Line 13: THis statement calls the inputFile.ReadLine method,
+ * which reads a line of text from the file. The line of text is
+ * returned as s string from the method anssigned to the studentName 
+ * variable. Since this statement reads the first line of text from 
+ * the file, the studentName variable is assigned the string "Joe Merrell".
+ * 
+ * Line 14: This statement calls the inputFile.ReadLine method, which reads a line of text from the file. The line of text is returned as a string from the method and assigned to the studentName variable. Since this statement reads the first line of text from the file, the studentName variable is assigned the string "Joe Merrell".
+ * 
+ * Line 17 and 18: The statement in line 17 reads the nect line of text from the file and assigns it to the studentName variable. After this line executes, the studentName variable is assigned the string "Kathryn Stevens". The statement in line 22 displays the contents of the studentName variable in a message box.
+ * 
+ * Line 25 and 26: The statement in line 25 reads the next line of text from the file and assigns it to the studentName variable. After this line executes, the studentName variable is assigned the string "Carly Colombo". The statement in line 26 displays the contents of the studentName variable in a message box.
  * 
+ * Line 29:This statement closes the Students.txt file.
+ * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The Read Position
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * When a program works with an input file, a special value known as a 
+ * read position is internally maintained for that file. A file's read
+ * position marks the location of the nect item that will be read from
+ * the file. When an input file is opened, it's read position is
+ * initially set to the first item in the file. As items are read
+ * from the file, the read position moves forward, toward the end of
+ * the file. Let's see how this works in the previous code sample
+ * (from the Student Names project).
+ * After the statement in line 10 executes, the read position for
+ * the Student.tst file is position for the Students.txt file is 
+ * positioned as shown in Figure 5-30.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 4-30 The initial read position
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The ReadLine method call in line 13 reads an item from the file's 
+ * current read position and assigns that item to the studentName variable.
+ * Once this statement executes, the studentNames variable is assigned the 
+ * string "Jow Merrell". In addition, the file's read position is advanced to
+ * the next item in the file, as shown in Figure 5-31
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-31 Read postion after the first ReadLine method call
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * The ReadLine method call in line 17 reads an item from the file's
+ * current read position and assigns that value to the studentName
+ * variable. Once this statement exectues, the studentName variable
+ * is assigned the string "Chris Rich". The file's read position is 
+ * advanced to the next item, as shown in Figure 5-32.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-32 Read position after the second ReadLine method call 
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The ReadLine method call in line 21 reads an item from the file's
+ * current read position and assigns that value to the studentName
+ * variable. Once this statement executes, the studentName variable is 
+ * assigned the string "Kathryn Stevents". The file's read position is
+ * advanced to the next item, as shown in Figure 5-33.
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 5-33 Read position after the third ReadLine method call
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The last ReadLine method call appears in line 25. It reads an item from
+ * the file's current read position and assigns that value to the
+ * studentName variable. Once this statement executes, the studentName
+ * variavble is assigned the string "Carly Colombo". The file's read
+ * position is advanced to the end of the file, as shown in Figure 5-34.
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-34 Read position after the fourth ReadLine method call
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Note: Did you notice that the previous code sample read the items in
+ * the Students.txt file in sequence, from the beginning of the file to
+ * the end of the file? Recall from out discussion at the beginning of
+ * the section that this is the nature of a dequrntial access file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
