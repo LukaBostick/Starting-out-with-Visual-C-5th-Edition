@@ -1558,40 +1558,78 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Each operating system has its own rules for naming files. Many systems, including Windows, support the use of filename extensions, which are short sequences of characters that 
+ * Each operating system has its own rules for naming files.
+ * Many systems, including Windows, support the use of filename
+ * extensions, which are short sequences of characters that appear at 
+ * the end of a filename and are preceded by a period (which is know as
+ * a "dot"). For example, the files depicted in Figure 5-18 have the 
+ * extensions .jpg, .txt, and .docx. The extension usually indicates the
+ * type of data stored in the file. For example, the .jpg extension usually
+ * indicates that the file contains a grphic image that is compressed 
+ * according to the JPEG image standard. The .txt extension usually indicates
+ * that the file indicates that the file contains text. The .docx extension
+ * usually indicates that the file contains a Microsoft Word document.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * In order for a program to work with a file on the conputer's disk, the
+ * program must create a file object in memory. A file object is an object
+ * that is associated with a specidic file and provides a way for the program
+ * to work with the file. In the program, a variable is linked with the 
+ * file object. We say that the variable references the object. This variable
+ * is used to carry out any operations that are performed on the file.
  * 
+ * This concept is shown in Figure 5-19.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figuire 5-19 A variable referencing a file object that is associated
+ * with a file
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * You will be using two classes from the .NET Framework to create file
+ * objects. When you want to write data to a text file, you use the 
+ * StreamWriter class, and when you want to read data from a text file
+ * you use the StreamReader class. These classes are in the System.IO
+ * namespace in the .NET Framework, so you will need to write the 
+ * following directive at the top of your programs:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * using System.IO;
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Note: In programming terminology, files are considered streams of
+ * data. In C#, you use a StreamWriter object to open a stream, such
+ * as a file, and write data to it. You use a StreamReader object to open
+ * a stream, such as a file, and read data from it.
+
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Writing Data to a File with a StreamWriter Object
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * You can use the StreamWriter class's WriteLine method to write a line
+ * of text to a file. Let's suppose you want to write a program that creates
+ * a text file named course.txt and writes the names of the courses you are
+ * taking to the file. The following codesample shows how you can do this:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamWriter outputFile;
+ * outputFile = File.CreateText("courses.txt");
  * 
+ * outputFile.WriteLine("Intro to Computer Science");
+ * outputFile.WriteLine("English Composition");
+ * outputFile.WriteLine("Calculus I");
+ * outputFile.WriteLine("Music Appreciation");
+ * 
+ * outputFile.Close();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
