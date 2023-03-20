@@ -2182,11 +2182,25 @@ namespace Chapter5LoopsFileandRandomNumbers
  * variable. Since this statement reads the first line of text from 
  * the file, the studentName variable is assigned the string "Joe Merrell".
  * 
- * Line 14: This statement calls the inputFile.ReadLine method, which reads a line of text from the file. The line of text is returned as a string from the method and assigned to the studentName variable. Since this statement reads the first line of text from the file, the studentName variable is assigned the string "Joe Merrell".
+ * Line 14: This statement calls the inputFile.ReadLine method, which
+ * reads a line of text from the file. The line of text is returned as
+ * a string from the method and assigned to the studentName variable.
+ * Since this statement reads the first line of text from the file,
+ *  the studentName variable is assigned the string "Joe Merrell".
  * 
- * Line 17 and 18: The statement in line 17 reads the nect line of text from the file and assigns it to the studentName variable. After this line executes, the studentName variable is assigned the string "Kathryn Stevens". The statement in line 22 displays the contents of the studentName variable in a message box.
+ * Line 17 and 18: The statement in line 17 reads the nect line of text 
+ * from the file and assigns it to the studentName variable.
  * 
- * Line 25 and 26: The statement in line 25 reads the next line of text from the file and assigns it to the studentName variable. After this line executes, the studentName variable is assigned the string "Carly Colombo". The statement in line 26 displays the contents of the studentName variable in a message box.
+ * After this line executes, the studentName variable is assigned the
+ * string "Kathryn Stevens". The statement in line 22 displays the
+ * contents of the studentName variable in a message box.
+ * 
+ * Line 25 and 26: The statement in line 25 reads the next line of
+ * text from the file and assigns it to the studentName variable.
+ * 
+ * After this line executes, the studentName variable is assigned
+ * the string "Carly Colombo". The statement in line 26 displays
+ * the contents of the studentName variable in a message box.
  * 
  * Line 29:This statement closes the Students.txt file.
  * 
@@ -2271,343 +2285,744 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Reading Numeric Data from a Text File
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Remember that when data is stored in a text file, it is encoded as
+ * text, using a scheme such as Unicode. Even if the file contains 
+ * numbers, those numbers, those numbers are stored in the file as a 
+ * series of characters. Furthermore, when you read an item from a 
+ * text file with the StreaReader class's ReadLine method, that item
+ * is returning a string.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Suppose a text file contains numeric data, sych as that shown in 
+ * Figure 5-35. When we use the ReadLine method to read the items from
+ * the file, we get the strings "10","20", and "30". IF we need to
+ * perform math with these values, we must convert each value 
+ * from a string to a numeric data type. We can use the Parse or TryParse
+ * families of methods that you already know about to perfrom this
+ * conversion.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 5-35 A text file containing numeric data
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Let's suppose you want to write a program that reads the three numbers
+ * from the NumericData.txt file shown on Figure 5-35 and displays their
+ * total in a message box. The following code sample shows a simple 
+ * demonstration. (This code sample is taken from the Numeric Data project
+ * in the Chap05 folder of this book's Student Sample Program.)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * try
+ * {
+ *		// Variables to hold the numbers read from the file
+ *		// and their total
+ *		int number1, number2, number3, total;
+ *		
+ *		// A StreamReader variable.
+ *		StreamReader inoutFile;
+ *		
+ *		// Open the file and get a StreamReader object.
+ *		intputFIle = File.OpenText("NumericData.txt");
+ *		
+ *		// Read three numbers from the file.
+ *		number1 = int.Parse(inputFile.ReadLine());
+ *		number2 = int.Parse(inputFile.ReadLine());
+ *		number3 = int.Parse(inputFile.ReadLine());
+ *		
+ *		// Calculate the total of the numbers.
+ *		total = number + number2 + number3;
+ *		
+ *		// Display the total.
+ *		MessageBox.Show("The total is " + total);
+ *		
+ *		// Close the file.
+ *		inputFile.Close()'
+ * }
+ * catch(Exception ex)
+ * {
+ *		// Display an error message.
+ *		MessageBox.Show(ex.Message);
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Let's take a closer look at the code.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 1: This is the beginning of a try-catch statement. Various exceptions
+ * can be thrown by the code in the try block, which cause the program to
+ * jump to the catch clacue in line 27.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 5: This statement declares the int variables number1, number2, number3, and total.
+ * These variables hold the three values read from the file and their total.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 8-11: After these statements have executed, the NumericData.txt
+ * file is opened for reading and the inputFile variable references a
+ * StreamReader object that is associated with the file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 14: This statement does the following:
  * 
+ *		* It calls the inputFile.ReadLine method to read a line from the file.
+ *		
+ *		*The value that is returneed from the inputFile.ReadLine method
+ *		(a string) is passed as an argument to the int.Parse method.
+ *		
+ *		*The value that is returned from the int.Parse method is assigned
+ *		to the number1 variable.
+ *		
+ *After this statement executes, the number1 variable is assigned the
+ *value read from the file, converted to an int.
+ *(The number1 variable is assigned the value 10.))
+ *
+ *Line 15: This statement reads the next value from the file, converts it 
+ *to an int, and assigns the result to the number2 variable. (THe number2
+ *variable is assigned the value 20.)
+ *
+ *Line 16: This statements reads the next value from the file, converts
+ *it to an int, and assings the result to the number3 variable.
+ *(The number3 variable is assigned the value 30.)
+ *
+ *Line 19: This statement calculate the sum of number1, number2, and 
+ *number3, and assigns the result to total.
+ *
+ *Line 22: This statement displays the sum of the numbers in a message
+ *box.
+ *
+ *Line 25: This statement closes the file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Reading a File with a Loop and Detaching the End of the File
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Quite often a program must read the contents of a file without knowing 
+ * the number of items that are stored in the file. For example, suppose 
+ * you need to write a program that displays all the items in a file, but
+ * you do not know how many items the file contains. You can open the file
+ * use a loop to repeatedly read an item from the file and display it. 
+ * However, an exception will be thrown of the program attemps to read 
+ * byond the end of the file. The program needs some way of knowing 
+ * when the end of the file has been reached so it will not try to read
+ * beyond it. The following pseudocode shows the logic:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Open the file
+ * While not at the end of the file:
+ *  Read an item from the file
+ *  Display an item
+ * End While 
+ *  Close the file
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * StreamReader objects have a Boolean property named EndOfStream that 
+ * signals whether the end of the file has been reached. If the file's
+ * read position is at the end of the file(and there is not more data to
+ * read), the EndOfStream property is set to true. Otherwise, it is set to 
+ * false. Whe nyou need to read all the items in a file without knowing
+ * how many items the file contains, you can write a loop that iterates as
+ * long as the EndOfStream property is false.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Let's assume inputFile references a StreamReader object that is
+ * associates with a file that is already open. You can write the loop in the
+ * following manner:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * while(inputFile.EndOfStream == false)
+ * {
+ *	 // Read an item from the file.
+ *	 // Process the item
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Recall that the ! operator is the logical NOT operator. When you read 
+ * the first line of this loop, you naturally think while NOT at the end
+ * of the stream. Im Tutorial 5-6, you will complete an application that 
+ * uses this tecgnique to display all the items in a file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Tutorial 5-6: Using a Loop to Read to the End of a File
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In this tutorial, you complete the South America application that is 
+ * found in the Chap05 folder of this book's Student Sample Programs. The
+ * application's form has already been created and is shown in Figure 5-36.
+ * The application also has an accompanying text file named Countries.txt
+ * that is stored in the bin\Debug folder under the project folder. The 
+ * Countries.txt file contanins the names of the countries of South
+ * America. Figure 5-37 shows the file as it appears in Notepad.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-36 The South America application's form 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-37 The Countries.txt file
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * When the completed application runs and the user clicks the Get Countries
+ * button, the application reads each country name from the file and adds each 
+ * one to the countriesListBox control.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Step 1: Step Visual Studio. Open the project named South America in 
+ * the Chap05 folder of this book's Student Sample Programs.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 2: OPen the Form1 form's code in the code editor.
+ * Insert the using System.IO; directive shown in line 10 of Program
+ * 5-6 at the end of this tutorial.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * This statement is necessary because the StreamReader class is part of
+ * the System.IO namespace in the .NET Framework.
  * 
+ * Step 3: Open the Form1 form in the Designer. The form is shown, along
+ * with the names of important controls, in Figure 5-36. Double-click the 
+ * getCountriesButton control. This opens the code editor, and you will 
+ * see an empty event handler named getCountriesButton_Click. Complete 
+ * the getCountriesButton_CLick event handler by typing the code shown in
+ * line 23-46 in Program 5-6. Let's take a closer look at the code: 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Line 23:This is the beginning of a try-catch statement, which handles 
+ * any exceptions that are thown while the file is being processed. if 
+ * an exception is thrown by any statement in the try block, the program
+ * jumps to the catch clause in line 50. 
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 26:This statement declares the string variable countryName, which holds the 
+ * lines of text that are read from the fole.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Lines 29-32: After these statements have executed, the Countires.txt file is opened for reading, and the inputFile variable references a StreamReader object that is associated with the file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 35:This statement clears anything that might be displayed in the countriesListBox control. (This prevents the names of the countries from appearing multiple times in the ListBox if the user clicks the Get Countries button multiple times.))
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 38:This is the beginning of a while loop that iterates as long as the end of the Countries.txt file has not been reached.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 41:This statement reads a line of text from the file and assigns it to the countryName variable.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 44:This statement adds the countents of the countryName variable to the ListBox
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 48:This statement closese the file
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 4: Switch your view back to the Designer and double-click the 
+ * exitButton control. in the codeeditor you will see an empty event handler
+ * named exitButton_Click. Complete the exitButton_Click event handler by
+ * typing the code shown in lines 59-60 in Program 5-6.
  * 
+ * Step 5: Save the project. Then press F5 on the keyboard or click the Start Debugging button(|>) on the toolbar to compile and run the application. When the application runs, click the Get Countries button. This should fill the ListBox with the names of the countries from the Countries from the Countries.txt file, as shown in Figure 5-38. Click the Exit button to exit the application.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-38 The South America application displaying the list of 
+ * countries
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Program 5-6 Completed code for Form1 in the South America application
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Calculating a Running Total
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Many programming tasks require you to calculate the total of a series
+ * of numbers. In this secion you learn how to calculate the total of a
+ * serires of numbers that are stored in a file. For example, suppose
+ * you have a file that contains a business's sales for each day of a 
+ * week and you need to write a program that calcualtes the total of 
+ * all the amounts in the file. The program would read the values in
+ * the file and keep a total of the values as they are read. 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Programs that calculate the total of a series of numbers typically use
+ * two elements:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * * A loop that reads each number in the series
  * 
+ * *A variable that accumulates the total of the numbers as they are read
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The variable that is used to accumulate the total of the number is
+ * called an accumulator. IT is often said that the loop keeps a running
+ * total because it accumulates the total as it reads each number in the
+ * series. Figure 5-39 shows the general logic of a loop that calculates
+ * a running total.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-39 Logic for calculating a running total
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * When the loop finishes, the accumulator will contain the total of the
+ * numbers that were read by the loop. Notice that the first step in the 
+ * flowchart is to set the accumulator variable to 0. This is a critial
+ * step. Each time the loop reads a number, it adds it to the accumulator.
+ * If the accumulator starts with any value other than 0, it will not contain the 
+ * correct total when the loop finishes.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In Tutorial 5-7, you will complete an application that calculates a
+ * running total of the values in a file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Tutorial 5-7: Calculating a Running Total
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In this tutorial, you complete the Total Sales application that is found
+ * in the Chap05 folder of this book's Student Sample Programs.
+ * The application's form has already been created and is shown in
+ * Figure 5-40. The application also has an accompanying text file named
+ * Sales.txt that is stored in the bin\Debug folder, under the project
+ * folder. The Sales.txt file contains the amounts shown in Figure5-41.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-40 The Total Sales application's form
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-41 Contents of the Sales.txt file
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * When the completed application runs and the user clicks the Read Sales
+ * & Calculate Total button, the application calculates the total of the 
+ * values in the Sales.txt file and displays the total in the totalLabel
+ * control.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 1: Start Visual Studio. Open the project named Total Sales in
+ * the Chap05 folder of this book's Student Sample Programs.
+ * Step 2: Open the Form1 form's code in the code editor. Insert the 
+ * using System.IO; directive shows in line 10 of Program 5-7 at the
+ * end of this tutorial.
+ * Step 3: Open the form in the Designer.
+ * The form is shown, along 
+ * with the names of the important controls, in Figure 5-40.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Double-click the calculateButton control. 
  * 
- * /////////////////////////////////////////////////////////////////////
+ * This opens the codeeditor, and you will see an empty handler 
+ * named calculateButton_Click.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Complete the calculateButton_Click event
+ * handler by typing the code shown in lines 23-56 in Program 5-7.
+ * Let's take a closer look at the code:
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 23: This is the beginning of a try-catch statement, which 
+ * handles any exception that are thrown while the file is being 
+ * processed.
+ * if an exception is thrown by any statement in the try block, 
+ * the program jumps to the catch clause in line 52.
  * 
- * /////////////////////////////////////////////////////////////////////
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Lines 26-27: These statements declare the decimal variables sales
+ * and total. The sales variable holds each value that is read from 
+ * the file, and the total variable is used as an accumulator.
+ * Notice that the total variable is explicitly initialized to 0.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Lines 30-33:After these statements have executed, the Sales.txt file
+ * is opened for reading, and the inputFile variable references a 
+ * StreamReader object that is associated with the file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 36: This is the beginning of a while loop that iterates as long
+ * as the end of the Countries.txt file has not been reached.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 39: This statement reads a line of text from the file, converts
+ * it to a decimal, and assigns the result to the sales variable.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 42: This statement adds the sales variable to the total variable.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 46:This statement closes the file.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 49:This statement displays the total, formatted as currency,
+ * in the totalLabel control.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Step 4:Switch your view back to the Designer and double-click the
+ * exitButton control. 
  * 
- * /////////////////////////////////////////////////////////////////////
+ * In the code editor you will see an empty event handler named
+ * exitButton_Click. Complete the exitButton_Click event handler
+ * by typing the code shown in lines 61-62 in Program 5-7.
  * 
+ * Step 5:Save the project. Then, press f5 on the keyboard or click 
+ * the Start Debugging button(|>) on the toolbar to compile and run
+ * the application. When the application runs, click the Read Sales 
+ * & Calculate Total button. The total sales should be calculated and
+ * displayed, as shown in Figure 5-42. Click the Exit button to exit 
+ * the application.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-42 The Total Sales application displaying the total sales
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * 5.7 The OpenFileDialog and SaveFileDialog Controls
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Concept: The OpenFileDialog and SaveFileDialog controls allow your
+ * application to display standard Windows dialog boxes for opening and
+ * saving files. These allow the user to easily a file's name and
+ * location
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * So far, the applications in this chapter that open a file specify the 
+ * filename as a string literal. Most Windows users, however, are
+ * accustomed to using a dialog box to browse their disk for a file to 
+ * open or for a location to save a file. You can use the
+ * OpenFileDialog and SaveFileDialog controls to equip applications
+ * with standard Windows dialog boxes for these purposes.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The OpenFileDialog Control
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The OpenFileDialog control displays a standard Windows Open dialog box,
+ * such as the one shown in Figure 4-43. The Open dialog box is useful in 
+ * applications that must open an existing file because it allows the user
+ * to browse the system and select the file.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-43 Windows Open dialog box
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Adding the OpenFileDialog Control to Your Project
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * To add an OpenFileDialog control to a form, double-click the
+ * OpenFileDialog tool under the Dialogs group in the Toolbox window. When
+ * the control is created, it does not appear on the form, but in an area
+ * at the bottom of the Designer known as the component tray. Figure 5-44
+ * shows an example of how an OpenFileDialog control appears in the component
+ * tray. The control's default name is OpenFileDialog1. As wish
+ * other controls,
+ * you can change the contro's Name property to change its name.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-44 An OpenFileDialog control in the component tray
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Displaying an Open Dialog Box
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In code, you can display an Open dialog box by calling the
+ * OpenFileDialog control's ShowDialog method. For example, assume 
+ * that we have create an OpenFileDialog control and change its name to
+ * openFile. The following statement calls the control's ShowDialog method:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * openFile.ShowDialog();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In most cases, however, you will want to know whether the user clicked
+ * the Open button or the Cancel button to dismiss the Open dialog box.
+ * If the user clicked the Open button, it means that the user has
+ * selected a file and he or she can open it. If the user clicked the Cancel 
+ * button, it means that the user dose not want to proceed.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The ShowDialog method returns a value that indicates which button the 
+ * user clicked to dismiss the dialog box. If the clicked the Open button
+ * , the value DialogResult.OK is returned. If the user clicked the Cancel
+ * button, the value DialogResult.Cancel is returned.  Assuming openFile
+ * is the name of an OpenFileDialog control, the following is an example of
+ * an if-else statement that calls the ShowDialog method and determines
+ * whether the user click the Open button or the Cancel button.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * if(openFile.ShowDialog() == DialogResult.OK)
+ * {
+ *	  MessageBox.Show("You clicked the Open button.");
+ * }
+ * else
+ * {
+ *		MessageBox.Show("You clicked the Cancel button.");
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The Filename Property
  * /////////////////////////////////////////////////////////////////////
- * 
+ * When the user selects a file with the Open dialog box, the file's 
+ * path and filename are stored in the control's Filename property.
+ * Assume openFile is the name of an OpenFileDialog control. The following 
+ * code is an example of how you can display an Open dialog box and, if the
+ * user clicks the Open button to dismiss the dialog box, open the selected
+ * file:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamReader inputFile;
  * 
+ * if(openFile.ShowDialog() == DialogResult.OK)
+ * {
+ *	// Open the selected file.
+ *	inputFile = File.OpenText(openFile.Filename);
+ *	
+ *	// Continue processing the file...
+ * }
+ * else
+ * {
+ *	MessageBox.Show("Operation canceled.");
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Let's take a closer look at the code. The statement in line 1 declares
+ * a StreamReader variable named inputFile. The if statement in line 3 
+ * calls the openFile control's ShowDialog method to display an Open
+ * dialog box.
+ * If the user clicks the Open button to dismiss the dialog box, the 
+ * program continues to line 6, when the name of the selected file is
+ * retrieved from the control's Filename property and that file is
+ * opened. Otherwise (if the user clicks the Cancel button),
+ * the program jumps to the else clause in line 10. 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Tip When you create an OpenFileDialog control, its Filename property
+ * is initially set to the control's default name. For example, it the
+ * control's default name is openFileDialog1, then the Filename property 
+ * is also set to openFileDialog1. Always be sure to delete the default
+ * value of the Filename property.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The InitialDirectory Property
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * By default, the Open dialog box displays the contents of the user's
+ * Documents directory(or folder). You can specify another direct to be
+ * initially displayed by storing its path in the InitialDirectory property.
+ * For example, the following code stores the path C:\Data in the
+ * openFile control's InitialDirectory property before displaying an Open dialog box:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * openFile.InitialDirectory = "C:\Data";
+ * if(openFile.ShowDialog() == DialogResult.OK)
+ * {
+ *	// Continue to process the selected file..
+ * }
+ * else
+ * {
+ *		//The operation was canceled.
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In this example, when the Open dialog box is displayed it shows the 
+ * contents of the directory C:\Data.
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * The Title Property
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * By default, the word Open is displayed in an Open dialog box's title
+ * bar. You can change the default text displayed in the title bar by 
+ * changing the control's Title property.
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The SaveFileDialog Control
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The SaveFileDialog control displays a standard Windows Save As
+ * dialog box, such as the one shown in Figure 5-45.
  * 
+ * The Save As dialog box allows the user to browse the system and
+ * select a location and name for a file that is about to be saved.
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 5-45 Windows Save As dialog box
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Adding the SaveFileDialog Controls to Your Project
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * The SaveFileDialog control has mush in common with the OpenFileDialog
+ * control. To add a SaveFileDialog control to a form, double-click the 
+ * SaveFileDialog tool under the Dialogs group in the Toolbox window. 
+ * When the control is created, it appears in the component tray at the 
+ * bottom of the Designer. The control will be given a default name such as
+ * saveFileDialog1, but you can change the name with the Name property.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Displaying a Save As Dialog Box
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * In code, you can display a Save As dialog box by calling the
+ * SaveFileDialog contro's ShowDialog method.
+ * For example, assume that we have created a SaveFileDialog control and 
+ * changed its name to saveFile. The following statement calls
+ * the control's ShowDialog method:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * saveFile.ShowDialog();
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The method returns a value indicating whether the user clicked the 
+ * saved button or the Cancel button to dismis the Save As dialog box.
+ * If the user clicks the Save button, the value DialogResult.OK is
+ * returned.
+ * If the user clicks the Cancel button, the value DialogResult.Cancel
+ * is returned. Assume saveFile is the name of a SaveFileDialog control.
+ * The following is an example of an if-else statement that calls the
+ * ShowDialog method and determines whether the user clicked the
+ * Save button or Cancel button:
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * if(saveFile.ShowDialog() == DialogResult.OK)
+ * {
+ *	MessageBox.Show("You clicked the Save button.");
+ * }
+ * else
+ * {
+ *	MessageBox.Show("You clicked the Cancel button.");
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The Filename Property
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * When the user specifies a location and filename with the Save As
+ * dialog box, the file's path and filename are stored in the control's
+ * Filename property. Assume saveFile is the name of a SaveFileDialog
+ * control. The following code is an example of how you can display a 
+ * Save As dialog box, and if the user clicks the Save button to dismiss
+ * the dialog box, open the selected file:
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * StreamWriter outputFile;
  * 
+ * if(saveFile.ShowDialog() == DialogResult.OK)
+ * {
+ *	// Create the selected file.%
+ *  outputFile = File.CreateText(saveFile.Filename);
+ *  // Write data to the file 
+ * }
+ * else
+ * {
+ *		MessageBox.Show("Operation canceled.")
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Let's take a closer look at the code. The statement in line 1 declares a 
+ * StreamWriter variable named outputFile. The if statement in line
+ * 3 calls the saveFile control's ShowDialog method to display a 
+ * Save As dialog box. if the user clicks the Save button to dismiss
+ * the dialog box, the program contrinues to line 6, when the selected
+ * name and path are retrieved from the control's Filename property, 
+ * and that file is created. Otherwise(if the user clicks the Cancel button),
+ * the program jumps to the else clause in line 10.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * The InitialDirectory Property
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * By default, the Save As dialog box displays the contents of the user's
+ * Documents directory (or folder). You can specify another directory to
+ * be initially displayed by storing its path in the IntialDirectory
+ * property. The following code stores the path C:\Data in the saveFile
+ * control's InitialDirectory property before displaying a Save As dialog box:
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * saveFile.InitialDirectory = "C:\ Data";
+ * if(saveFile.ShowDialog() == DialogResult.OK)
+ * {
+ *		// Continue to process the file
+ * }
+ * else
+ * {
+ *		// The operation was cancelled.
+ * }
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * In this example, when the Save As dialog box is displayed, it
+ * shows the contents of the directory C:\Date.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * The Title Property
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * By default the word Save As are displayed in a Save As dialog box's
+ * title bar. You can change the default text displayed in teh title bar
+ * by changing the control's Title property.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ *
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
