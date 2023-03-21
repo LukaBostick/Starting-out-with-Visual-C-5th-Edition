@@ -2978,6 +2978,10 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * ///////////////////////////////////////////////////////////////////// 
  * The InitialDirectory Property
  * /////////////////////////////////////////////////////////////////////
  * 
@@ -3017,12 +3021,9 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
- * /////////////////////////////////////////////////////////////////////
- *
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -3032,225 +3033,464 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * 5.8 Random Numbers
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Conceot Random numbers are used in a variety of applications. The
+ * .NET Framework provides the Random class that you can use in C# to
+ * generate random numbers.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Random numbers are useful for lots of different prgramming tasks.
+ * The following are just a few examples:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * * Random numbers are commonly used in games. For example, computer 
+ * games that let the player roll dice use random numbers to represent
+ * the values of the dice Program tha show cards being drawn from a 
+ * shuffled deck use random numbers to represent the face values of 
+ * the cards.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * * Random numbers are useful in simulation programs. In some simulations
+ * , the computer must randomly decided how a person, animal, insect, or
+ * other living being will behave. Formulas can be constructed in which a
+ * random number is used to determine various actions and events that take
+ * place in the program.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * *Random numbers are useful in simulation programs that must randomly select 
+ * data for analysis.
  * 
+ * *Random numbers are commonly used in computer security to encrypt
+ * sensitive data.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The .NET Framework provides a class named Random that you can use in
+ * C# to generate random numbers. First you create an object from the 
+ * Random class with a statement such as this:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Random rand = new Random();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Let's dissect the statement into two parts. The first part of the 
+ * statement, appearing on the left side of the = operator, it as follows:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Random rand = new Random();
+ * |_________|
+ *		|
+ *	This declares a
+ *	var named rand that 
+ *	can reference a Random 
+ *	object
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Random rand = new Random();
+ *				 |___________|
+ *					   |
+ *				 This creates a 
+ *				 Random object
+ *				 in memory.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The expression new Random() causes an object of the Random class 
+ * to be created in memory. The = operator causes the rand variable
+ * to reference the Random object, as illustrated in Figure 5-46.
+ * After this statement has executed, we can use the rand variable to
+ * work with the Random object.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-46 The rand variable references a Random object
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The Next Method
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Once you have created a Random object, you can call its Next method
+ * to get a random integer number. The following code shows an example:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ *  // Declare an int variable.
+ *  int number;
+ *  // Create a Random object.
+ *  Random rand = new Random();
+ *  
+ *  // Get a random integer and assign it to number.
+ *  number = rand.Next();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * After this code executes, the number variable contains a random integer.
+ * If the call the Next method with no arguments, as shown in this
+ * example, the returned integer is somewhere between 0 and 
+ * 2,147,483,647. Alternatively, you can pass an argument that specifies
+ * an upper limit to the generated number's range. In the following
+ * statement, the value assigned to number is somewhere between 1 and 99:
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * number = rand.Next(100);
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * You can also specify a lower limit for the range of numbers. In the 
+ * following statement, the value assigned to number is somewhere between
+ * 100 and 199:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * number = rand.Next(100, 200);
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The following statement shows another example. It assigns a random
+ * integer to number between -50 and +49:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * number = rand.Next(-50,50);
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The NextDouble Method
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * You can call a Random object's NextDouble to ger a random floating-
+ * point number between 0.0 and 1.0 (not including 1.0). The following
+ * code shows an example:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ *  // Declare a Double variable.
+ *  double number;
+ *  
+ *  // Create a Random object.
+ *  Random rand = new Random();
+ *  
+ *  // Get a random number and assign it to number.
+ *  number = rand.NextDouble();
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * After this code executes, the number variable will contain a random
+ * floating-point number in the range of 0.0 up to (but not including)
+ * 1.0.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In Tutorial 5-8, you will use random numbers to determine whether
+ * the heads or tails side of a coin is facing up after the coin has
+ * been tossed.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Tutorial 5-8: Simulating Coin Tosses
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In this tutorial, you create an application that simulates the 
+ * tossing of a coin. Each time the user tosses the coin, the application
+ * uses a Random object to get a random integer in the range of 0 through
+ * 1. If the random number is 0, it means the tails side of the coin is
+ * up, and if the random number is 1, it means the heads side is up. The 
+ * application displays an image of a coin showing wither heads or tails
+ * , depending on the value of the random number.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Step 1: Start Visual Studio and begin a new Windows Forms Application 
+ * project named coin toss.
  * 
+ * Step 2: Set up the application's form as shown in Figure 5-47. Notce
+ * that the form's Text property is set to Coin Toss. The names of the 
+ * controls are shown in the figure. As you place each of the conmtrols
+ * on the form, refer to Table 5-1 for the relevant property settings.
+ * (Make sure the headsPictureBox control's Visible property is set to
+ * True, and the tailsPictureBox control's Visable property is set to
+ * False. This will cause the coin to initially appear heads up when the
+ * application runs.)
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-47 Initial setup of the Coin Toss form
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Table 5-1 Control property settings
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Step 3: After you have set all of the control properties as shown in 
+ * Table 5-1, move the PictureBox controls so one is on top of the 
+ * other, as show in Figure 5-48. (In the figure, the headsPictureBox
+ * control is on top, but it really doesn't matter which is on top.) Also
+ * , reduce the width of the form and position the button controls as 
+ * shown in the figure.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Figure 5-28 The controls repositioned and the form size adjusted
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Step 4: Now you will create the Click event handlers for the Button
+ * controls. At the end of this tutorial, Program 5-8 shows the completed
+ * code for the form. You will be instructed to refer to Program 5-8 as 
+ * you write the event handlers.
+ * In the Designer, double-click the tossButton control. This opens the 
+ * code editor, and you will see an empty event handler named tossButton
+ * _Click. Complete the tossButton_Click event handler by typing the code
+ * shown in lines 22-44 in Programs 5-8. Let's take a closer look at the
+ * code:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Line 23: This statement declares an int variable named sideup. This 
+ * variable is used to hold a random number that indicates which side of
+ * the coin is up.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 26: This statement does the following:
+ *		
+ *		*It declares a variable named rand that can be used to reference a
+ *		Random object.
+ *		
+ *		* It creates a Random object in memory.
+ *		
+ *		* The = operator causes the rand variable to reference the Random
+ *		object.
  * 
- * /////////////////////////////////////////////////////////////////////
+ * Line 30: This statement gets a random integer in the range of 0 through 1
+ * and assigns it to the sideup variable. The random integer represents
+ * which side of the coin is facing up. The value 0 means that the tails
+ * side is facing up, and the value 1 means that the heads side is facing up.
  * 
+ * Lines 33-44: This if-else statement displays the side of the coin that 
+ * is facing up. If sideUp equals 0, then the statements in line 36 and 
+ * 37 display the tailsPictureBox control and hide the headsPictureBox
+ * control. If sideup equals 1, then the statements in lines 42 and 43
+ * display the headsPictureBox control and hide the tailsPictureBox.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Step 5: Switch your view back to the Designer and double-click the 
+ * exitButton control. In the code editor you will see an empty event
+ * handler named exitButton_Click. Complete the exitButton_Click event 
+ * handler by typing the code shown in lines 49-50 in Program 5-8.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Step 6: Save the project. Then, press F5 on the keyboard or click the
+ * Start Debugging button(|>) on the toolbar to compile and run the
+ * application. When the application runs, click the Toss button several
+ * times to simulate several coin tosses. When you are finished, click
+ * the Exit button to exit the application.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Program 5-8 Completed code for Form1 in the Coin Toss application
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ *						Random Number Seeds
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * The numbers that are generated by the Random class are not truly
+ * random. Indtead, they are pseudorandom numbers that are calculated by
+ * a formula. The formula used to generate random numbers has to be 
+ * initialized with a value know as the seed value. The seed value is 
+ * used in the calculation that returns the next random number in the 
+ * series. When a Random object is created in memory, it retrieves
+ * the system time from the computer's internal clock and uses that as
+ * the seed value. The system time is an integer that represents the 
+ * current date and time, down to a hundredth of a second.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * If a Random object uses the same sed value each time it is created,
+ * it always generates the same series of random numbers. Because the 
+ * system time changes every hundredth of a second, it is the preferred
+ * value to use as the seed in most cases. However, you can specify a
+ * different integer value as the seed, if you desire, when you create a
+ * Random object. Here is an example:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Random rand = new Random(1000);
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * In this example, the Random object that is created uses 1000 as the 
+ * seed value. Each time a Random object is created with this statement
+ * , it generates the same series of random numbers. That may be desirable
+ * in some applications, when you always want to produce the same set of 
+ * pseudorandom numbers,
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ *							5.9 The Load Event 
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * Concept:
+ * When an application's form loads into memory, an event
+ * known as the Load event takes place. You can write an event handler
+ * for the Load event, and that handler will execute just before the 
+ * form is displayed.
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * When you run an application, the application's form loaded into
+ * memory and an event known as the Load event takes place.
+ * The Load event takes place before the form is displayed on the
+ * screen. If you want execute some code at this point, you can write
+ * a Load event handler containing the desired code.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * To create a Load event handler for a form, simply double-click any
+ * area of the form in the Designer window where there is no other
+ * control. The code editor will open with an empty Load event handler.
+ * If the form is named Form1, the event handler is named Form1_Load.
  * 
+ * Any code that you write inside the event handler executes when the 
+ * form's Load event takes place. Here is an example of a Load event
+ * handler in a form named Form1:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * private void Form1_Load(object sender, EventArgs e)
+ * {
+ *		MessageBox.Show("Prepare to see the form!");
+ * }
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Keep in mind that the Load event happens before the form is displayed
+ * on the screen. When the application containing this event handler runs,
+ * the message box is displayed before the form appears.
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Load event handler are useful for performing setup operations.
+ * In Tutorial 5-9, you will complete an application that uses a Load
+ * event handler to read items from a text file and adds those items
+ * to a ListBox control.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Tutorial 5-9: Creating a Load Event Handler
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you complete the Load Event application that is 
+ * found in the Chap05 folder of this book's Student Sameple Programs.
  * 
+ * This application is a variation of the South America application that
+ * you created in Tutorial 5-6. This version of the application uses a 
+ * Load event handler to read the contents of the Conutries.txt file and
+ * adds those items to a ListBox control.
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * The application's form has already been created and is shown in 
+ * Figure 5-49. The application also has an accompanying text file named
+ * Countries.txt that is stored in the bin\Debug folder, under the 
+ * project folder. The Countries.txt file contains the names of the
+ * countries 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-49 The Load Event application's form
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Step 1: Start Visual Studio. Open the project named Load Event in the 
+ * Chap05 folder of this book's Student Sample Programs.
+ * 
+ * Step 2: Open the Form1 form's code in the code editor. Insert the 
+ * using System.IO; directive shown in line 10 of Program 5-9 at the
+ * end of this tutorial. This statement is necessary because you will
+ * be using the StreanReader class, which is part of the System.IO
+ * namespace in the .NET Framework.
+ * 
+ * Step 3: Open the Form1 form in the Designer. The form is shown,
+ * along with the names of the important controls, in Figure 5-49.
+ * Double-click any part of the form that does not contain a control.
+ * (Be sure not to click the Label control, the ListBox control, 
+ * or the Button control.)
+ * 
+ * This opend the code editor, and you will see an empty handler
+ * named Form1_Load. 
+ * Complete the Form1_Load event handler by typing the code shown 
+ * in lines 23-46 in Program 5-9.
+ * Let's take a closer look at the code: 
+ * 
+ * Line 23:This is the beginning of a try-catch statement,
+ * which handles any exceptions that are thrown while the
+ * file is being processed. if an exception is thrown by
+ * any statement in the try block, the program jumps to 
+ * the catch clauses in line 47.
+ * 
+ * Line 26: This statement declares the string variable countryName,
+ * which holds the lines of text that are read from the file.
+ * 
+ * Lines 29-32: After these statements have executed, the Countries.txt
+ * file is opened for reading, and the inputFile variable references
+ * a StreamReader object that is associated with the file.
  * 
+ * 
+ * Line 35: this is the beginning of a while loop that iterates as
+ * long as the end of the Countries.txt file has not been reached.
+ * 
+ * Line 38: This statement reads a line of text from the file and 
+ * assigns it to the countryName variable.
+ * 
+ * Line 41:This statemetn adds the contents of the countryName
+ * variable to the ListBox.
+ * 
+ * Line 45: This statement closes the file.
+ * 
+ * 
+ * Step 4:Switch your view back to the Designer and double-click the 
+ * exitButton control. In the code editor you will see an empty event
+ * handler named exitButton_Click. Complete the exitButton_Click event
+ * handler by typing the code shown in lines 56-57 in Program 5-9.
+ * 
+ * Step 5: Save the project. Then, press f5 on the keyboard or click the 
+ * start Debugging button (|>) on the toolbar to compiler and run the
+ * application. When the application runs, the ListBox should appear 
+ * filled with the names of the countries from the Countries.txt file,
+ * as shown in Figure 5-50. Click the Exit button to exit the
+ * application.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Figure 5-50 The Load Event application displaying the list of 
+ * countries
+ * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 5-9 Completed code for Form 1 in the Load Event applicaion
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
