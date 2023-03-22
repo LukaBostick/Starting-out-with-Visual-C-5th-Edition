@@ -106,13 +106,13 @@
 	c.-1
 	d.any value you specify
 
-19. You can use the ____ orioerty to setermine whether an item is selected in a ListBox.
+19. You can use the ___B_ property to setermine whether an item is selected in a ListBox.
 	a. Index
 	b. SelectedItem
 	c. SelectedIndex
 	d. Items.SelectedIndex
 	
-20.The ____ property holds the item that is selected ion a LIstBox control.
+20.The __D__ property holds the item that is selected ion a LIstBox control.
 	a.Index
 	b.SelectedItem
 	c.SelectedIndex
@@ -123,37 +123,137 @@
 True or False
 
 1.You can write any program using sequence structures. True
-2.A single-alternative secision structure tests a condition and then takes one path if the condition is true or another path if the condition is false.
-3.The if-else statement is a dual-alternative decision structure.
-4.A decision structure can be nested inside another secision structure.
-5.A compound Boolean expression created with the && operator is true only when bother subexpressions are true.
-6.The TryPArse methods throw an exception if the string argument cannot be converted.
-7.Multiple CheckBox controls in the same GroupBox can be selected at the same time.
-8.The test expression in a switch statement can be a double or a decimal value.
-9.IF an item is not selected in a ListBox, the control's SelectedIndex property will be set to 0.
-10. To storeitems in a ListBox, you add them to the control's Test property.
+2.A single-alternative secision structure tests a condition and then takes one path if the condition is true or another path if the condition is false. TRUE
+3.The if-else statement is a dual-alternative decision structure. TRUE
+4.A decision structure can be nested inside another secision structure. TRUE
+5.A compound Boolean expression created with the && operator is true only when bother subexpressions are true. TRUE
+6.The TryPArse methods throw an exception if the string argument cannot be converted. TRUE
+7.Multiple CheckBox controls in the same GroupBox can be selected at the same time. FALSE
+8.The test expression in a switch statement can be a double or a decimal value. FALSE
+9.IF an item is not selected in a ListBox, the control's SelectedIndex property will be set to 0. TRUE
+10. To storeitems in a ListBox, you add them to the control's Test property. TRUE
 
 Short Answer
 1.What is meant by the term conditionally executed?
+	The condition has been determined to be true
+
 2.You need to test a condition and then execute one set of statements of the condition is true. If the condition is false, you need to execute a different set of statements. What structure will you use?
+	if else statement 
+
 3.Briefly describe how the && operator works.
+	It its a boolean operator that dictates that one condition and a second condition must be correct. (AND)
+	
 4.Briefly describe how the || operator works.
-5.When determiningg whether a number is inside a range, which logical operator is it best to use?
-6.What is a flagg and how does it work?
-7.What are the two arguments that you pass to a TryPArse method?
+	It is a boolean expressiom that dictates that atleast one out of two (or more conditions) must be correct . (OR)
+
+5.When determining whether a number is inside a range, which logical operator is it best to use?
+	modulus operator
+
+6.What is a flag and how does it work?
+	A flag is a boolean variable that singnals to another part of the program
+
+7.What are the two arguments that you pass to a TryParse method?
+	the two arguments you can pass to a TryParse are String and
+	a boolean flag to determine if the parse is case sensitive.
+
 8.How do you determine in code whether a RadioButton control or a CheckBox control is selected?
+	you use the RadioButton Control's Checked Property.
+	
 9.How do you add items to a ListBox using the Properties window?
+	You add a string followed by a new line 
+
 10.How can you read the selected item from a ListBox while preventing an exception from occuring if no item is selected?
+	You nest the the read method call in a try-catch block.
+
 
 Algorithm WorkBench
-1.Write an if statement that assigns 20 to the variable y and assigns 40 to the cvariable x if the variable x is greater than 100.
-2.Write x if the variable x is greater than 100.
-3.Write an if statement that assigns 0 to the variable b and assigns 1 to the variable c if the variable a is less than 1-
-4.Write nested decision structures that perform the following: if amount1 is greater than 10 and amount 2 is less than 100, display the greater of amount 1 and amount2.
-5.Write an if-else statement that displays "Speed is normal" if the value of the speed variable is at least 24 but not more than 56. IF the speed variable's value is outside this range, display "Speed is abnormal."
-6.Write an an if-slse statement that determines whether the value of the points variable is less than 9 or greater than 51. IF this is true, display "Invalid points." Othjerwise, display "Valid points".
-7.Assume pointsTextBox is the name of a TextBox control and points is the name of an int variable. Write an if-else statement that uses one of the TryParse methods to convert the pointsTextBox control's Text property to an int and stores the result in the points variable. If the conversion is not succerssful, display an error message in a message box.
-8.Rewrite the following if-else-if statement as a switch statement.
+1.Write an if statement that assigns 20 to the variable y and assigns 40 to the variable x if the variable x is greater than 100.
+	int x,y;
+	
+	if((x > 100)
+	{
+		x+=20;
+		y+=40;
+	}
+	
+2. Write an if statement that assigns 0 to the variable b and assigns 1 to the variable c if the variable a is less than 1-
+	if(c < -1)
+	{
+		a=o;
+		b=1;
+	}
+	
+3. Write an if-else statement that assigns 0 to the variable b and assigns 1 to the variable c if the variable a is less than 10.
+	if(a < 10)
+	{
+		b = 0;
+		
+	}
+	else
+	{
+		c=1;
+	}
+
+4. Write nested decision structures that perform the following: if amount1 is greater than 10 and amount2 is less than 100, display the greater of amount 1 and amount2.
+if(amout1 > 10 && amount2 < 100)
+{
+	if(amount1 > amount2 )
+	Console. WriteLine(amount1);
+	else{
+	Console. WriteLine(amount2);
+	}
+}
+
+5. Write an if-else statement that displays "Speed is normal" if the value of the speed variable is at least 24 but not more than 56. IF the speed variable's value is outside this range, display "Speed is abnormal."
+	if(speed >= 24 %% speed <= 56)
+	Console. WriteLine("Speed is normal");
+	else{
+	Console. WriteLine("Speed is abnormal");
+	}
 
 
-9.Assume nameListBox is a ListBox control. Write code that reads the selected item from the ListBox. Be sure to prevent an exception form occurring in case no item has been selected.
+6. Write an an if-else statement that determines whether the value of the points variable is less than 9 or greater than 51. IF this is true, display "Invalid points." Othjerwise, display "Valid points".
+		if(points < 9 || points > 51)
+		Console. WriteLine("Invalid points");
+		else{
+		Console. WriteLine("valid points");
+		}
+		
+7. Assume pointsTextBox is the name of a TextBox control and points is the name of an int variable. Write an if-else statement that uses one of the TryParse methods to convert the pointsTextBox control's Text property to an int and stores the result in the points variable. If the conversion is not succerssful, display an error message in a message box.
+	
+	if(!int.TryParse(pointsTextBox))
+		pointsTextBox.Show("Error");
+		
+		
+	
+	
+
+8. Rewrite the following if-else-if statement as a switch statement.
+	switch(expression)
+	{
+		case 1:
+		MessageBox.Show("You selected 1.");
+		break;
+		
+		case 2:
+		MessageBox.Show("You selected 2.");
+		break;
+		
+		case 3:
+		MessageBox.Show("You selected 3.");
+		break;
+		
+		case 4:
+		MessageBox.Show("You selected 4.");
+		break;
+	}
+
+9. Assume nameListBox is a ListBox control. Write code that reads the selected item from the ListBox. Be sure to prevent an exception form occurring in case no item has been selected.
+
+try{
+	string name = string.TryParse(nameTextBox);
+}
+catch(Exception e)
+{
+	//error
+}

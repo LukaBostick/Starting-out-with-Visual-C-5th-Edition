@@ -3139,7 +3139,7 @@ else
 ///you can create the Click event handlers for the Button contrls.
 ///At the end of this tutorial, Program 4-6 shows the completed 
 ///code for the form. You will be instructed to refer to 
-///PRgram 4-6 as you write the event handlers. In the Designer,
+///Program 4-6 as you write the event handlers. In the Designer,
 ///double-click the okButton control. This opens the code editor,
 ///and you see an empty event handler named okButton_Click. 
 ///Complete the okButton_Click event handler by typing the 
