@@ -13,6 +13,7 @@
     <Compile Remove="Chapter 4 Making Decisions.cs" />
     <Compile Remove="Chapter 5 Loops, File, and Random Numbers.cs" />
     <Compile Remove="Chapter 6 Modularizing Your Code with Methods.cs" />
+    <Compile Remove="Chapter 7 Arrays and Lists.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,7 @@
     <None Include="Chapter 4 Making Decisions.cs" />
     <None Include="Chapter 5 Loops, File, and Random Numbers.cs" />
     <None Include="Chapter 6 Modularizing Your Code with Methods.cs" />
+    <None Include="Chapter 7 Arrays and Lists.cs" />
   </ItemGroup>
 
 </Project>
