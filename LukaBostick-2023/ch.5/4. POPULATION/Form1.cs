@@ -37,7 +37,7 @@ namespace _4._POPULATION
             double startingOrg = double.Parse(textBox1.Text);
             int lcv = int.Parse(textBox3.Text);
 
-            double average = (double.Parse(textBox2.Text)/lcv)*0.0f;
+            double average = (double.Parse(textBox2.Text)/lcv)*0.01f;
 
             for(int i = 0; i < lcv; i++)
             {

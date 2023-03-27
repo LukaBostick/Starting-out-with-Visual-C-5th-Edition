@@ -33,19 +33,19 @@ namespace _11.TIME_CALCULATOR
                 if(sec >= 60)
                 {
                     min = sec/60;
-                    label3.Text = min.ToString();
+                    label3.Text = min.ToString()+" Mins";
                 }
 
                 if(sec >= 3600)
                 {
                     hour = sec/3600;
-                    label3.Text = hour.ToString();
+                    label3.Text = hour.ToString()+" Hours";
                 }
 
                 if (sec >= 86400)
                 {
                     day = sec / 86400;
-                    label3.Text = day.ToString();
+                    label3.Text = day.ToString()+" Days";
                 }
 
                 

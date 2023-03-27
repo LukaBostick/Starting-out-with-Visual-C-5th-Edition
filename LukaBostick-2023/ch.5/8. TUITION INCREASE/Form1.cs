@@ -19,10 +19,10 @@ namespace _8._TUITION_INCREASE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int total = 6000;
-            for(int i = 0; i < 10; i++) { 
+           double total = 6000;
+            for(int i = 1; i <= 10; i++) { 
             
-                total += (total/10)*100;
+                total += (total/i)*0.01f;
                 listBox1.Items.Add("Tuition ~ " +total+ "$");
             }
 

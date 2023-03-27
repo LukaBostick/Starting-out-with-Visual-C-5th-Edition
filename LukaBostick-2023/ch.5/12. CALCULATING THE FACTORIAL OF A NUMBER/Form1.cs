@@ -31,5 +31,10 @@ namespace _12._CALCULATING_THE_FACTORIAL_OF_A_NUMBER
                 total = total * i;
                 label2.Text = total.ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
