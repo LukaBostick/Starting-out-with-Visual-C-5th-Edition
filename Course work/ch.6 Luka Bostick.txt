@@ -1,189 +1,176 @@
-1.A(n) _____ is the thin dotted line that encloses an object in the Designer.
-	a.
-	b.
-	c.
-	d.
+1.In general terms, a program that is broken into smaller units of code, such as methods, is known as a(n) __B__.
+	a. Object-oriented Program
+	b. modularized program
+	c. procedural program
+	d. method-driven program
 	
-2.
-	a.
-	b.
-	c.
-	d.
+2. Writing the code to preform a task once and then reusing it each time you need to perform the task is a benefit of using method called__A___.
+	a. code reuse
+	b. the single-use philosophy
+	c. method recycling
+	d. code reprocessing
 	
-3.
-a.
-b.
-c.
-d.
+3.When you call a(n)___C__, it simply executes the statements it contains and then terminates.
+a. intrinsic method
+b. empty method
+c. logical method
+d. void method
 
-4.
-	a.
-	b.
-	c.
-	d.
-	
-5.
-	a.
-	b.
-	c.
-	d.
-	
-6.	
-	a.
-	b.
-	c.
-	d.
-	
-7.	
-	a.
-	b.
-	c.
-	d.
-	
-8.
-	a.
-	b.
-	c.
-	d.
-	
-9.
-	a.
-	b.
-	c.
-	d.
-	
-10.
-	a.
-	b.
-	c.
-	d.
-	
-11.
-	a.
-	b.
-	c.
-	d.
-	
-12.
-	a.
-	b.
-	c.
-	d.
-	
-13.
-
-	a.
-	b.
-	c.
-	d.
-	
-14.
-	a.
-	b.
-	c.
-	d.
-	
-15.
-	a.
-	b.
-	c.
-	d.
-	
-16.
-	a.
-	b.
-	c.
-	d.
-	
-17.
-	a.
-	b.
-	c.
-	d.
+4.The ____C__, which appears at the beginning of a method definition, lists several important about the method, including the method's name.
+	a. method title
+	b. method description
+	c. method header
+	d. method declarartion
 	
 
-18.
-	a.
-	b.
-	c.
-	d.
+5.The __A__ is a collection of statements enclosed inside a set of curly braces that are performed when the method is executed.
+	a.method body
+	b. method designation
+	c. method code
+	d.method classification
+6.The ___C__ is the memory address that is saved by the system when a method is called and it the location to which the system should return after a methods ends.
+	a. calling address
+	b. method address
+	c. return point
+	d. come back position
 	
-19.
-	a.
-	b.
-	c.
-	d.
+7.Programmers commonly use a technique known as __D___ to break down an algorithm into methods
+	a. prototyping 
+	b. method modeling
+	c. algorithm division
+	d. top-down design
 	
-20.
+8. Pices of data are sent into a method are known as ___a_.
+	a. arguments
+	b. references
+	c. method variables
+	d. data entries
+	
+9. A(n) ___C__ is a special variable that receives an argument when a method is called.
+	a. reference variable
+	b. argument variable
+	c. patameter variable
+	d. method variable
+	
+10.A__D__ specifies which parameter an argument should be passed into.
+	a. named argument
+	b. special argument
+	c. constant argument
+	d. literal argument
+	
+11. When a(n)___C__ is provided for a parameter, it becomes possible to call the method without explicity passing an argument into the parameter.
+	a. local argument
+	b. empty argument
+	c. default argument
+	d. expressional argument
+	
+12. When an argument is __C___, only a copy of the argument's value is passed into the parameter variable.
+	a. named constant
+	b. passed by association
+	c. passed by reference
+	d. passed by value
+	
+13.When you want a method to be able to change the value of a variable that is passed to it as an argument, the variable must be ___C___.
+	a. passed reference
+	b. a local variable
+	c. passed by reference
+	d. a named constant
+	
+14. A ___B__ a special type of parameter variable that is useful for establishing two-way communication between methods.
+	a. communication variable
+	b. reference parameter
+	c. method parameter
+	d. golabal variable
+	
+15.A(n)__C___ can have an uninitialized value passed into it, but it must be sent to some value before the method it belongs to finishes executing.
+	a. input parameter
+	b. reference parameter
+	c. output parameter
+	d. default parameter
+	
+16.A method's ___B__ is the type of value that the method returns.
+	a. data type
+	b. return type
+	c. value type
+	d. method type
+	
+True or False
+1. Dividing a large problem into several smaller problems that are easily solved is sometimes called divide and conquer. TRUE
+2. In a Pascal case name, the first character is always uppercase.TRUE
+3. If a method belongs to a class, the you must write a method's definition inside the class.TRUE
+4. The contents of variables and the values of expressions cannot be passed as arguments. FALSE
+5. You do not have to write the data type for each parameter variable that is declared in a parameter list if they are all of the same data type. TRUE
+6. An output parameter works like a by value parameter.  TRUE
+7. A value-returning method must contain a return statement. TRUE
+8. A Boolean method returns either yes or no. TRUE
 
-	a.
-	b.
-	c.
-	d.
+Short Answer
+1. What do you call a method that executes the statements it contains and then returns a value back to the statement that called it?
+	A value returning method.
 	
-21.
-	a.
-	b.
-	c.
-	d
-22.
-	a.
-	b.
-	c.
-	d.
+2. What is the standard naming convention used among C# programmers for method names? Why?
+	Pascal is used for the method names as a hold over standard from c/c++.
+	
+3. What is another name for the top-down design process?
+	Functional programing is a programming paradime that mainly consistes of functions 
 
-23.
-	a.
-	b.
-	c.
-	d.
+4. What is a parameter list?
+	The inputs a method recieves in order to perform work with said methods 
+	
+5. How do you specify a named argument?
+	You use a string literal to define a arguments name.
 
-24.
-	a.
-	b.
-	c.
-	d.
+6. How are output parameters different from reference parameters?
+	Output parameters must set the output parameter before it finishes executing.
 
-25.
-	a.
-	b.
-	c.
-	d.
-	
-26.
-	a.
-	b.
-	c.
-	d.
-	
-27.
-	a.
-	b.
-	c.
-	d.
-	
+7. How is a value-returning method like a void method? How is it different?
+	Both value-returing and void methods contain method headers, the ablity to pass reference parameters, etc. The difference is that void methods do no return a value back, but they still perform work
 
-28.
-	a.
-	b.
-	c.
-	d.
+8. Can Boolean methods be used to modularize input validation? Why or why not?
+	Yes, A Boolean method used as the argument of an if statement would perform the body of the if statement only if the input is validated.
+
+Algorithm Workbench
+
+1. Examine the following method header; then write an example call to the method.
+	private void ShowValue()
 	
-29.
-	a.
-	b.
-	c.
-	d.
+	if(argument)
+	{
+		ShowValue()
+	}
+	else
+	{
+		return 0;
+	}
+
 	
-30.
-	a.
-	b.
-	c.
-	d.
+2. The following statement calls a method named ShowHalf. The ShowHalf method displays a value that is half that of the argument. Write the method.
+	ShowHalf(50);
 	
-31.
-	a.
-	b.
-	c.
-	d.
 	
+		private void ShowHalf(decimal num)
+		{
+			Console.WriteLine(num/num);
+		}
+
+3. Write the method header for a method named ShowRetailPrice. The method should include parameter variables for a list price and a markup percentage.
+ Write the method so that the default arguments for the markup percentage is set to 50 percent.
+ 
+		public void ShowRetailPrice(int listPrice, int markup = 50)
+
+4.Examine the following method header; then write an example call to the method.
+private void ResetValue(ref int value)
+
+		int value = 20;
+
+		ResetValue(ref value);
+
+5. A program contains the following value-returning method:
+		private int Square(int value )
+		{
+			return value * value;
+		}
+Write a statement that passes the value 10 as an argument to this method and
+assigns its return value to the variable result.
+
+int var = Square(10);
