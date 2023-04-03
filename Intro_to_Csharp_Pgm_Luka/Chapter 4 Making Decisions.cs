@@ -2305,7 +2305,7 @@ lists expressions showing all the possible combinations
 ///already been declared as an int. The outer if statement (line 1)
 ///uses the int.Parse method to make sure the user has entered an
 ///integer. If so, the valueis stored in the hours variable and the 
-///program contrinues to the inner if statement (line 3). The inner
+///v program contrinues to the inner if statement (line 3). The inner
 ///if statement ensures that we cannot write a paycheck for 0 hours
 ///worked, and 168 is the maximum number of hours in a week.
 /////////////////////////////////////////////////////////////////////

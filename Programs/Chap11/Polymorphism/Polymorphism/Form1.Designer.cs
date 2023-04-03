@@ -36,49 +36,55 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(116, 58);
+            this.exitButton.Location = new System.Drawing.Point(232, 112);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 37);
+            this.exitButton.Size = new System.Drawing.Size(150, 71);
             this.exitButton.TabIndex = 7;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             // 
             // createCatButton
             // 
-            this.createCatButton.Location = new System.Drawing.Point(197, 10);
+            this.createCatButton.Location = new System.Drawing.Point(394, 19);
+            this.createCatButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.createCatButton.Name = "createCatButton";
-            this.createCatButton.Size = new System.Drawing.Size(75, 37);
+            this.createCatButton.Size = new System.Drawing.Size(150, 71);
             this.createCatButton.TabIndex = 6;
             this.createCatButton.Text = "Create a Cat";
             this.createCatButton.UseVisualStyleBackColor = true;
             // 
             // createDogButton
             // 
-            this.createDogButton.Location = new System.Drawing.Point(116, 10);
+            this.createDogButton.Location = new System.Drawing.Point(232, 19);
+            this.createDogButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.createDogButton.Name = "createDogButton";
-            this.createDogButton.Size = new System.Drawing.Size(75, 39);
+            this.createDogButton.Size = new System.Drawing.Size(150, 75);
             this.createDogButton.TabIndex = 5;
             this.createDogButton.Text = "Create a Dog";
             this.createDogButton.UseVisualStyleBackColor = true;
             // 
             // createAnimalButton
             // 
-            this.createAnimalButton.Location = new System.Drawing.Point(35, 10);
+            this.createAnimalButton.Location = new System.Drawing.Point(70, 19);
+            this.createAnimalButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.createAnimalButton.Name = "createAnimalButton";
-            this.createAnimalButton.Size = new System.Drawing.Size(75, 39);
+            this.createAnimalButton.Size = new System.Drawing.Size(150, 75);
             this.createAnimalButton.TabIndex = 4;
             this.createAnimalButton.Text = "Create an Animal";
             this.createAnimalButton.UseVisualStyleBackColor = true;
+            this.createAnimalButton.Click += new System.EventHandler(this.createAnimalButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 105);
+            this.ClientSize = new System.Drawing.Size(612, 202);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.createCatButton);
             this.Controls.Add(this.createDogButton);
             this.Controls.Add(this.createAnimalButton);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Polymorphism Demo";
             this.ResumeLayout(false);
