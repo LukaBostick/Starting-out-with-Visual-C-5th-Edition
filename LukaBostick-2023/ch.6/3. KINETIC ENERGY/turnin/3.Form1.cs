@@ -51,7 +51,7 @@ namespace _3.KINETIC_ENERGY
         {
             double v = Math.Pow(velocity, 2);
 
-            return (mass * v)*.50;
+            return (mass * v) * .50;
         }
     }
 }
