@@ -15,6 +15,30 @@
  * 8.5 The String.Format Method
  * /////////////////////////////////////////////////////////////////////
  * 
+ * /////////////////////////////////////////////////////////////////
+ *                      8.1 Intduction 
+ * /////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////
+ * Many of the programs you have written so far worked with string,
+ * but only in a limtied way. The operations you have performed with
+ * strings thus far have primarily involed only input and output.
+ * Form example, you have read strings as input from the keyboard and
+ * from files, and displayed strings as output to the screen and to 
+ * files.
+ * 
+ * There are many types of programs that not only read strings as 
+ * input and write strings as output, but also preform operations 
+ * on strings.
+ * Word processing programs, for example, manipulate large amounts
+ * of text, and thus work extensively with strings.
+ * Email programs and search engines are other examples of programs
+ * that perform operations on strings. C# and the .NET Framework
+ * provide a wide cariety of tools and programming techniques that
+ * you can use to examine and manipulate strings.
+ * We will look at many of these in this chapter.
+ * /////////////////////////////////////////////////////////////////
+ * 
  * /////////////////////////////////////////////////////////////////////
  * 8.2 Working with Characters
  * /////////////////////////////////////////////////////////////////////
@@ -54,6 +78,1083 @@
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * This statement assigns the character 'g' to the letter variable. 
+ * Because char variables can hold only one character, they are not
+ * compatible with strings. For example, you cannot assign a string to a 
+ * char variaable, event if the string contains only one character.
+ * The following statement, for example, will not compile because it 
+ * attempts to assign a string literal to a char variable:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * letter = "g"
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * It is important that you no not comfuse chatacter literals, which are
+ * enclosed in single qoutation marks, with string literals, which are
+ * encolosed in double quotation marks.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * When you need to convert a char variable to a string, you can call its
+ * ToString method. For example, the following statements displays the 
+ * value of the letter variables in a message box.
+ * /////////////////////////////////////////////////////////////////////
+ *  
+ * /////////////////////////////////////////////////////////////////////
+ * MessageBox.Show(letter.ToString());
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The following statement shoes another example. Assumen the letter 
+ * in a char variable and outputLabel is the name of a Label control:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * outputLabel.Text= letter/ToString();
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Retrieving the Individual Characters in a String
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * C# allows you to access the individual characters in a string ussing
+ *subscript notation. This makes it possible to work with a string as if
+ *it were an array of characters. You use subscript 0 to access the
+ *first character, subscript 1 to access the second character, and so forth.
+ *The subscript of the last character is 1 less than the string's length.
+ *The following code shows an example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Declare a string and a char.
+ *  string name = "Jacob";
+ *  char letter;
+ *  
+ *  // Get the first character (at postion 0.)
+ *  letter = name[0];
+ *  
+ *  //Display the character.
+ *  MessageBox.Show(letter.ToString());
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Note with arrays, an exception occurs if you attempt to use an invalid
+ * subscript with a string. String subscripts must be at least 0, and 
+ * they must be less than the length of the string.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The following code sample shows how a loop can be used to step through
+ * the character in a string. Notice that in the for loop, the index variable
+ * has a starting value of 0 and is incremented after each iteration, and
+ * the loop iterates as long  as index is less name.Length. If this code 
+ * were executed, a series of message boxes would appear displaying
+ * the characters J, a, c, o, and b.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Declare a string and a char
+ *  string name = "Jacob";
+ *  char letter;
+ *  
+ *  // Display the characters in the string.
+ *  for (int index = 0; index < name.Length; index++)
+ *  {
+ *      letter = name[index];
+ *      MessageBox.Show(letter.ToString());
+ *  }
+ *  
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Keep in mind that subscripts provide read-only access to the character in 
+ * a string. You cannot use a subscript to change the value of a character.
+ * For example, the following code will not compiler because the second
+ * statement attementsp to use a subscript expression to chage the value
+ * of the first character in the name variable:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * string name = "Jill";
+ * name[0] = 'B';   // Error! This will not work!
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * You can also use the foreach loop to retrieve the individual characters
+ * in a string. The following code shows an example. If this code were 
+ * executed, a series of message boxes would appear displaying the characters J, a, c, 0, and b.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Declare a string and a char.
+ *  string name = "Jacob";
+ *  char letter;
+ *  
+ *  // Display the characters in the string.
+ *  foreach(char letter in name)
+ *  {
+ *      MessageBox.Show(letter.ToString());
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Character Testing and Conversion Methods
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The char data types provides several methods for testing the value of 
+ * a character. Some of the methods are listed in Table 8-1. Note that 
+ * each of the methods listed in the table returns a Boolean value of 
+ * true or false.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * |    Method                      |   Discription |
+ * |char.IsDigit(ch)                |
+ * |                                |
+ * |________________________________|
+ * |char.IsDigit(str, index)        |
+ * |                                |
+ * |________________________________|
+ * |char.IsLetter(ch)               |
+ * |                                |
+ * |________________________________|
+ * |char.IsLetter(str. index)       |
+ * |                                |
+ * |________________________________|
+ * |char.IsLower(ch)
+ * |________________________________|
+ * |char.IsLower(ch,index)
+ * |________________________________|
+ * |char.IsPunctuation(ch)
+ * |________________________________|
+ * |char.IsPunctuation(str, index)
+ * |________________________________|
+ * |char.IsUpper(ch)
+ * |________________________________|
+ * |char.IsUpper(ch,index)
+ * |________________________________
+ * |char.IsWhiteSpace(ch)
+ * |_______________________________|
+ * |char.IsWhiteSpace(ch)
+ * |_______________________________|
+ * -----------------------------|
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Tutorial 8-1: Completing the Password Validation Application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Many passwords-protected system allows users to set up their own
+ * passwords. When a user creates a password, the system examines the 
+ * password to determien whether it meets the minimum requirments. If it
+ * does not, the system rejects the password and requires the user to 
+ * create another, more secure, password.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you complete the Password Valisation application.
+ * The application's form, which has already been created for you, is 
+ * shown in Figure 8-1. When the application is complete, the user will
+ * enter a password and then clicks the Check Password button. The application 
+ * will cheack the password to make sure it meets the following requirments:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 8-1 The Password Validation application's form
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The password must be at least eight characters long.
+ * 
+ * The password must contain at least one upper case character.
+ * 
+ * The password must contain at least one lowercase character.
+ * 
+ * The password must contain at least one numberic digit.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Character Case Conversion
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The char data type also provides the ToLower and ToUpper methods
+ * listed in Table 8-2 for converting the case of a character.
+ * Each method accepts a char argument and returns a char value.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Table 8-2 Character case conversion methods
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * If the ToLower method's argument is an uppercase character, the mehtods
+ * returns the lowercase equvalnet. For example look at the following code.
+ * The statement in line 2 assigns the character 'a' to the letter variable.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * string str = "ABC";
+ * char lettter = char.ToLower(str[0]);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * IF the argument is already lowercase, the ToLower method returns it
+ * unchanged.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * If the ToUpper method's argument is a lowercase character, the method
+ * returns the uppercase the equivlen. For example, look at the folloing
+ * code. The statement in line assigns the character 'A' to the letter
+ * variable.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * string str = "abc";
+ * char letter = char.ToUpper(str[0]);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * If the argument is already uppercase, the ToUpper method returns it
+ * unchanged.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 8.3 Working with Substrings
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Concept: A substring is a string within a string. The .NET Framework 
+ * provides various methods for working with and manipulating substrings.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Searching for Substrings
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Some tasks require you to search for a specific string of characters
+ * within a string. A string within a string is called a substring.
+ * Objects of the string data type have several methods that allow you
+ * to search for substrings. Table 8-3 summarizes the Contains, StartsWith,
+ * and EndsWith methods. Each of the methods in Table 8-3 returns a Boolean
+ * value indicating whether the substring was found.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Table 8-3 Some of the substring-searching methods
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * |Method||Description|
+ * |staringVar is the name of a string variable or is a string expression. The argument substring is also a string. The method returns true if stringVar contains the string substring or false otherwise.
+ * |
+ * |stringVar.Contains(substring)|stringVar is the name of a string variable or a string expression. The argument substring is also a string. The method returns true if string Var conttains the string substring or false otherwise.
+ * |stringVar.Contains(ch)|stringVar is the name of a string variable or is a string expression, The argument ch is a character. The method returns true of stringVar contains the character ch or false otherwise.
+ * |stringVar.StartsWith(substring)|starting is the name of a string variable or is a string expression. The arugment substring is also a string. The method returns trye of stringVar starts with the string substring or false otherwise.
+ * |stringVar.EndsWith(substring)|stringVar is the name of a string variable or is a string expression. The argument substring is also a string. The method returns true if stringVar ends with the string substring or false otherwise.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The methods shows in Table 8-3 let you know whether a specified substring
+ * uis found within a string.
+ * Sometimes you also want to know the position of the substring.
+ * When that is the case, you can use one of the IndexOf or LastIndexOf
+ * methods shown in Table 8-4.
+ * Note that each method in Table 8-4 returns an int.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Table 8-4 Methods for getting a character or substring's position
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                  stringVar.IndexOf(substring)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * string is the name of a striong var or a string expression. The argument
+ * substring is also a string. If substring is found in stringVar,
+ * method returns the integer position of substring's first occurrence.
+ * If substring is not found in stringVar, the method returns -1.
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "2"
+ *  string str = "cocoa beans";
+ *  int position = str.IndexOf("co", 2);
+ *  if(position != -1)
+ *  {
+ *  MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("co was not found.")
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *              stringVar.IndexOf(substring, start, count)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The argument substring is a string, the argument start is an integer,
+ * and the argument count is also an integer.
+ * The method searches startingVar for substring, starting  at the position
+ * specified by start and continuing for count characters. If substring is
+ * found in this portion of stringVar, the method returns the integer position
+ * of its first occurrence.If substring is not found, the method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "6"
+ *  string str = "xx oo xx oo xx";
+ *  int position = str.indexOf("xx", 3, 8);
+ *  if (position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("xx was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *              stringVar.IndexOf(ch)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+* stringVar is the name of a string variable or is a string expression.
+* The argument ch is a character. If ch is found in startingVar, the 
+* method returns the integer position of ch's first occurrence.
+* If ch is not found in stringVar, the method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "2"
+ *  string str = "chocolate ice cream";
+ *  int position = str.IndexOf('o');
+ *  if(position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("o was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                  stringVar.IndexOf(ch,start)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The argument ch is a character, and the argument start is an integer. 
+ * The method searches stringVar for ch, starting at the position
+ * specified by start and going to the end of stringVar. If ch is found 
+ * in this portion of stringVar, the method returns the integer position
+ * of its first occurrence. If ch is not found, the method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "4"
+ *  string str = "chocolate ice cream";
+ *  int position = str.IndexOf('o', 3);
+ *  if (position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("o was not found.")
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.IndexOf(ch, start, count);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The argument ch is a character, the argument start is an integer, and
+ * the argument count is also an integer.
+ * The methopd searches staringVar for ch, starting at the position
+ * specified by start and countinuing for count characters. If ch is 
+ * found in this portion of startingVar, the method returns the integer 
+ * position of its first occurrence. If substring is not found, the 
+ * method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "11".
+ *  string str = "blue green blue";
+ *  int position = str.LastIndexOf("blue");
+ *  id(position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("blue was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.LastIndexOf(substring, start)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The argument substring is a string, and the argument atart is an 
+ * integer. The methods searches stringVar for substring, starting at the
+ * position specified by start and proceeeding backward toward the beginning 
+ * of stringVar. If substring is found in this portion of stringVar, the 
+ * method returns its integer position. If substring is not found, the method 
+ * returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  //The following code displays "6".
+ *  string str = "xx oo xx oo xx";
+ *  int position = str.LastIndexOf("xx", 10);
+ *  if(position != -1)
+ *  {
+ *  MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *  MessageBox.Show("xx was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.LastIndexOf(substring, start, count)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * startingVar is the name of a string variable or is a string expression.
+ * The argument substring is a string, the argument start is an integer, 
+ * and the argument count is also an integer. The method searches startingVar
+ * for substring, starting at the position specified by start and proceeding 
+ * backward tword the beginning of stringVar for count character. If substring
+ * is found in this portion of stringVar, the method returns its integer
+ * position. If substring is not found, the method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "6"
+ *  starting str = "oo xx oo xx oo";
+ *  int position = str.LastIndexOf("oo",10, 8);
+ *  if(position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("oo was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.LastIndexOf(ch)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *stringVar is the name of a string variable or is a string expression.
+ *The argument ch is a character. If ch is found in stringVar, the method 
+ *returns the integer position of ch's last occurence. If ch is not found in stringVar,
+ *the method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "14".
+ *  string str = "chocolate ice cream";
+ *  int position = str.LastIndexOf('c');
+ *  if(position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("c was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * startingVar.LastIndexOf(ch,start)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ *  The argument ch is a character, and the argument start is an integer. 
+ *  The method searches startingVar for ch, starting at the position 
+ *  specified by the start and proceeding backward toward the beginning
+ *  of stringVar. If ch is found in this portion of stringVar, the
+ *  method returns its integer position, If ch is not found, the 
+ *  method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "12"
+ *  string str = ""chocolate ice cream";
+ *  int position = str.LastIndexOf('e', 14);
+ *  if(position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("e was not found.")
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.LastIndexOF(ch, start, count)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ *  The argument ch is a character, the argument start is an integer, and
+ *  the argument count is also an integer. The method searches stringVar
+ *  for ch, starting at the position specified by start and proceeeding
+ *  backword for count characters. If ch is found in this portion
+ *  of stringVar, the method returns its integer position. If substring
+ *  is not found, the method returns -1.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "12".
+ *  string str = "chocolate ice cream";
+ *  int position= str.LastIndexOf('e', 14, 8);
+ *  if(position != -1)
+ *  {
+ *      MessageBox.Show(position.ToString());
+ *  }
+ *  else
+ *  {
+ *  MessageBox.Show("e was not found.");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Somethimes you neeed to retrieve a specific set of characters from a string.
+ * For example, suppose a string contains a US telephone number, such as 
+ * "(919)555-1212" and you are interested in gtetting the area code. You 
+ * need a way to retrieve the characters in positions 1 through 3. You can
+ * use the Substring method, as shown in Table 8-5.
+ * Note that the Substring method returns a string.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Table 8-5 The Substring method
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.Substring(start)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The argument start is an integer that specifies a postirion in
+ * stringVar. The method returns a string containing the characters
+ * beginning at start, continuing to the end of stringVar.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "beans"
+ *  string str = "cocoa beans";
+ *  MessageBox.Show(str.Substring(6));
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.Substring(start, count)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The argument start is an integer that specifies a position in stringVar,
+ * and count is an integer that specifies a position in stringVar, and 
+ * count is an integer that specifies a number of characters. The method
+ * returns a string containing the characters beginning at start and 
+ * continuing for count characters.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following code displays "cocoa".
+ *  string str = "cocoa beans";
+ *  MessageBox.Show(str.Substring(0,5));
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Methods for Modifying a String
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Table 8-6 describes several methods that string objects have for 
+ * modifying the contents of a string in the following ways:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * *The Insert method inserts a string into another string.
+ * *The Remove method remove specified characters from a string.
+ * *The ToLower method converts a string to all lowercase characters.
+ * *The ToUpper method converts a string to all uppercase characters.
+ * *The Trim method removes all leading and trailing spaces from a string.
+ * (Leading spaces are spaces that appear at the end of a string.)
+ * *The TrimStart method removes all leading spaces from a string.
+ * *The TrimEnd method removes all trailing spaces from a string.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * It is important to remember that the methods shown in Table 8-6 do
+ * not actually modify the calling string object.
+ * They return a method copy of the calling string object. For example,
+ * look at the following code, which demonstrates the Remove method:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Table 8-6 Methods for modifying a string
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.Insert(start, srtItem)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The start argument is an integer that specifies a position in stringVar,
+ * and the strItem argument is a string that is to be inserted.
+ * The methodreturns a string containing a copy of sstringVar with
+ * strItem inserted into it beginning at the position specified by start.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following displays "New York City."
+ *  string str1 = "New City";
+ *  string str2  = str1.Insert(4,"York ");
+ *  MessageBox.Show(str2);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                  StringVar.Remove(start)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The start argument is an integer that specifies a position in
+ * stringVar. The method returns a string containing a copy of stringVar
+ * with all the characters for mthe position specified by start to the end
+ * removed.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following displays "Blue"
+ *  string str1 = "blueberry";
+ *  string str2 = str1.Remove(4);
+ *  MessageBox.Show(str2)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.Remove(start, count)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVAr is the name of a string variable or is a string expression.
+ * The start argument is an integer that specifies a position in stringVar,
+ * and count is an integer that specifies a number of characters.
+ * The method returns a string containing a copy of stringVar with count
+ * characters removed, beginning at the position specified by start.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following displays "jelly doughnuts".
+ *  string str1 = "jelly filled doughnuts";
+ *  string str2 = str1.Remove(6,7);
+ *  MessageBox.Show(str2);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.ToLower()
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression
+ * The method returns a string containing a copy of stringVar converted
+ * to lowercase.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following displays "abc".
+ *  string str1 = "ABC";
+ *  string str2 = str1.ToLower();
+ *  MessageBox.Show(str2);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.ToUpper()
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a sring expression.
+ * The method returns a string containing a copy of stringVar converted to 
+ * uppercase.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following displays "ABC".
+ *  string str1 = "abc";
+ *  string str2 = str1ToUpper();
+ *  MessageBox.Show(str2);
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                          stringVar.Trim()
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The method returns a string containing a cooy of stringVar with all
+ * leading trailing spaces removed.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // The following displays ">Hello<".
+ *  string str1 = "   Hello";
+ *  string str2 = str1.TrimStart();
+ *  MessageBox.Show(">"+str2+"<");
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar.TrimEnd()
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * stringVar is the name of a string variable or is a string expression.
+ * The method returns a string containing a copy of stringVar with all 
+ * trailing spaces removed.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *   Tutorial 8-2: Completing the telephone Format Application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Telephone numbers in the United States are commonly formatted to
+ * appear in the following manner
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * (xxx)xxx-xxxx
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In the format, x represents a digit. The tree digits that appear inside
+ * the parentheses are the area code. The three digits following the area
+ * code are the prefix, and the four digits after the hyphen are the line
+ * number. Here is an example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * (919)555-1212
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Although the parentheses and the hyphen make the number easier for
+ * people to read, those characters are unnecessary for processing by
+ * a computer. In a computer system, a telephone number is commonly stored 
+ * as an unformatted series of digits, as show here:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 9195551212
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Programs that work with telephones numbers sometimes need to unformat 
+ * numbers that have been entered by the user. This means that the parentheses
+ * and the hyphen must be removed prio to storing the number in a file or
+ * processing it in some other way. In addition, such programs need the 
+ * ablity to format a number so it contains teh parentheses and the hyphen
+ * before displaying it on the screen or printing it on paper.
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you complete the Telephone Format application.
+ * The application's form, which has already been created for you, is 
+ * shown in Figure 8-2. When the application is complete, you will be 
+ * able to enter a string of 10 digits into the numberTextBox control and
+ * click the Format button to see the string of digits formatted as a 
+ * telephone number.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 8-2 The Telephone Format application's form
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * /////////////////////////////////////////////////////////////////////
+ *                      8.4 Tokenizing Strings
+ * /////////////////////////////////////////////////////////////////////
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Concept: tokenizing a string is a process of breaking a string down into
+ * smaller string compontents, which are called tokens. In C#, string
+ * objects have s Split method that tokenizes the contents of the string.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Sometimes, a string contains a series of words or other items of data separated by space or other characters. For example, look at the following string:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * "peach raspberry, strawberry vanilla"
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * This string contains the following four items of data: peach,
+ * rasberry.
+ * strawberry, vanilla. In programming terms, items such as thesse are
+ * known as tokens Notice that a space appears between the items.
+ * The character that sepeactes tokens is know as a delimiter.
+ * Here is anither example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * "17;92;81;12;46;5"
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * This string contains the following tokens: 17, 92, 81, 12, 46, and 5.
+ * Notice that a semicolon appears between each item. In this ex, the 
+ * semicolons is used as a delimiter. Some programming problems require
+ * you to read a string that contains a list of items and then
+ * extract all the toekens from the string for processing.
+ * 
+ * For example, look at the followingh string that contains a data:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * "3-22-2019"
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The tokens in this string are 3,22, and 2019, and the delimiter is 
+ * the hyphen character. Perhaps a progam needs to extract the month, day
+ * , and year from such a string.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The process of breaking a string into tokens is known as tokenizing.
+ * In C#, string object have a method named Split that is used to tokenize
+ * the string. When you call a string object's Split method, the method
+ * extracts tokens from the string and returns them as an array of
+ * strings.
+ * Each element in the array is one of the tokens.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * We discuss two ways that you can call the Split method. The first 
+ * way is to pass the value null as an argument. When you pass null as
+ * an argument to the Split method, The method tokenizes the string
+ * using white-space characters as delimiters.(White-space characters
+ * are the space, tab, linefeed, carriage-return, formfeed,
+ * vertical-tab, and newline characters.) The method returns a string
+ * array, with each element of the array containing one of the tokens.
+ * The following code shows an example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  
+ *  // Create a String to tokenize.
+ *  string str = "one two three four";
+ *  
+ *  // Get the tokens from the string
+ *  string[] tokens = str.Split(null);
+ *  
+ *  // Display each token.
+ *  foreach(string s in token.)
+ *  {
+ *      MessageBox.Show(s);
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The second way that we call the Split method is to pass a char array
+ * as an argument. Each element of the char array is used as a delimiter.
+ * The following code shows an example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Create a String to tokenize.
+ *  string str = "one;two;three;four";
+ *  
+ *  // Create an array of delimiters.
+ *  char[] delim = { ';' };
+ *  
+ *  // Get the tokens from the string.
+ *  string[] tokens = str.Split(delim);
+ *  
+ *  // Display each token.
+ *  foreach(string s in tokens)
+ *  {
+ *      MessageBox.Show(s);
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Some situations require that you use multiple characters as delimiters
+ * in the same string. For exanple, loop at the following e-mail address:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * joe@gaddisbooks.com
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * This string uses two delimiters: @ (the at symbol) and . (the period).
+ * To extract the tokens from this string, we must specify bother
+ * characters as delimiters. Here is an example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Create a String to tokenize.
+ *  string str = "joe@gaddisbooks.com";
+ *  
+ *  // Create an array of delimiters.
+ *  char[] delim = {'@','.'};
+ *  
+ *  // Get the tokens from teh string.
+ *  string[] tokens = str.Split(delim);
+ *  
+ *  // Display each token.
+ *  
+ *  foreach (string s in tokens)
+ *  {
+ *      MessageBox.Show(s);
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                  Timming a String before Tokenizing 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * When you are tokenizing a string that was entered by the user and you
+ * are using characters other than white spaces as delimiters, you probably
+ * want to trim the atring before tokenizing it. Otherwise, if the user enters
+ * leading white-space characters, they will become part of the first token.
+ * Likewise, if the user enters trailing white-space characters, they will
+ * become part of the last token. For example, look at the following code:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Create a string with leading and trailing whitespaces.
+ *  String str = "   one;twothree   ";
+ *  
+ *  // Create a char array containing the semilcolon.
+ *  char[] delim = { ';' };
+ *  
+ *  // Get the tokens from the string.
+ *  string[] tokens = str.Split(delim);
+ *  
+ *  // Dispay each token.
+ *  foreach(string a in tokens)
+ *  {
+ *      MessageBox.Show("*" + s + "*");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * This code produces three message boxes, displaying the following output
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * *one*
+ * *two*
+ * *three*
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Tutorial 8-4: Completing the CSV Reader Application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * A professor keeps her students's test scores in a MicrosoftExcel 
+ * spreadSheet. Figure 8-4 shows a set of five test scores for five students.
+ * EAch column holds a test score, and each row represents the scores for one
+ * student.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 8-4 Microsoft Excel SpreadSheet
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Suppose the professor wants you to write a C# application that reads
+ * the test scores from the Excel spreadsheet and preforms some
+ * operation with them.
+ * Excel, like many commercial applications,
+ * has the ablity to export data to a text file.
+ * When the data in a spreadsheet is exported, each row is written 
+ * to a line, and the values of the cells are separated by commas. 
+ * For example, when the data shown in Figure 8-4 is exported, it 
+ * will be written to text file in the following format:
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * This is called the comma separated value, or CSV, file format.
+ * When you save a spreadsheet in this format, Excel saves it to a file
+ * with the .csv extenstion. Excel saves it to a file with the .csv extension. in a C# application, you can read a line from the fille into a string variable and then 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+* /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
@@ -84,7 +1185,6 @@
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- *  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
@@ -115,7 +1215,8 @@
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- *  * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
