@@ -1,189 +1,110 @@
-1.A(n) _____ is the thin dotted line that encloses an object in the Designer.
-	a.
-	b.
-	c.
-	d.
+1.If a LINQ query's source of data is a List<int>, the query will return a collection of the____type
+	a.List<int>
+	b.array of int
+	c.IEnumerable<int>
+	d.IQueryResult<int>
 	
-2.
-	a.
-	b.
-	c.
-	d.
+2.In a LINQ query, the____clause iterates over a collection of elements
+	a.from
+	b.for
+	c.select
+	d.where
 	
-3.
-a.
-b.
-c.
-d.
+3.In a LINQ query, the_____ clause determines what will be included in the query results.
+	a.from
+	b.for
+	c.select
+	d.where
 
-4.
-	a.
-	b.
-	c.
-	d.
+4.The____clause causes the result of a LINQ query to be stored.
+	a.sort
+	b.orderby
+	c.order
+	d.sortby
 	
-5.
-	a.
-	b.
-	c.
-	d.
+5.You can wiite a LINQ query using either query syntax or____.
+	a.pseudocode
+	b.SQL syntax
+	c.procedural syntax
+	d.method syntax
 	
-6.	
-	a.
-	b.
-	c.
-	d.
+6.In LINQ to SQL, a(n)____object represents a database.
+	a.table
+	b.entity
+	c.data context
+	d.row
 	
-7.	
-	a.
-	b.
-	c.
-	d.
+7.In LINQ to SQL, a(n)____object represents a table in a database.
+	a.table
+	b.entity
+	c.data context
+	d.row
 	
-8.
-	a.
-	b.
-	c.
-	d.
+8.In LINQ to SQL, a(n)____object represents a row in a database.
+	a.entity
+	b.data context
+	c.row
+	d.record
 	
-9.
-	a.
-	b.
-	c.
-	d.
+9.The____is a visual design tool that you use to create the classes needed for LINQ ro SQL to work with a particular database.
+	a.Database Designer
+	b.Object Relational Design
+	c.LINQ Designer
+	d.Table Designer
 	
-10.
-	a.
-	b.
-	c.
-	d.
+10.To update an exising row in a database table, you call the data context object's____method.
+	a.Update
+	b.Commit
+	c.Reload
+	d.SubmitChanges
 	
-11.
-	a.
-	b.
-	c.
-	d.
-	
-12.
-	a.
-	b.
-	c.
-	d.
-	
-13.
+True or False
+1.The var keyword makes code more difficult to read, but improves performance by a factor of 2.
+2.In a LINQ query, the from clause iterates over a collection of elements.
+3.You can use more than one where clause in a LINQ query
+4.The C# compiler translates all LINQ quries that are written in method syntax to query syntax.
+5.The data context object has table objects as properties that repesent the tables in the database.
+6.A table object is a collection of entity objects thast represent the rows in the table.
+7.One limitation of LINQ to SQL is that query results cannot be displayed in a data-bound control.
+8.One limitation of LINQ to SQL is that you cannot insert or selete rows in a database table. Tables are essentially read-only.
 
-	a.
-	b.
-	c.
-	d.
-	
-14.
-	a.
-	b.
-	c.
-	d.
-	
-15.
-	a.
-	b.
-	c.
-	d.
-	
-16.
-	a.
-	b.
-	c.
-	d.
-	
-17.
-	a.
-	b.
-	c.
-	d.
-	
+Short Answer
+1.in the following code, assume values is an array of double s. What is the data type of the result variable?
 
-18.
-	a.
-	b.
-	c.
-	d.
-	
-19.
-	a.
-	b.
-	c.
-	d.
-	
-20.
+	var results = from item in nums
+				  where item < 0
+				  select item;
 
-	a.
-	b.
-	c.
-	d.
-	
-21.
-	a.
-	b.
-	c.
-	d
-22.
-	a.
-	b.
-	c.
-	d.
+2.What are the two syntaxes that you can use to write LINQ queries?
+3.What extension method do you call if you want to order a query's results in descending order?
+4.In LINQ to SQL, how are databases, tables, rows, and columns represented?
+5.Describe the process of inserting a new row into a table with LINQ to SQL.
 
-23.
-	a.
-	b.
-	c.
-	d.
+Algorithm Workbench
+1.Assume nums is a List of integers. Write a LINQ query that gets all the values from the List that are less than 0. Assign the results to a variable named results.
+2.Assume nums is a List of integers. Write a LINQ query that gets all the values from the List sorted in ascending order. Assign the result to a variable named results.
+3.Assume nums is a List of integers. Write a LINQ query that gets all the values from the List sorted in decending order. Assign the results to a variable named results.
+4.Rewite the follwing query using method syntax:
 
-24.
-	a.
-	b.
-	c.
-	d.
-
-25.
-	a.
-	b.
-	c.
-	d.
+	var result = from item in values
+				 where item > 0 && item < 1-
+				 orderby item
+				 select item;
+				 
+	For Question 5-8, assume that a database has a table named Stock, with the following columns:
 	
-26.
-	a.
-	b.
-	c.
-	d.
+	Column Name				Type
+	Trading_Symbol			nchar(10)
+	Company_Name			nchar(25)
+	Num_Shares				int
+	Purchase_Price			money
+	Selling_Price			money
 	
-27.
-	a.
-	b.
-	c.
-	d.
+	Also assume that a data object has been created with the following statement:
 	
-
-28.
-	a.
-	b.
-	c.
-	d.
-	
-29.
-	a.
-	b.
-	c.
-	d.
-	
-30.
-	a.
-	b.
-	c.
-	d.
-	
-31.
-	a.
-	b.
-	c.
-	d.
-	
+	StockDataContext db = new StockDataContext();
+5.Write a LINQ to SQL query that returns all the columns form every row in the table.
+6.Wire a LINQ to SQL query that returns only the Trading_Symbol column from every row in the table.
+7.Wire a LINQ to SQL query that returns the Company_Name column only from the rows where Purchase_Price is greater than $50.00.
+8.Wrie a LINQ to SQL query that returns the Trading_Symbol column only from the rows where Selling_Price is greater than Purchase_Price and
+Num_Shares is greater than 100.

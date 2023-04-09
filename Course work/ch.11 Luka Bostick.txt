@@ -153,9 +153,46 @@ Short Answer
 Algorithm Workbench
 1.Write the first line of the definition for a Poodle class. The class should derived from the Dog class
 2.Look at the following class declarations:
-3.
-4.
-5.
-6.
-7.
-8.
+	
+	class Plant
+	{
+		public virtual void Message()
+		{
+			MessageBox.Show("I'm a plant.");
+		}
+	}
+	class Tree : Plant
+	{
+		public override void Message()
+		{
+			MessageBox.Show("I'm a tree.");
+		}
+	}
+	Given these class definitions, what will the following code display?
+	
+		Plant p = new Tree();
+		p.Message();
+
+3.Write a parameterized constructor for a base class named Movie with a string field named _title and an int field named _runningTime.
+4.A class named Wave has a virtual property named Frequency. A class named Sound is derved from the Wave class. Write example code showing how the Frequency property might appear in the Sound class.
+5.Create an abstract class called Star. Include an abstract method named SolarMasses that returns a value of the double data type.
+6.Concider the following extension method
+
+	public static bool IsGood(this int a, int b)
+	{
+		// Code goes here
+	}
+	
+	in the following code, what value is passed to the a parameter of the IsGood method?
+	
+	int number = 2;
+	if(number.IsGood(99))
+	{
+		//code goes here
+	}
+
+7.Write the first line of the definition for a SmartPhone class. The class should extend the MobileDevice class, and it should implement the ICallable and ITextable interfaces.
+8.Write an interface named INameable that apecifies the following methods:
+
+	void SetName(string n)
+	string GetName()
