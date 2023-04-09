@@ -1,189 +1,112 @@
-1.A(n) _____ is the thin dotted line that encloses an object in the Designer.
-	a.
-	b.
-	c.
-	d.
+1.In C#, _____ are enclosed in single quotation marks.
+	a. strings
+	b. enumerators
+	c. tokens
+	d. character literals
 	
-2.
-	a.
-	b.
-	c.
-	d.
+2. The char data type provides the _____ for converting the case of a character.
+	a. Lowercase and Uppercase methods
+	b. ToLower and ToUpper methods
+	c. IsDigit and IsLetter methods
+	d. IsWiteSpace and IsPunctuation methods
 	
-3.
-a.
-b.
-c.
-d.
+3.A string within a string is called a(n)____.
+	a. character 
+	b. inner string
+	c. substring
+	d. thread
 
-4.
+4. The _____ of a string object allows you so search for substrings.
+	a. TrimStart and TrimEnd methods
+	b. IndexOf and LastIndexOf methods
+	c. IsWhiteSpace and IsPunctuation mehtods
+	d.Contains, StartsWith, and EndsWith methods
+	
+5. When you want to know the position of the substring, you can use one of the _____ of a string
+	a. TrimStart or TrimEnd methods
+	b. IndexOf or LastIndexOf methods
+	c. ToLower or ToUpper methods
+	d. StartsWith or EndsWith methods
+	
+6. The ____ of a string object can be used to retrieve a specifiv set of charactes from a string/	
+	a.Substring method
+	b.IndexOF method
+	c.TrimStart and TrimEnd methods
+	d.StartsWith and EndsWith methods
+	
+7. ______ are spaces that appear at the beginning of the string.
+	a. Leading spaces
+	b. Primary spaces
+	c. Starting spaces
+	d. Empty spaces
+	
+8.____ are spaces that appear at the end of a string.
+	a. Blank spaces
+	b. Secondary spaces
+	c. Ending spaces
+	d. Trauiling spaces
+	
+9. A series of words or other items of data contained in a string and separated by spaces or other characters are known as ____.
+	a. substring
+	b. elements
+	c. characers
+	d. tokens
+	
+10. The character that separates tokens is known as _____.
+	a. partition
+	b. literal
+	c. delimiter
+	d. symbol
+	
+11. The process of breaking a string into tokens is known as _____.
+	a. extracting
+	b. tokenizing
+	c. delimiting
+	d. parsing
+	
+12. The ______ file format is commonly used to export spreadSheet data to a text file.
 	a.
 	b.
 	c.
 	d.
 	
-5.
-	a.
-	b.
-	c.
-	d.
-	
-6.	
-	a.
-	b.
-	c.
-	d.
-	
-7.	
-	a.
-	b.
-	c.
-	d.
-	
-8.
-	a.
-	b.
-	c.
-	d.
-	
-9.
-	a.
-	b.
-	c.
-	d.
-	
-10.
-	a.
-	b.
-	c.
-	d.
-	
-11.
-	a.
-	b.
-	c.
-	d.
-	
-12.
-	a.
-	b.
-	c.
-	d.
-	
-13.
+True or False
+1. You cannot store a string in a variable of char data type.
+2. C# allows you to access the individual characters in a string using subscript notation.
+3. When you call a string object's Split method, the method divides the string into two substrings and returns them as an array of strings.
 
-	a.
-	b.
-	c.
-	d.
-	
-14.
-	a.
-	b.
-	c.
-	d.
-	
-15.
-	a.
-	b.
-	c.
-	d.
-	
-16.
-	a.
-	b.
-	c.
-	d.
-	
-17.
-	a.
-	b.
-	c.
-	d.
-	
+Short Anwser
+1.What method can be converted a char variable to a string.
 
-18.
-	a.
-	b.
-	c.
-	d.
-	
-19.
-	a.
-	b.
-	c.
-	d.
-	
-20.
+2.List the method you would use to determine whether each of the following is true or false for the value of a Character:
+	a. numeric digit
+	b. alphabetic letter
+	c. alphabetic letter of numeric digit
+	d. punctuation mark
+	e. white-space character
+	f. uppercase letter
+	g. lowercase letter 
 
-	a.
-	b.
-	c.
-	d.
-	
-21.
-	a.
-	b.
-	c.
-	d
-22.
-	a.
-	b.
-	c.
-	d.
+3.List the methods you would use to determine each of the following about the value of a string object:
+	a. starts with the substring "VENI"
+	b. contains the substring "VIDI"
+	c. ends with the substring "VICI"
 
-23.
-	a.
-	b.
-	c.
-	d.
+4. Briefly describe each of the following string object methods:
+a. Insert
+b. Remove
+c. ToLower
+d. ToUpper
+e. Trim
+f. TrimStart
+g. TrimEnd
 
-24.
-	a.
-	b.
-	c.
-	d.
 
-25.
-	a.
-	b.
-	c.
-	d.
-	
-26.
-	a.
-	b.
-	c.
-	d.
-	
-27.
-	a.
-	b.
-	c.
-	d.
-	
+5.What characters are used as delimiters when you pass null as an argument to the Split method of a string object?
 
-28.
-	a.
-	b.
-	c.
-	d.
-	
-29.
-	a.
-	b.
-	c.
-	d.
-	
-30.
-	a.
-	b.
-	c.
-	d.
-	
-31.
-	a.
-	b.
-	c.
-	d.
-	
+Algorithm Workbench
+1. Write a method that accepts a string as an argument abd checks it for proper capitalization and punctuation. The method should determine if the string begins with an uppercase letter and ends with a punctuation mark. The method sould return true if the string metts the criteria; otherwise if should return false.
+2. Write a method that accepts a string as an argument and displays its contents backward. For instance, if the string argument is "gravity", the method should display "ytivarg".
+3. Assume the double variable number contains the value 12345.6789. Write a statement that uses the String.FOrmat method to format the number as 12345.7
+4. Assume the double variable number containes the value 12345.6789. Write a statement that uses the String.FOrmat method to format the number as 12,345.68.
+5. Assume the int variable number contains the value 1234567. Write a statement that uses the String.Format method to format the number as 1,234,567.

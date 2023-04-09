@@ -1,189 +1,166 @@
-1.A(n) _____ is the thin dotted line that encloses an object in the Designer.
-	a.
-	b.
-	c.
-	d.
+1.A _____ is a data type you can create that contains one or more variables known as fields.
+	a. structure
+	b. collection
+	c. volume
+	d. list
 	
-2.
-	a.
-	b.
-	c.
-	d.
+2. Before you can use a structure to store data, you must create a(n) _____ of the structure in memory.
+	a.copy
+	b.instance
+	c.declaration
+	d.reference
 	
-3.
-a.
-b.
-c.
-d.
+3. When the items in two data structures are related by their indexes, it is said that a _____ exists between the data structures.
+	a. bindary union
+	b. parallel relationship
+	c. unilateral bond
+	d. vitual connection
 
-4.
-	a.
-	b.
-	c.
-	d.
+4. A program uses a DataTime object's ToString method to display its value, and the output is 3/17/1999. Which format string was used with the ToString method?
+	a. "D"
+	b. "d"
+	c. "F"
+	d. "MDY"
 	
-5.
-	a.
-	b.
-	c.
-	d.
+5. Which expression returns the current data and time form the system?
+	a.DataTime.Today
+	b.DateTime.SysDateTime
+	c.DateTime.Current
+	d.DataTime.Now
 	
-6.	
-	a.
-	b.
-	c.
-	d.
+6. Which expression returns the current data, but not the time, from the system?
+	a.DataTime.Today
+	b.DateTime.SysDateTime
+	c.DateTime.Current
+	d.DataTime.Now
 	
-7.	
-	a.
-	b.
-	c.
-	d.
+7.	Which of the following is not a property of a TimeSpan object?
+	a.Days
+	b.Months
+	c.Hours
+	d.Minutes
 	
-8.
-	a.
-	b.
-	c.
-	d.
+8. When you create a(n)_____, you specify a set of symbolic values that belong to that data type.
+	a. abstract data type
+	b. symbolic data type
+	c. enumerated data type
+	d. cryptic data type 
 	
-9.
-	a.
-	b.
-	c.
-	d.
+9.______ are constants that represent integer values.
+	a. Literals
+	b. Enumerators
+	c. Constants
+	d. Tokens
 	
-10.
-	a.
-	b.
-	c.
-	d.
-	
-11.
-	a.
-	b.
-	c.
-	d.
-	
-12.
-	a.
-	b.
-	c.
-	d.
-	
-13.
+10. You can use the _____ method to determien whether a key exists in a dictionary.
+	a. KeyIn
+	b. ContainsKey
+	c. KeyMatch
+	d. KeyExists
 
-	a.
-	b.
-	c.
-	d.
+11. You can use the _____ method to determien whether a value exists in a dictionary.
+	a.ValueIn
+	b. ContainsValue
+	c. ValueMatch
+	d. ValueExists
 	
-14.
-	a.
-	b.
-	c.
-	d.
+12. You use _____ to remove an element from a dictionary.
+	a. the Remove method
+	b. the Erase method
+	c. the Delete method
+	d. the Del method
 	
-15.
-	a.
-	b.
-	c.
-	d.
 	
-16.
-	a.
-	b.
-	c.
-	d.
+13. The _____ property holds the number of elements in a declaration.
+	a. Size
+	b. Len
+	c. Elements
+	d. Count
 	
-17.
-	a.
-	b.
-	c.
-	d.
-	
+14. Assuming food is a Dictionary, what does the following statement do?
 
-18.
-	a.
-	b.
-	c.
-	d.
+		food[101] = "Cheesburger";
+	a.After the statement executes, the Dictionary will have an element with the key 101 and the value "Cheeseburger." 
+	b.After the statement executes, the Dictionary will have an element with the key 101 and the value "Cheeseburger." and the value 101.
+	c.After the statement executes, the Dictionary will have 101 elements, each with a key "Cheeseburger." 
+	d.After the statement executes, the element at position 101 will have the key "Cheeseburger."
 	
-19.
-	a.
-	b.
-	c.
-	d.
-	
-20.
+True or False
+1. The fields contained in a structure must be of the same type
+2. Before you can use the structure to store data, you must create an instance of the structure in memory.
+3. Structure objects can be passed into a method only by reference.
+4. You cannot perform comparision operations directly on structure objects.
+5. Enumeratos must be enclosed in quotation marks.
+6. An enum declaration can only appear inside the application's namesapce.
+7. The integer values that you assign to enumerators do not have to be unique.
+8. You can compare enumerators can enum variables with relational operators.
+9. The DataTime.TryParse method will successfullt convert the string "8/22/1990" to a DateTime object
+10. You can use relational operators to compare two DataTime objects and determine which one is earlier or later.
+11. You can store duplicate keys in a Dictionary.
+12. A Dictionary object's Remove method returns an integer indicating the number of elements that were removed.
+13. A KeyAvaluePair object has three properties: Index, Key, and Value.
 
-	a.
-	b.
-	c.
-	d.
-	
-21.
-	a.
-	b.
-	c.
-	d
-22.
-	a.
-	b.
-	c.
-	d.
+Short Answer
+1. List the places that a structure can be declared in code.
+2. Assume an application contains a structure named Fruit. Write a statement that demonstrates how you would create a List that can holder Fruit objects/
+3. What will the following code display?
+	Dictionary <string, int> dct = new Dictionary<string, int>()
+	{
+		{}
+		{}
+		{}
+	};
+	MessageBox.Show(dct["Tuesday"].ToString());
 
-23.
-	a.
-	b.
-	c.
-	d.
+4. How do you delete an element from a dictionary?
+5.How do you determine the number of elements that are stored in a dictionaty
+6.Can enumerators be used in a loop to step through the elements of an arrray? Why or why not?
+7.Why should you use the new operator when creating instances of a structure?
 
-24.
-	a.
-	b.
-	c.
-	d.
 
-25.
-	a.
-	b.
-	c.
-	d.
-	
-26.
-	a.
-	b.
-	c.
-	d.
-	
-27.
-	a.
-	b.
-	c.
-	d.
-	
+Algorithm Workbench
 
-28.
-	a.
-	b.
-	c.
-	d.
+1. Look at the following structure declaration:
+
+	struct Engine
+	{
+		public inr cylinders;
+		public int hoursepower
+		public int torque;
+	}
+Write a method that accets two Engine structures as arguments, determines if the two structures are equal, and return the the Boolen value true if the structures are equal or false if the structures are not equal.
+
+2. Declare an enumerated data type type named Direction with enumerators for North, South, East, and West.
+
+3. Give an example of instantiating a DateTime object named dt, initialized with the data Augest 22, 1965.
+
+4. data and date2 are DateTime objects containing two difference dates. Write code that displays the values of theses two objects in chronological order.
+
+5. Given the following declaration, write code that uses a TimeSpan object to add five days to the data1 object and assigns the result to a second DateTime object named data2.
+
+		DateTime date1 = new DateTime(1977,3,22);
+		
+6. Write a statement that defines a Dictionary named food. The Keys should be string s, and the values should be int s.
+
+7. Suppose a program declares a Dictionary as follows:
+
+Dictionary<int, string> customers = new Dictionary<int, string>();
+
+Write statements that use the Dictionary class's Add method to insert the following elements:
+
+	9001,	"Jen Williams"
+	9002,	"Frank Smith"
+	9003,	"Geri Rose"
 	
-29.
-	a.
-	b.
-	c.
-	d.
+8. Suppose a program has the following Dictionary definition:
 	
-30.
-	a.
-	b.
-	c.
-	d.
+	Dictionary<int, string> customers = new Dictionary<int, string>();
 	
-31.
-	a.
-	b.
-	c.
-	d.
-	
+Write a for loop that iterates over the Dictionary. Each element's key should be added to ListBox named customerListBox.
+
+9. Suppose a program has the following Dictionary definition:
+
+	Dictionary<int, string> customers = new Dictionary<int, string>();
+
+Write an if statement that determines whether the key 999 exisits in the Dictionary. If the key exists, display the message "Customer 999 found" in a message box. Otherwise, display the message "Customer 999 not found."
+

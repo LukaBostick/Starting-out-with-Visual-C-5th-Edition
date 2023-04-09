@@ -1,189 +1,192 @@
-1.A(n) _____ is the thin dotted line that encloses an object in the Designer.
-	a.
-	b.
-	c.
-	d.
+1. Each object that is created from a class is called a(n) ____ of the class.
+	a.reference
+	b.example
+	c.instance
+	d.event
 	
-2.
-	a.
-	b.
-	c.
-	d.
+2.You create a class by writing a(n)____.
+	a. blueprint
+	b. class declaration
+	c. initialization list
+	d. object name
 	
-3.
-a.
-b.
-c.
-d.
+3. The first line of a class declaration is known as the _____.
+	a. class preface
+	b. class title
+	c. class header
+	d. class directive.
 
-4.
-	a.
-	b.
-	c.
-	d.
+4. The class's _____ are the statements that define the class's fields, properties, and methods.
+	a.data agents
+	b.body statements
+	c.private definitions
+	d.member declarations
 	
-5.
-	a.
-	b.
-	c.
-	d.
+5.A(n)_____ is a method that is automatically executed when an object is created.
+	a.opener
+	b.loader
+	c.constructor
+	d.assembler
 	
-6.	
-	a.
-	b.
-	c.
-	d.
+6.A(n)_____ is a special type of class member that allows an object to store and retrueve a piece of data.
+	a. property
+	b. assest
+	c. inserter/retriever
+	d.accessory.
 	
-7.	
-	a.
-	b.
-	c.
-	d.
+7.A special set of methods, known as _____, work in conjunction with a private field and allow code outside the class to ger the property's value. and assign values to the property.
+	a.accessors
+	b.imitators
+	c.intermediates
+	d.directives
 	
-8.
-	a.
-	b.
-	c.
-	d.
+8.The private field, which is know as the property's _____, holds any data that is assigned to the property.
+	a.private data
+	b.backing field
+	c.holding value
+	d.masked variable
 	
-9.
-	a.
-	b.
-	c.
-	d.
+9.The ____ parameter of the set accessor is automatically created by the compiler, and its data type is the same as that of the property.
+	a.property
+	b.value
+	c.member
+	d.detail
 	
-10.
-	a.
-	b.
-	c.
-	d.
+10.A_____ can be read, but it cannot be modified.
+	a. limited property
+	b. temporary value
+	c. field value
+	d.read-only property
 	
-11.
-	a.
-	b.
-	c.
-	d.
+11.When the value of an item is dependent on other data and that item is not updated when the other data is changedm what has the value become?
+	a. bitter
+	b. stale
+	c. asynchronous
+	d. moldy
 	
-12.
-	a.
-	b.
-	c.
-	d.
+12.A constructor that accepts arguments is know as a(n)____.
+	a.argumentative constructor
+	b.changable constructor
+	c.parameterized constructor
+	d.secondary constructor
 	
-13.
-
-	a.
-	b.
-	c.
-	d.
+13.When a method is _____, it means that multiple methods in the same class have the same name but use different types of parameters.
+	a.emulated
+	b.versioned
+	c.threaded
+	d.overloaded
 	
-14.
-	a.
-	b.
-	c.
-	d.
+14.The process of mating a method call with the correct method is known as ____.
+	a.sorting
+	b.matching
+	c.stlying
+	d.binding
 	
-15.
-	a.
-	b.
-	c.
-	d.
+15.A method's _____ consists of the method's name and the data type and arguments kind (by value, ref, or out) of the method's parameter, from left to right.
+	a.apperance
+	b.signature
+	c.identifier
+	d.footprint
 	
-16.
-	a.
-	b.
-	c.
-	d.
+16.A_____is a constructor that accepts no arguments:
+	a.parameterless constructor
+	b.basic constructor
+	c.primary constructor
+	d.passive constructor
 	
-17.
-	a.
-	b.
-	c.
-	d.
-	
-
-18.
-	a.
-	b.
-	c.
-	d.
-	
-19.
-	a.
-	b.
-	c.
-	d.
-	
-20.
-
-	a.
-	b.
-	c.
-	d.
-	
-21.
-	a.
-	b.
-	c.
-	d
-22.
-	a.
-	b.
-	c.
-	d.
-
-23.
-	a.
-	b.
-	c.
-	d.
-
-24.
-	a.
-	b.
-	c.
-	d.
-
-25.
-	a.
-	b.
-	c.
-	d.
-	
-26.
-	a.
-	b.
-	c.
-	d.
-	
-27.
-	a.
-	b.
-	c.
-	d.
+17.If you write a class with no constructor whatsoever, the compiler will provided a(n)____.
+	a.default constructor
+	b.constructor list
+	c.parameterized method
+	d.error message
 	
 
-28.
-	a.
-	b.
-	c.
-	d.
+18.The_____ is the set of real-world objects, parties, and major event related to the problem.
+	a.critial path
+	b.problem domain
+	c.solution set
+	d.operation focus
 	
-29.
-	a.
-	b.
-	c.
-	d.
+19.A class's responsibilities are _____.
+	a.the objects create from the class
+	b.things the class knows
+	c.actions the class performs
+	d.both b and c
 	
-30.
-	a.
-	b.
-	c.
-	d.
+20.The_____displays a form on the screen, and it gives that form the focus.
+	a.Show method
+	b.ShowDialog method
+	c.Clear method
+	d.Focus method
 	
-31.
-	a.
-	b.
-	c.
-	d.
+21.This type of method cannot access any nonstatic member variables in its own class.
+	a.Instance
+	b.Void
+	c.Static
+	d.Nonstatic
 	
+22.The compiler will not allow you to instantiate this type of class.
+	a.Base
+	b.Private
+	c.Static
+	d.Nonstatic
+	
+
+True or False
+1.Objects that are instances of a class are always passed by value.
+2.Class declarations must be written inside the project namespace.
+3.A class is an object.
+4.It is common practice to make all a class's fields private and to providd access to thoes fields through methods.
+5.The same rules for naming variables apply to naming classes.
+6.If you need to make a property read only, you simply do not write a set accessor for the property.
+7.If you try to pass a property to a ref or an out parameter, an error will occur
+8.Class fields are almost always declared public in order to make their values easi;y accessible to code outside of the class.
+9.The get accessor can be throught of as a method that returns the class property's value.
+10.Constructors can accept arguements in the same way as ither methods.
+11.It is legal to write a class without any constructors.
+12.Objects that are intances of a class can be stored in an array.
+13.The objects of a class can be stored in an array,  but not in a List.
+14.One way to find the classes needed for an object-oriented program is to identify all the verbs in a description of the problem domain.
+15.Every form in a Visual C# project has a class.
+16.By default, a control's Modifiers property is set to Public.
+17.A static member method may refer to nonstatic fields of the same class, but only after an instance of the class has been defined.
+18.All the members of a static class must be static as well
+
+Short Answer
+1. When a method recieves an object as an argument, does the method have access to the actual object or a copy of the object?
+2.What are the advantages of storing cl;asses in their own files?
+3.How is a constructor used?
+4.What is the difference between a class and an instance of a class?
+5.What converntion do most properammers follow when naming classes?
+6.What is the value parameter? How is it created?
+7.When is executed any time a class property is read?
+8.What is executed any time a value is assigned to a class property?
+9.How can you protech class fields from, accidental corruption?
+10.What is stale data?
+11.Is it possible to pass initialization values to the constructor when you create an object? If so, how?
+12.How does the compiler distinguish a method from other methods of the same name?
+13.What do you call the constructor that is provided by the compiler, if no constructor is specified when a class is written?
+14.In Visual Studio, how  can you switch your view to another form?
+15.How do you remoce a form from a project but keep its file on the disk?
+16.What property of a control must you change if you want to access that control firn code ouside the form's class?
+17.What is the difference between a modal form and a modeless form?
+18.A class has a public field named name. A program creates three instances of the class. How cany copies of the name field exists in memory?
+
+Algorithm Workbench
+1.Write a statement that creates an instance of the Transcript class.
+2. Write the accessors for a property named CustomerNumber that assigns a string value to the _customerNumber field.
+3.Suppose that an application declares an array of class objects with the following statement:
+
+	Employee[] employees = new Employee[9]'
+	
+Write a loop that creates 10 instances of the class and assigns them to the elements of the array.
+
+4.Look at the following description of the prblem domain:
+	The bacank offers the following types of accounts to its customers: savings accounts, checking accounts, and, money market accounts. Customers are allowed to deposit money into an account (thereby increasing its balance), withdraw money from an account (thereby decreasing its blance), and earn instrest on the account. Each account has an interest rate. Assume that you are writing a program that will calculate the amount intrest earned for a bank account.
+		
+		a.Identify the potential classes in this problem domain.
+		b.Refine the list to include only the necessary class or classes for this problem
+		c.Identify the responsibilities of the class or classes.
+
+5.A class named MyClass had a punlic static int field named unitsOnHand. There are no instances of the class in existence. Write a statement that assigns 10 to the unitsOnHand field.
+6.A class named MyClass has a public static void method named Reset. The Reset method has no parameters. Write a statement that calls the Rest method.

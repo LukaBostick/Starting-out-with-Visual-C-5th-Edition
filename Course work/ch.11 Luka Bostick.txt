@@ -1,189 +1,161 @@
-1.A(n) _____ is the thin dotted line that encloses an object in the Designer.
-	a.
-	b.
-	c.
-	d.
+1.When one object is a specialized version of another object, there is an _____ between them.
+	a."is a" relationship
+	b.innate association
+	c.inherent union
+	d.unbreakable union
 	
-2.
-	a.
-	b.
-	c.
-	d.
+2.In an inheritance relationship, the _____ is the general class.
+	a.derived class
+	b.base class
+	c.dependent class
+	d.child class
 	
+3.In an inheriance relationship, the _____is the specialized class.
+	a.base class
+	b.master class
+	c.derived class
+	d.parenet class
+
+4.Base classes are sometimes called_____.
+	a.megaclasses
+	b.primitive classes
+	c.starter classes
+	d.superclasses
+	
+5.Derived classes are sometimes called_____.
+	a.refined classes
+	b.subclasses
+	c.child classes
+	d.neoclasses
+	
+6.The _____refers to the base class.
+	a.friend keyword
+	b.this keyword
+	c.base keyword
+	d.class keyword
+	
+7.The term____ refers to an object's ability to take different forms.
+	a.multi-instance
+	b.by referencing
+	c.polymorphism
+	d.olighopoly
+	
+8.When a derived class method has the same name as a bade class method, it is oftern said that the derived class method __ the base class method.
+	a.terminates
+	b.cancles out
+	c.overrides
+	d.short circuits
+	
+9.The_____ declares that a derived class is allowed to override a method.
+	a.void keyword
+	b.protected keyword
+	c.base keyword
+	d.virtural keyword
+	
+10.The _____declares that this method overrides a method in the base class.
+	a.override keyword
+	b.class keyword
+	c.virtual keyword
+	d.base keyword
+	
+11.A class that is not intended to be instantiated, nut used only as a base class, is called a(n)_____.
+	a.dummy class
+	b.subclass
+	c.virtual class
+	d.abstract class
+	
+12.To declare a class as abstract, you use the _____in the class header.
+	a.abstract keyword
+	b.base keyword
+	c.void keyword
+	d.virtual keyword
+	
+13.A regular, nonabstract class is sometimes called a_____.
+	a.true class
+	b.model class
+	c.concreate class
+	d.real class
+	
+14.A(n)_____is a method that appears in a base class but expects to be overridden in a derived class.
+	a.abstract method
+	b.virtual method
+	c.concreate method
+	d.base method
+	
+15.A(n)_____is a property that appears in a base class but exprects to be overridden in a derived class
+	a.virtual property
+	b.concreate property
+	c.base property
+	d.abstract property
+	
+16._____allows a base class reference variable to reference a derived class object.
+	a.Polymorphism
+	b.Inheritance
+	c.Generalization
+	d.Specialization
+	
+17.This type of method extends a class without modifying the class or inheriting from it.
+	a.submethod
+	b.Add-on method
+	c.Extension method
+	d.Sealed method
+	
+18.The first parameter declaration in an extension method always begins with the _____keyword.
+	a.extension
+	b.this
+	c.static
+	d.ext
+	
+19.When a class implementsw an interface, it must____.
+	a.provide only methods that are not listed in the interface
+	b.provided all of the methods that are listed in the interface, with the exact signatures and return types specified
+	c.not have a constructor
+	d.be an abstract class
+	
+True or False
+1.The base class inherits fields, properties, and methods from the derived class.
+2.Polymorphism allows a class variable of the base class type to reference object of either the base class or derived class type
+3.Properties in a base class cannot be overridden in the same way that methods can be overridden.
+4.A base class reference variable can reference an object of any class that is derived from the base class.
+5.A statement that tries to use the new operator to instantiate an abstract class will not compile
+6.A class that is not intended to be instantiated, but used only as a base class, is caleld a concreate class.
+7.When an abstract property appears in a class, it must be overridden in any class that is dericed from the class.
+8.To write an extension method, you must inherit from the class that you are extending.
+9.An extension method never has a parameter.
+10.Extension methods must be static
+11.A class may only implement one interface.
+12.All members of an interface are implicity public.
+
+Short Answer
+1.What does a derived class inherit from its base class?
+2.Look at the following code, which is the first line of a class declaration. What is the name of the base class? What is the name of the dericed class?
+
+	class Tiger : Felis
+	
+3.Can methods in the derived class directly access the base class's private members?
+4.When you create an instance of a derived class, which constructor is called first?
+5.In what kind of situation would you want to use an abstract class instead of a base class?
+6.What is a primaty difference between an abstract class and a regular class?
+7.Can abstract classes also contain abstrcat properties? 
+8.How does the compiler know that a method is an extension method?
+9.Consider the follwing extension method:
+	
+	public static bool DoSomething(this string a, int b)
+	{
+		// ..Code goes here
+	}
+	
+	What class or data type does the method extend?
+
+10.Why is it often said that an interface is like a contract?
+11.What is the only code allowed in properties that are listed in an interface?
+
+Algorithm Workbench
+1.Write the first line of the definition for a Poodle class. The class should derived from the Dog class
+2.Look at the following class declarations:
 3.
-a.
-b.
-c.
-d.
-
 4.
-	a.
-	b.
-	c.
-	d.
-	
 5.
-	a.
-	b.
-	c.
-	d.
-	
-6.	
-	a.
-	b.
-	c.
-	d.
-	
-7.	
-	a.
-	b.
-	c.
-	d.
-	
+6.
+7.
 8.
-	a.
-	b.
-	c.
-	d.
-	
-9.
-	a.
-	b.
-	c.
-	d.
-	
-10.
-	a.
-	b.
-	c.
-	d.
-	
-11.
-	a.
-	b.
-	c.
-	d.
-	
-12.
-	a.
-	b.
-	c.
-	d.
-	
-13.
-
-	a.
-	b.
-	c.
-	d.
-	
-14.
-	a.
-	b.
-	c.
-	d.
-	
-15.
-	a.
-	b.
-	c.
-	d.
-	
-16.
-	a.
-	b.
-	c.
-	d.
-	
-17.
-	a.
-	b.
-	c.
-	d.
-	
-
-18.
-	a.
-	b.
-	c.
-	d.
-	
-19.
-	a.
-	b.
-	c.
-	d.
-	
-20.
-
-	a.
-	b.
-	c.
-	d.
-	
-21.
-	a.
-	b.
-	c.
-	d
-22.
-	a.
-	b.
-	c.
-	d.
-
-23.
-	a.
-	b.
-	c.
-	d.
-
-24.
-	a.
-	b.
-	c.
-	d.
-
-25.
-	a.
-	b.
-	c.
-	d.
-	
-26.
-	a.
-	b.
-	c.
-	d.
-	
-27.
-	a.
-	b.
-	c.
-	d.
-	
-
-28.
-	a.
-	b.
-	c.
-	d.
-	
-29.
-	a.
-	b.
-	c.
-	d.
-	
-30.
-	a.
-	b.
-	c.
-	d.
-	
-31.
-	a.
-	b.
-	c.
-	d.
-	
