@@ -2157,90 +2157,516 @@
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Iterating over
+ * Iterating over a Dictionary with the foreach Loop
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
+ * When an element is stored in a Dictionary, it is stored as an object
+ * of the KeyValuePair type. The KeyValuePair type is a struct that has
+ * two properties: Key and Value. The element's Key is stored in the Key
+ * propery, and the element's value is stored in the Value property.
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * You can use the Foreach loop to iterate over all the KeyValuePair 
+ * elements in a Dictionary. The following code shows an example of
+ * how to display all of the elements in a Dictionary. Assume this code 
+ * is in an application that has a ListBox control named emplyeesListBox.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Dictionary<int, string> employees = new Dictionary<int, string>()
+ * {
+ *  {101, "Chris Jones"},
+ *  {102, "Jessica Smith"},
+ *  {103, "Amanda Stevens"},
+ *  {104, "Will Osborn"}
+ * };
+ * 
+ *  // Display each element.
+ *  foreach(KeyValuePair<int, string> element in employees)
+ *  {
+ *      employeesListBox.Items.Add("ID: " + element.Key + " Name: " + element.Value);
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In the foreach loop header, we are declaring element as the iteration
+ * variable:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * KeyValuePair<int, string> element
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * This declaration specifies that element is a KeyValuePair object, and
+ * that its Key property is an int, and its Value property is a string.
+ * As long as we understand these charcteristics of the element variable
+ * , we can simplify its declaration be using the var keyword:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * foreach(var element in employees)
+ * {
+ *  emplyeesListBox.Items.Add("ID: " + element.Key + " Name: " + element.Value);
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The ContainsKey, ContainsValue, and Contains Methods
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * You can use the ContainsKey method to determine whether a specific 
+ * key exits in a dictionary. The ContainsKey method accepts a key as its
+ * argument, and retuens true if the key was found, or false othewise.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * if(!employees.ContainsKey(103))
+ * {
+ *  MeassageBox.Show("Employee 103 was not found.");
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * You can use the ContainsValue method to determine whether a speciic 
+ * value exists in a dictionary. The ContainsVAlue methods accepts a 
+ * value as it argumet, and returns true if the value was found, or 
+ * false otherwise.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * if(!employees.ContainsValue("Chris Jones"))
+ * {
+ *  MeassageBox.Show("Chris Jones was not found.");
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * You can use the Contains method to determine whether a specific
+ * element exists as a KeyValuePair in a Dictionay. The Contains method
+ * accepts a KeyValuePair aas its argument, and returns true if the 
+ * element was found, or false otherwise.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * KeyValuePair<int, string> element = 
+ * new KeyValuePair<int, string>(101, "Chris Jones");
+ * 
+ * if(!employees.Contains(element))
+ * {
+ *      MessageBox.Show("Chris Jones was not found.");
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Retieving a Value with the TryGetValue Method
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * When you call the TryGetValue method, you pass two arguments:(1) the
+ * key that you are searching for, and (2) an output variable in which
+ * you want to store the valur associated with the Key. Here is the 
+ * general format of how the TryGetValue method is called:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * dictionaryName.TryGetValue(key, out targetVariable)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * IN the general format, dictionaryName is the name of a Dictionary,
+ * key is the key that you are searching for, and targetVariavble is
+ * the nane of a variable. The method searches for key in the Dictionary,
+ * and if it is found, the value associated with key is stored in the
+ * targeVariable and returns false to indicate the key was not found.
+ * The following code shows an example:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  // Create a Dictionary with employee information
+ *  Dictionary<int, string> employees = new Dictionary<int, string>()
+ *  {
+ *      {101, "Chris Jones"},
+ *      {102, "Jessica Smith"},
+ *      {103, "Amanda Stevens"},
+ *      {104, "Will Osborn"}
+ *  };
+ *  // Variable to hold an employees's name 
+ *  string name;
+ *  
+ *  // Search for employee 104
+ *  if(employees.TryGetValue(104, out name))
+ *  {
+ *      MessageBox.Show(name);
+ *  }
+ *  else
+ *  {
+ *      MessageBox.Show("Emplyee 104 was not found.")
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *          The Count Property and the ElementAt Method
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Dictionary objects have a Count property that is set to the number
+ * of elements in the Dictionary.
+ * The Count property can be used along wit the ElementAt method 
+ * to iterate other the elements in aDictionary using a for loop.
+ * Here is the general format of the ElementAt method:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * dictionaryName.ElementAt(index)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In the general format, disctionaryName is a Disctionary and index is 
+ * a position within the Dicttionary, wit h0 begins the first element.
+ * The method returns the element at the specified position as a 
+ * KeyValuePair object. If the index is out of bounds, the method throws
+ * an exception. The following code shows an example. Assume this code is 
+ * an application that has a ListBox control named emplyeesListBox.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Dictionary<int, string> employees = new Dictionary<int, string>()
+ * {
+ *  {101, "Chris Jones"},
+ *  {102, "Jessica Smith"},
+ *  {103, "Amanda Stevens"},
+ *  {104, "Will Oberson"}
+ * };
+ * 
+ * for(int i = 0; i < employees.Count; i++)
+ * {
+ *      // Get a KeyValuePair element
+ *      var element = employees.ElementAt(i);
+ *      
+ *      // Display the element 
+ *      employeesListBox.Items.Add(element.key + "" + element.Value);
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                         The Clear Method
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The Clear method delates all the elements in a Dictionary, leaving
+ * the Dictionary empty. The method's general format is:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * dictionaryName.Clear();
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Storing List s as Values in a Dictionary
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * IN the following code snippet, we create a Dictionary in which the 
+ * keys are student names(as strings), and the values are List s
+ * containing test scores. Assume this code is in an application
+ * that has a ListBox conteol named scoresListBox.
+ * The outPut of the code (the contents of teh ListBox) is shown in
+ * Figure 9-16.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Dictionary<string, List<int>> testScores = 
+ * new Dictionary<string, List<int>>()
+ * {
+ *  {"Kayla", new List<int> {88, 92, 100}},
+ *  {"Luis", new List<int> {95, 74, 81}},
+ *  {"Sophie", new List<int> {72, 88, 91}},
+ *  {"Ethan", new List<int> {70, 75, 78}},
+ * };
+ * 
+ *  // Display each student's text score.
+ *  foreach(var student in textScores)
+ *  {
+ *      scoresListBox.Item.Add(student.Key);
+ *      foreach(int score in student.Value)
+ *      {
+ *          scoresListBox.Item.Add(score);
+ *      }
+ *      scoresListBox.Items.Add("---------------");
+ *  }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Tutorial 9-3 Storing Names and Brithdays in a Dictionary
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you complete an application that stores names and 
+ * birthdays in a Dictionary. Each entry in the dictionary uses a
+ * person's name as the key, and that person's birthday will be retrived
+ * from the Dictionary and displayed in the birthdatyLable control.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 9-5 Complete Form1 code for the Birthday application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Birthdays
+ * {
+ *      public partial class Form1 : Form
+ *      {
+ *          // Dictionary with names and birthdays
+ *          private Dictionary<string, string> birthdays
+ *          = new Dictionary<string, string>()
+ *          {
+ *              {"Cameron", "4/17/1998"},
+ *              {"Kathryn", "5/7/1996"},
+ *              {"Jason", "1/22/1997"},
+ *              {"Lola", "5/5/1995"},
+ *              {"Wesley", "10/4/1999"},
+ *          };
+ *          
+ *          public Form1()
+ *          {
+ *              InitializeComponent();
+ *          }
+ *          
+ *          private void Form1_Load(object sender, EventArgs e)
+ *          {
+ *              // Display the names in the LisBox.
+ *              foreach(var element in birthdays)
+ *              {
+ *                  namesListBox.Items.Add(elements.Key);
+ *              }
+ *              
+ *          }
+ *          
+ *          private void namesListBox_SelectedIndexChanges(object sender, EventArgs e)
+ *          {
+ *              // Get the selected name.
+ *              string name = nameListBox.SelectedItem.ToString();
+ *              
+ *              // Get the selected person's birthday.
+ *              string birthdat = birthfays[name];
+ *              
+ *              // Display the selected person's birthday.
+ *              birthdayLabel.Text = birthday;
+ *          } 
+ *      }
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Tutorial 9-4 Using a Dictionary to Simulate a Deck of Cards
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In some games inviling poker cards, the cards are assigned numeric 
+ * values. For example, in the game of BlackJack, the cards are given the 
+ * following numeric values:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * * Numeric cards are assigned the value they have printed on them. For
+ * example, the value of the 2 of spades is 2, and the value of the 5 of
+ * diamonds is 5.
+ * 
+ * * Jacks, queens, and kings are valued at 10.
+ * 
+ * *Aces are valued at either 1 or 11, depending on the player's
+ * choice.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In this tutorial, you complete an application that uses a Dictionary
+ * to simulate a standard deck of poker cards, where the cards are
+ * assigned numeric values simuilar to those used in Blackjack. (In the 
+ * program, you will assign the value 1 to all aces.) The key-value pairs
+ * used the name of the card as the key, and the card's numeric value as
+ * the value. For example, the key-value pair for the queen of hearts is
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * "Queen of Hears", 10 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * and the key-value pair for the 8 of diamonds is
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * "8 of Diamonds", 8
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The application's form is shown in Figure 9-18, and the completed
+ * code for the application is shown in Program 9-6. The completed 
+ * application will work like this:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  * The user enters the number of cards to detal into the numCardsTextBox control
+ *  
+ *  * The user clicks the dealButton control to deal a hand of that
+ *  many cards from the deck. To simulate dealing the cards, the application will
+ *  randomly select elements from the Dictionary. The randomly selected elements
+ *  will be removed from the Dictionary so they can't be dealt more than once.
+ *  
+ *  *The names of the randomly selected cards will be displayed in the
+ *  dealtCardsListBox control.
+ *  
+ *  *The total numeric value of the hand will display in the valueLabel control.
+ *  
+ *  *The number of cards that are left in the deck will be displayed in
+ *  the cardsLeftLabel control.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 9-18 The Car Dealer application's Form1 form
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 9-6 Completed Form1 code for the Card Dealer application
+ * 
+ * Note: This code sucks
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Card_Deler
+ * {
+ *      public partial class Form1: Form
+ *      {
+ *          // Dicttionary to simulate a deck of cards
+ *          private Dictionary<string, int> deck = new Dictionary<string, int>()
+ *          {
+ *              // Spades
+ *              
+ *              // Hearts
+ *              
+ *              // Clubs
+ *              
+ *              // Diamonds
+ *          };
+ *          
+ *          public Form1()
+ *          {
+ *              InitializeComponent();
+ *          }
+ *          private void Form1_Load(object sender, EventArgs e)
+ *          {
+ *              // Update the number of cards left in the deck.
+ *              cardsLeftLAbel.Text = deck.Count.ToString();
+ *          }
+ *          
+ *          private void dealButton_Click(object sender, EventArgs w)
+ *          {
+ *              int numCards = 0;           // Number of cards tp deal
+ *              int handValue = 0;          // Value of the dealt cards
+ *              Random rand = new Random(); // Random number generator
+ *              
+ *              // Clear the hand value
+ *              valueLabel.Text = "";
+ *              
+ *              // Get the number of cards to deal
+ *              if(int.TryParse(numCardsTextBox.Text, out numCards))
+ *              {
+ *                  // Make sure the number is within range.
+ *                  if(numCard > 0 && numCards <= deck.Count)
+ *                  {
+ *                      // Deal the cards
+ *                      for(int count = 0; count < numCards; count++)
+ *                      {
+ *                          // Get a random number.
+ *                          int randNumber = rand.Next(deck.Count);
+ *                          
+ *                          // Get the card at the random position.
+ *                          var card = deck.ElementAt(randNumber);
+ *                          
+ *                          // Display the card.
+ *                          dealtCardsListBox.Items.Add(card.Key);
+ *                          
+ *                          // Update and display the hand value.
+ *                          handValue += card.Value;
+ *                          valueLabel.Text = handValue.ToString();
+ *                          
+ *                          // Remove the delected card from the deck.
+ *                          deck.Remove(card.Key);
+ *                          
+ *                          // Update the number of cards left in the deck.
+ *                          cardsLeftLabel.Text = deck.Count.ToString();
+ *                      }
+ *                  }
+ *                  else
+ *                  {
+ *                      // Error message for number out of range
+ *                      if(deck.Count == 0)
+ *                      {
+ *                          MessageBox.Show("The deck is empty!");
+ *                      }else
+ *                      {
+ *                          MessageBox.Show("Enter a number in the range of "
+ *                          + "1 thorough " + deck.Count.ToStrimg    )
+ *                      }
+ *                  }
+ *              }
+ *              else
+ *              {
+ *                  // Error message for noninteger value
+ *                  MessageBox.Show("Enter an integer.")
+ *              }
+ *          }
+ *      }   
+ * }
+ * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
