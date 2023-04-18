@@ -501,7 +501,7 @@ namespace ch11
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* You must also develop a class that represnets a cetificate of deposit
+* You must also develop a class that reprsnets a cetificate of deposit
 * (CD) account. The data that must be help by an object of this class is
 * /////////////////////////////////////////////////////////////////////
 * 
@@ -1522,7 +1522,7 @@ namespace ch11
 * 
 * /////////////////////////////////////////////////////////////////////
 * /////////////////////////////////////////////////////////////////////
-* 11.4 Extension Methods
+*                       11.4 Extension Methods
 * /////////////////////////////////////////////////////////////////////
 * /////////////////////////////////////////////////////////////////////
 * 
@@ -1535,159 +1535,392 @@ namespace ch11
 * Suppose you want to extend a class, but you cannot inherit from it 
 * because it is sealed. This might be the case when the class you want
 * to extend is in the .NET Framework, or was written by someone other 
-* than you. In this
+* than you. In this situation, you can use extension methods to exend
+* the class. AN extendion method is a method that you can add onto a
+* class without modifying the class or inheriting from it.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Extension methods can be applicaed to classes, structs, and
+* interfaces (which are discussed later in this chapter). They can even be applied to primitive types like int and double. in fact, let's look at how can apply an extension method to the primatice int data type. Suppose we want int variables to have a method that wells us whether the variable is odd or even. For ex, we would like to do somthing like this
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* int number = 4;
+* if(number.IsEven())
+* {
+*   MessageBox.Show("The number is even.");
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* To accomplish this, we need to define an extension method for the
+* int type named isEven. The extensiomn method will return true of the
+* number it is evaluating is event, or false otherwise
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Here are the key things to know about implementing an extendion method:
 * 
 * /////////////////////////////////////////////////////////////////////
 * 
-* /////////////////////////////////////////////////////////////////////
+* *An extension method is a static method, stored in a static class.
+* You can write multiple extension methods in the same static class.
 * 
-* /////////////////////////////////////////////////////////////////////
+* *It is recommended to put the extension method's class in its own namespace,
+* separeate from your project's namespce.
 * 
+* *An extension always has at least one parameter. The method's first
+* parameter must be an object of the class or type that the method is
+* extending. The declaration of the first parameter must begin with
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Here's an example of how we might implement the IsEven extension
+* method previously shown:
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* namespace ExtensionMethods
+* {
+*   public static class Extension
+*   {
+*       public static bool IsEven(this int i)
+*       {
+*       returns (i % 2) ==0;
+*       }
+*   }
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* This code ddefines a namesapce named ExtenMEthods, and inside that
+* namespace is a static class named Extensions.
+* (Any program that uses the exntension method will need need to have
+* the statement using ExtensionMethod; in order to access the method.)
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+*               this int 1
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* The this keyword singnals the compiler that the method is an
+* extension method.
 * 
-* /////////////////////////////////////////////////////////////////////
+* The parameter i is an int, so the compiler knows that we are defining
+* an extension method for the int data type. 
 * 
+* When the method executes, 
+* the i parameter will reference the int variable that the method is
+* working on.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 11-11 myValue is passed implicity ontp the i parameter
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Note:
+* An extension method can have multiple parameters. 
+* The this keyword appearts only before the first parameter, however.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Extension method must hace at least one parameter, preceded by the
+* this keyword, to refer to the object that the method is working on. 
+* If you need to explicity pass other arguments into an extension method, 
+* just decalre additional parameters after the first paramter.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* public static bool IsGreaterThan(this int a, int b)
+* {
+*       return a > b;   
+* }
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Figure 11-12 num1 is passed implicitly into the a parameter, and 
+* num2 is passed explicilty into the b parameter
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Note: in an extension method, only the first parameter begins with 
+* the this keyword.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Let's look at a complete application that demonstrates extension method.
+* In chap11 fold of this book's Student Sample Programs, you will find
+* a project named Extension methods.
+* Figure 11-13 shows the application's form in the Designer.
+* When the application runs, the user enters an integer into the 
+* numberTextBox control and then clicks the goButton control.
+* The application displays information about the number in the
+* resultsListBox control. 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 11-13 The Extension Methods form
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Program 11-13 The Extension class The Extensions class
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* namespace ExtensionMethods
+* {
+*   public static class Extensions 
+*   {
+*       public static bool IsEvent(this int i)
+*       {
+*           return(i % 2) == 0;
+*       }
+*       
+*       public static bool IsMultipleOf(this int a, int b)
+*       {
+*           return (a % b) == 0;
+*       }
+*       
+*       public static bool IsWhileNumber(this double d)
+*       {
+*           return (d - (int)d) == 0;
+*       }
+*   }
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Program 11-14 The Form1 code for the Integer Extension Methods 
+* application
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* namespace Integer_Extension_Methods
+* {
+*   public partial class Form1 : Form
+*   {
+*       public Form1()
+*       {
+*            InitializeComponent();
+*       }
+*       
+*           private void goButton_Click(object sender, EventArgs e)
+*           {
+    *           // Clear the ListBox
+    *           resultsListBox.Items.Clear();
+    *           
+    *           // Make sure the number is an integer
+    *       
+    *           double dnum = double.Parse(numberTextBox.Text);
+    *           if(dnum.IsWhileNumber())
+    *           {
+    *               resultsListBox.Items.Add("numberTextBox.Text");
+    *               
+    *               int inum = int.Parse(numberTextBox.Text);
+    *               
+    *               // Is inum even>
+    *               if (inum.IsEven()) {
+    *               resultsListBox.Items.Add("The nunber is even.");
+    *               } else
+    *                   {
+    *                   resultsListBox.Items.Add("The nunber is odd.");
+    *                }
+    *               
+    *               // Is the number a multiple of 5?
+    *               if(inum.IsMultipleof(5))
+    *               {
+    *                   resultsListBox.Items.Add("The number is a multiple of 5.");
+    *               }
+    *               else
+    *               {
+    *                   resultsListBox.Items.Add("The number is not a multiple of 5.");
+    *                   
+    *               }
+*             }  
+*           }
+*       }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Tutorial 11- 4 Creating Extension Methods
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 11-15 The European DAte application's Form1 form
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 11-17 The application's form at runtime
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Program 11-15 The Extension class
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* namespace ExtensionMethods
+* {
+*       static class Extensions
+*       {
+*           public static string EuroDate(this string str)
+*           {
+*               string euroFormat;
+*               char[] delim={'/'};
+*               string[] tokens = str.Split(delim);
+*               
+*               // Validate the number of tokens and return the result.
+*               if(tokens.Length == 3)
+*                   euroFormat = toekns[1] + "/" + toekns[0] +"/"+toekns[2];
+*               else
+*                   euroFormat = str;
+*                   
+*               return euroFormat;
+*           }
+*       }
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Program 11-16 The Form1 code
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* namespace European_Dates
+* {
+*           public partial class Form1 : Form
+*           {
+*                   public Form1()
+*                       {
+*                            InitializeComponent();
+*                       }
+*               private void convertButton_Click(object sender, EventArgs e)
+*                   {
+*                       // Get the input enderted by the user.
+*                       string input = dateTextBox.Text;
+*                       
+*                       // Display the converted output
+*                       outputLabel.Text = input.EuroDate();
+*                       
+*                   }           
+*           }
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
 * /////////////////////////////////////////////////////////////////////
-* 
+*                         11.5 Interfaces
 * /////////////////////////////////////////////////////////////////////
-* 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Concept: An interface specifies behavior for a class.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* An interface is like a class that contains only abstract methods and
+* or abstaract properties. An interface cannot be instantiated.
 * 
+* Instead, it is implemented by other classes. When a class implements
+* an interface.the class must provide all the methods and properties
+* that are specifieds by the interface.
+* 
+* 
 * /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* An interface declaration look similar to a class, except the keyword
+* interface is used instead of the keyword class, and the methods that
+* are specified in an interface have no bodies, only headers that are 
+* terminated by semicolons. Also, any properties that are specified in an
+* interface are abstract, and cannot contain any code other than the get and/
+* or set keywords. Here is the general format of an interface definition.
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* public interface InterfaceName
+* {
+*       Method headers and/or Properties..
+* }
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* The following shows an ex on an interface named IDisplayable.
+* The interface specifies a void method named display(). 
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+*   interface IDisplayable
+*   {
+*       void Display();
+*   }
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* Notice that the Display method header in line 3 does not have an access specifier.
+* This is because all methods and properties declared in an interface 
+* are implicitly public.
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* Any class that implements the IDisplayable interface must provide an 
+* implementation of the Display method (with the exact signature 
+* specified by the interface, and with the same return type).
+* 
+* The Person class shown in the follwoing code snippet is an ex:
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* Class Person : IDisplayable
+* {
+*   // Name property
+*   public string Name {get; set;}
+*   
+*   // Constructor
+*   public Person(string n)
+*   {
+*       Name = n;
+*   }
+*   
+*   // Display method, required by IDisplayable
+*   public void Display()
+*   {
+*       MessageBox.Show("My name is " + name);
+*   }
+* }
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* The frst line of the class declararion is written as:
+* 
+* class Person : IDisplayable
+* 
+* also known as an interface header
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* After the name of the class, Person, a colon appears, followed by the
+* name of the interface IDisplayable. This line indicates that we are 
+* defining a class named Person, and it implements the IDisplauable interface.
+* (This is the same syntax as delcaring a class that inherits from
+* another class.) Because the Person class implements the IDisplayab;e
+* interface, it must provide an implementation of the interface's 
+* Display method.
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+*   // Create an instance of the Psrson class.
+*   Person p = new Person("Antonio");
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
 * /////////////////////////////////////////////////////////////////////
 * /////////////////////////////////////////////////////////////////////
