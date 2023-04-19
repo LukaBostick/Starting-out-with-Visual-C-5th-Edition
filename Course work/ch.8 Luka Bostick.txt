@@ -1,112 +1,174 @@
-1.In C#, _____ are enclosed in single quotation marks.
+1.In C#, __D___ are enclosed in single quotation marks.
 	a. strings
 	b. enumerators
 	c. tokens
 	d. character literals
 	
-2. The char data type provides the _____ for converting the case of a character.
+2. The char data type provides the ___B__ for converting the case of a character.
 	a. Lowercase and Uppercase methods
 	b. ToLower and ToUpper methods
 	c. IsDigit and IsLetter methods
 	d. IsWiteSpace and IsPunctuation methods
 	
-3.A string within a string is called a(n)____.
+3.A string within a string is called a(n)_C___.
 	a. character 
 	b. inner string
 	c. substring
 	d. thread
 
-4. The _____ of a string object allows you so search for substrings.
+4. The __D___ of a string object allows you so search for substrings.
 	a. TrimStart and TrimEnd methods
 	b. IndexOf and LastIndexOf methods
 	c. IsWhiteSpace and IsPunctuation mehtods
 	d.Contains, StartsWith, and EndsWith methods
 	
-5. When you want to know the position of the substring, you can use one of the _____ of a string
+5. When you want to know the position of the substring, you can use one of the _B____ of a string
 	a. TrimStart or TrimEnd methods
 	b. IndexOf or LastIndexOf methods
 	c. ToLower or ToUpper methods
 	d. StartsWith or EndsWith methods
 	
-6. The ____ of a string object can be used to retrieve a specifiv set of charactes from a string/	
+6. The __D__ of a string object can be used to retrieve a specific set of charactes from a string/	
 	a.Substring method
 	b.IndexOF method
 	c.TrimStart and TrimEnd methods
 	d.StartsWith and EndsWith methods
 	
-7. ______ are spaces that appear at the beginning of the string.
+7. ____A__ are spaces that appear at the beginning of the string.
 	a. Leading spaces
 	b. Primary spaces
 	c. Starting spaces
 	d. Empty spaces
 	
-8.____ are spaces that appear at the end of a string.
+8.__C__ are spaces that appear at the end of a string.
 	a. Blank spaces
 	b. Secondary spaces
 	c. Ending spaces
 	d. Trauiling spaces
 	
-9. A series of words or other items of data contained in a string and separated by spaces or other characters are known as ____.
+9. A series of words or other items of data contained in a string and separated by spaces or other characters are known as __D__.
 	a. substring
 	b. elements
 	c. characers
 	d. tokens
 	
-10. The character that separates tokens is known as _____.
+10. The character that separates tokens is known as ___C__.
 	a. partition
 	b. literal
 	c. delimiter
 	d. symbol
 	
-11. The process of breaking a string into tokens is known as _____.
+11. The process of breaking a string into tokens is known as ____D_.
 	a. extracting
 	b. tokenizing
 	c. delimiting
 	d. parsing
 	
-12. The ______ file format is commonly used to export spreadSheet data to a text file.
-	a.
-	b.
-	c.
-	d.
+12. The ____B__ file format is commonly used to export spreadSheet data to a text file.
+	a. spreadsheet data volume, or SDV
+	b.comma separated value, or CSV
+	c.estensible markup language, or XML
+	d.portable document format, or PDF
 	
 True or False
-1. You cannot store a string in a variable of char data type.
-2. C# allows you to access the individual characters in a string using subscript notation.
-3. When you call a string object's Split method, the method divides the string into two substrings and returns them as an array of strings.
+1. You cannot store a string in a variable of char data type. TRUE
+2. C# allows you to access the individual characters in a string using subscript notation.TRUE
+3. When you call a string object's Split method, the method divides the string into two substrings and returns them as an array of strings. FALSE
 
 Short Anwser
 1.What method can be converted a char variable to a string.
+	char b = 'b';
+
+	String B = b.ToString();
 
 2.List the method you would use to determine whether each of the following is true or false for the value of a Character:
-	a. numeric digit
-	b. alphabetic letter
-	c. alphabetic letter of numeric digit
-	d. punctuation mark
-	e. white-space character
-	f. uppercase letter
-	g. lowercase letter 
+	a. numeric digit						-	char.IsDigit(ch)
+	b. alphabetic letter 					-	char.letter(str, index)
+	c. alphabetic letter or numeric digit	-	char.(!IsWhiteSpace(ch))
+	d. punctuation mark						-	char.IsPunctuation(cj)
+	e. white-space character				-	char.IsWhiteSpace(ch)
+	f. uppercase letter						-	char.IsUpper(ch)
+	g. lowercase letter 					-	char.IsLower(ch)	
 
 3.List the methods you would use to determine each of the following about the value of a string object:
-	a. starts with the substring "VENI"
-	b. contains the substring "VIDI"
-	c. ends with the substring "VICI"
+	a. starts with the substring "VENI"		-		stringVar.StartsWith("VENI")
+	b. contains the substring "VIDI"		-		stringVar.Contains("VIDI")
+	c. ends with the substring "VICI"		-		stringVar.EndsWith("VICI")
 
 4. Briefly describe each of the following string object methods:
-a. Insert
-b. Remove
-c. ToLower
-d. ToUpper
-e. Trim
-f. TrimStart
-g. TrimEnd
+a. Insert		-		Inserts a string into another string.
+b. Remove		-		Removes a specified character from a string.
+c. ToLower		-		Converts a string to all lowercase characters.
+d. ToUpper		-		Converts a string to all uppercase characters.
+e. Trim			-		Removes all leading and trailing spaces from a str
+f. TrimStart	-		Removes all leadingspaces from a string.
+g. TrimEnd		-		Removes all trailing spaces from a string.
 
 
 5.What characters are used as delimiters when you pass null as an argument to the Split method of a string object?
+						The method tokenizes the string
+					  using white-space characters as delimiters.(White-space characters
+					  are the space, tab, linefeed, carriage-return, formfeed,
+					  vertical-tab, and newline characters.) The method returns a string
+					  array, with each element of the array containing one of the tokens.
+  
+  
 
 Algorithm Workbench
 1. Write a method that accepts a string as an argument abd checks it for proper capitalization and punctuation. The method should determine if the string begins with an uppercase letter and ends with a punctuation mark. The method sould return true if the string metts the criteria; otherwise if should return false.
+	 public static bool isStrASentence(string str)
+        {
+            char[] chars = str.ToCharArray();
+            int lengthOfArry = chars.Length;
+
+            if(char.IsPunctuation(chars[lengthOfArry - 1])&&char.IsUpper(chars[0]))
+            {
+                return true;
+            }
+
+            return false;
+
+
+        }
+
+
 2. Write a method that accepts a string as an argument and displays its contents backward. For instance, if the string argument is "gravity", the method should display "ytivarg".
-3. Assume the double variable number contains the value 12345.6789. Write a statement that uses the String.FOrmat method to format the number as 12345.7
+	public static string reverseStr(String str)
+        {
+            char[] chars = str.ToCharArray();
+            int lengthOfArry = chars.Length;
+            string output = "";
+            
+            for(int i = lengthOfArry-1; i >= 0 ; i--)
+            {
+                char c = chars[i];
+                output+= c;
+            }
+            return output;
+        }
+
+
+3. Assume the double variable number contains the value 12345.6789. Write a statement that uses the String.Format method to format the number as 12345.7
+	public static string nFormatDouble(String num)
+        {
+            decimal inPut = decimal.Parse(num);
+
+            return string.Format("the double is: {0:N1}",inPut);
+        }
+		
 4. Assume the double variable number containes the value 12345.6789. Write a statement that uses the String.FOrmat method to format the number as 12,345.68.
+		
+		public static string nFormatDouble_2(String num)
+        {
+            decimal inPut = decimal.Parse(num);
+
+            return string.Format("the double is: {0:N2}",inPut);
+        }
 5. Assume the int variable number contains the value 1234567. Write a statement that uses the String.Format method to format the number as 1,234,567.
+
+		public static string nFormatDouble_2(String num)
+        {
+            decimal inPut = decimal.Parse(num);
+
+            return string.Format("the double is: {0:N2}",inPut);
+        }
