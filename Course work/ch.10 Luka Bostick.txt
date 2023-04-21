@@ -1,192 +1,294 @@
-1. Each object that is created from a class is called a(n) ____ of the class.
+1. Each object that is created from a class is called a(n) __C__ of the class.
 	a.reference
 	b.example
 	c.instance
 	d.event
 	
-2.You create a class by writing a(n)____.
+2.You create a class by writing a(n)__B__.
 	a. blueprint
 	b. class declaration
 	c. initialization list
 	d. object name
 	
-3. The first line of a class declaration is known as the _____.
+3. The first line of a class declaration is known as the _C____.
 	a. class preface
 	b. class title
 	c. class header
 	d. class directive.
 
-4. The class's _____ are the statements that define the class's fields, properties, and methods.
+4. The class's __D___ are the statements that define the class's fields, properties, and methods.
 	a.data agents
 	b.body statements
 	c.private definitions
 	d.member declarations
 	
-5.A(n)_____ is a method that is automatically executed when an object is created.
+5.A(n)__C___ is a method that is automatically executed when an object is created.
 	a.opener
 	b.loader
 	c.constructor
 	d.assembler
 	
-6.A(n)_____ is a special type of class member that allows an object to store and retrueve a piece of data.
-	a. property
-	b. assest
-	c. inserter/retriever
+6.A(n)___a__ is a special type of class member that allows an object to store and retrueve a piece of data.
+	a.property
+	b.assest
+	c.inserter/retriever
 	d.accessory.
 	
-7.A special set of methods, known as _____, work in conjunction with a private field and allow code outside the class to ger the property's value. and assign values to the property.
+7.A special set of methods, known as __A___, work in conjunction with a private field and allow code outside the class to get the property's value. and assign values to the property.
 	a.accessors
 	b.imitators
 	c.intermediates
 	d.directives
 	
-8.The private field, which is know as the property's _____, holds any data that is assigned to the property.
+8.The private field, which is know as the property's __B___, holds any data that is assigned to the property.
 	a.private data
 	b.backing field
 	c.holding value
 	d.masked variable
 	
-9.The ____ parameter of the set accessor is automatically created by the compiler, and its data type is the same as that of the property.
+9.The _B___ parameter of the set accessor is automatically created by the compiler, and its data type is the same as that of the property.
 	a.property
 	b.value
 	c.member
 	d.detail
 	
-10.A_____ can be read, but it cannot be modified.
+10.A___D__ can be read, but it cannot be modified.
 	a. limited property
 	b. temporary value
 	c. field value
 	d.read-only property
 	
 11.When the value of an item is dependent on other data and that item is not updated when the other data is changedm what has the value become?
+	__B__
 	a. bitter
 	b. stale
 	c. asynchronous
 	d. moldy
 	
-12.A constructor that accepts arguments is know as a(n)____.
+12.A constructor that accepts arguments is know as a(n)_C___.
 	a.argumentative constructor
 	b.changable constructor
 	c.parameterized constructor
 	d.secondary constructor
 	
-13.When a method is _____, it means that multiple methods in the same class have the same name but use different types of parameters.
+13.When a method is ___D__, it means that multiple methods in the same class have the same name but use different types of parameters.
 	a.emulated
 	b.versioned
 	c.threaded
 	d.overloaded
 	
-14.The process of mating a method call with the correct method is known as ____.
+14.The process of matcing a method call with the correct method is known as ___D_.
 	a.sorting
 	b.matching
 	c.stlying
 	d.binding
 	
-15.A method's _____ consists of the method's name and the data type and arguments kind (by value, ref, or out) of the method's parameter, from left to right.
+15.A method's ___B__ consists of the method's name and the data type and arguments kind (by value, ref, or out) of the method's parameter, from left to right.
 	a.apperance
 	b.signature
 	c.identifier
 	d.footprint
 	
-16.A_____is a constructor that accepts no arguments:
+16.A___A__is a constructor that accepts no arguments:
 	a.parameterless constructor
 	b.basic constructor
 	c.primary constructor
 	d.passive constructor
 	
-17.If you write a class with no constructor whatsoever, the compiler will provided a(n)____.
+17.If you write a class with no constructor whatsoever, the compiler will provided a(n)__A__.
 	a.default constructor
 	b.constructor list
 	c.parameterized method
 	d.error message
 	
 
-18.The_____ is the set of real-world objects, parties, and major event related to the problem.
+18.The__B___ is the set of real-world objects, parties, and major event related to the problem.
 	a.critial path
 	b.problem domain
 	c.solution set
 	d.operation focus
 	
-19.A class's responsibilities are _____.
+19.A class's responsibilities are __D___.
 	a.the objects create from the class
 	b.things the class knows
 	c.actions the class performs
 	d.both b and c
 	
-20.The_____displays a form on the screen, and it gives that form the focus.
+20.The__B___displays a form on the screen, and it gives that form the focus.
 	a.Show method
 	b.ShowDialog method
 	c.Clear method
 	d.Focus method
 	
 21.This type of method cannot access any nonstatic member variables in its own class.
+___C__
 	a.Instance
 	b.Void
 	c.Static
 	d.Nonstatic
 	
 22.The compiler will not allow you to instantiate this type of class.
+___C__
 	a.Base
 	b.Private
 	c.Static
 	d.Nonstatic
 	
-
 True or False
-1.Objects that are instances of a class are always passed by value.
-2.Class declarations must be written inside the project namespace.
-3.A class is an object.
-4.It is common practice to make all a class's fields private and to providd access to thoes fields through methods.
-5.The same rules for naming variables apply to naming classes.
-6.If you need to make a property read only, you simply do not write a set accessor for the property.
-7.If you try to pass a property to a ref or an out parameter, an error will occur
-8.Class fields are almost always declared public in order to make their values easi;y accessible to code outside of the class.
-9.The get accessor can be throught of as a method that returns the class property's value.
-10.Constructors can accept arguements in the same way as ither methods.
-11.It is legal to write a class without any constructors.
-12.Objects that are intances of a class can be stored in an array.
-13.The objects of a class can be stored in an array,  but not in a List.
-14.One way to find the classes needed for an object-oriented program is to identify all the verbs in a description of the problem domain.
-15.Every form in a Visual C# project has a class.
-16.By default, a control's Modifiers property is set to Public.
-17.A static member method may refer to nonstatic fields of the same class, but only after an instance of the class has been defined.
-18.All the members of a static class must be static as well
+1. Objects that are instances of a class are always passed by value. FALSE
+2. Class declarations must be written inside the project namespace. TRUE
+3. A class is an object. TRUE
+4. It is common practice to make all a class's fields private and to provide access to those fields through methods. TRUE
+5. The same rules for naming variables apply to naming classes. FALSE
+6. If you need to make a property read-only, you simply do not write a set accessor for the property. TRUE
+7. If you try to pass a property to a ref or an out parameter, an error will occur FALSE
+8. Class fields are almost always declared public in order to make their values easily accessible to code outside of the class. FALSE
+9. The get accessor can be thought of as a method that returns the class property's value. TRUE
+10. Constructors can accept arguments in the same way as other methods. FALSE
+11. It is legal to write a class without any constructors. TRUE
+12. Objects that are instances of a class can be stored in an array. TRUE
+13. The objects of a class can be stored in an array but not in a List. FALSE
+14. One way to find the classes needed for an object-oriented program is to identify all the verbs in a description of the problem domain. FALSE
+15. Every form in a Visual C# project has a class. TRUE
+16. By default, a control's Modifiers property is set to Public. TRUE
+17. A static member method may refer to nonstatic fields of the same class, but only after an instance of the class has been defined. TRUE
+18. All the members of a static class must be static as well. FALSE
 
 Short Answer
-1. When a method recieves an object as an argument, does the method have access to the actual object or a copy of the object?
-2.What are the advantages of storing cl;asses in their own files?
-3.How is a constructor used?
-4.What is the difference between a class and an instance of a class?
-5.What converntion do most properammers follow when naming classes?
-6.What is the value parameter? How is it created?
-7.When is executed any time a class property is read?
-8.What is executed any time a value is assigned to a class property?
-9.How can you protech class fields from, accidental corruption?
-10.What is stale data?
-11.Is it possible to pass initialization values to the constructor when you create an object? If so, how?
-12.How does the compiler distinguish a method from other methods of the same name?
-13.What do you call the constructor that is provided by the compiler, if no constructor is specified when a class is written?
-14.In Visual Studio, how  can you switch your view to another form?
-15.How do you remoce a form from a project but keep its file on the disk?
-16.What property of a control must you change if you want to access that control firn code ouside the form's class?
-17.What is the difference between a modal form and a modeless form?
-18.A class has a public field named name. A program creates three instances of the class. How cany copies of the name field exists in memory?
+1. When a method receives an object as an argument, does the method have access to the actual object or a copy of the object?
+	
+	When a method signature contains an object as an argument, it receives only a reference to the object memory address 
+	and not a deep copy of the object
+
+2. What are the advantages of storing classes in their own files?
+	
+	Storing classes in separate files allows multiple programmers to work in a single namespace at once.
+	It also helps with reading the code as you can compartmentalize each individual section independently.
+
+3. How is a constructor used?
+	A Constructor has three main forms 
+	1. When no constructor is present in a class, C# automatically constructs the object instance with a Default constructor
+	2. When a constructor is present, values are set, iterated, and can be modified for every object instantiation
+	3. When a class inherits a constructor, the child class's constructor is overloaded with the parent constructor. In Java,
+	we call this a call to the super constructor
+	
+4. What is the difference between a class and an instance of a class?
+	A class is a container that comprises the data and structure of an uninitialized class.
+	An instance of a class is a 'literal'(not actually a literal) or a functional representation of the class.
+
+5. What convention do most programmers follow when naming classes?
+	Pascal case
+
+6. What is the value parameter? How is it created?
+	A value parameter is a literal data parameter that is declared and passed into a constructor upon instantiation.
+
+7. What is executed any time a class property is read?
+	The class's getter property
+
+8. What is executed any time a value is assigned to a class property?
+	The class's Setter property
+	
+9. How can you protect class fields from accidental corruption?
+	By placing the private keyword in front of the class header
+
+10. What is stale data?
+	When a field's value is tightly dependent on the other data and that field is not updated when the other data is changed, it is said that the field has become stale.
+
+11. Is it possible to pass initialization values to the constructor when you create an object? If so, how?
+	When you instantiate the class, you pass in arguments that match the constructors' header.
+	
+	
+12. How does the compiler distinguish a method from other methods of the same name?
+	The compiler distinguishes overloaded methods in the following ways
+	1. Are there two of the same methods named the same in scope
+	2. Are the method's return values the same
+	3. Are the method's signatures both the same (the arguments that are passed into the method)
+
+
+13. What do you call the constructor that is provided by the compiler if no constructor is specified when a class is written?
+		The default constructor
+		
+		
+14. In Visual Studio, how can you switch your View to another form?
+	On the top of visual studio is a drop-down button titled View. You can then select what windows you would like displayed. 
+
+15. How do you remove a form from a project but keep its file on the disk?
+	When you delete a form, it prompts the user if they would like to permanently delete the form but keep it on the Harddisk.
+	
+16. What property of a control must you change if you want to access that control from code outside the form's class?
+	You must either make the access public or import the property with the static keyword.
+
+17. What is the difference between a model form and a modeless form?
+	In a modeless, the "action"(java swing term) is not taken away from the main form when a new form is displayed.
+	In a model form, you cannot interact with the main form until the 
+
+18. A class has a public field named name. A program creates three instances of the class. How many copies of the name field exist in memory?
+	Only one field exists in memory, and it is shared between all instances. 
 
 Algorithm Workbench
-1.Write a statement that creates an instance of the Transcript class.
+1. Write a statement that creates an instance of the Transcript class.
+	var Transcript transcript = new Transscript();
+	
 2. Write the accessors for a property named CustomerNumber that assigns a string value to the _customerNumber field.
-3.Suppose that an application declares an array of class objects with the following statement:
 
-	Employee[] employees = new Employee[9]'
+	// Name property
+   public string CustomerNumber
+   {
+       get {return _customerNumber;}
+       set {_customerNumber = CustomerNumber;}
+   } 
+3. Suppose that an application declares an array of class objects with the following statement:
+
+	Employee[] employees = new Employee[9];
+	
+	
 	
 Write a loop that creates 10 instances of the class and assigns them to the elements of the array.
-
-4.Look at the following description of the prblem domain:
-	The bacank offers the following types of accounts to its customers: savings accounts, checking accounts, and, money market accounts. Customers are allowed to deposit money into an account (thereby increasing its balance), withdraw money from an account (thereby decreasing its blance), and earn instrest on the account. Each account has an interest rate. Assume that you are writing a program that will calculate the amount intrest earned for a bank account.
+	foreach(Employee emp in employees)
+	{
+		employees[emp] = new Employee();
+	}
+	
+4. Look at the following description of the problem domain:
+	The bank offers the following types of accounts to its customers: savings accounts, checking accounts, and money market accounts. Customers are allowed to deposit money into an account (thereby increasing its balance), withdraw money from an account (thereby decreasing its balance), and earn interest on the account. Each account has an interest rate. Assume that you are writing a program that will calculate the amount of interest earned for a bank account.
 		
 		a.Identify the potential classes in this problem domain.
+		
+			Classes:
+				Abstract Bank class
+					Aggregation
+				account interface
+				
+				savings account inherent account
+				checking accounts inherent account
+				money-market accounts inherent account
+				
+			
+				
 		b.Refine the list to include only the necessary class or classes for this problem
+		This is the best way to do it, lol.
+		
+		Classes:
+				Abstract Bank class
+					Aggregation
+				account interface
+				
+				savings account inherent account
+				checking accounts inherent account
+				money-market accounts inherent account
+				
 		c.Identify the responsibilities of the class or classes.
+			Bank class stores all of the account instances
+			and is responsible for calling the account to make withdraws and deposits 
+			
+			The account interface: stores static methods for removing and adding funds:
+			
+					savings account: Stores methods for calculating the interest 
 
-5.A class named MyClass had a punlic static int field named unitsOnHand. There are no instances of the class in existence. Write a statement that assigns 10 to the unitsOnHand field.
-6.A class named MyClass has a public static void method named Reset. The Reset method has no parameters. Write a statement that calls the Rest method.
+5. A class named MyClass had a public static int field named unitsOnHand. There are no instances of the class in existence. Write a statement that assigns 10 to the unitsOnHand field.
+	
+	myClass class = new MyClass();
+	class.unitsOnHand = 10;
+	
+6. A class named MyClass has a public static void method named Reset. The Reset method has no parameters. Write a statement that calls the Rest method.
+	myClass.Reset();

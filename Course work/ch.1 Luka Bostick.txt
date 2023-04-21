@@ -2,14 +2,14 @@ Review Questions
 
 Multiple Choice
 
-1. A(n)__b___ is a set of instructiions that a computer follows to perform a tast.
+1. A(n)__b___ is a set of instructions that a computer follows to perform a task.
 	
 	a. compiler
 	b. program
-	c. interperter
+	c. interpreter
 	d. programming language
 	
-2. The physical devices that a computer is made of are refered to as __A__
+2. The physical devices that a computer is made of are referred to as __A__
 	
 	a. hardware
 	b. software
@@ -22,7 +22,7 @@ Multiple Choice
 	c. the operating system
 	d. tools
 	
-4. Today, CPU's are small chips know as __D__
+4. Today, CPUs are small chips known as __D__
 	a. ENIACs
 	b. secondary storage
 	c. main memory
@@ -34,19 +34,19 @@ Multiple Choice
 	c.	memory chips
 	d.	operating system
 	
-6. __A___is a volatile type of memory that iks used only for temnporaty storage while a program is running.
+6. __A___is a volatile type of memory that is used only for temporary storage while a program is running.
 	a. RAM
 	b. Secondary storage
 	c. The disk drive
 	d. The USD drive
 	
-7. A type of memory that can hold data for long periods of time-even when there is no power to the computer-is called _B___.
+7. A type of memory that can hold data for long periods of time even when there is no power to the computer is called _B___.
 	a. RAM
 	b. Secondary storage
 	c. The disk drive
 	d. The USB drive
 	
-8. A component that collects data from peoplke or other devices and sends it to the computer is called__B__.
+8. A component that collects data from people or other devices and sends it to the computer is called__B__.
 	a.an output devices
 	b. an input device
 	c. a secondary storage device
@@ -59,13 +59,13 @@ Multiple Choice
 	d. main memory
 	
 10. A___A_ is enough memory to store a letter of the alphabet or a small number.
-	a.Byte
+	a. Byte
 	b.Bit
 	c.Switch
 	d.Transistor
-11. A byte is made up of eight__D__.
+11. A Byte is made up of eight__D__.
 	a. CPUs
-	b. Instructiions
+	b. Instructions
 	c. Variables
 	d. Bits
 12. In the _b___ numbering system, all numeric values are written as sequences of 0s and 1s.
@@ -80,7 +80,7 @@ Multiple Choice
 	c.0
 	d."no"
 	
-14. A set of 128 numeric codes that represents the English letters, various punctuation marks, and other characters is__B__.
+14. A set of 128 numeric codes representing English letters, various punctuation marks, and other characters is__B__.
 	a. binary numbering
 	b.ASCII
 	c.Unicode
@@ -94,9 +94,9 @@ Multiple Choice
 	
 16. NEgative numbers are encoded using the __B___tecgnique.
 	a. two's complement 
-	b. floting point
+	b. floating point
 	c. ASCII
-	d. uNICODE
+	d. Unicode
 17. Real numbers are encoded using the _A___technique
 	a. two's complement
 	b. floating point
@@ -108,7 +108,7 @@ Multiple Choice
 	c.color packets
 	d.pixles
 	
-19. IF you were to look at a machine langiage program, you would see __B_.
+19. IF you were to look at a machine language program, you would see __B_.
 	a.C# code
 	b. a stream of binary numbers
 	c. English words
@@ -120,49 +120,49 @@ Multiple Choice
 	c. execute
 	d.immediately after the instruction is executed
 	
-21. Computers can execute only prgrams that are written in __C___.
+21. Computers can execute only programs that are written in __C___.
 	a. C#
 	b. assembly language
 	c. machine language
 	d. Java
 	
-22. The ___B___ Translates an assembly language program to a machine language program.
+22. The ___B___ Translates an assembly language program into a machine language program.
 	a. assembler
 	b. compiler
 	c. translator
-	d. interperter
+	d. interpreter
 	
-23. The words that make up a high-level prgramming language are called _D________.
+23. The words that make up a high-level programming language are called _D________.
 	a. binary instructions
 	b. mnemonics
 	c. commands
 	d. keywords
 	
-24. The rules that must be followed when writting a program are called__A__. 
+24. The rules that must be followed when writing a program are called__A__. 
 	a. syntax
 	b.punctuation
 	c.keywords
 	d.operators
 	
-25. A(n) _B_____ is a program that translates a high-level language program into a sepatate machine language prgram.
+25. A(n) _B_____ is a program that translates a high-level language program into a separate machine language program.
 	a.assembler
 	b.compiler
 	c.translator
 	d.utility
 	
-26. A____B__ is any hypothetical person using a prgram and providing input for it.
+26. A____B__ is any hypothetical person using a program and providing input for it.
 	a. designer
 	b. user
 	c. guinea pig
 	d. text subject
 	
-27. A___C___ error does not prevent the prgram from running but caUSES IT to produce incorrect results.
+27. A___C___ error does not prevent the program from running but caUSES IT to produce incorrect results.
 	a. syntax
 	b. hardware
 	c. logic
 	d. fatal
 	
-28. A(n) ___D__ is a set of well-defined logical steps that must be taken to preform a task.
+28. A(n) ___D__ is a set of well-defined logical steps that must be taken to perform a task.
 	a. logarithm
 	b. plan of action
 	c. logic schedule
@@ -180,7 +180,7 @@ Multiple Choice
 	c. code graph
 	d. program graph
 	
-31. Object that are visible in a prgram's graphical user interface are commonly reffed to as __C_____.
+31. Objects that are visible in a program's graphical user interface are commonly reffed to as __C_____.
 	a. button
 	b.controls
 	c.forms
@@ -192,25 +192,25 @@ Multiple Choice
 	c. schema
 	d. class
 	
-33. The ___A__ is a collection of classes and other code that can be used, along with a programming language such as C#, to create programs for the windows operating system
+33. The ___A__ is a collection of classes and other code that can be used, along with a programming language such as C#, to create programs for the Windows operating system
 	a. .NET framework
 	b. Standard Template Libary
 	c. GUI framework
 	d. MSDN Libary
 
-34. The ___B__ is the part of a computer with which the user interacts.
+34. The ___B__ is part of a computer with which the user interacts.
 	a. central processing unit
 	b. user interface
 	c. control system
 	d. interactivity system
 	
 35. Before GUIs became popular, the ___A__ interface was the most commonly used.
-	a. commaned line
+	a. command line
 	b. remote terminal 
 	c. sensory
 	d. event-driven
 	
-36. __C___ programs are usually event driven.
+36. __C___ programs are usually event-driven.
 	a. Command line
 	b. Text-based
 	c.GUI
@@ -218,73 +218,73 @@ Multiple Choice
 	
 	
 TRUE or False
-1. Today, CPUs are huge devices made of electrical and mechanical components such as vacuum tubes and switches.False
-2. Main memory is also know as RAM. False
+1. Today, CPUs are huge devices made of electrical and mechanical components such as vacuum tubes and switches. False
+2. Main memory is also known as RAM. False
 3. Any piece of data that is stored in a computer's memory must be stored as a binary number.TRUE
-4. Images, such as the ones you make will your digital camera, cannot be stored as binary numbers.False
-5. Machine language is the inly language that a CPU understands. TRUE
-6. Assembly language is the only language that a CPU understands False
-7. An interperter is a program that both translates and executes the instructions in a high-level language program. True
+4. Images, such as the ones you make will your digital camera, cannot be stored as binary numbers. False
+5. Machine language is the only language that a CPU understands. TRUE
+6. Assembly language is the only language that a CPU understands. False
+7. An interpreter is a program that both translates and executes the instructions in a high-level language program. True
 8. A syntax error does not prevent a program from being compiled and executed. False
-9. Windows, Linux, UNIX, and Mac OS are all examnpls of application software. False
-10. WOrd processing processing, spreadsheet programs, e-mail programs, Web browsers, and games are all examples of utility prgrams. True
-11.Programmers must be careful not to make syntax errors when writing pseudocode programs.	False
+9. Windows, Linux, UNIX, and Mac OS are all examples of application software. False
+10. Word processing, spreadsheet programs, e-mail programs, Web browsers, and games are all examples of utility programs. True
+11. Programmers must be careful not to make syntax errors when writing pseudocode programs.	False
 12. C# provides only the basic keywords and operators that you need to construct a program. False
 	
 	
 Short Answer
 
 1. Why is the CPU the most important component in a computer?
-	It preforms all computation tasks. 
+	It performs all computation tasks. 
 	
 2. What number does a bit that is turned on represent? What number does a bit that is turned off represent?
-	the number one represents a bit that is turned on. The number 0 represents a but that is turened off.
+	The number one represents a bit that is turned on. The number 0 represents a bit that is turned off.
 	
 3. What would you call a device that works with binary data?
 	The device that works with streams of binary data is called a computer.
 	
 4. What are the words that make up a high-level programming language called?
-	Code is writen with keywords, numbers and ASCII characters
+	Code is written with keywords, numbers, and ASCII characters.
 
 5. What are the short words that are used in assembly language called? 
 			Commands.
 			
-6. What is the deifference between a compiler and an imperter?
-	The compiler converts code into mechine code, and the imperter reads the mechine code and runs it.
+6. What is the difference between a compiler and an interpreter  ?
+	The compiler converts code into machine code, and the interpreter reads the machine code and runs it.
 
 7. What type of software controls the internal operations of the computer's hardware?
 	The operating system.
 
 8. What is pseudocode? What is a flowchart?
-	pseudocode is the shorthand version of code, a flowchart demonstrates the flow of data.
+	Pseudocode is the shorthand version of code, a flowchart demonstrates the flow of data.
 
-9. When a prgram runs in a text-based environment, such as a command line interface, what determines the order in which things happens?
-	The order it is typed in the code file.
+9. When a program runs in a text-based environment, such as a command line interface, what determines the order in which things happen?
+	The order is typed in the code file.
 	
 	
 10. What does a class specify about an object?
-	Classes specify what methods and variables the object hold.
+	Classes specify what methods and variables the object holds.
 	
 11. Can you use C# alone to perform advanced operations such as creating GUIs, reading data from a file, or working with databases? Why or why not?
-	Yes, C# has a built in GUI(forms), you might use sql or postgres fir data bases, but c# supports files data streams.
+	Yes, C# has a built-in GUI(forms), you might use SQL or postgres for databases, but c# supports file data streams.
 	
 12. Figure 1-49 shows the Visual Studio IDE. What are the names of the four areas that are indicated in the figure?
-	1.Toolbox
-	2.code window 
-	3.Solution Explorer 
-	4.properites
+	1. Toolbox
+	2. code window 
+	3. Solution Explorer 
+	4.properties
 	
 13. What is the purpose of the Toolbox in the Visual Studio environment
-	Drag and drop event basesd components.
+	Drag and drop event based components.
 
-14. How can you access the documentation for Visual Studio? What resoirces are provided by the MSDN Libary?
-		microsoft devlopers netword provides the c# documentation. 
+14. How can you access the documentation for Visual Studio? What resources are provided by the MSDN Libary?
+		Microsoft developers network provides the c# documentation. 
 
-15. What steps mush you take to open an existing project?
+15. What steps must you take to open an existing project?
 	open visual studio code, and select the recent project
 	
-16.How can you view the project's form if it is not automatically displayed in the Designer?
-	By running the program.
+16. How can you view the project's form if it is not automatically displayed in the Designer?
+	To view the projecrs running the program.
 	
 Programming Problems
 1. Use what you've learned about the binary numbering system in this chapter to convert the following decimal numbers to binary:
@@ -293,7 +293,7 @@ Programming Problems
 	100 ~1100100
 	255 ~ 11111111
 	
-2. Use what you've learned about the binary numbering system in this chapter to convert the following binary numbers to decimal:
+2. Use what you've learned about the binary numbering system in this chapter to convert the following binary numbers to decimals:
 	1101 ~ 13
 	1000 ~ 8
 	101011 ~ 43
@@ -306,9 +306,9 @@ Programming Problems
 	K~75
 	A~65
 
-4. Suppose your instructor gives three exams during the semester and you want to write a program that calculates your average exam score. Answer the following:
+4. Suppose your instructor gives three exams during the semester, and you want to write a program that calculates your average exam score. Answer the following:
 		a. What items of input must the user enter?
-		b. Once the input has  been entered, how will the program determine the average?
+		b. Once the input has been entered, how will the program determine the average?
 		c. What output will the program display?
 		
 		a. The grades of each exam

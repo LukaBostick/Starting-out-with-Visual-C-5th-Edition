@@ -109,22 +109,40 @@ True or False
 
 Short Answer
 1. List the places that a structure can be declared in code.
-2. Assume an application contains a structure named Fruit. Write a statement that demonstrates how you would create a List that can holder Fruit objects/
+
+	1. Outside the application's namespace
+	2. Inside the application's namespace
+	3. Inside a class
+	4. Inside another structure
+	
+2. Assume an application contains a structure named Fruit. Write a statement that demonstrates how you would create a List that can holder Fruit objects
+	List<Fruit> FrutList = new List<Fruit>();
+	
 3. What will the following code display?
 	Dictionary <string, int> dct = new Dictionary<string, int>()
 	{
-		{}
-		{}
-		{}
+		{"Monday", 1},
+		{"Tuesday", 2},
+		{"Wednesday",3}
 	};
 	MessageBox.Show(dct["Tuesday"].ToString());
+	
+	2
 
 4. How do you delete an element from a dictionary?
+	 Dictionary.Remove("Value")
+
 5.How do you determine the number of elements that are stored in a dictionaty
+
+	Store the Dictionary Elements in an List, call the list.length method
+
 6.Can enumerators be used in a loop to step through the elements of an arrray? Why or why not?
+	
+	You could iterate through a list of items until the value of item is equated to the enumerated value
+
 7.Why should you use the new operator when creating instances of a structure?
 
-
+	The new operator is used to instantiate an object. So in order to create an object, you need to use the new operator.
 Algorithm Workbench
 
 1. Look at the following structure declaration:
@@ -135,20 +153,66 @@ Algorithm Workbench
 		public int hoursepower
 		public int torque;
 	}
-Write a method that accets two Engine structures as arguments, determines if the two structures are equal, and return the the Boolen value true if the structures are equal or false if the structures are not equal.
+Write a method that accepts two Engine structures as arguments, determines if the two structures are equal, and return the the Boolen value true if the structures are equal or false if the structures are not equal.
 
-2. Declare an enumerated data type type named Direction with enumerators for North, South, East, and West.
+	private bool compareStruc(ref Engine E1, ref Engine E2)
+	{
+		try
+		{
+			if(E1.cylinders==E2.cylinders && 
+			   E1.hoursepower==E2.hoursepower &&
+			   E1.torque==E2.torque )
+			   {
+					return true;
+			   }
+			   return false;
+		}
+		catch(Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		
+		{
+	}
 
+2. Declare an enumerated data type named Direction with enumerators for North, South, East, and West.
+	enum Direction
+	{
+		North,
+		South,
+		East,
+		West
+	}
+	
+	
 3. Give an example of instantiating a DateTime object named dt, initialized with the data Augest 22, 1965.
-
+	DateTime dt = new DateTime(1965, 8, 22);
+	
 4. data and date2 are DateTime objects containing two difference dates. Write code that displays the values of theses two objects in chronological order.
-
+	if(data.ToString("T") > data2.ToString("T"))
+	{
+		Console.WriteLine(data);
+	}
+	else
+	{
+		Console.WriteLine(data2);
+	}
 5. Given the following declaration, write code that uses a TimeSpan object to add five days to the data1 object and assigns the result to a second DateTime object named data2.
 
 		DateTime date1 = new DateTime(1977,3,22);
+	   // Create a TimeSpan object for 5 days.
+	   TimeSpan tspan = new TimeSpan(5,0,0,0);
+	   
+	   // Add the TimeSpan object to the DateTime object.
+	   DateTime futureDate = date1 + tspan;
 		
 6. Write a statement that defines a Dictionary named food. The Keys should be string s, and the values should be int s.
-
+ Dictionary<string,int> Food = new Dictionary<int, string>()
+  {
+   {"Pizza",101},
+   {"Hotdog",102},
+   {"Hamburger",103},
+   {"Soda",104}
+  };
 7. Suppose a program declares a Dictionary as follows:
 
 Dictionary<int, string> customers = new Dictionary<int, string>();
@@ -159,699 +223,34 @@ Write statements that use the Dictionary class's Add method to insert the follow
 	9002,	"Frank Smith"
 	9003,	"Geri Rose"
 	
+	
+	Dictionary<int, string> customers = new Dictionary<int, string>();
+	{
+	{9001,	"Jen Williams"},
+	{9002,	"Frank Smith"},
+	{9003,	"Geri Rose"}
+	};
 8. Suppose a program has the following Dictionary definition:
 	
 	Dictionary<int, string> customers = new Dictionary<int, string>();
 	
 Write a for loop that iterates over the Dictionary. Each element's key should be added to ListBox named customerListBox.
 
+	Dictionary<int, string> customers = new Dictionary<int, string>();
+	foreach(KeyValuePair<int, string> element in customers)
+   {
+       CustomeristBox.Items.Add("ID: " + element.Key + " Name: " + element.Value);
+   }
+   
 9. Suppose a program has the following Dictionary definition:
 
-	Dictionary<int, string> customers = new Dictionary<int, string>();
+	     
 
 Write an if statement that determines whether the key 999 exisits in the Dictionary. If the key exists, display the message "Customer 999 found" in a message box. Otherwise, display the message "Customer 999 not found."
-
-
-
-Adjetivos posesivos
-Write the correct possessive adjective for each sentence.
-
-Question 1 with 1 blank
-Susana es (my) "" tía.
-
-Question 2 
-(your, fam.)  "" familia no está en casa.
-
-Question 3 ¿Son (your, form.)"" padres?
-
-Question 4 
-(our) "" primos son de Venezuela.
-
-Question 5 
- Son (their) "" hermanos.
-
-
-La familia
-Complete the following text about family by choosing the correct possessive adjectives.
-¡Hola, soy Jaime!  "" familia es muy grande.
-
-Somos cinco hermanos, dos perros y dos gatos. 
- "" padres se llaman Victoria y Manuel.
- Son de México. "" padres, es decir, mis abuelos, son de México también. 
- 
- nombres son Margarita y Pedro. ¡Siempre vamos a "" casa por Navidad!
-
-
-
-Preguntas
-
-Answer the following questions using the correct possessive adjective.
-
-Modelo
-¿Es una mochila? (my)
-
-Example answer
-
-Sí, es mi mochila.
-
-End example answer
-
-1. ¿Son los padres? (our) ""
-2.¿Son las profesoras? (your, fam.)
-3.¿Son los amigos? (their)
-4.¿Es la clase de música? (your, form.)
-5.¿Es el libro de inglés? (my)
-6.¿Es la computadora de usted? (your, form.)
-
-
-Escribir
-Rewrite these phrases with a possessive adjective.
-
-Modelo
-Los parientes de él
-
-Example answer
-
-Sus parientes
-
-End example answer
-
-1. Los padres de Marta y María
-2. El amigo de Juan
-3. La prima de Héctor y mía (mine)
-4. Las hermanas de Francisco
-
-Choose the correct verb forms.
-
-Nosotros "" con lápiz.
-
-escribimos, escriben, escribes, escribe
-
-Choose the correct verb forms.
-
-Usted "" mucha pizza, ¿verdad?
-
-comen, come, como, comes
-
- Present tense of -er and -ir verbsInteractive video Activity
-
-Fill in the verb forms
-
-1. El señor Ortiz "" en una casa grande. (vivir)
-2. ¿Usted "" a bailar, señora? (aprender)
-3. La profesora "" la ventana. (abrir)
-4. ¿A qué hora "" a tu clase de historia? (asistir)
-5. Mis primos "" a hablar alemán. (aprender)
-6. La hija ""una soda. (beber)
-7. Mis hermanas no "" sus cosas. (compartir)
-8. Nosotros "" asistir a todas las clases. (deber)
-9. Mis padres no "" Internet. (comprender)
-10. Mis abuelos "" mil dólares. (recibir)
-
-Verbo leer
-Write the present-tense conjugation for the verb leer
-
-1 .yo ""
-2 tú ""
-3 Ud./él/ella 
-4 nosotros/as 
-5 Uds./ellos/ellas
-
-Completar
-Complete these sentences with the correct present-tense conjugation of each verb.
-
-1 Gustavo (correr) por la mañana.
-
-2 Yo (vivir) "" en España.
-
-3 Luisa y Martín (asistir) "" a las clases.
-
-4 El niño (escribir) "" en su diario.
-
-5 "" Nosotras (comer) en la ciudad.
-
-
-Completar
-Complete these sentences with the correct present-tense conjugation of each verb.
-Modelo
-
-Pepe / vivir / Costa Rica.
-
-Example answer
-
-Pepe vive en Costa Rica.
-
-End example answer
-
-1. Mi hermano / deber / estudiar / francés
-2. Nosotros / recibir / estudiantes / ingleses
-3. Mis padres / beber / vino / cena
-4. Lucía / compartir / su almuerzo
-5. Ustedes / abrir / puerta
-
-Mis amigos
-Complete the following text about a group of friends by using the present tense of the verbs.
-
- Mis amigos (ser) "" muy diferentes. Manuel (correr) "" todos los días y (aprender) "" deportes nuevos. Pero a Roberto no le gusta el deporte.
- Él (leer) "" muchos libros y (asistir) "" al teatro. ¡Todos somos diferentes!
- 
- 
- 
- ¡Inténtalo!
-
-Fill in the blanks with the present tense of the indicated verbs.
-
-Modelo
- 
-
-Example answer
-
-Graciela corre
-
-End example answer.
-
-correr
-Question 1 Tú "".
-Question 2 Yo "".
-Question 3 Sara y Ana "".
-Question 4 Usted "".
-Question 5 Marcos y yo "".
-Question 6 La gente "".
-Question 7 Ustedes"".
-
-Modelo
-Ellos 
-Example answer
-abren
-
-End example answer
-
- la puerta.
-
-abrir
-
-Question 8 Carolina "" la maleta.
-Question 9 Yo ""las ventanas.
-Question 10 Usted "" el cuaderno.
-Question 11 Nosotras "" los libros.
-Question 12 Tú "" la ventana.
-Question 13 Ustedes "" las maletas.
-Question 14 Los muchachos "" los cuadernos.
-
-Modelo
-Él 
-Example answer
-aprende
-
-End example answer
- español..
-
-aprender
-Question 15 Maribel y yo "" inglés.
-Question 16 Tú ""japonés.
-Question 17 Mi hijo "" chino.
-Question 18 Tú y tu hermanastra ""francés.
-Question 19 Yo ""alemán.
-Question 20 Usted "" inglés.
-Question 21 Nosotros ""italiano.
-
-Select the correct conjugation for each pronoun.
-Questions
-1.  nosotros
- viven
- vives
- vivimos
- vivo
-2.  tú
- come
- comen
- comes
- como
-3.  ustedes
- comparte
- comparten
- compartes
- compartimos
-4.  yo
- cree
- creemos
- crees
- creo
-5.  ella
- aprende
- aprenden
- aprendes
- aprendo
- 
- Select the correct verb forms to complete the sentences.
-Questions
-
-1.Tu sobrino Samuel y mi hijastra Isabel "" a la misma escuela.
-2.Carlos, tú estás gordo porque "" mucho.
-3.Juana ""que su novio es inteligente y simpático, pero yo "" que es un poco tonto.
-4.Mi esposa y yo ""el periódico todas las mañanas a las 7:00 a.m. y ""juntos (together) las noticias.
-5.Aníbal y yo "" viajar a un país sudamericano este año.
-6. Para estar saludable (healthy), yo ""correr todos los días y beber mucha agua.
-
-
-Fill in the blanks with the correct forms of the verbs. One of the verbs will remain in the infinitive.
-Questions
-
-Question 1 Mi familia y yo " " (vivir) en Mérida, Yucatán.
-
-Question 2 Tengo muchos libros. Me gusta ""(leer).
-
-Question 3 Mi hermano Alfredo es muy inteligente. Alfredo 1 of 1
- (asistir) a clases los lunes, miércoles y viernes.
-
-Question 4 Los martes y jueves, Alfredo y yo ""(correr) en el Parque del Centenario.
-
-Question 5 Mis padres "" (comer) mucha lasaña los domingos y se quedan dormidos (they fall asleep).
-Question 6 Yo "" (creer) que (that) mis padres deben comer menos (less).
-
-
-
-Form complete sentences by adding any other necessary elements. Follow the model.
-Questions
-Modelo
-yo / correr / amigos / lunes y miércoles
-
-Example answer 
-Yo corro con mis amigos los lunes y miércoles.
-End example answer
-
-Question 1 with 1 blank
-Manuela / asistir / clase / yoga
-""
-
-Question 2 with 1 blank
-Isabel y yo / leer / la biblioteca
-""
-
-Question 3 with 1 blank
-Sofía y Roberto / aprender / hablar / inglés
-""
-
-Question 4 with 1 blank
-Eugenio / abrir / correo electrónico (e-mail)
-""
-
-Question 5 with 1 blank
-tú / comer / cafetería / universidad
-""
-
-Question 6 with 1 blank
-mi novia y yo / compartir / el libro de historia
-""
-
-
-Mario and his family are spending a year abroad to learn Japanese.
- Use words from the list to indicate what he and/or his family members are doing or should do to adjust to life in Japan.
- Then, create one more sentence using a verb not on the list.
- 
- Modelo
-recibir libros / deber practicar japonés
-
-Example answer
-
-Mario y su esposa reciben muchos libros en japonés.
- Los hijos deben practicar japonés.
- 
- 
- word List:
- 
-aprender japonés
-decidir explorar el país
-asistir a clases
-escribir listas de palabras en japonés
-beber té (tea)
-leer novelas japonesas
-deber comer cosas nuevas
-vivir con una familia japonesa
-
-
-Fill in the blanks with the correct forms of the indicated verbs.
-Questions
-Modelo
-vender
-
-— ¿Qué Example answervendesEnd example answer tú?
-
-— Example answer
-Vendo
-End example answer 
-
-libros en la librería.
-
-leer
-Question 1 — ¿Qué ""tú, Ana?
-Question 2 — ""un libro de historia.
-
-vivir
-Question 3 — ¿Dónde "" ustedes?
-Question 4 - Nosotros ""en Nueva York. ¿Y tú?
-
-comer
-Question 5 — ¿Qué ""ustedes?
-Question 6 — Yo "" un sándwich y Eduardo "" pizza.
-
-deber
-Question 7 — Profesora, ¿ "" abrir nuestros libros ahora?
-Question 8 — Sí, ustedes "" abrir los libros en la página (page) 87.
-
-escribir
-Question 9 — ¿ "" un libro, Melinda?
-Question 10 — Sí, ""un libro de ciencia ficción.
-
-Fill in the blanks with the correct form of the verb.
-Questions
-Modelo
-Ellos Example answervivenEnd example answer (vivir) en la residencia estudiantil.
-
-Question 1 (nosotros) "" (escribir) muchas composiciones en la clase de literatura.
-Question 2 Esteban y Luisa "" (aprender) a bailar el tango.
-Question 3 ¿Quién no "" (comprender) la lección de hoy?
-Question 4 (tú) ""(deber) comprar un mapa de Quito.
-Question 5 Ellos no ""(recibir) muchos mensajes electrónicos (e-mails) de sus padres.
-Question 6 (yo)"" buscar) unas fotos de mis primos.
-
-
-Modelo
-La profesora Example answerviveEnd example answer (recibir, escribir, vivir) en Chicago.
-
-Question 1 	Tú ""(abrir, correr, decidir) en el parque (park), ¿no?
-Question 2 Yo ""(asistir, compartir, leer) a conciertos de Juanes.
-Question 3 ¿""(aprender, creer, deber) a leer tu sobrino?
-Question 4 Yo no "" (beber, vivir, comprender) la tarea de física.
-Question 5 Los estudiantes ""(escribir, beber, comer) hamburguesas en la cafetería.
-Question 6 Mi esposo y yo ""(decidir, leer, deber) el Miami Herald.
-
-Rewrite each sentence using the subject in parentheses. Change the verb form and possessive adjectives as needed.
-Questions
-Modelo
-Carolina no lee sus libros. (nosotros)
-
-Example answerNosotros no leemos nuestros libros.End example answer
-
-Question 1  blankRubén cree que la lección 3 es fácil. (ellos)
-""
-
-Question 2 
-Mis hermanos aprenden alemán en la universidad. (mi tía)
-""
-
-Question 3 
-Aprendemos a hablar, leer y escribir en la clase de español. (yo)
-""
-
-Question 4 
-Sandra escribe en su diario todos los días (every day). (tú) 
-""
-
-Question 5 
-Comparto mis problemas con mis padres. (Víctor)
-""
-
-Question 6 
-Vives en una residencia interesante y bonita. (nosotras)
-""
-
-Answer Valeria's questions.
-
-1.Hola. ¿Con quién vives en la residencia estudiantil?
-2.Qué bien. ¿Dónde comen tus compañeros de clase al mediodía?
-3.¿Ah, sí? ¿Y qué cursos deben tomar ustedes el próximo semestre?
-4.Excelente. ¡Nos vemos!
-
-
-
-Tener y venir
-Write the present-tense conjugation for the verbs tener and venir.
-Tener
-
-Question 1 Yo "" 15 años.
-Question 2 Tú ""dos hermanos.
-Question 3 Ellos ""un restaurante.
-
-
-Venir
-Question 4 Ella ""de la escuela.
-Question 5 Nosotros ""los jueves.
-Question 6 Ana y yo ""a jugar.
-
-
-Unir
-Match the phrases to form full sentences.
-
-phrases bank
-tengo ganas de ir al cine
-viene de Bolivia
-tienen much calor
-tenemos sueño
-vienes de Italia
-
-1.Javi y Carlos ""
- 
-2.Yo ""
- 
-3.Nosotros ""
- 
-4.Tú ""
- 
-5.Laura ""
- 
-
-
-Expresiones
-Complete the following expressions with the present-tense form of the verb tener.
-
-Question 1 Los niños "" mucha hambre.
-Question 2 Raquel "" frío en el jardín.
-Question 3 Yo "" cuidado al caminar.
-Question 4 Daniel siempre "" mucha suerte.
-Question 5 No, tú no "" razón.
-
-
-
-Escribir
-Write complete sentences with the words provided and the present-tense form of tener or venir.
-Modelo
-Mi hermanita/ sueño
-
-Example answer
-Mi hermanita tiene sueño.
-End example answer
-
-1. Alicia / ganas de / estudiar
-""
-
-2.Tú / que / trabajar / mañana
-""
-
-3.Yo / de / la tienda de ropa
-""
-
-4.Mercedes y yo / a / comer
-""
-
-
-Review the vocabulary you have learned in this lesson by completing these activities. After you submit, you will have the opportunity to do extra practice activities.
-Questions
-1
-Select the word that corresponds to each description.
-1.  la madre de mi madre
- mi tía
- mi abuela
- mi cuñada
-2.  el esposo de mi hermana
- mi primo
- mi cuñado
- mi nieto
-3.  la mujer (wife) de mi hijo
- mi madre
- mi nuera
- mi hijastra
-4.  el esposo de la hermana de mi padre
- mi tío
- mi primo
- mi gemelo
-5.  el hijo de mi hijo
- mi tío
- mi sobrino
- mi nieto
-6.  la hija de mi tío
- mi prima
- mi tía
- mi cuñada
-7.  el padre del padre de mi padre
- mi padrastro
- mi bisabuelo
- mi abuelo
-8.  el esposo de mi hija
- mi hijo
- mi hijastro
- mi yerno
-2
-Complete the sentences.
-Word Bank reference
-Your options are:
-amigo,
-apellido,
-gente,
-médica,
-muchacho,
-novia,
-persona,
-programador,
-suegro,
-
-
-Question 1  Te presento a mi "" Pablo. Somos compañeros de cuarto.
-Question 2  Marina trabaja en un hospital. Es "".
-Question 3  Los padres de mi ""son de Ecuador.
-Question 4  El padre de mi esposo, mi "", regresa el lunes de Florida.
-Question 5  Los lunes hay mucha "" en la biblioteca.
-Question 6  La especialización de Nicolás es computación. Él desea ser "".
-Question 7  Mi "" es García.
-
-3
-Select the word that doesn't belong.
-1.  
- doctor
- niño
- médico
- periodista
-2.  
- muchacho
- chico
- joven
- apellido
-3.  
- amiga
- sobrina
- tía
- prima
-4.  
- ingeniero
- primo
- sobrino
- tío
-5.  
- familia
- parientes
- padres
- artista
- 
- Review the grammar concepts you have learned in this lesson by completing these activities. After you submit, you will have the opportunity to do extra practice activities for all grammar concepts.
-Questions
-1
-AdjetivosComplete each phrase with the appropriate adjective from the list. Make all necessary changes.
-Word Bank reference
-Your options are:
-antipático,
-difícil,
-interesante,
-joven,
-mexicano,
-moreno,
-Question 1 with 1 blank
-Mi tía es 1 of 1
-. Vive en Guadalajara.
-Question 2 with 1 blank
-Mi primo no es rubio, es 1 of 1
-.
-Question 3 with 1 blank
-Mi novio cree que la clase no es fácil; es 1 of 1
-.
-Question 4 with 1 blank
-Los libros son 1 of 1
-; me gustan mucho.
-Question 5 with 1 blank
-Mis hermanos son 1 of 1
-; no tienen muchos amigos.
-Question 6 with 1 blank
-Las gemelas tienen quince años. Son 1 of 1
-.
-2
-CompletarFor each set of sentences, provide the appropriate form of the verb tener and the possessive adjective. Follow the model.
-Modelo
-Él Example answertieneEnd example answer un libro. Es Example answersuEnd example answer libro.
-
-Question 1 with 2 blanks
-Esteban y Julio 1 of 2
- una tía. Es 2 of 2
- tía.
-Question 2 with 2 blanks
-Yo 1 of 2
- muchos amigos. Son 2 of 2
- amigos.
-Question 3 with 2 blanks
-Tú 1 of 2
- tres primas. Son 2 of 2
- primas.
-Question 4 with 2 blanks
-María y tú 1 of 2
- un hermano. Es 2 of 2
- hermano.
-Question 5 with 2 blanks
-Nosotras 1 of 2
- unas mochilas. Son 2 of 2
- mochilas.
-Question 6 with 2 blanks
-Usted 1 of 2
- dos sobrinos. Son 2 of 2
- sobrinos.
-3
-OracionesArrange the words in the correct order to form complete logical sentences. ¡Ojo! Don't forget to conjugate the verbs.
-Question 1 with 1 blank
-libros / unos / tener / interesantes / tú / muy
-1 of 1
-Question 2 with 1 blank
-dos / leer / fáciles / compañera / tu / lecciones
-1 of 1
-Question 3 with 1 blank
-mi / francés / ser / amigo / buen / Hugo
-1 of 1
-Question 4 with 1 blank
-ser / simpáticas / dos / personas / nosotras
-1 of 1
-Question 5 with 1 blank
-a / clases / menores / mismas / sus / asistir / hermanos / las
-1 of 1
-4
-CartaComplete this letter with the appropriate forms of the verbs in the word list. Not all verbs will be used.
-Word Bank reference
-Your options are:
-abrir,
-asistir,
-compartir,
-comprender,
-correr,
-creer,
-escribir,
-leer,
-recibir,
-tener,
-venir,
-vivir,
-Question 1 with 11 blanks
-Hola, Ángel:
-¿Qué tal? (Yo) (1) 1 of 11
- esta carta (this letter) en la biblioteca. Todos los días (2) 2 of 11
- aquí y (3) 3 of 11
- un buen libro. Yo (4) 4 of 11
- que es importante leer por diversión. Mi compañero de apartamento no (5) 5 of 11
- por qué me gusta leer. Él sólo (6) 6 of 11
- los libros de texto. Pero nosotros (7) 7 of 11
- unos intereses. Por ejemplo, los dos somos atléticos; por las mañanas nosotros (8) 8 of 11
-. También nos gustan las ciencias; por las tardes (9) 9 of 11
- a nuestra clase de biología. Nosotros (10) 10 of 11
- en un apartamento que está cerca del laboratorio.Y tú, ¿cómo estás? ¿(Tú) (11) 11 of 11
- mucho trabajo (work)?
-5
-ProverbioComplete this proverb with the correct forms of the verbs in parentheses.
-A handful of dollar bills are laid underneath a stack of coins.
-Question 1 with 2 blanks
-"Dos andares (speeds) 1 of 2
- (tener) el dinero (money), 2 of 2
- (venir) despacio (slowly) y se va ( it leaves) ligero (quickly)."
+if(!custimer.ContainsKey(999))
+  {
+   MeassageBox.Show("Customer 999 found");
+  }
+ else{
+	MeassageBox.Show("Customer 999 not found");
+ }
