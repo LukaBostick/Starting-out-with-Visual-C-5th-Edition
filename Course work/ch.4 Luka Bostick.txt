@@ -4,25 +4,25 @@
 	c. decision
 	d. Boolean
 	
-2.A ___ structure provides one alternative path of execution.
+2.A __B_ structure provides one alternative path of execution.
 	a. sequence
 	b. single-alternative decision
 	c. one-path alternative
 	d. single-execution decision
 	
-3.A(n) ____ expression has a value of wither true or false.
+3.A(n) __B__ expression has a value of wither true or false.
 	a. binary
 	b. decision
 	c. unconditional
 	d. Boolean
 	
-4. The symbols >,<, and == are all ____ operators.
+4. The symbols >,<, and == are all __B__ operators.
 	a. relational 
 	b. logical
 	c. conditional
 	d. ternary
 
-5.A ___ structure tests a condition and then takes one path if the condition is true or another path if the consition is false.
+5.A _C__ structure tests a condition and then takes one path if the condition is true or another path if the consition is false.
 	a.miltibranch statement
 	b.single-alternative
 	c.dual-alternative decision

@@ -4,91 +4,91 @@
 	c. value type
 	d. framwork type
 	
-2.A variable that is used to reference an object is commonly called a(n)____.
+2.A variable that is used to reference an object is commonly called a(n)__A__.
 	a. reference variable
 	b. resource variable
 	c. object variable
 	d. component variable
 	
-3.When you want to work with an object, you use a variable that holds a special value known as a(n) _____ to link the variable to the object.
+3.When you want to work with an object, you use a variable that holds a special value known as a(n) ___B__ to link the variable to the object.
 	a. union
 	b. reference
 	c. object linker
 	d. data coupling
 
-4.The _____ creates an object in memory and returns a reference to that object
+4.The ___C__ creates an object in memory and returns a reference to that object
 	a. = operator
 	b. object allocator
 	c. reference variable
 	d. new operator
 	
-5.A(n) _____ is an object that can hold a group of values that are all of the same data type.
+5.A(n) __A___ is an object that can hold a group of values that are all of the same data type.
 	a. array
 	b. collection
 	c. container
 	d. set
 	
-6. The _____ indicates the number of values that the array should be able to hold.
+6. The ___B__ indicates the number of values that the array should be able to hold.
 	a. allocation limit
 	b. size declarator
 	c. data type
 	d. compiler
 	
-7.	The storage locations in an array are known as _____.
+7.	The storage locations in an array are known as __A___.
 	a. elements
 	b. sectors
 	c. pages
 	d. blocks
 	
-8. each element in an array is assigned a unique number known as a(n)_____.
-	a.element identifier
-	b.subscript
+8. each element in an array is assigned a unique number known as a(n)___C__.
+	a. element identifier
+	b. subscript
 	c. index
 	d. sequencer
 	
-9. When you create ab array, you can optionally initialize it with a group of values called a(n)_____.
+9. When you create an array, you can optionally initialize it with a group of values called a(n)__B___.
 	a. default value group
 	b. initialization list
 	c. defined set
 	d. value list
 	
-10. In C#, all arrays have a _____ that is set to the number of elements in the array.
+10. In C#, all arrays have a ___B__ that is set to the number of elements in the array.
 	a. Limit property
 	b. Size property
 	c. Length property
 	d. Maximum property
 	
-11.A(n) ______ occurs when a loop iterates one time too many or one time too few.
+11.A(n) __D____ occurs when a loop iterates one time too many or one time too few.
 	a. general error
 	b. logic error
 	c. loop count error
 	d. off-by-one error
 	
-12.C# provides a special loop that, in many citcumstances, simplifies array processing. It is known as the _____.
+12.C# provides a special loop that, in many citcumstances, simplifies array processing. It is known as the ___B__.
 	a. for loop
 	b. foreach loop
 	c. while loop
 	d. do-while loop
 	
-13.The foreach loop designed to work with a temporary, read-only variable that is known as the ______.
+13.The foreach loop designed to work with a temporary, read-only variable that is known as the ___B___.
 	a. element varible
 	b. loop variable
 	c. index variable
 	d. iteration variable
 	
-14._______ is a process that periodically runs, removing all unreferenced objects from memory.
+14.____C___ is a process that periodically runs, removing all unreferenced objects from memory.
 	a. Systematic reallocation
 	b. Memory cleanup
 	c. Garbage collection
 	d. Object maintenance
 	
-15. Various techniques know as _____ have been devloped to locate a specific item in a larger collection of data, such as an array.
+15. Various techniques know as ___D__ have been devloped to locate a specific item in a larger collection of data, such as an array.
 	a. Seek Functions 
 	b. request methods
 	c. traversal procedures
 	d. search algorithms
 	
-16. The _____ uses a loop to step though an array, starting with the first element, searching for an item.
+16. The ___A__ uses a loop to step though an array, starting with the first element, searching for an item.
 	a. Sequential search algorithm
 	b. top-down method
 	c. acending search algorithm
@@ -101,25 +101,25 @@
 	d. parallel copy
 	
 
-18. The ______ is a clever algorithm that is much more efficient than the sequential search.
+18. The ___C___ is a clever algorithm that is much more efficient than the sequential search.
 	a. linear search
 	b. bubble sort
 	c. binary search
 	d. selection sort
 	
-19.A _______ is similar to a two-dimensional array, but the rows can have differenc numbers of columns.
+19.A ____C___ is similar to a two-dimensional array, but the rows can have differenc numbers of columns.
 	a. one-dimensional array
 	b. columnar array
 	c. jagged array
 	d. split row array
 	
-20.The .NET Framework provides a class named _____, which can be used for storing and retrueving items.
+20.The .NET Framework provides a class named __D___, which can be used for storing and retrueving items.
 	a.Matrix
 	b.Database
 	c.Container
 	d.List
 	
-21.The ____ is a container that can hold nultiple images
+21.The ___A_ is a container that can hold nultiple images
 	a. ImageList control
 	b. GroupBox control
 	c. PictureBox control
@@ -127,36 +127,111 @@
 
 
 TRUE OR FALSE
-1. When you are working with a value type, you are using a variable that holds a piece of data.
-2. Reference varables can be used only to reference objects.
-3. Individual variables are well suited for storing and processing lists of data.
-4. Arrays are reference type objects.
-5. You can store a mixture of data types in an array.
-6. When you create a numeric array in C#, its elements are set to the value by default.
-7. The subscript of the last element will always be one less than the array's Length property.
-8. You use the == operator to compare two array reference variables and determine whether the arrays are equal.
-9. A jagged array is similar to a two-dimensional array, but the rows in a jagged array can have different number of columns.
-10. When you create a List object, you do not have to know the number of items that you intend to store in it.
-11. ImageList controls are designed to store small images such as icons or thumbnails.
+1. When you are working with a value type, you are using a variable that holds a piece of data. FALSE
+2. Reference varables can be used only to reference objects. TRUE
+3. Individual variables are well suited for storing and processing lists of data. FALSE
+4. Arrays are reference type objects.TRUE
+5. You can store a mixture of data types in an array.FALSE
+6. When you create a numeric array in C#, its elements are set to the value by default. FALSE
+7. The subscript of the last element will always be one less than the array's Length property. TRUE
+8. You use the == operator to compare two array reference variables and determine whether the arrays are equal. FALSE
+9. A jagged array is similar to a two-dimensional array, but the rows in a jagged array can have different number of columns.TRUE
+10. When you create a List object, you do not have to know the number of items that you intend to store in it.TRUE
+11. ImageList controls are designed to store small images such as icons or thumbnails.TRUE
 
 Short Answer
 1. How much memory is allocated by the compiler when you declare a value type variable?
+	The amount of memory is based on the type of variable declared
+	
 2. What type of variable is needed to work with an object in code?
-3. What two steps are typically required for creating a reference type object?
-4. After variables well suited for processing lists of data? why or why not?
-5. What value is returned by the Length property of an array?
-6. What can cause an off-by-one error when working with an array?
-7. How do you keep track of elements that contain data in a partially filled array?
-8. Briefly describe the selection sort algorithm.
-9. How is the binary search more efficient that the sequential search algorithm?
-10. What advantages does a List have over an array?
-11. What is the result if the value of the ImaageSize property does not match the size of the images that are stored in the ImageList control?
+	An object variable is required, in order for an argument to be an object the reference must be passed into the method
 
+3. What two steps are typically required for creating a reference type object?
+	declaring a variable, passing it as an argument to a method by reference.
+
+4. Are variables well suited for processing lists of data? why or why not?
+	Yes, variables are precessed one by one while iterating through a list.
+
+5. What value is returned by the Length property of an array?
+	The amount of reference varables declared in the array (exclusive)
+
+6. What can cause an off-by-one error when working with an array?
+	Couting the legnth of the array excluaivly insetead of inclusively 
+
+7. How do you keep track of elements that contain data in a partially filled array?
+	You assign the index to a variable.
+
+8. Briefly describe the selection sort algorithm.
+	Exclusively iterate through the list, save the value at the index of loop control variable,
+	loop through all of the indices ajacent to the curent temp value, if the value at the array
+	index lcv2 is larger than of the value at at the array of index lcv1 swap the values. On^2
+
+9. How is the binary search more efficient that the sequential search algorithm?
+	Binary search splits the list in half and then perform the steps of of the selection sort.
+	This method also makes it possible to preform multiple sort steps at the same time 
+	in separate asyncrounes threds.
+	
+10. What advantages does a List have over an array?
+	A list can store objects and variables of differing data types
+
+11. What is the result if the value of the ImageSize property does not match the size of the images that are stored in the ImageList control?
+	The images will appear distored when you display them.
 Algorithm Workbench
 1. Assume names is a variable that references an array of 20 string values. Write a foreach loop that displays each of the elements of the array in a ListBox control.
-2. The variables numberArray1 and numberArray2 reference arrays have 100 elements each. Write code that copies the values from numberArray1 to numberArray2.
+
+	foreach(string str in sList)
+        {
+            outputListBox.Items.Add(values[str.IndexOf()];
+        }
+		
+2. The variables numberArray1 and numberArray2 reference arrays that have 100 elements each. Write code that copies the values from numberArray1 to numberArray2.
+
+`	 // Create a two arrays
+    const int ROWS = 100;
+    
+    int[] numberArray1 = new int[ROWS];
+    int[] numberArray2 = new int[ROWS];
+ 
+    // Fill the array with random numbers.
+    for(int row = 0; row < ROWS; row++)
+    {
+      numberArray1[row] = numberArray2[row];
+    }
+
 3. Write code for a sequential search that determines whether the value -1 is stored in an array with a reference variable named values. The code should display a message indicating whether the value was found. 
+
+	int value = 0;
+     int[] arr = new  int[];
+	 
+        while (true)
+        {
+					//sentan
+            if ( arr[value]== "-1")
+            {
+			 Console.WriteLine($"-1 wasfound");
+                break;
+            }
+            value++;
+        }
+
+        Console.WriteLine($"-1 was not found");
+    }
 4. Write a declaration statement that creates a two-dimensional array referenced by a variable named grades. The array should store int values using 18 rows and 12 columns.
+	// Create a two-dimensional int array
+    const int ROWS = 18;
+    const int COLS = 12;
+    int[,] grades = new int[ROWS,COLS];
+   
+   
 5. Write code that sums each column in the array in Question 4.
+	int sun = 0;
+	
+   for(int cols = 0; cols < COLS; cols++)
+   {
+       sum += grades[0,cols]; 
+   }
+
 6. Create a List object that uses the binary search algorithm to search for the string "A". Display a message box indicating whether the value was found.
+
+	
 7. Write a statement that retrieves the image stored at index 0 from an ImageList control named slideShowImageList and displays it in a PictureBox control named slideShowPictureBox.
