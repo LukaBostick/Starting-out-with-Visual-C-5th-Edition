@@ -9,9 +9,6 @@ namespace code.ch9
     internal class Class1
     {
 
-        static void Main()
-        {
-
-        }
+        
     }
 }

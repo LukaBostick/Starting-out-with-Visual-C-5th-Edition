@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "code", "code.csproj", "{5DAE0F67-3471-4EE2-AE6A-F67D2D9624B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. DRIVE'EXAM", "4. Driver'\4. DRIVE'EXAM.csproj", "{7A5DED11-33F1-4798-A2CE-E3CBC8882AB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5DAE0F67-3471-4EE2-AE6A-F67D2D9624B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5DAE0F67-3471-4EE2-AE6A-F67D2D9624B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5DAE0F67-3471-4EE2-AE6A-F67D2D9624B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5DAE0F67-3471-4EE2-AE6A-F67D2D9624B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5DED11-33F1-4798-A2CE-E3CBC8882AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5DED11-33F1-4798-A2CE-E3CBC8882AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5DED11-33F1-4798-A2CE-E3CBC8882AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5DED11-33F1-4798-A2CE-E3CBC8882AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {54369C20-3C9C-46E1-8EF6-4DEEF897E91C}
+		SolutionGuid = {29FE7F4E-938C-4C92-9795-E9FC325C71D0}
 	EndGlobalSection
 EndGlobal
