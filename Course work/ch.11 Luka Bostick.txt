@@ -1,143 +1,163 @@
-1.When one object is a specialized version of another object, there is an _____ between them.
+1.When one object is a specialized version of another object, there is an ___A__ between them.
 	a."is a" relationship
 	b.innate association
 	c.inherent union
 	d.unbreakable union
 	
-2.In an inheritance relationship, the _____ is the general class.
+2.In an inheritance relationship, the __B___ is the general class.
 	a.derived class
 	b.base class
 	c.dependent class
 	d.child class
 	
-3.In an inheriance relationship, the _____is the specialized class.
+3.In an inheriance relationship, the ___C__is the specialized class.
 	a.base class
 	b.master class
 	c.derived class
 	d.parenet class
 
-4.Base classes are sometimes called_____.
+4.Base classes are sometimes called___D__.
 	a.megaclasses
 	b.primitive classes
 	c.starter classes
 	d.superclasses
 	
-5.Derived classes are sometimes called_____.
+5.Derived classes are sometimes called___C__.
 	a.refined classes
 	b.subclasses
 	c.child classes
 	d.neoclasses
 	
-6.The _____refers to the base class.
+6.The ___C__refers to the base class.
 	a.friend keyword
 	b.this keyword
 	c.base keyword
 	d.class keyword
 	
-7.The term____ refers to an object's ability to take different forms.
+7.The term___C_ refers to an object's ability to take different forms.
 	a.multi-instance
 	b.by referencing
 	c.polymorphism
 	d.olighopoly
 	
-8.When a derived class method has the same name as a bade class method, it is oftern said that the derived class method __ the base class method.
+8.When a derived class method has the same name as a base class method, it is oftern said that the derived class method _C_ the base class method.
 	a.terminates
 	b.cancles out
 	c.overrides
 	d.short circuits
 	
-9.The_____ declares that a derived class is allowed to override a method.
+9.The___B__ declares that a derived class is allowed to override a method.
 	a.void keyword
 	b.protected keyword
 	c.base keyword
 	d.virtural keyword
 	
-10.The _____declares that this method overrides a method in the base class.
+10.The __A___declares that this method overrides a method in the base class.
 	a.override keyword
 	b.class keyword
 	c.virtual keyword
 	d.base keyword
 	
-11.A class that is not intended to be instantiated, nut used only as a base class, is called a(n)_____.
+11.A class that is not intended to be instantiated, nut used only as a base class, is called a(n)____C_.
 	a.dummy class
 	b.subclass
 	c.virtual class
 	d.abstract class
 	
-12.To declare a class as abstract, you use the _____in the class header.
+12.To declare a class as abstract, you use the ___A__in the class header.
 	a.abstract keyword
 	b.base keyword
 	c.void keyword
 	d.virtual keyword
 	
-13.A regular, nonabstract class is sometimes called a_____.
+13.A regular, nonabstract class is sometimes called a___C__.
 	a.true class
 	b.model class
 	c.concreate class
 	d.real class
 	
-14.A(n)_____is a method that appears in a base class but expects to be overridden in a derived class.
+14.A(n)__A___is a method that appears in a base class but expects to be overridden in a derived class.
 	a.abstract method
 	b.virtual method
 	c.concreate method
 	d.base method
 	
-15.A(n)_____is a property that appears in a base class but exprects to be overridden in a derived class
+15.A(n)__A___is a property that appears in a base class but expects to be overridden in a derived class
 	a.virtual property
 	b.concreate property
 	c.base property
 	d.abstract property
 	
-16._____allows a base class reference variable to reference a derived class object.
+16.___B__allows a base class reference variable to reference a derived class object.
 	a.Polymorphism
 	b.Inheritance
 	c.Generalization
 	d.Specialization
 	
-17.This type of method extends a class without modifying the class or inheriting from it.
+17.This type of method extends a class without modifying the class or inheriting from it __C__.
 	a.submethod
 	b.Add-on method
 	c.Extension method
 	d.Sealed method
 	
-18.The first parameter declaration in an extension method always begins with the _____keyword.
+18.The first parameter declaration in an extension method always begins with the ___B_keyword.
 	a.extension
 	b.this
 	c.static
 	d.ext
 	
-19.When a class implementsw an interface, it must____.
+19.When a class implements an interface, it must___D_.
 	a.provide only methods that are not listed in the interface
 	b.provided all of the methods that are listed in the interface, with the exact signatures and return types specified
 	c.not have a constructor
 	d.be an abstract class
 	
 True or False
-1.The base class inherits fields, properties, and methods from the derived class.
-2.Polymorphism allows a class variable of the base class type to reference object of either the base class or derived class type
-3.Properties in a base class cannot be overridden in the same way that methods can be overridden.
-4.A base class reference variable can reference an object of any class that is derived from the base class.
-5.A statement that tries to use the new operator to instantiate an abstract class will not compile
-6.A class that is not intended to be instantiated, but used only as a base class, is caleld a concreate class.
-7.When an abstract property appears in a class, it must be overridden in any class that is dericed from the class.
-8.To write an extension method, you must inherit from the class that you are extending.
-9.An extension method never has a parameter.
-10.Extension methods must be static
-11.A class may only implement one interface.
-12.All members of an interface are implicity public.
+1.The base class inherits fields, properties, and methods from the derived class. FALSE
+2.Polymorphism allows a class variable of the base class type to reference object of either the base class or derived class type. TRUE
+3.Properties in a base class cannot be overridden in the same way that methods can be overridden. FALSE
+4.A base class reference variable can reference an object of any class that is derived from the base class.T RUE
+5.A statement that tries to use the new operator to instantiate an abstract class will not compile. TRUE
+6.A class that is not intended to be instantiated, but used only as a base class, is caleld a concreate class. FALSE
+7.When an abstract property appears in a class, it must be overridden in any class that is dericed from the class. True
+8.To write an extension method, you must inherit from the class that you are extending. FALSE
+9.An extension method never has a parameter.FALSE
+10.Extension methods must be static. TRUE
+11.A class may only implement one interface. FALSE
+12.All members of an interface are implicity public. TRUE
 
 Short Answer
 1.What does a derived class inherit from its base class?
+	Upon intance the derieved class inherits  field, properties, and methods from its base class.
 2.Look at the following code, which is the first line of a class declaration. What is the name of the base class? What is the name of the dericed class?
 
 	class Tiger : Felis
+	The name of the base class is "Felis" and the name of the derived class is "Tiger".
+	
 	
 3.Can methods in the derived class directly access the base class's private members?
+	No, methods in the derived class cannot directly access the base class's private members.
+
 4.When you create an instance of a derived class, which constructor is called first?
+	The base class constructor is called first, followed by the derived class constructor.
+	
 5.In what kind of situation would you want to use an abstract class instead of a base class?
+	You would want to use an abstract class when you want to provide a default
+	implementation for some methods, but also allow derived classes to provide their own
+	implementation for other methods.
+	
 6.What is a primaty difference between an abstract class and a regular class?
-7.Can abstract classes also contain abstrcat properties? 
+	A primary difference between an abstract class and a regular class is that an abstract
+	class cannot be directly instantiated; it can only be used as a base class for derived classes.
+
+7.Can abstract classes also contain abstract properties? 
+	Yes,abstract classes can also contain abstract properties
+	
 8.How does the compiler know that a method is an extension method?
+	The compiler knows that a method is an extendion method because the method is defined
+	as static, the first parameter of the method is decorated with the "this" keyword,
+	and the parameter type specifies the  the type being extended.
+
 9.Consider the follwing extension method:
 	
 	public static bool DoSomething(this string a, int b)
@@ -146,12 +166,27 @@ Short Answer
 	}
 	
 	What class or data type does the method extend?
+	
+	This method extends the string data type.
 
 10.Why is it often said that an interface is like a contract?
-11.What is the only code allowed in properties that are listed in an interface?
-
+	It is often said that an interface is like a contract because a class that implements an interface 
+	agrees to provide a certain set of methods and propertues that are specified by the interface.
+	
+11.What is the only code allowed in properties that are listed in an interface?	
+	The only code allows in properties that are listed in an interface agrees to provide a certain
+	set of methods and properties that are specified by the interface.
+	
 Algorithm Workbench
 1.Write the first line of the definition for a Poodle class. The class should derived from the Dog class
+	class Dog
+	{
+	
+	}
+	
+	class Poodle:Dog {
+	
+	}
 2.Look at the following class declarations:
 	
 	class Plant

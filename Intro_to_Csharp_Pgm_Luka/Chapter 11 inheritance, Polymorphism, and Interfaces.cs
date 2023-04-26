@@ -1102,7 +1102,8 @@ namespace ch11
 * shown in Figure 11-9. When you run the completed application, clicking
 * the Create an Animal button creates an object of the Animal class and
 * passes the object to the ShowAnimalInfo method. Clicking the create a
-* Dog button creates an object of the Dog class and passes that object to the ShowAnimalInfo method.
+* Dog button creates an object of the Dog class and passes that objec
+* t to the ShowAnimalInfo method.
 * Clicking a Cat button creates an object of the Cat class and passes
 * that object to the ShowAnimalInfo method.
 * /////////////////////////////////////////////////////////////////////
@@ -1542,7 +1543,13 @@ namespace ch11
 * 
 * /////////////////////////////////////////////////////////////////////
 * Extension methods can be applicaed to classes, structs, and
-* interfaces (which are discussed later in this chapter). They can even be applied to primitive types like int and double. in fact, let's look at how can apply an extension method to the primatice int data type. Suppose we want int variables to have a method that wells us whether the variable is odd or even. For ex, we would like to do somthing like this
+* interfaces (which are discussed later in this chapter). They can even
+* be applied to primitive types like int and double.
+* In fact, let's look at how can apply an extension method to the
+* primatice int data type.
+* Suppose we want int variables to have a method that wells us whether
+* the variable is odd or even. For ex, we would like to do somthing
+* like this
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
@@ -1627,7 +1634,7 @@ namespace ch11
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* Extension method must hace at least one parameter, preceded by the
+* Extension method must have at least one parameter, preceded by the
 * this keyword, to refer to the object that the method is working on. 
 * If you need to explicity pass other arguments into an extension method, 
 * just decalre additional parameters after the first paramter.

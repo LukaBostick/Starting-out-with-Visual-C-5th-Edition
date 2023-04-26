@@ -3424,7 +3424,11 @@ namespace Chapter7ArraysandLists
  *  /////////////////////////////////////////////////////////////////////
  *  
  *  /////////////////////////////////////////////////////////////////////
- *  If you know the index value for a particular image, you can retreve that image from the ImageList control and display it in a PictureBox. The following code shows an example. Assume myImageList is the name of an ImageList control and myPictureBox is the name of a PictureBox control.
+ *  If you know the index value for a particular image, you can retreve 
+ *  that image from the ImageList control and display it in a PictureBox.
+ *  The following code shows an example.
+ *  Assume myImageList is the name of an ImageList control and
+ *  myPictureBox is the name of a PictureBox control.
  *  /////////////////////////////////////////////////////////////////////
  *  
  *  /////////////////////////////////////////////////////////////////////
