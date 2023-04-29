@@ -1,4 +1,4 @@
-1.A(n)_____ is software that is specifically designed to store, retrieve, and manipulate large amounts of data in an organized and afficient manner.
+1.A(n)_____ is software that is specifically designed to store, retrieve, and mani=pulate large amounts of data in an organized and afficient manner.
 	a.software davelopment kit(SDK)
 	b.database managment system(DBMS)
 	c.application programming interface(API)

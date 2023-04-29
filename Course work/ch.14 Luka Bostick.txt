@@ -1,72 +1,72 @@
-1.If a LINQ query's source of data is a List<int>, the query will return a collection of the____type
+1.If a LINQ query's source of data is a List<int>, the query will return a collection of the__A__type
 	a.List<int>
 	b.array of int
 	c.IEnumerable<int>
 	d.IQueryResult<int>
 	
-2.In a LINQ query, the____clause iterates over a collection of elements
+2.In a LINQ query, the__B__clause iterates over a collection of elements
 	a.from
 	b.for
 	c.select
 	d.where
 	
-3.In a LINQ query, the_____ clause determines what will be included in the query results.
+3.In a LINQ query, the__D___ clause determines what will be included in the query results.
 	a.from
 	b.for
 	c.select
 	d.where
 
-4.The____clause causes the result of a LINQ query to be stored.
+4.The__B__clause causes the result of a LINQ query to be stored.
 	a.sort
 	b.orderby
 	c.order
 	d.sortby
 	
-5.You can wiite a LINQ query using either query syntax or____.
+5.You can write a LINQ query using either query syntax or__B__.
 	a.pseudocode
 	b.SQL syntax
 	c.procedural syntax
 	d.method syntax
 	
-6.In LINQ to SQL, a(n)____object represents a database.
+6.In LINQ to SQL, a(n)__C__object represents a database.
 	a.table
 	b.entity
 	c.data context
 	d.row
 	
-7.In LINQ to SQL, a(n)____object represents a table in a database.
+7.In LINQ to SQL, a(n)__A__object represents a table in a database.
 	a.table
 	b.entity
 	c.data context
 	d.row
 	
-8.In LINQ to SQL, a(n)____object represents a row in a database.
+8.In LINQ to SQL, a(n)_A___object represents a row in a database.
 	a.entity
 	b.data context
 	c.row
 	d.record
 	
-9.The____is a visual design tool that you use to create the classes needed for LINQ ro SQL to work with a particular database.
+9.The__A__is a visual design tool that you use to create the classes needed for LINQ ro SQL to work with a particular database.
 	a.Database Designer
 	b.Object Relational Design
 	c.LINQ Designer
 	d.Table Designer
 	
-10.To update an exising row in a database table, you call the data context object's____method.
+10.To update an exising row in a database table, you call the data context object's__D__method.
 	a.Update
 	b.Commit
 	c.Reload
 	d.SubmitChanges
 	
 True or False
-1.The var keyword makes code more difficult to read, but improves performance by a factor of 2.
-2.In a LINQ query, the from clause iterates over a collection of elements.
-3.You can use more than one where clause in a LINQ query
-4.The C# compiler translates all LINQ quries that are written in method syntax to query syntax.
-5.The data context object has table objects as properties that repesent the tables in the database.
-6.A table object is a collection of entity objects thast represent the rows in the table.
-7.One limitation of LINQ to SQL is that query results cannot be displayed in a data-bound control.
-8.One limitation of LINQ to SQL is that you cannot insert or selete rows in a database table. Tables are essentially read-only.
+1.The var keyword makes code more difficult to read, but improves performance by a factor of 2.	FALSE
+2.In a LINQ query, the from clause iterates over a collection of elements.FALSE
+3.You can use more than one where clause in a LINQ query. TRUE
+4.The C# compiler translates all LINQ quries that are written in method syntax to query syntax. FALSE
+5.The data context object has table objects as properties that repesent the tables in the database. TRUE
+6.A table object is a collection of entity objects thast represent the rows in the table. TRUE
+7.One limitation of LINQ to SQL is that query results cannot be displayed in a data-bound control. FALSE
+8.One limitation of LINQ to SQL is that you cannot insert or selete rows in a database table. Tables are essentially read-only.FALSE
 
 Short Answer
 1.in the following code, assume values is an array of double s. What is the data type of the result variable?
@@ -74,23 +74,45 @@ Short Answer
 	var results = from item in nums
 				  where item < 0
 				  select item;
+		
+		The data type of the result variable is IEnumerable<double>
 
 2.What are the two syntaxes that you can use to write LINQ queries?
+
+	The two syntaxes that can be used to write LINW queries are query syntax and method suntax.
+
 3.What extension method do you call if you want to order a query's results in descending order?
+	To order a query's results in descending order, you call the extension method OrderByDescending().
+	
 4.In LINQ to SQL, how are databases, tables, rows, and columns represented?
+	In LINQ to SQL, databases, tables, rows, and columns are represented as classes, with properties and methods that enable LINQ to SQL to interact with the underlying database.
 5.Describe the process of inserting a new row into a table with LINQ to SQL.
+	To insert a new row into a table with LINQ to SQL, you create an new instance of the approprate entity class, set its properties to the desired values, and then call the DataCOntext object's SubmitChanges() method. The DataCOntext object generates the appropriate SQL statemetns and executes them against the database.
 
 Algorithm Workbench
 1.Assume nums is a List of integers. Write a LINQ query that gets all the values from the List that are less than 0. Assign the results to a variable named results.
+		var results = from item in nums
+				 where item < 0 
+				 select item;
 2.Assume nums is a List of integers. Write a LINQ query that gets all the values from the List sorted in ascending order. Assign the result to a variable named results.
+
+		var results = from item in nums
+				 orderby item
+				 select item;
 3.Assume nums is a List of integers. Write a LINQ query that gets all the values from the List sorted in decending order. Assign the results to a variable named results.
+
+		var results = from item in nums
+				 orderby item
+				 select item;
 4.Rewite the follwing query using method syntax:
 
 	var result = from item in values
 				 where item > 0 && item < 1-
 				 orderby item
 				 select item;
-				 
+	
+	var result = values.Where(item => item > 0 && item < 1)
+    .OrderBy(item => item);
 	For Question 5-8, assume that a database has a table named Stock, with the following columns:
 	
 	Column Name				Type
@@ -104,7 +126,20 @@ Algorithm Workbench
 	
 	StockDataContext db = new StockDataContext();
 5.Write a LINQ to SQL query that returns all the columns form every row in the table.
+	private void qtall(object sender, EventArgs e)
+	{
+		StockDataContext db = new StockDataContext();
+		
+		var results = from all in db 
+					  select db
+					  
+					  foreach(string a)
+	}
+				 
+	
 6.Wire a LINQ to SQL query that returns only the Trading_Symbol column from every row in the table.
+
 7.Wire a LINQ to SQL query that returns the Company_Name column only from the rows where Purchase_Price is greater than $50.00.
+
 8.Wrie a LINQ to SQL query that returns the Trading_Symbol column only from the rows where Selling_Price is greater than Purchase_Price and
 Num_Shares is greater than 100.

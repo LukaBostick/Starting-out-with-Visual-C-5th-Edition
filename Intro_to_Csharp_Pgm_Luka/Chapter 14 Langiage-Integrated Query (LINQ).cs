@@ -1455,7 +1455,7 @@
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* MEthods       Description
+* Methods       Description
 * Distinct  
 * 
 * Except
@@ -1865,7 +1865,7 @@ int[] numbers = {1,2,3,4,5,6,7};
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* Enitiy Objects
+* Entity Objects
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
@@ -2018,7 +2018,7 @@ int[] numbers = {1,2,3,4,5,6,7};
 * 
 * /////////////////////////////////////////////////////////////////////
 * When Visual Studio generates a data context class, the naming
-* convention is strightforward: The name of the data context c;ass is 
+* convention is strightforward: The name of the data context class is 
 * based on the name of the DBML file. For example, if the DBML file is
 * named Personnel.dbml, then the data context class will be named 
 * PersonnelDataContext.
@@ -2355,14 +2355,26 @@ int[] numbers = {1,2,3,4,5,6,7};
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* -The priceGT100Button executes a LINQ query to get all the items from the database with Price greater than $100.
+* -The priceGT100Button executes a LINQ query to get all the items from
+* the database with Price greater than $100.
 * 
-* -The qtyGT100Button executes a LINQ query to get all the items from the database with Units_On_Hand greater than 100.
+* -The qtyGT100Button executes a LINQ query to get all the items from 
+* the database with Units_On_Hand greater than 100.
 * 
-* -The priceLT100Button executes a LINQ query to get all the items from the database with Price less than $100.
+* -The priceLT100Button executes a LINQ query to get all the items from 
+* the database with Price less than $100.
 * 
-* -The qtyLT100Button executes a LINQ query to get all the items from the database with Units_On_Hand less than 100.
+* -The qtyLT100Button executes a LINQ query to get all the items from 
+* the database with Units_On_Hand less than 100.
 * 
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Step 1: Open the project named Project Reports in the Chap14 folder
+* of this book's Student Sample Programs
+* 
+* Step 2: Open the Form1 form in the Designer. The form is shown, along
+* with the names of the important conttrols, in Figure 14-16.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
@@ -2370,192 +2382,676 @@ int[] numbers = {1,2,3,4,5,6,7};
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* Figure 14-16 The Product Reports Application Form1 Form
-* /////////////////////////////////////////////////////////////////////
+* Step 3: Now you will create a connection to the ProductDB.mdf 
+* database, which is in the Chap14 folder of this books's Student Sample
+* Program
+* 
+* *If you do not see the Server Explorer window, click View on the menu
+* bar, and then click Server Explorer.
+* 
+* *In the Server Explorer window, click the Connent to Database icon as
+* previously shown in Figure 14-4.
 * 
+* *The Add Connection window should appear next, as previously shown in 
+* Figure 14-7. Make sure Microsoft SQL Server Database File (SqlClient)
+* is selected under Data Source.  Then click the Browse...button to 
+* select the database file. Navigate to the Chap14\Databases folder of 
+* the Student Sameple Program and select the ProductDB.mdf file.
+* 
+* *Click the Test Connection button to test the connection. You should 
+* see the message Test Connection Succeeded. Click the OK button to 
+* complete the connection.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 4: Now you will add the LINQ to SQL classes to the project. 
+* Perform the following steps:
 * 
+*   *Click Project on the menu bar, then clock Add New Item...
+*   
+*   *The Add New item window appears next. Select Data in the left pane,
+*   select LINQ to SQL Classes in the center pane, and change the name 
+*   of the file to ProductDB.dbml. Click the Add button to add the 
+*   classes to the project.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 5: Now you will use the Object Relational Designer to create 
+* the classes you need to access the database.
+* 
+*   *The Object Relational Designer should be open. In the Server 
+*   Explorer window, expand the PeoductDB.mdf entry, and then expand
+*   the Tables Enrty.
+*   
+*   *Drag the Product table from the Server Explorer window and drop it
+*   in the Object relational Designer. You will see a window displaying
+*   a message indicating that you have selected a database file located
+*   outside the prohjecy folder, and you are asked if you want to copy 
+*   the project. Click Yes.
+*   
+*   *The Object Relational Designer now shows a visual representation 
+*   of a class named Product, as shown in Figure 14-17. Notice that the
+*   classes has properties named Product_Number, Description,
+*   Units_On_Hand, and Price. This class is the entity class that
+*   represents a row in the Product table.
 * /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* Figure 14-17 The Product class created in the Object 
+* Relational Designer
 * /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* At this point, your project now has a data context class named
+* ProductDBDataContext. The PRoductDBDataContext class contains table
+* object property named Products. (Notice the pluralization of the 
+* name.) The Products object is a collection of Product objects. Each
+* Product object represents a row in the database table.
+* /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* Step 6: Open the Form1 form in the Designer. The form, along with the
+* names of the important controls, was previously shown in Figure 14-16.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 7: Double-click the priceGT100Button control. This opents the 
+* code editor, and you will see an empty event handler named 
+* priceGT100Button_Click. Complete the priceGT100Button_Click event 
+* handler by tying the code shown in lines 17-32 in Program 14-6. Let's
+* take a closer look at the code:  
 * 
+* Line 18: This statement creates a ProductDBDataContext object named db.
+* We chose the name db because the object represents the database. 
 * 
-* /////////////////////////////////////////////////////////////////////
+* Lines 21-23: This statement executes a LINQ query that return the 
+* descriptions of all the items in the db.Products collection with a 
+* price greater than 100. The results of the query are assigned to the
+* results variable.
 * 
+* Line 26: This foreach loop iterates over the query results and adds 
+* each description to the descriptionListBox control.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 8: Open the Form1 for in the Designer and double-click the 
+* priceLT100Button control. This operns the code editor, and you will
+* see an empty event handler named priceLT100Button_Click.
 * 
-* /////////////////////////////////////////////////////////////////////
+* Complete the priceLT100Button_Click event handler by typing the code
+* shown in lines 37-52 in Program 14-6. Let's take a closer look at the
+* code:
 * 
-* /////////////////////////////////////////////////////////////////////
+* Line 38: This statement creates a PRoductDBDataContext object named 
+* db. We chose the name db because the object represents the database.
 * 
-* /////////////////////////////////////////////////////////////////////
+* Line 41-43: This statement executes a LINQ query that returns the 
+* descriptions of all the items in the db.Products collection with a 
+* price less than 100. The results of the query are assigned to the 
+* results variable.
 * 
-* /////////////////////////////////////////////////////////////////////
+* Line 46: This statement clears the contents of the descriptionListBox
+* control.
 * 
+* Lines 49-52: This foreach loop iterates over the query results and
+* adds each description to the descriptionListBox control.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 9: Open the Form1 form in the Designer and double-click the 
+* qtgt100Button control. This opens the code editor, and you will see 
+* an empty event handler named qtyGT100Button_Click.
+* Complete the qtyGT100Button_Click event handler by typing the code
+* shown in lines 57-72 in Program 14-6. Let's take a closer look at the
+* code:
+* 
+* Line 58: This statement creates a PRoductDBDataContext object named
+* db. We chose the name db because the object represents the database.
+* 
+* Lines 61-63: This statement executes a LINQ query that returns the 
+* descriptions of all the items in the db.Products collection with 
+* units on hand greater than 100. The results of the query are 
+* assigned to the results variable.
+* 
+* Line 66: This statement clears the contents of the descriptionListBox
+* control.
+* 
+* Lines 69-72: This foreach loop iterates over the query results and
+* adds each description to the descriptionListBox control.
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Step 10: Open the Form1 form in the Designer and double-click the 
+* qtLT100Button control. This opens the code editor, and you will see 
+* an empty event handLer named qtyLT100Button_Click. Complete the 
+* qtyLT100Button_Click event handler by typing the code shown in lines
+* 77-94 in Program 41-6. Let's take a closer look at the code:
+* 
+* Line 78: This statment creates a Program DBDataContext objecy named
+* db. We chose the name db because the objecy represents the database.
+* 
+* Lines 81-83: This statement exeutes a LINQ queru that returns the descriptions
+* of all the items in the db.products collection with units on hand less
+* than 100. The results of teh query are assigned to teh results variable.
+* 
+* Line 86: This statement clears the contents of the descriptionListBox
+* control.
+* 
+* Lines 89-92: This foreach loop iterates over the query results and adds
+* each description to the descriptionListBox control
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Step 11:: Open the Form1 form in the Desigener and double-click the 
+* closeButton control. This opents the code editor, and you will see an 
+* empty event handler named closeButton_Click. Complete the 
+* closeButton_Click event handler by typing the code shown in lines 97 
+* and 98 in Program 14-6.
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Figure 14-18 The application's form at runtime
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Program 14-6 Completed Form1 code for the Product Resports application
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* using System;
+* using System.Data;
+* using System.Linq;
+* using System.Windows.Forms;
+* using System.Windows.Forms;
+* 
+* namespace Product_Reports
+* {
+*   public partial class Form1 : Form
+*   {
+*       public Form1()
+*       {
+*           InitializeComponent();
+*       }
+*       
+*       private void priceGT100Button_Click(object sender, EventArgs e)
+*       {
+*           // Create a data context object.
+*           ProductDBDataContext db = new ProductDBDataContext();
+*           
+*           //Get the products with a price > 100.
+*           var results = from product in db.Products
+*                         where products.Price > 100m
+*                        select product.Description;
+*                        
+*           // Clear the ListBox.
+*           descirptionListBox.Items.Clear();
+*           
+*           // Display those products' descriptions.
+*           foreach(string description in results)
+*           {
+*               descirptionListBox.Items.Add(description);
+*           }
+*       }
+*       
+*       private void priceLT100Button_Click(object senderm EventArgs e)
+*       {
+*           // Create a data context object
+*           ProductDBDataContext db = new ProductDBDataContext();
+*           
+*           // Get the products with a price < 100.
+*           var results = from products in db.Prducts
+*                         where products in db.Products
+*                         where products.Price < 100m
+*                         select products.Description;
+*                         
+*           // Clear the ListBox.
+*           descriptionListBox.Item.Clear();
+*           
+*            // Display those products' descriptions.
+*           foreach(string description in results)
+*           {
+*               descirptionListBox.Items.Add(description);
+*           }
+*           
+*       }
+*       
+*       private void qtgt100Button_Click(object sender, EventArgs e)
+*       {
+*           // Create a data context object
+*           ProductDBDataContext db = new ProductDBDataContext();
+*           
+*           // Get the products with units on hand > 100.
+*           var results = from products in db.Products
+*                         where products.Units_On_Hand > 100
+*                         select product.Description;
+*                        
+*                         
+*           // Clear the ListBox.
+*           descriptionListBox.Item.Clear();
+*           
+*            // Display those products' descriptions.
+*           foreach(string description in results)
+*           {
+*               descirptionListBox.Items.Add(description);
+*           }
+*       }
+*       
+*        private void qtyLT100Button_Click(object sender, EventArgs e)
+*       {
+*           // Create a data context object
+*           ProductDBDataContext db = new ProductDBDataContext();
+*           
+*           // Get the products with units on hand < 100.
+*           var results = from products in db.Products
+*                         where products.Units_On_Hand < 100
+*                         select product.Description;
+*                        
+*                         
+*           // Clear the ListBox.
+*           descriptionListBox.Item.Clear();
+*           
+*            // Display those products' descriptions.
+*           foreach(string description in results)
+*           {
+*               descirptionListBox.Items.Add(description);
+*           }
+*       }
+*       
+*       private void closeButton_Click(object sender, EventArgs e)
+*       {
+*           // Close the form.
+*           this.Close();
+*       }
+*   }
+*   
+* }
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* Using LINQ Queries with Data-Bound Controls
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* You learned in Chapter 12 that a data.bound controls is a user
+* interface control that is connected to a data source. DAta-bound
+* control is a user interface control that is connected to a data source.
+* Data-bound controls automatically display data from the data source
+* can be used to change the data that they are bound to. One of the 
+* simplest and most powerful data-bound controls is the DataGridView
+* controls. A DataGridView control can display an entire database table
+* in a scrollable grid on an application's form.
+* 
+* /////////////////////////////////////////////////////////////////////
+* Data-bound controls can also be used to display the results of a 
+* LINQ query. These are the steps to follow if you want to use LINQ
+* to query a database table, and then display those results in a data
+* -bound control:
+* 
+* 1.In Visual Studio, connect the project to the database and use the
+* Object Relational Designer to create an entity class for the table
+* you wish to query.
+* 
+* 2.Add a new data source to the project, and select Object as the data
+* source type.
 * 
-* /////////////////////////////////////////////////////////////////////
+* 3.Select the entity class as the data object.
 * 
-* /////////////////////////////////////////////////////////////////////
+* 4.In the Designer, open a form and create the desired data-bound
+* control (such as a DataGridView).
 * 
+* 5.In code, write a LINQ query that returns a collection of objects that
+* instances of the entity class you selected in step 3.
+* 
+* 6.Assign the result of the LINQ query to the data-bound control's 
+* DataSource property.
 * /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* You will pratice these steps in Tutorial 14-6. In the tutorial, you
+* create an application that uses LINQ to query a database table, and
+* display results in a DataGridView control.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
+* Tutorial 14-6: Completing the QueryDataSource Application
+* /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* In this tutorial, you create an application that uses a DataGridView
+* control to display the results of a LINQ query that is exectued on the 
+* ProductDB database.
 * 
+* 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
 * 
+* In this tutorial, you create an application that uses a DataGridView
+* controls to display the results of a LINQ query that is executed on
+* the ProductDB database.
 * /////////////////////////////////////////////////////////////////////
+* 
 * /////////////////////////////////////////////////////////////////////
+* Step 1: Lanuch Visual Studio and start a new Windows Desktop Application
+* projecy named Query Data Source. Set the Form1 form's Text property
+* to Products.
 * 
+* Step 2: Create a connectioon to the PRoductDB.mdf databasem which is in
+* the Chap14 folder of this book's Student Sample Program.
 * /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* Step 3: In this step, you will add the LINQ to SQL classes to the 
+* project, for which you need to perform the following steps:
 * 
+*       *Click Project on the menu bar, then click Add New Item....
+*       *The Add new Item window appears next. Select Data in the
+*       left pane, select LINQ to SQL Classes in the center pane, 
+*       and change the name of the file to ProductDB.dbml. Click the
+*       Add button to add the classes to the project.
+*       
+* Step 4: Now you will use the Object Relational Designer to create
+*         the classes you need to access the database.
+*         
+*         *The Object Relational Designer should be open. In the 
+*         Server Explorer window, expand the ProductDB.mdf entry,
+*         and then expand the Tables Entry. 
+*         
+*         *Drag the Product table from the Server Explorer window and 
+*         drop it in the Object Pelational Designer. You will see a
+*         window displaying a message indicating that you have 
+*         selected a database file location outside the program folder,
+*         and you would be asked if you want to copy the file into the
+*         project. Click Yes.
+*         
+*         *The Object Relational Designer now shows a visual 
+*         representation of a class named Product. Notice that the class
+*         has properties named Product_Number, Description, Units_On_Hand,
+*         and Price. This class is the entity class that represents a row
+*         in the Product table.
+*         
+* At this point, your project now has a data context class named 
+* ProducyDBDataContext. THe ProductDBDataContext class contains table
+* object property named Products. (Notice the plurialzation of the name.)
+* The Products object is a colection of Product objects. Each Product
+* object represents a row in the database table.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 5:Click the Save All button() to save the project.
 * 
+* Step 6: If the Data Sources window is not already opened, open it by
+* selecting View > Other Windows...> Data Sources.
 * 
+* Step 7: In the DAta Soirces window, click the Add New Data Soruce button,
+* as shown in Figure 14-19. This displays the Choose a Data Source Type
+* window shown in Figure 14-20. Select Object and then click Next. 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Figure 14-19 Add New Data Source
 * 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 14-20 Choose a Data Source Type
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Step 8: The Select the Data Objects window, shown in Figure 14-21,
+* appears next. Look at the figure carefully. Expand the 
+* QueryDataSource entries as shown in the figure and select Product.
+* This action selects the Product class (the entity class) that you 
+* created in Step 4. Click Finsh. The Data Sources window should now
+* appear as shown in Figure 14-22. Notice that the Product class is 
+* shown as a data source.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Figure 14-21 Select the Data Object
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
-* 
+* Figure 14-22 The updata Data Sources window
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Step 9: Open the Form1 form in the Designer.
 * 
+* Step 10: In the Data Soruces window, click the down arrow that 
+* appears next to Product, and select DataGrdiView, as shown in 
+* Figure 14-23. This selects the DataGridView controls as the default
+* data-bound controls for the Product data source.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 14-23 Select DataGridView
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Step 11: Click and drag the Product data source from the Data 
+* Sources window onto the form, as shown in Figure 14-24. This creates
+* a DataGridView control on the form. Notice in the Properties window
+* that the control's name. Adjust the size of the DataGridView control
+* so you can see all the columns (Product_Number, Description, 
+* Units_On_Hand, Price).
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Figure 14-24 Creating the DataGridViewcontrols
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Step 12: Double-click any part of the form that does not contain
+* a control. (Be sure not to click any part of the DataGridView control
+* or its navigation bar.) This opens the code editor, and you will see 
+* an empty event handler named Form1_Load. Complete the Form1_Load 
+* event handler by typing the code shown in lines 17-27 in Program 14-7.
+* Let's take a closer look at the code:
 * 
-* /////////////////////////////////////////////////////////////////////
+* Line 18: This statement creates a data context object named db.
 * 
-* /////////////////////////////////////////////////////////////////////
+* Lines 22 and 23: This statement executes a LINQ query on the 
+* db.Products table collection. It retrieves all the Product objects
+* from the table. At the database level, this causes all the rows in 
+* the Product table to be retrieved. They are returned from the query
+* as a collection of Product objects, and assigned to the results
+* variable.
 * 
+* Line 27: This statement assigns the results variable to DataGridView
+* control's DataSource property. As a results, the contents of the 
+* results collection will be displayed in the DataGridView control's
+* DataSource property. As a result, the contents of the results 
+* collection will be displayed in the DataGridView.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Step 13: Open the Form1 form in the Designer and adjust the size of 
+* the form and the position of the DataGridView control to appear 
+* similar to Figure 14-25.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-* 
+* Figure 14-25 The final appearance of the form
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Step 14: Save the project. Then, press F5 on the keyboard or click 
+* the Start Debugging (<|) on the toolbar to compile and run the 
+* application. The application's form should appear as shown in 
+* Figure 14-25. When you are finishedm click the close button to 
+* close the application.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Figure 14-26 The application's form at runtime
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Program 14-7 Completed Form1 code for the QueryDataSource application
+* /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* using System;
+* using System.Data;
+* using System.LINQ;
+* using System.Windows.Forms;
 * 
+* namespace QueryDataSource
+* {
+*   public partial class Form1 : Form
+*   {
+*       public Form1()
+*       {
+*           InitializeComponent();
+*       }
+*       
+*       private void Form1_Load(object sender, EventArgs e)
+*       {
+*           // Create a data context object.
+*           ProductDBDataContext db = new ProductDBDataContext();
+*           
+*           // Get all the Product objects from the 
+*           // Products collection.
+*           var results = from product in db.Products
+*                         select product;
+*                         
+*           // Assign the results of the query to the 
+*           // DataGridView control.
+*           
+*           productDataGridView.DataSoruce = results;
+*       }
+*   }
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* Updating, Inserting, and Deleting Rows with LINQ
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* In addition to retrieving rows from a database table, LINQ also 
+* allows you to update rows, insert rows, and delete rows. In the 
+* following examples, we will assume that we are working with the 
+* PRoductDB database. Our data context class is named
+* ProductDBDataContext, and it has a table property named Products.
+* Our entity class is named Product.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* The first example, shown below, gets the product with Product_Number
+* set to 10-04. It changes the product's price to 99.99, and then 
+* updates the database with the new row.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* ProductDBDataContext db = new ProductDBDataContext();
 * 
+* Product prod = db.Products.FirstOrDefault(item => 
+*                                           item.Product_Number 
+*                                           == "10-04");
+*                                           
+* if(prod != null)
+* {
+*   prod.Price = 99.99m;
+*   db.SubmitChanges();
+* }
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* Let's take a closer look at the code. Linw 1 creates a data context
+* object. Lines 3-4 use the FirstorDefault extension method to get the
+* first item in the db.Products collection that has its Product_Number
+* Property set to "10-04". If the item is found, it will be assigned
+* to the prod variable. If is is not found, the prod variable will be
+* set null. If prod is not set to null, the statement in line 8
+* assigns 99.99 to its Price property, and the statement in line 9
+* calls the db.SubmitChanges() to update the database with the new data.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* The following code shows another example. In this example, the LINQ
+* query in line 3-5 returns all of the products that have a 
+* Product_Number property containing the string "10-". The foreach loop
+* in lines 7-10 iterates over all the perducts that were returned from
+* the query, changeing their Units_On_Hand property to 0. The statement
+* in line 8 calls the db.SubmitChanges() to updata the database with
+* the new data.
 * 
-* 
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* ProductDBDataContext db = new ProductDBDataContext();
 * 
+* var results = from prod in db.Products
+*               where prod.Product_Number.Contains("10-")
+*               select prod;
+*               
+* foreach(Product p in results)
+* {
+*   p.Units_On_Hand = 0;
+* }
 * 
+* db.SubmitChanges();
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* 
+* The following example shown a new row being inserted into the database
+* table:
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* ProductDBDataContext db = new ProductDBDataContext();
 * 
-* /////////////////////////////////////////////////////////////////////
+* Product prod = new Product();
+* prod.Price_Number = "40-01";
+* prod.Description = "Hiking Boots"
+* prod.Units_On_Hand = 10;
+* prod.Price = 299m;
 * 
+* db.Products.InertOnSubmit(prod);
+* db.SubmitChanges();
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* In this code lines 3-7 create an instance of the Product entity class
+* and assign values to the object's properties. Line 9 calls the
+* db.Products.InsertOnSubmit method, passing the object as an argument.
+* When the db.SubmitChanges() method is called in line 10, the object
+* is inserted into the database.
 * 
+* The following example shows how to delete an item from a database
+* table:
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
+* ProductDBDataContext db = new ProductDBDataContext();
+* 
+* Product prod = db.Products.FirstOrDefault(item => item.Product_Number
+* == "10-04");
+* 
+* if(prod != null)
+* {
+*   db.Products.DeleteOnSubmit(prod);
+*   db.SubmitChanges();
 * 
+* }
+* 
+* 
 * /////////////////////////////////////////////////////////////////////
 * 
+* /////////////////////////////////////////////////////////////////////
+* Lines 3-4 use the FirstOrDefault extension method to get the first
+* item in the db.Products collection that has its Product_Number proerty
+* set to "10-4", If the item is found, it will be assigned to the prod
+* variable. If it is not found, the prod variable will be set to null.
+* If prod is not set to null, the statement in line 8 calls for the 
+* db.Products.DeleteOnSubmit method, passing the prod object as an
+* argument. When the db.SubmitChanges() method is called in line 9, the
+* object is deleted from the database.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
