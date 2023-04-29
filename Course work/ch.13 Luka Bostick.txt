@@ -1,0 +1,109 @@
+1. You can use a delegate to reference a(n)__C__.
+	a.object
+	b.variable
+	c.method
+	d.structure
+	
+2.Before you can create a delegate, you must declare__B__.
+	a.a delegate type
+	b.a delegate variable
+	c.the delegate's lifetime 
+	d.the delegate's scope
+3.A delegate can reference___D__.
+	a.any method whatsover
+	b.any void method
+	c.any method that has a parameter list matching that of the delegate type.
+	d.any method that has a return type and paramter list matching that of the delegate type.
+
+4.A delegate that references multiple methods is known as a(n)___B___.
+	a.compound delegate
+	b.multicast delegate
+	c.complex delegate
+	d.error! Delegates cannot refer to mroe than one method.
+	
+5.A(n)__B___method has no name.
+	a.untyped
+	b.anonymous
+	c.hidden
+	d.protected
+	
+6.A lambda expression is a shortcut technique for writing a(n)__C___.
+	a.extension method
+	b.if-else statement
+	c.anonymous method
+	d.unsupervised delegate
+	
+7.___A___is the lambda operator.
+	a.=>
+	b.->
+	c.<=
+	d.<=>
+	
+8.If a lambda expression contains multiple statements in its body, those statements must be enclosed in___C___.
+	a.curly braces {}
+	b.square brackets[]
+	c.parentheses ()
+	d.angled brackets <>
+	
+9.This type of delegate invokes a void method accepts 0 to 16 arguments ____C___.
+	a.Func
+	b.Predicate
+	c.Action
+	d.Automaton
+	
+10.This type of delegate invokes a method that accepts one argment and returns a booleans value____B__.
+	a.Func
+	b.Predicate
+	c.Action
+	d.Automaton
+	
+11.This type of selegate invokes a method that accepts 0 to 16 arguments and returns a value__A__.
+	a.Func
+	b.Predicate
+	c.Action
+	d.Automation
+	
+True or False
+1.You can use a delegate to call a method.FALSE
+2.Once a delegate has been assigned, it cannot be reassigned.FALSE
+3.You can use a delegate to pass a method as an argument to another method. TRUE
+4.A delegate is compatible with any method that has a return type and parameter list matching that of the delegate's type. true
+5.A delegate cannot refer to an anonymous method. FALSE
+6.An anonymous method is a shortcut  technique for writing a lambda expression.  FALSE
+7.You can assign a lambda expression to a delegate. TRUE
+8.Writing a lambda expression usually requires more code than writing an anonymous method FALSE
+9.A lambda expression can be passed as an argument to a method.TRUE
+
+Short Answer
+1.Suppose you have have already declared a delegate type, and you are ready to create an instance of the delegate. What types of methods can the delegate refer to?
+2.What is an anonymous method?
+3.In a lambda expression, what appears on the left side of the lambds operator?
+4.When must lambda expression have a return statent
+6.Describe each of the following predefined delefate types: Action, Func, and Predicate.
+
+Algorithm Workbench
+1.Write a delegate type declaration named DisplayInteger that is compataible with this method:
+
+	private void Showvalue(int i)
+	{
+		MessaageBox.Show(i.ToString());
+	}
+
+2. Write a statement that creates an instance of the delegate type that you declared in question 1, named ShowIntValue. The delegate should reference the ShowValue method
+
+3.Write a statement that uses the delegate that you created in Question 2 to call the ShowValue method. Assume number is an int vatiable. Pass number as an argument to the method
+
+4.Suppose you have two methods named MethodA and MethodB. The delegate MyDelegate already referes to MethodA. Write a statement  that adds MethodB to the delegate. (The delegate should refer to both MethodA and MethodB.)
+
+5.Look at this declaration:
+
+	delegate void WorkWithAnInt(int i);
+Write the code to create an instance
+
+7.
+
+8.
+
+9.
+
+10.

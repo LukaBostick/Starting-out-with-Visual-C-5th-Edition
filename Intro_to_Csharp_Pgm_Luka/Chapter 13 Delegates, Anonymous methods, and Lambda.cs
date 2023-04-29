@@ -1701,89 +1701,278 @@
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * When the application is compiled, this lambda expression will be 
+ * converted to an Action delegate and passeda to the ForEach method.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Let's also look at the RemoveAll method. Here is the general format:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * listName.RemoveAll(ParedicateDelagate)
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * in the general format, listName is the name of a List. 
+ * The PredicateDelegate. If the PredicateDelegate returns true, the 
+ * element is removed from the List. If the PredicateDelegate returns
+ * false, no action is taken for the element. Let's look at ac complete
+ * application that demonstrates the RemoveAll method. Program 13-11 
+ * shows the Form1 code for the RemoveAllDemo1 application.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 13-11 Form1 code for the RemoveAllDemo1 application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * using System;
+ * using System.Collections.Generic;
+ * using System.Windows.Forms;
+ * 
+ * namespace RemoveAllDemo1
+ * {
+ *      public partial class Form1 : Form
+ *  {
+ *      publuc Form1()
+ *      {
+ *          InitializeComponent();
+ *      }
+ *  }
+ *  
+ *  private void demoButton_Click(object sender, EventArgs e)
+ *  {
+ *      // Create a list of integers.
+ *      List<int> numbers = new List<int>(){-3,-2,-1,0,1,2};
+ *      
+ *      // Remove all the elements containing a negative value.
+ *      numbers.RemoveAll(x => x < 0);
+ *      
+ *      //Display each element of the List
+ *      numbers.ForEach(x => MessageBox.Show(x.ToString()));
+ *   }
+ *  }
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Let's take a closer look at the code:
+ * 
+ *  *THe code in line 17 creates a List of Integers named numbers, and
+ *  initializes the List with the values -3,-2,-1,0,1, and 2.
+ *  
+ *  * Line 20 calls the List's RemoveAll method, passing the following
+ *  lambda expression as an arguement:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *                  x => x < 0
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *  *This lambda expression is converted by the compiler to a Predicate
+ *  delegate that returns true if the argument x is less than 0, or
+ *  false otherwise. As a result, line 20 removes all the List's elements
+ *  that contain a negative number. Once this completes, the List will 
+ *  contain the values 0,1, and 2.
+ *  
+ *  *Line 23 calls the numbers List's ForEach method, passing a lambda 
+ *  expression that displays its argument in a message box. As a result
+ * , three message boxes will appear (one after the other), showing the
+ * values 0,1, and 2.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Tutorial 13-1 Working with List Methods and Lambdas
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * In this tutorial you complete the SAT Scores application.
+ * The application's form is shown in Figure 13-8. When the application
+ * runs, it displays a list of students and their SAT score in the 
+ * studentListBox. Once you have completed the tutorial, the application
+ * will allow you to search for students with an SAT score greater than
+ * a specified minimum.
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Figure 13-8 The SAT Score Application's Form
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The application stores each student's name and SAT scores in a 
+ * StudentScore class, which has already been written and is included in 
+ * the project. The StudentScore class is shown in Program 13-12. Here is
+ * a summary of the class:
+ * 
+ * *Line 12: is the Name property, a string. This property holds 
+ *  a student's name.
+ * 
+ * *Line 13 is the Score property, an int. This property holds a 
+ *  student's SAT score.
+ * 
+ * *Lines 16-20 is the constructor, which accepts arguments for the 
+ *  student's name and SAT score.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Program 13-12 The StudentScore class
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * using System
+ * using System.Collections.Generic;
+ * using System.Linq;
+ * using System.Text;
+ * using System..Threading.Tasks;
+ * 
+ * namespace SAT_Scores
+ * {
+ *      class StudentScore
+ *      {
+ *          // Properties
+ *          public string Name{set; get;}
+ *          public int Score{set; get;}
+ *          
+ *          // Constructor
+ *          public StudentScore(string n, int s)
+ *          {
+ *              Name = n;
+ *              Score = s;
+ *          }
+ *      }
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 13-13 Form1 code for the SAT Scores application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * using System
+ * using System.Collections.Generic;
+ * using System.ComponentModel;
+ * using System.Data;
+ * using System.Drawing;
+ * using System.Linq;
+ * using System.Text;
+ * using System.Threading.Tasks;
+ * using System.Windows.Forms;
+ * 
+ * namespace SAT_Scores
+ * {
+ *      public partial class Form1 : Form 
+ *      {
+ *          // List of student and their SAT scores
+ *          private List<StudentScore> studentList = new List<StudentScore>()
+ *          {
+ *            new StudentScore("Jess Adams", 1275),  
+ *            new StudentScore("Dennis Bailey", 1060),  
+ *            new StudentScore("Ashley Carter", 1155),  
+ *            new StudentScore("Rebecca Foster", 1310),  
+ *            new StudentScore("Sarah Green", 975),  
+ *            new StudentScore("Claudia Kelly", 1260),  
+ *            new StudentScore("Brandon Parker", 1055),  
+ *            new StudentScore("Timothy Ward", 920)  
+ *          };
+ *          
+ *          public Form1()
+ *          {
+ *              InitializeComponent();
+ *          }
+ *          private void Form1_Load(object sender, EventArgs e)
+ *          {
+ *              // populate the studentListBox
+ *              foreach(var student in studentList)
+ *              {
+ *                  studentListBox.Items.Add(student.Name + " (" +
+ *                  student.Score + ") ");
+ *              }
+ *          }
+ *          
+ *          private void searchButton_Click(object sender, EventArgs e)
+ *          {
+ *              int minScore;
+ *              
+ *              // Get the minimum socre
+ *              if(int.TryParse(scoreTextBox.Text, out minScore))
+ *              {
+ *                  // Clear the resultsListBox
+ *                  resultsListBox.Items.Clear();
+ *                  
+ *                  // Get the students with a score greater than minScore.
+ *                  List<StudentScore> result = studentList.FindAll(s => s.Score > minScore);
+ *                  
+ *                  // Display those students.
+ *                  foreach(var student in results)
+ *                  {
+ *                      resultsListBox.Items.Add(student.Name + " (" student.Score + " )");
+ *                  }
+ *              }
+ *              else
+ *              {
+ *                  MessageBox.Show("Enter an integer score.");
+ *              }
+ *          }
+ *     }
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * NOTEL The code in lines 15-26 of Program 13-13 has already beem 
+ * written for you. This code creates a List named studentList and 
+ * initializes it with eight StudentScore objects.
+ * 
+ * In the Designer, double-click the searchButton control. This will open
+ * the code editor, and you see an empty event naemd searchButton_Click.
+ * Complete the searchButton_Click event handler by typing the code
+ * shown in lines 45-67 in Program 13-13. Let's take a closer look 
+ * at the code:
+ * 
+ * Line 45: This statement declares a local variable named minScore. We will
+ * use the variable to hold the score that the user enters into the 
+ * scoreTextBox control.
+ * 
+ * Line 48: This if statement tries to convert scoreTextBox.Text to an int.
+ * If the conversion is successful, the result is stored in the minScore
+ * variable, and the program containues executing at line 50. If the 
+ * conversion is not successful, the program jumps to the elese clasue
+ * in line 64, and line 66 displays an error message.
+ * 
+ * Line 51: This statement clears the contents of the resultsListBox
+ * control.
+ * 
+ * Lines 54 and 55: This statement performs multiple steps. 1) it 
+ * declares a List of StudentScore objects named results, 2) it 
+ * calls the List class's FindAll method. 3) it assigns the value
+ * that is returned from the FindAll method to results.
+ * It can be see form Table 13-1 that the FindAll method accepts a 
+ * Predicate delegate as its argument. The method returns a List
+ * of all the elements that, when passed to the Predicate, causes
+ * the Predicate to return true. In this statement, we pass the 
+ * following lambda expression as the Predicate:
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * s => s.Score > minScore
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * The expression works like this: s is a StudentScore object. The 
+ * Predicate returns true if s.Score is greater than minScore. Otherwise,
+ * the Predicate returns false. So, the FindAll method will return a List
+ * of all the StudentScore object that a Score property greater than
+ * minScore. Lines 58-62: This foreach statetment displays all the 
+ * elements of results.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
- * /////////////////////////////////////////////////////////////////////
- * 
+ * Step 4: Save the project. Then, compiler and run the applicationm. 
+ * Experiment by searching for students with acres that are greater
+ * than various values. When you are finished, close the application
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
