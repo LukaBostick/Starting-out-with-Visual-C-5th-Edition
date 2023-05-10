@@ -1630,7 +1630,7 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Figure 6-17 The North America application;s form
+ * Figure 6-17 The North America applications form
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -1766,6 +1766,99 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * Figure 6-18 The North America application displaying the list of
  * countries
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 6-6 Completed code for the Form1 in the North America 
+ * application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace North_America
+ * {
+ *	public partial class Form1 : Form
+ *	{
+ *		public Form1()
+ *		{
+ *			InitializeComponent();
+ *		}
+ *		
+ *		// The GetFileName method gets a filename from the user and assigns it to 
+ *		the variable passed as an argument.
+ *		
+ *		private void GetFileName(out string selectedFile)
+ *		{
+ *			if(openFIle.ShowDialog() == DialogResult.OK)
+ *			{
+ *				selectFile = openFile.FileName;
+ *			}
+ *			else
+ *			{
+ *				selectedFile = "";
+ *			}
+ *		}
+ *		
+ *		// The GetCountries method accepts a filename as an
+ *		// argument. It opens the specified file and displays its 
+ *		// contents in the countriesListBox control.
+ *		
+ *		private void GetCountries(string filename)
+ *		{
+ *			try
+ *			{
+ *				// Declaring a variable to hold a country name.
+ *				string countryName;
+ *				
+ *				// Declar a SreamReader variable.
+ *				StreamReader inputFile;
+ *				
+ *				//Open the file and get a StreamReader variable.
+ *				StreamReader inputFile;
+ *				
+ *				//Open the file and get a StreamReader object.
+ *				inputFile = File.OpenText(filename);
+ *				
+ *				// Clear anything currently in the ListBox.
+ *				countriesListBox.Items.Clear();
+ *				
+ *				// Read the file's contents
+ *				while(!inputFile.EndOfStream)
+ *				{
+ *						// get a country name.
+ *						countryName = inputFile.ReadLine();
+ *						
+ *						// Add the country name to the ListBox.
+ *						countriesListBox.Items.Add(countryName);
+ *				}
+ *				
+ *				// Close the file
+ *				inputFile.Close();
+ *			}
+ *			catch (Exception ex)
+ *			{
+ *				// Display an error message.
+ *				MessageBox.Show(ex.Message);
+ *			}
+ *		}
+ *		
+ *		private void getCountriesButton_Click(object sender, EventArgs e)
+ *		{
+ *			string filename;	// To hold the filename
+ *			
+ *			// Get the filename from the user.
+ *			GetFileName(out filename);
+ *			
+ *			// Get the contries from the file.
+ *			GetCountries(filename);
+ *		}
+ *		
+ *		private void exitButton_Click(object sender, EventArgs e)
+ *		{
+ *			// Close the form.
+ *			this.Close();
+ *		}
+ *	}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -1948,6 +2041,63 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * namespace Sum
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializaeComponent();
+ *			}
+ *			
+ *			// The Sum method accepts two int arguments
+ *			// and returns the sum of the arguments.
+ *			
+ *			private int Sum(int num1, int num2)
+ *			{
+ *				return num1 + num1;
+ *			}
+ *			
+ *			private void calculateButton_Click(object sender, EventArgs e)
+ *			{
+ *				// declare variables to hold two ages and thir sum.
+ *				int userAge, friendAge, combindAge;
+ *				
+ *				// Get the user's age.
+ *				if(int.TryParse(ageTextBox.Text, out userAge))
+ *				{
+ *					// Get the best friend's age.
+ *					if(int.TryParse(age1TextBox.Text, out userAge))
+ *					{
+ *						// Get the sum of the ages.
+ *						combindedAge = Sum(userAge, firendAge)
+; *					
+ *						// Display the combined age.
+ *						combinedAgeLabel.Text = combinedAge.ToString();
+ *					}
+ *					else
+ *					{
+ *						// Display an error message.
+ *						MessageBox.Show("Ender an integer for your age.");
+ *					}
+ *				}
+ *				else
+ *				{
+ *					// Display an error message.
+ *					MessageBox.Show("Enter an integer for your age.");
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form
+ *				this.Close();
+ *			}
+ *		}
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
  * In line 33, the value entered into the age1TextBox control is converted 
  * to an int and stored in the userAge variable,. In line 36, the 
  * value entered into the age2TextBox control is converted to an int and 
@@ -2088,6 +2238,55 @@ namespace Chapter6ModularizingYourCodewithMethods
  * 
  * /////////////////////////////////////////////////////////////////////
  * Program 6-8 Completed from Form1 in the Cups To Ounces application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Cups_To_Ounces
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializedComponent();
+ *			}
+ *			
+ *			//The CupsToOunces method accepts a number
+ *			// of cups as an argument and returns the 
+ *			// equivalent number of fluif ounces.
+ *			
+ *			private douvle CupsToOunces(double cups)
+ *			{
+ *				return cups *8.0;
+ *			}
+ *			
+ *			private void convertButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Variables to hold cups and onces
+ *				double cups, onces;
+ *				
+ *				// Get the number of cups.
+ *				if(double.TryParse(cupsTextBox.Text, out cups))
+ *				{
+ *					// Convert the cups to ounces.
+ *					ounces = CupsToOunces(cups);
+ *					
+ *					// Display the onces
+ *					ouncesLabel.Text = ounces.ToString("n1");
+ *				}
+ *				else
+ *				{
+ *					// Display an error message
+ *					MessageBox.Show("Enter a valid number.");
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form
+ *				this.Close();
+ *			}
+ *		}
+ * }	
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -2240,6 +2439,61 @@ namespace Chapter6ModularizingYourCodewithMethods
  * 
  * /////////////////////////////////////////////////////////////////////
  * Program 6-9 Completed code for Form1 in the Pay abd Bonus application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Pay_and_Bouns
+ * {
+ *	public partial class Form1 : Form
+ *	{
+ *		// Constant field for the contribution rate
+ *		private const decimal CONTRIB_RATE = 0.05m;
+ *		
+ *		public Form1()
+ *		{
+ *			InitialzeComponent();
+ *		}
+ *		
+ *		// The InputIsValid method converts the user input and stores
+ *		// it in the arguments (passed by reference). If the conversion
+ *		// is sucessful, the method returns true. Otherwise it returns 
+ *		// false.
+ *		
+ *		private bool InputIsValid(ref decimal pay, ref decimal bonus)
+ *		{
+ *			// Flag variable to indicate whethe the input is good.
+ *			bool inputGood = false;
+ *			
+ *			// Try to convert both inputs to decimal.
+ *			if(decimal.TryParse(grossPayTextBox.Text, out pay))
+ *			{
+ *				if(decimal.TryParse(bonusTextBox.Text), out bonus))
+ *				{
+ *					// Both inputs are good.
+ *					inputGood = true;
+ *				}
+ *				else
+ *				{
+ *					// Display an error message for the bonus
+ *					MessageBox.Show("Bonus amount is invalid.");
+ *				}
+ *			}
+ *			
+ *			else
+ *			{
+ *				// Display an error message for gross pay
+ *				MessageBox.Show("Gross pay is invalid.");
+ *			}
+ *			// Return the results
+ *			return inputGood;
+ *		}
+ *		
+ *		private void calculateButton_Click(object sender, EventArgs e)
+ *		{
+ *			// Variables for gross pay, bonus, and con
+ *		}
+ *	}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
