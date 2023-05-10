@@ -209,9 +209,45 @@ Algorithm Workbench
 		p.Message();
 
 3.Write a parameterized constructor for a base class named Movie with a string field named _title and an int field named _runningTime.
+
+	public class Movie
+{
+    private string _title;
+    private int _runningTime;
+
+    public Movie(string title, int runningTime)
+    {
+        _title = title;
+        _runningTime = runningTime;
+    }
+
+    // Other members of the Movie class...
+}
 4.A class named Wave has a virtual property named Frequency. A class named Sound is derved from the Wave class. Write example code showing how the Frequency property might appear in the Sound class.
+
+	public class Wave
+{
+    public virtual double Frequency { get; set; }
+}
+
+public class Sound : Wave
+{
+    private double _frequency;
+
+    public override double Frequency
+    {
+        get { return _frequency; }
+        set { _frequency = value; }
+    }
+}
+
 5.Create an abstract class called Star. Include an abstract method named SolarMasses that returns a value of the double data type.
-6.Concider the following extension method
+	public abstract class Star
+{
+    public abstract double SolarMasses();
+}
+
+6.Consider the following extension method
 
 	public static bool IsGood(this int a, int b)
 	{
@@ -225,9 +261,26 @@ Algorithm Workbench
 	{
 		//code goes here
 	}
-
+	
+In the following code, the value of number is passed to the a parameter of the IsGood method.
+The IsGood method is an extension method for the int type and takes two integer
+parameters: a and b. In the code snippet provided, the IsGood method is called on the number variable
+ (which is an int) and passed the integer value 99 as the b parameter.
+ 
+ 
 7.Write the first line of the definition for a SmartPhone class. The class should extend the MobileDevice class, and it should implement the ICallable and ITextable interfaces.
-8.Write an interface named INameable that apecifies the following methods:
+	public class SmartPhone : MobileDevice, ICallable, ITextable
+{
+    // Class members go here...
+}
+
+8.Write an interface named INameable that specifies the following methods:
 
 	void SetName(string n)
 	string GetName()
+
+public interface INameable
+{
+    void SetName(string n);
+    string GetName();
+}

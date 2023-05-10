@@ -295,7 +295,7 @@
 * services.
 * 
 * *TABLE ADAPTER-A table adapter connects to a data source and can retrieve
-* data from a table in a data source. It can also updata the table in the 
+* data from a table in a data source. It can also update the table in the 
 * data source.
 * 
 * *DATASET-A dataset gets a copy of a table from the table adapter and

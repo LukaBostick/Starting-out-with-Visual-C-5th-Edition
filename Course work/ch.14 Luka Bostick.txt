@@ -133,13 +133,44 @@ Algorithm Workbench
 		var results = from all in db 
 					  select db
 					  
-					  foreach(string a)
+					  foreach(var value in results)
+					  {
+						MessageBox.Show(value);
+					  }
 	}
 				 
 	
 6.Wire a LINQ to SQL query that returns only the Trading_Symbol column from every row in the table.
+	 private void tradSymColumn(object sender, EventArgs e)
+	{
+	StockDataContext db = new StockDataContext();
+	
+	 var results = from tSymbol in db.TradingSymbol
+					where tSymbol > 255 /*less then the val of symbol  max char value*/
+					select tradSym
+               select item.Description;
+               
+	 foreach(var value in results)
+	 {
+	   MessageBox.Show(value);
+	 }
+ 
+	}
+
 
 7.Wire a LINQ to SQL query that returns the Company_Name column only from the rows where Purchase_Price is greater than $50.00.
-
+ // Create a data context object
+           ProductDBDataContext db = new ProductDBDataContext();
+           
+           // Get the products with a price < 50.
+           var results = from products in db.Prducts
+                         where products in db.Products
+                         where products.Price < 50m
+                         select products.Description;
+	
 8.Wrie a LINQ to SQL query that returns the Trading_Symbol column only from the rows where Selling_Price is greater than Purchase_Price and
 Num_Shares is greater than 100.
+
+	var query = from s in dbContext.Stocks
+            where s.Selling_Price > s.Purchase_Price && s.Num_Shares > 100
+            select s.Trading_Symbol;
