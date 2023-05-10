@@ -38,7 +38,7 @@
 * traditioal files work well. These types of files are not practical,
 * however, when a large amount of data must be stored and manipulated.
 * Many businesses keep hundreds of thousands-or even millions-of data 
-* items in files. When a taditional file contains this must data, simple
+* items in files. When a traditional file contains this must data, simple
 * operations such as searching, inserting, and deleting become
 * cumbersome and inefficient.
 * /////////////////////////////////////////////////////////////////////
@@ -57,12 +57,12 @@
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* Figure 12-1 A C#application interating with a DBMS, which manipulates
+* Figure 12-1 A C# application interating with a DBMS, which manipulates
 * data.
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* Although Figure 12-1 is simplified, it issustrates the layered nature
+* Although Figure 12-1 is simplified, it illustrates the layered nature
 * of the application that works with a DBMS. The topmost layer of
 * software, which-in this case- is written in C#, interacts with the 
 * user. It also sends instructions to the next layer of software, the
@@ -153,6 +153,25 @@
 * 
 * /////////////////////////////////////////////////////////////////////
 * Figure 12-2 The table
+* /////////////////////////////////////////////////////////////////////
+* 
+* /////////////////////////////////////////////////////////////////////
+* |SQL Server Data Type|    |Description|   |Corresponding C# or .NET Framework Data Type||
+* |_______________________________________________________________________________________|
+* |bit|
+* |
+* |decimal(t,d)|
+* |
+* |folat|
+* |
+* |int|
+* |
+* |money|
+* |
+* |nchar(n)|
+* |
+* |nvarchar(n)|
+* |
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////

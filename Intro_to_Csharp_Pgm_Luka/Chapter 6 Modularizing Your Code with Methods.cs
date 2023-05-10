@@ -82,7 +82,7 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Figure 6-1 Using one long sequence of statements to perfrom a tasl
+ * Figure 6-1 Using one long sequence of statements to perfrom a task
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -152,7 +152,7 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Fogure 6-3 Parts of the method header
+ * Figure 6-3 Parts of the method header
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -267,7 +267,33 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * LEt's setp through the code. When the user clicks the Go button, the
+ * namespace Simple_Method
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			private void goButton_Click(object sender, EventArgs e )
+ *			{
+ *				MessageBox.Show("This is the goButton_Click method.");
+ *				DisplayMessage();
+ *				MessageBox.Show("Back in the goButton_Click method.");
+ *			}
+ *			
+ *			private void DisplayMessage()
+ *			{
+ *				MessageBox.Show("This is the DisplauMessage method.");
+ *			}
+ *			
+ *		}
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Let's setp through the code. When the user clicks the Go button, the
  * goButton_Click event handler executes. Inside the event handler
  * the statement in line 22 displays This is the goButton_Click method
  * in a message box. Then, line 32 calls the DisplayMessage method.
@@ -308,7 +334,7 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * In Tutoria; 6-1, you will get hands-on practice writing and calling
+ * In Tutorial 6-1, you will get hands-on practice writing and calling
  * methods.
  * /////////////////////////////////////////////////////////////////////
  * 
@@ -403,6 +429,7 @@ namespace Chapter6ModularizingYourCodewithMethods
  * completed code. Open the code editor and type the code for the 
  * TurnLightOn and the TurnLightOff method, shown in lines 20-42
  * of Program 6-2.
+ * 
  * Let's take a closer look at the code. Line 20 is the beginning of the
  * method named TurnLightOn. The purpose of this method is to simulate the
  * light turning on. When this method executes, line 23 makes the 
@@ -448,6 +475,62 @@ namespace Chapter6ModularizingYourCodewithMethods
  * 
  * /////////////////////////////////////////////////////////////////////
  * Program 6-2 Completed code for Form1 in the Lights application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Lights
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			private void TurnLightOn()
+ *			{
+ *				//Display the "light on" image.
+ *				lightOnPictureBox.Visible = true;
+ *				
+ *				// Hide the "lights off" image.
+ *				lightOffPictureBox.Visible = false;
+ *				
+ *				// Display the light's stage.
+ *				lightStageLabel.Text = "ON";
+ *			}
+ *			
+ *			private void TurnLightOff()
+ *			{
+ *				//Display the "light off" image.
+ *				lightOffPictureBox.Visible = true;
+ *				
+ *				// Hide the "light on" image.
+ *				lightOnPictureBox.Visible = false;
+ *				
+ *				// Display the light's state.
+ *				lightStateLabel.Text = "OFF";
+ *			}
+ *			
+ *			private void switchButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Reverse the state of the light.
+ *				if(lightOnPictureBox.Visible == true)
+ *				{
+ *					TurnLightOff();
+ *				}
+ *				else
+ *				{
+ *					TurnLightOn();
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -569,7 +652,7 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Figure 6-10 Passing the value 5 to the DisplayValu method
+ * Figure 6-10 Passing the value 5 to the DisplayValue method
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -613,7 +696,58 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
  * Program 6-3 Code for the Argument Demo application's Form1 form
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ *	namespace Argument_Demo
+ *	{
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			private void DisplayValue(int value)
+ *			{
+ *				MessageBox.Show(value.ToString());
+ *			}
+ *			
+ *			private void demo1ButtonValue(int value)
+ *			{
+ *				// Call DisplayValue passing 5 as argument.
+ *				DisplayValue(5);
+ *			}	
+ *			
+ *			private void demo2Button_Click(object sender, EventArgs e)
+ *			{
+ *				// Call DisplayValue passing the expression 3+5 as an 
+ *				// argument
+ *				DisplayValue(3+5);
+ *			}
+ *			
+ *			private void demo3Button_Click(object sender, EventArgs e)
+ *			{
+ *				//Use a loop to call DisplauValue 5 times.
+ *				for(int count = 0; count < 5; count++)
+ *				{
+ *					DisplayValue(count);
+ *				}	
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ *	}
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -779,6 +913,90 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * Program 6-4 Completed code for Form1 in the Cards application
  * /////////////////////////////////////////////////////////////////////
+ * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Cards
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializedComponent();
+ *			}
+ *			
+ *			// The ShowCard method accepts a string that names
+ *			// the selected card, and displays that card.
+ *			private void ShowCard(string card)
+ *			{
+ *				switch(card)
+ *				{
+ *					case "Ace of Spades" :
+ *						ShowAceSpades();
+ *						break;
+ *						
+ *					case "10 of Hearts"
+ *						ShowTenHeards();
+ *						break;
+ *					case "King of Clubs":
+ *						ShowKingClubs();
+ *						break
+ *				}
+ *			}
+ *			
+ *			// The ShowAceSpaces method meakes the Ace of Spaces
+ *			// visible and the other cards invisible.
+ *			
+ *			private void ShowAceSpades()
+ *			{
+ *				aceSpadesPictureBox.Visible = true;
+ *				tenHeartsPictureBox.Visible = false;
+ *				kingClubsPictureBox.Visible = false;
+ *			}
+ *			
+ *			// The ShowTenHearts method meakes the Ten of Hearts
+ *			// visible and the other cards invisible.
+ *			
+ *			private void ShowTenHearts()
+ *			{
+ *				tenHeartsPictureBox.Visible = true;
+ *				aceSpadesPictureBox.Visible = false;
+ *				kingClubsPictureBox.Visible = false;
+ *			}
+ *			
+ *			// The ShowKingClubs method makes the King of Clubs
+ *			// visible and the other cards invisible.
+ *			
+ *			private void ShowKingClubs()
+ *			{
+ *				kingClubsPictureBox.Visible = true;
+ *				aceSpadesPictureBox.Visible = false;
+ *				tenHeartsPictureBox.Visible = false;
+ *			}
+ *			
+ *			private void showCardButton_Click(object sender, EventArgs e)
+ *			{
+ *				// If a card is selected in the ListBox, display it.
+ *				if(cardListBox.SelectedIndex != -1)
+ *				{
+ *					ShowCard(cardListBox.SelectedItem.ToString());
+ *				}
+ *				else
+ *				{
+ *					MessageBox.Show("Please select a card from " 
+ *					+ "The list box.");
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
  * 
  * /////////////////////////////////////////////////////////////////////
  * Argument and Paramenter Data Type Compatibility
@@ -1206,12 +1424,15 @@ namespace Chapter6ModularizingYourCodewithMethods
  * /////////////////////////////////////////////////////////////////////
  * Inside the parentheses, the keyword ref indicates that the number is 
  * a reference variable. The method assigns 0 to the number parameter.
- * Because number is a reference parameter, this action is actully performed on the varable that was passed ti the method as an argument.
+ * Because number is a reference parameter, this action is actully
+ * performed on the varable that was passed ti the method as an argument.
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * When you call a method that has a reference parameter, you must also write the keyword ref before the argument. THe following code sample shows an example:
+ * When you call a method that has a reference parameter, you must
+ * also write the keyword ref before the argument.
+ * THe following code sample shows an example:
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -1251,6 +1472,56 @@ namespace Chapter6ModularizingYourCodewithMethods
  * 
  * /////////////////////////////////////////////////////////////////////
  * Program 6-5 Code for the Pass By Ref application's form1 form
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Pass_By_Ref
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			// The SetToZero method accepts an int argument by reference
+ *			// and sets it to zero.
+ *			
+ *			private void SetToZero(ref int numbers)
+ *			{
+ *				number = 0;
+ *			}
+ *			
+ *			private void goButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Declarer some local int variavles.
+ *				int x = 99, y = 100, z = 101;
+ *				
+ *				// Display the values in thoes variables.
+ *				outputListBox.Items.Clear();
+ *				outputListBox.Items.Add("x is set to " + x);
+ *				outputListBox.Items.Add("y is set to " + y);
+ *				outputListBox.Items.Add("x us set to " + z);
+ *				
+ *				// Pass each variable to SetToZero.
+ *				SetToZero(ref x);
+ *				SetToZero(ref y);
+ *				SetToZero(ref z);
+ *				
+ *				// Display the value in those variables again.
+ *				outputListBox.Items.Add("---------------------");
+ *				outputListBox.Items.Add("x us set to " + x);
+ *				outputListBox.Items.Add("y us set to " + y);
+ *				outputListBox.Items.Add("z us set to " + z);
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EvventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ * }	
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////

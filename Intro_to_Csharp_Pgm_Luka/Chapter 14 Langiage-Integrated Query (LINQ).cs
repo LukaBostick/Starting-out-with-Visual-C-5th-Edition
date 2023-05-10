@@ -26,7 +26,7 @@
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* In Chapter 12 you learned about SQ (Structured Query Language), which
+* In Chapter 12 you learned about SQL (Structured Query Language), which
 * allows you to query the data in a database. The .Net Framework also 
 * provides several LINQ tools that allows you to query many types of
 * data. In this section, we will use a tool called LINQ to Objects,
@@ -68,6 +68,7 @@
 * /////////////////////////////////////////////////////////////////////
 * var results = form item in numbers
 *               where item > 100
+*               
 *               select item;
 * /////////////////////////////////////////////////////////////////////
 * 
@@ -122,8 +123,8 @@
 * /////////////////////////////////////////////////////////////////////
 * 
 * /////////////////////////////////////////////////////////////////////
-* This code is similar to an SQL Select statement, except than in LINQ
-* the shere clauses appears before the select clause. The where clause
+* This code is simalar to an SQL Select statement, except than in LINQ
+* the share clauses appears before the select clause. The where clause
 * specifies a Boolean search criterion (in this case, item > 100), and 
 * select clause causes the value of the item variable to be retrieved 
 * if the search criterion is true. In plain English, the expression says

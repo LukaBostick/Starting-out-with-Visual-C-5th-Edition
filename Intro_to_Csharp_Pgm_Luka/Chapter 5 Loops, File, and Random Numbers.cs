@@ -550,6 +550,9 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
  * Tutorial 5-2: Enhancing the Ending Balance Application
  * /////////////////////////////////////////////////////////////////////
  * 
@@ -608,6 +611,95 @@ namespace Chapter5LoopsFileandRandomNumbers
  * application further. When you are finished, click the Exit button and
  * the form should close.
  * /////////////////////////////////////////////////////////////////////
+ * 
+ *  * /////////////////////////////////////////////////////////////////////
+ * Program 5-1 Completed Form1 code for the Ending Balance application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Ending_Blance
+ * {
+ *		public partial class Form1 : form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			private void calculateButton_Click(object sender, EventAtgs e)
+ *			{
+ *				// Constant for the monthly insterest rate.
+ *				
+ *				const decimal INTREST_RATE = 0.005m;
+ *				
+ *				// Local variables
+ *				decimal balacnce;// The account balance
+ *				
+ *				
+ *				int months; // The number of months
+ *				
+ *				int count = 1;// Loop counter, initialized with 1
+ *				
+ *				if(decimal.Tryparse(startingBalTextBox.Text, out balance))
+ *				{
+ *					// Get the number of months.
+ *					if(int.TryParse(monthsTextBox.Text, out months))
+ *					{
+ *						// The following loop calculates the ending balance.
+ *						while(count <= months)
+ *						{
+ *							// Add this month's intrest to the balance.
+ *							balance = balance + (INTREST_RATE * balance);
+ *							
+ *							// Display this month's ending balance.
+ *							
+ *							detailListBox.Items.Add("The ending balance " +
+ *							"for month " + count + " is " + balance.ToString("c"));
+ *							
+ *							// Add one to the loop counter.
+ *							count = count+1;
+ *							
+ *						}
+ *						
+ *						// Display the ending balance.
+ *						endingBalanaceLAbel.Text = balance.ToString("c");
+ *						
+ *					}
+ *					else
+ *					{
+ *						Invalid number of months was entered.
+ *						MessageBox.Show("Invalid value for months.");
+ *					}
+ *				}
+ *				else
+ *				{
+ *					//Invalid starting balance was enterd.
+ *					MEssageBox.Show("Invalid valuje for starting balance.");
+ *				}
+ *			}
+ *			
+ *			private void clearButton_Click(object sender, EventArgs)
+ *			{
+ *				// Clear the TextBoxes, the endingBlanceLAbel control,
+ *				// and the ListBox
+ *				
+ *				startingBalTextBox.Text="";
+ *				monthsTextBox.Text = "";
+ *				endingBalanceLAbel.Text = "";
+ *				detailListBox.Items.Clear();
+ *				
+ *				//Reset the focus.
+ *				startingBalTextBox.Focus();
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs)
+ *			{
+ *				// Close the form.
+ *				this.Colse();
+ *			}
+ *		}
+ * }
  * 
  * /////////////////////////////////////////////////////////////////////
  *							Infinite Loops
@@ -1262,6 +1354,52 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Program 5-3 Completed Form1 code for the Speed Converter application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Speed_converter
+ * {
+ *	public partial class Form1 : Form
+ *	{
+ *		public Form1()
+ *		{
+ *			InitializeComponent();
+ *		}
+ *		
+ *		private void displayButton_Click(object sender, EventArgs e)
+ *		{
+ *			// Constants
+ *			const int START_SPEED = 60;
+ *			const int END_SPEED = 130;
+ *			const int INTERVAL = 10;
+ *			const double CONVERSION_FACTOR = 0.6214;
+ *			
+ *			// Variables
+ *			int kph;	// Kilometers per hour
+ *			double mph;	// Miles per hour
+ *			
+ *			// Display the table of speeds
+ *			for(kph = START_SPEED; kph <= END_SPEED; kph += INTERVAL)
+ *			{
+ *				// Calculate miles per hour.
+ *				mph = kph * CONVERSION_FACTOR;
+ *				
+ *				// Display the conversion.
+ *				outputListBox.Items.Add(kph + " KPH is the same as " + mph + " MPH");
+ *			}
+ *		}
+ *		
+ *		private void exitButton_Click(object sender, EventArgs e)
+ *		{
+ *			// Close the form.
+ *			this.Close();
+ *		}
+ *		
+ *	}
+ * }
+ * ///////////////////////////////////////////////////////////////////// 
+ * 
  * /////////////////////////////////////////////////////////////////////
  *					5.5 The do-while Loop
  * /////////////////////////////////////////////////////////////////////
@@ -1441,7 +1579,7 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Figure 3-16 Writing data to a file
+ * Figure 5-16 Writing data to a file
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -1888,6 +2026,56 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
+ * Program 3-4 Completed Form1 code for the Friend File application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Friend_File
+ * {
+ * 
+ *		public partial class Form1 : Form
+ *		{
+ *			InitializeComponent();
+ *		}
+ *		
+ *		private void writeNameButton_Click(object sender, EventArgs e)
+ *		{
+ *			try
+ *			{
+ *				// Declare a StreamWriter variable.
+ *				StreamWeiter outputFIle;
+ *				
+ *				// Create a File and get a StreamWriter object
+ *				
+ *				outputFile =File.CreateText("Friend.txt");
+ *				
+ *				// Write the firend's name to the file.
+ *				outputFile.WriteLine(nameTextBox.Text);
+ *				
+ *				// Close the files
+ *				outputFile.Close();
+ *				
+ *				// Let the user know the name was written.
+ *				MessageBox.Show("The name was written.");
+ *			}
+ *			catch (Exception ex)
+ *			{
+ *				//Display an error message
+ *				MessageBox.Show(ex.Message);
+ *			}
+ *		}
+ * 
+ *		private void exitButton_Click(object sender, EverArgs)
+ *		{
+ *			// Close the form.
+ *			this.Close();
+ *		}
+ * 
+ * 
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
  * Step 8: You should now see the contents of the Friend.txt file in 
  * Visual Studio, as shown in Figure 5-24. (The example in the figure
  * shows the contents of the file after the user has written Tim Owens to
@@ -2065,6 +2253,49 @@ namespace Chapter5LoopsFileandRandomNumbers
  * Studio
  * /////////////////////////////////////////////////////////////////////
  * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 5-5 Partial code for Form1 in the Firend File application 
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * private void writeNameButton_Click(object sender, EventArgs e)
+ * {
+ *		try
+ *		{
+ *			//Declare a SreamWriter variable.
+ *			StreamWriter outputFile;
+ *			
+ *			//Open the Friend.txt file for appending,
+ *			// and get a StreamWriter object.
+ *			outputFile = File.AppendText("Friend.txt");
+ *			
+ *			// Write the firend's name to the file.
+ *			outputFileWriteLine(nameTextBox.Text);
+ *			
+ *			// Close the file.
+ *			outputFIle.Close();
+ *			
+ *			// Let the user know the name was written.
+ *			MessageBox.Show("The name was written.");
+ *			
+ *			// Clear the nameTextBox control.
+ *			nameTextBox.Text = "";
+ *			
+ *			// Give the focus to the nameTextBox control.
+ *			nameTextBox.Focus();
+ *			
+ *		}
+ *		
+ *		catch (Exception ex)
+ *		{
+ *			// Display an error message.
+ *			MessageBox.Show(ex.Message);
+ *		}
+ *		
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
  * /////////////////////////////////////////////////////////////////////
  * Specifying The Location of an Output File
  * /////////////////////////////////////////////////////////////////////
@@ -2163,15 +2394,25 @@ namespace Chapter5LoopsFileandRandomNumbers
  * 
  * /////////////////////////////////////////////////////////////////////
  * 
- * Line 1:This is the beginning of a try-catch statement. An exception will be thrown in the try black of a problem occurs while the file is being opend or while an item is being read from the file. If that happens, the program jumps to the catch clause in line 31.
+ * Line 1:This is the beginning of a try-catch statement. 
+ * An exception will be thrown in the try black of a problem occurs
+ * while the file is being opend or while an item is being read from
+ * the file. If that happens,
+ * the program jumps to the catch clause in line 31.
  * 
- * Line 4:This statement declares a string variable named studentName. Each time we read a line of text from the file, we assign it tot the variable.
+ * Line 4:This statement declares a string variable named studentName.
+ * Each time we read a line of text from the file, we assign it to the
+ * variable.
  * 
- * Line 7:This statement declares a variable named inputFile that can be used to reference a StreamReader object.
+ * Line 7:This statement declares a variable named inputFile that can 
+ * be used to reference a StreamReader object.
  * 
- * Line 10:This statement opens the file from which we will be reading data. It does so by calling the FIle.OpenText method, passing the string "Student.txt" as an argument. The File.OpenText method does the following:
+ * Line 10:This statement opens the file from which we will be reading data
+ * . It does so by calling the FIle.OpenText method, passing the string 
+ * "Student.txt" as an argument. The File.OpenText method does the following:
  * 
- * *It opens an existing text file with the name specified by the argument. If the file does not exist, an exception is thrown.
+ * *It opens an existing text file with the name specified by the argument.
+ * If the file does not exist, an exception is thrown.
  * *It creates a StreamReader object in memory associated with the file.
  * *It returns a reference to the StreamReader object.
  * 
@@ -2213,7 +2454,7 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * When a program works with an input file, a special value known as a 
  * read position is internally maintained for that file. A file's read
- * position marks the location of the nect item that will be read from
+ * position marks the location of the next item that will be read from
  * the file. When an input file is opened, it's read position is
  * initially set to the first item in the file. As items are read
  * from the file, the read position moves forward, toward the end of
@@ -2226,7 +2467,7 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Figure 4-30 The initial read position
+ * Figure 5-30 The initial read position
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -2539,6 +2780,72 @@ namespace Chapter5LoopsFileandRandomNumbers
  * Program 5-6 Completed code for Form1 in the South America application
  * /////////////////////////////////////////////////////////////////////
  * 
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace South_America
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			private void getContriesButton_Click(object sender, EventArgs e)
+ *			{
+ *				try
+ *				{
+ *					// Declare a variable to hold a country name.
+ *					string countryName;
+ *					
+ *					// Declare a StreamReader variable.'
+ *					StreamReader inpoutFile.
+ *					
+ *					// Open the file and get a Streamreader object.
+ *					
+ *					inputFile = File.OpenText("Countrues.txt");
+ *					
+ *					// Clear anything currently in the ListBox.
+ *					countriesListBox.Items.Clear();
+ *					
+ *					// Read the file's contents.
+ *					while(!inputFile.EndOFStream)
+ *					{
+ *						// Get a country name.
+ *						countryName = inputFile.ReadLine();
+ *						
+ *						// Add the country name.
+ *						countryName = inputFile,ReadLine();
+ *						
+ *						// Add the country name to the ListBox.
+ *						countryName = inputFile.ReadLine();
+ *						
+ *						// Add the country name to the ListBox.
+ *						countriesListBox.Items.Ass(countryName);
+ *					}
+ *					
+ *					// Close the file.
+ *					inoutFile.Close();
+ *				}
+ *				
+ *				catch(Exception ex)
+ *				{
+ *					// Display an error message.
+ *					MessageBox.Show(ex.Message);
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *			
+ *		}
+ * }
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * 
  * /////////////////////////////////////////////////////////////////////
  * Calculating a Running Total
  * /////////////////////////////////////////////////////////////////////
@@ -2681,6 +2988,69 @@ namespace Chapter5LoopsFileandRandomNumbers
  * 
  * /////////////////////////////////////////////////////////////////////
  * Figure 5-42 The Total Sales application displaying the total sales
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * Program 5-7 Completed code for Form1 in the Total Sales applicartion
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Total_Sales
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializedComponent();
+ *			}
+ *			
+ *			private void calculateButton_Click(object sender, EventArgs e)
+ *			{
+ *				try
+ *				{
+ *					// Variables
+ *					decimal sales;	// To hold a sales amount
+ *					
+ *					decimal total = 0m; // Accumulator, set to 0
+ *					
+ *					//Declare a StreamREader variable.
+ *					StreamReader inputFile;
+ *					
+ *					// Open the file and get a Streamreader object.
+ *					
+ *					inputFile = File.OpenText("Sales.txt"");
+ *					
+ *					// Read the file's contents.
+ *					while(!inputFile.EndOfStream)
+ *					{
+ *						// Get a sales amount.
+ *						sales = decimal.Parse(inputFile.ReadLine());
+ *						
+ *						// Add the sales amount to total.
+ *						total += sales;
+ *						
+ *					}
+ *					
+ *					// Close the file.
+ *					inputFile.Close();
+ *					
+ *					// Display the total.
+ *					totalLabel.Text=total.ToString("C");
+ *				}
+ *				catch (Exception ex)
+ *				{
+ *					// Display an error message
+ *					MessageBox.Show(ex.Message);
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -3246,7 +3616,7 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
- * Figure 5-28 The controls repositioned and the form size adjusted
+ * Figure 5-48 The controls repositioned and the form size adjusted
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -3305,6 +3675,53 @@ namespace Chapter5LoopsFileandRandomNumbers
  * 
  * /////////////////////////////////////////////////////////////////////
  * Program 5-8 Completed code for Form1 in the Coin Toss application
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Coin_Toss
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponen();
+ *			}
+ *			
+ *			private void tossButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Variable to indicate which side is up
+ *				int sideUp;
+ *				
+ *				// Create a Random object.
+ *				Random rand = new Random();
+ *				
+ *				// Get a random integer in the range of 0 through 1.
+ *				// 0 means tails up, 1 means heads up.
+ *				sideUp = rand.Next(2);
+ *				
+ *				// Display the side that is up.
+ *				
+ *				if(sideUp == 0)
+ *				{
+ *					// Display tails up.
+ *					tailsPictureBox.Visible = true;
+ *					headsPictureBox.Visible = false;
+ *				}
+ *				else
+ *				{
+ *					// Display heads up.
+ *					headsPictrueBox.Visible = true;
+ *					tailsPictureBox.Visible = false;
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EventArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////
@@ -3487,6 +3904,38 @@ namespace Chapter5LoopsFileandRandomNumbers
  * /////////////////////////////////////////////////////////////////////
  * Figure 5-50 The Load Event application displaying the list of 
  * countries
+ * /////////////////////////////////////////////////////////////////////
+ * 
+ * /////////////////////////////////////////////////////////////////////
+ * namespace Load_Event
+ * {
+ *		public partial class Form1 : Form
+ *		{
+ *			public Form1()
+ *			{
+ *				InitializeComponent();
+ *			}
+ *			
+ *			private void Form1_Load(object sender, EventArgs e)
+ *			{
+ *				try
+ *				{
+ *				
+ *				}
+ *				catch(Exception ex)
+ *				{
+ *					// Display an error message.
+ *					MessageBox.Show(ex.Message);
+ *				}
+ *			}
+ *			
+ *			private void exitButton_Click(object sender, EvebtArgs e)
+ *			{
+ *				// Close the form.
+ *				this.Close();
+ *			}
+ *		}
+ * }
  * /////////////////////////////////////////////////////////////////////
  * 
  * /////////////////////////////////////////////////////////////////////

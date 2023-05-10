@@ -76,7 +76,12 @@ True or False
 
 Short Answer
 1.Suppose you have have already declared a delegate type, and you are ready to create an instance of the delegate. What types of methods can the delegate refer to?
+	Upon instantiation a delegate has the ability to reference any method.
+	
+	
 2.What is an anonymous method?
+	An anonymous method is a method with no name.
+	
 3.In a lambda expression, what appears on the left side of the lambds operator?
 4.When must lambda expression have a return statent
 6.Describe each of the following predefined delefate types: Action, Func, and Predicate.
@@ -98,12 +103,33 @@ Algorithm Workbench
 5.Look at this declaration:
 
 	delegate void WorkWithAnInt(int i);
-Write the code to create an instance
+Write the code to create an instance of the delegate type named ShowInt. The code should also create an anonymous method that displays the value or the parameter i in a message box.
 
-7.
+6. Write a lambda expression that has a parameter named x, and returns the value x time 2.
 
-8.
+7. Wreite code that does the following:
 
-9.
+	*Uses a lambds expression that accepts two int arguments a, and b, and returns the value of a * b.
+	
+	*Assigns the lambds expression to a delegate named Multiply.
+	
+	*Uses the Multiply delegate to call the lambda expression, passing the values 2 and 10 as arguments. The results should be assigned to an int variable named product.
 
-10.
+8.Write a lambda expression that accepts no arguments and displauys "Hello World" in a message box.
+
+9.Given the following class declaration:
+
+	class MyClass
+	{
+		public int MyMethod(int a, int b) => a *b;
+	}
+
+	What value will be stored in x after the following code executes?
+	
+	MyClass obj = new MyClass();
+	int x = obj.MyMethod(2,4);
+	
+	
+10.Write code that assigns a lambda expression to a PRedicate delegate named LessThan100.
+The delegate should have one int parameter and return true if the parameter is less than 100.
+Otherwise, the delegate should return false.
